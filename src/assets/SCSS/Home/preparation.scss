@@ -1,0 +1,373 @@
+@import "../variables";
+
+section.header {
+    // background-color: orangered;
+    height: calc(100vh - 10rem);
+    padding-top: 10rem;
+    position: relative;
+    width: 100vw;
+
+    @media only screen and (max-width: 1440px) {
+        // flex-direction: column;
+        height: calc(85vh - 10rem);
+    }
+
+    @media only screen and (max-width: 814px) {
+        // flex-direction: column;
+        height: calc(85vh - 10rem);
+    }
+
+    @media only screen and (max-width: 768px) {
+        // flex-direction: column;
+        height: calc(85vh - 10rem);
+    }
+
+    @media only screen and (max-width: 480px) {
+        // flex-direction: column;
+        height: calc(85vh - 10rem);
+    }
+
+    @media only screen and (max-width: 425px) {
+        // flex-direction: column;
+        height: calc(85vh - 10rem);
+    }
+
+    & .header-container {
+        // display: flex;
+        height: 100%;
+        // align-items: center;
+        // justify-content: center;
+
+        @media only screen and (max-width: $bp-tab) {
+            // flex-direction: column;
+        }
+
+        & .header-intro-content {
+            height: 100%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            margin-top: 6%;
+            & .section-box {
+                width: 30%;
+                margin: 0 auto;
+
+                @media only screen and (max-width: $bp-smallest) {
+                    width: 60%;
+                }
+            }
+
+            & .arContent {
+                width: 30%;
+                margin: 0 auto;
+                position: relative;
+                z-index: 99;
+
+                @media only screen and (max-width:$bp-small) {
+                    width: 60%;
+                }
+
+                @media only screen and (max-width: 375px) {
+                    width: 70%;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            & h1 {
+                color: $primary-color;
+            }
+
+        }
+    }
+
+    & .header-img {
+        img {
+            max-width: 100%;
+        }
+
+        flex: 1;
+    }
+
+    & .header-left-img {
+        & .header-cup-image {
+            & .intro-cup {
+                bottom: 18%;
+                right: 18%;
+                position: absolute;
+                width: 13%;
+
+                @media only screen and (max-width:$bp-mobile) {
+                    width: 17%;
+                }
+
+                @media only screen and (max-width: 375px) {
+                    width: 25%;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    & .header-right-img {
+        text-align: center;
+
+        & .header-shine-image {
+            & .shine {
+                position: absolute;
+                top: 37%;
+                right: 12%;
+                width: 6%;
+
+                @media only screen and (max-width: $bp-mobile) {
+                    width: 10%;
+                    top: 29%;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+
+        & .header-jug-image {
+            & .jug {
+                position: absolute;
+                top: 25%;
+                left: 8%;
+                right: unset;
+                bottom: unset;
+                width: 18%;
+
+                @media only screen and (max-width: $bp-mobile) {
+                    width: 21%;
+                }
+
+                @media only screen and (max-width: 375px) {
+                    width: 28%;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            & .buscuits {
+                & .full {
+                    position: absolute;
+                    z-index: 3;
+                    bottom: -4%;
+                    right: 10.5%;
+                    width: 7%;
+
+                    @media only screen and (max-width: $bp-mobile) {
+                        width: 10%;
+                    }
+
+                    @media only screen and (max-width: 375px) {
+                        width: 14%;
+                    }
+
+                    & img {
+                        width: 10rem;
+                        width: 100%;
+                    }
+                }
+
+                & .half {
+                    position: absolute;
+                    z-index: 3;
+                    bottom: 3%;
+                    right: 28%;
+                    width: 6%;
+
+                    @media only screen and (max-width: $bp-mobile) {
+                        width: 9%;
+                        right: 35%;
+                    }
+
+                    @media only screen and (max-width: 375px) {
+                        width: 12%;
+                        right: 32%;
+                    }
+
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.preparation-bottom-images {
+    height: 30vh;
+    width: 100vw;
+    position: relative;
+
+    // @media only screen and (max-width: 600px) {
+    //     height: 38vh;
+    // }
+
+    // @media only screen and (max-width: 600px) {
+    //     height: 26vh;
+    // }
+
+    // @media only screen and (max-width: 480px) {
+    //     height: 16vh;
+    // }
+
+    // @media only screen and (max-width: 375px) {
+    //     height: 8vh;
+    // }
+
+    // .guitar-left-image {
+    //     & .guitar {
+    //         position: absolute;
+    //         bottom: -22rem;
+    //         left: 12%;
+
+    //         & img {
+    //             width: 30rem;
+    //             // @media only screen and (max-width: $bp-large) {
+    //             //     width: 27rem;
+    //             // }
+    //         }
+
+    //         @media only screen and (max-width: $bp-tab) {
+    //             display: none;
+    //         }
+    //     }
+    // }
+
+    & .celeberationLine-group {
+        & .line-1 {
+            position: absolute;
+            right: 0px;
+            bottom: -40rem;
+            z-index: 1;
+            width: 120%;
+
+            @media only screen and (max-width: $bp-tab) {
+                width: 100%;
+            }
+
+            & img {
+                width: 100%;
+
+                &:first-child {
+                    @media only screen and (max-width: $bp-tab) {
+                        display: none;
+                    }
+                }
+
+                &:last-child {
+                    display: none;
+
+                    @media only screen and (max-width: $bp-tab) {
+                        display: initial;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: $bp-tab) {
+                bottom: -200%;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                bottom: -197%;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                bottom: -82%;
+            }
+
+            @media only screen and (max-width: 375px) {
+                bottom: -55%;
+            }
+
+            @media only screen and (min-width: 761px) {
+                bottom: -56rem;
+            }
+
+            @media only screen and (min-width: $bp-medium) {
+                bottom: -72rem;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                bottom: -67rem;
+            }
+
+            // @media only screen and (max-width: $bp-tab) {
+            //     bottom: -5rem;
+            // }
+
+        }
+
+        & .line-2 {
+            position: absolute;
+            right: 0rem;
+            bottom: -21rem;
+            z-index: 0;
+            width: 100%;
+
+            & img {
+                width: 100%;
+
+                &:first-child {
+                    @media only screen and (max-width: $bp-tab) {
+                        display: none;
+                    }
+                }
+
+                &:last-child {
+                    display: none;
+
+                    @media only screen and (max-width: $bp-tab) {
+                        display: initial;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: $bp-tab) {
+                bottom: -90%;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                bottom: -50%;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                bottom: -38%;
+            }
+
+            @media only screen and (max-width: 375px) {
+                bottom: -3%;
+            }
+
+            @media only screen and (min-width: 761px) {
+                bottom: -38rem;
+            }
+
+            @media only screen and (min-width: $bp-medium) {
+                bottom: -50rem;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                bottom: -60rem;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                bottom: -40rem;
+            }
+
+            // @media only screen and (max-width: $bp-tab) {
+            //     bottom: -17rem;
+            // }
+        }
+    }
+}

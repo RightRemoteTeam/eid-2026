@@ -1,0 +1,391 @@
+.fairSection {
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 50px;
+    @media screen and (max-width: 1680px){
+        padding-top: 165px;
+    }
+    @media screen and (max-width: 1440px){
+        padding-top: 200px;
+    }
+    @media screen and (max-width: 1024px){
+        padding-top: 160px;
+    }
+    @media screen and (max-width: 814px){
+        padding-top: 130px;
+    }
+    @media screen and (max-width: 768px){
+        padding-top: 115px;
+    }
+    @media screen and (max-width: 480px){
+        padding-top: 75px;
+    }
+    & .fairKites{
+        .fairKites0 {
+            z-index: 1;
+            position: absolute;
+            top: 38%;
+            left: 2%;
+            width: 9%;
+            @media screen and (max-width: 991px){
+                left: 10%;
+            }
+            @media screen and (max-width: 480px){
+                left: 17%;
+            }
+        }
+        .fairKites01 {
+            position: absolute;
+            top: 18%;
+            left: 6.5%;
+            width: 9%;
+            @media screen and (max-width: 991px){
+                left: 12%;
+            }
+            @media screen and (max-width: 480px){
+                left: 20%;
+            }
+        }
+        .fairKites02 {
+            position: absolute;
+            left: 42%;
+            top: 0;
+            width: 10%;
+        }
+        .fairKites03 {
+            position: absolute;
+            left: 47%;
+            top: 0;
+            width: 23%;
+        }
+        .fairKites04 {
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            width: 19%;
+        }
+    }
+    & .fairSectionGroup {
+        position: relative;
+        &  img {
+            width: 100%;
+        }
+        .fairNight {
+            display: none;
+        }
+    }
+    & .footerMainGroup {
+        position: relative;
+        & .layer01Wrap {
+            position: relative;
+            width: 100%;
+        }
+        & .layer01aWrap {
+            position: relative;
+            width: 100%;
+            display: none;
+        }
+        & .posAbsImg {
+            position: absolute;
+            // display: none;
+            & img {
+                width: 100%;
+            }
+        }
+        & .layer02Wrap {
+            display: block;
+            bottom: -4%;
+            right: -12%;
+            width: 69%;
+        }
+        & .layer03WrapSun  {
+            display: block;
+            top: 3%;
+            left: 21%;
+            width: 34%;
+        }
+        & .layer03WrapMoon  {
+            display: none;
+            top: 10%;
+            left: 33%;
+            width: 10%;
+        }
+        & .layer04Wrap {
+            display: block;
+            top: 47%;
+            right: 2%;
+            width: 7%;
+        }
+        & .layer05Wrap {
+            display: block;
+            top: 39%;
+            right: 3%;
+            width: 7%;
+        }
+        & .layer06Wrap {
+            display: block;
+            top: 52%;
+            right: 6%;
+            width: 12%;
+        }
+        & .layer07Wrap {
+            display: block;
+            top: 34%;
+            right: -7%;
+            width: 143%;
+        }
+        & .layer08Wrap {
+            display: block;
+            top: 64%;
+            right: 11%;
+            width: 17%;
+        }
+        & .layer09Wrap {
+            display: block;
+            left: -21%;
+            width: 68%;
+            bottom: 7%;
+        }
+        & .layer10Wrap {
+            display: block;
+            top: 52%;
+            right: 21%;
+            width: 5%;
+        }
+        & .layer11Wrap {
+            display: block;
+            top: 37%;
+            left: -1%;
+            width: 20%;
+        }
+        & .layer12Wrap {
+            display: block;
+            top: 24%;
+            left: 10%;
+            width: 24%;
+        }
+        & .layer13Wrap {
+            display: block;
+            top: 59%;
+            right: 26%;
+            width: 7%;
+        }
+        & .layer14Wrap {
+            display: block;
+            top: 27%;
+            right: 14%;
+            width: 4%;
+        }
+        & .layer15Wrap {
+            display: block;
+            top: 29%;
+            right: 25%;
+            width: 3%;
+        }
+        & .layer16Wrap {
+            display: block;
+            top: 45%;
+            right: 38%;
+            width: 10%;
+        }
+        & .layer17Wrap {
+            display: block;
+            top: 56%;
+            right: 32%;
+            width: 15%;
+        }
+        & .layer18Wrap {
+            display: block;
+            top: 34%;
+            left: 26%;
+            width: 12%;
+        }
+        & .layer19Wrap {
+            display: block;
+            top: 47%;
+            right: 35%;
+            width: 5%;
+        }
+        & .layer20Wrap {
+            display: block;
+            top: 52%;
+            right: 33%;
+            width: 4%;
+        }
+        & .layer21Wrap {
+            display: block;
+            top: 35%;
+            left: 46%;
+            width: 21%;
+        }
+        & .layer22Wrap {
+            display: block;
+            top: 29%;
+            left: 35.5%;
+            width: 17%;
+        }
+        & .layer23Wrap {
+            display: block;
+            top: 52%;
+            left: 41%;
+            width: 19%;
+        }
+        & .layer24Wrap {
+            display: block;
+            bottom: 7%;
+            left: 14%;
+            width: 68%;
+        }
+        & .layer25Wrap {
+            display: block;
+            bottom: 23%;
+            left: 4%;
+            width: 6%;
+        }
+        & .layer26Wrap {
+            display: block;
+            bottom: 0%;
+            left: -13%;
+            width: 78%;
+        }
+        & .layer27Wrap {
+            display: block;
+            bottom: 28%;
+            left: 1%;
+            width: 4%;
+        }
+        & .layer28Wrap {
+            display: block;
+            bottom: 16%;
+            left: 46%;
+            width: 4%;
+        }
+        & .layer29Wrap {
+            display: block;
+            top: 62%;
+            right: 3%;
+            width: 8%;
+        }
+        & .layer30Wrap {
+            display: block;
+            top: 51%;
+            right: 7%;
+            width: 17%;
+        }
+        & .layer31Wrap {
+            display: block;
+            bottom: -5%;
+            right: 6%;
+            width: 92%;
+        }
+        & .layer32Wrap {
+            display: block;
+            bottom: 14%;
+            left: 2%;
+            width: 3%;
+        }
+        & .layer33Wrap {
+            display: block;
+            bottom: 4%;
+            left: 51%;
+            width: 17%;
+        }
+        & .layer34Wrap {
+            display: block;
+            bottom: 9%;
+            left: -4%;
+            width: 79%;
+        }
+        & .layer35Wrap {
+            display: block;
+            bottom: -2%;
+            left: 15%;
+            width: 10%;
+        }
+        & .layer36Wrap {
+            display: block;
+            bottom: 4%;
+            left: 68%;
+            width: 10%;
+        }
+        & .layer37Wrap {
+            display: block;
+            top: 20%;
+            left: 6%;
+            width: 5%;
+        }
+        & .layer38Wrap {
+            display: block;
+            bottom: 9%;
+            right: 5%;
+            width: 4%;
+        }
+        & .layer39Wrap {
+            display: block;
+            bottom: 5%;
+            left: 11%;
+            width: 4%;
+        }
+        & .layer40Wrap {
+            display: block;
+            bottom: -4%;
+            left: 49%;
+            width: 5%;
+        }
+        & .layer41Wrap {
+            display: block;
+            bottom: 3%;
+            left: 40%;
+            width: 5%;
+        }
+        & .layer42Wrap {
+            display: block;
+            bottom: 10%;
+            left: 33%;
+            width: 5%;
+        }
+        & .layer43Wrap {
+            display: block;
+            bottom: -6%;
+            left: 26%;
+            width: 9%;
+        }
+        & .layer44Wrap {
+            display: block;
+            bottom: -1%;
+            left: 25%;
+            width: 5%;
+        }
+        & .layer45Wrap {
+            display: block;
+            bottom: 3%;
+            left: 29%;
+            width: 3%;
+            & img {
+                transform: rotate(180deg);
+            }
+        }
+        & .layer46Wrap {
+            display: block;
+            bottom: 0%;
+            left: 29%;
+            width: 4%;
+            & img {
+                transform: rotate(215deg);
+            }
+        }
+        & .layer47Wrap {
+            display: block;
+            bottom: 9%;
+            left: 5%;
+            width: 5%;
+        }
+        & .layer48Wrap {
+            display: block;
+            bottom: 5%;
+            left: 61%;
+            width: 4%;
+        }
+
+    }
+}

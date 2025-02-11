@@ -1,0 +1,55 @@
+{
+    "header": {
+        "language": "English"
+    },
+    "preparation" : {
+        "title" : "Eid <br/> Preparation Ar",
+        "description" : "هلا بالعيد .. وهلا بك"
+    },
+    "happiness" : {
+        "title" : "Eid <br/> Happiness Ar",
+        "description" : " هلا هلا بالعيد اللي لنا سنة نستناه ما ننسى البخور ولبس العيد اللي مجهزينه وننتظر اليوم اللي نلبسه",
+        "download-button":"حمّل هوية العيد"
+    },
+    "aud":{
+        "title":"Headline here AR",
+        "description":"بعد الكشخة يبدأ وقت التكبيرات وصلاة العيد وأجوائها الحلوة .. نسلم ونعايد وبعدين نلحق على جمعة العائلة"
+    },
+    "family":{
+        "title":"Headline here AR",
+        "description":"وبعد التهاني يجي الوقت اللي يكون فيه الصّغار اغنى من أهلهم ويجمعون فيه العيديات ويتسابقون مين يجمّع أكثر "
+    },
+    "Buttontranslate" : {
+        "title1" : "فعاليات العيد",
+        "title2" : "بطاقات المعايدة",
+        "title3" : "مطبوعات المنازل",
+        "title4" : "مطبوعات الشركات"
+    },
+    "slidertranslate" : {
+        "title1" : "Home Kit",
+        "title2" : "Greeting Card",
+        "title3" : "Eid Booklet",
+        "title4" : "Eid Identity",
+        "title5" : "Companies Kit"
+    },
+    "greetingSection" : {
+        "title" : "بطاقات المعايدة",
+        "para" : "حمّل بطاقات المعايدة لتشاركها مع أهلك وناسك",
+        "buttondownload" : "حمّل قوالب التصميم",
+        "createbutton" : "أضف معايدتك وشاركها"
+    },
+    "rideSection" : {
+        "title" : "Headline here",
+        "para" : "نجي هنا لوقت غداء العيد مع الأهل بس ناقصين   بعضهم بدت عندهم غيبوبة العيد والباقين بيلحقونهم بعد الغداء"
+    },
+    "moneySection" : {
+        "title" : "Headline here",
+        "para" : "بعد غيبوبة العيد يتجدد الحماس وين نروح وش نسوي؟ وهنا يجي دور فعاليّات العيد",
+        "buttondownload":"للاطلاع على فعاليات العيد"
+    },
+    "footerMain" : {
+        "menuone" : "Privacy",
+        "menutwo" : "Terms & Conditions",
+        "btn" : "عيد الرحلة من جديد"
+    }
+}

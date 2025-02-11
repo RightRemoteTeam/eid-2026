@@ -1,0 +1,55 @@
+{
+    "header": {
+        "language": "عربي"
+    },
+    "preparation" : {
+        "title" : "Eid <br/> Preparation",
+        "description" : "Hello to the Eid that we've been waiting for a year."
+    },
+    "happiness" : {
+        "title" : "Eid <br/> Happiness",
+        "description" : "We don't forget the incense and the Eid clothes that we've prepared, and we eagerly await the day to wear them.",
+        "download-button":"Download Eid Toolkit"
+    },
+    "aud":{
+        "title":"Headline here",
+        "description":"After getting dressed, it's time for the Takbeerat, and the Eid prayer, with its delightful atmosphere, We exchange greetings and well wishes, and then we hurry to join the family gathering."
+    },
+    "family":{
+        "title":"Headline here",
+        "description":"After the congratulations, comes the time when the children become wealthier than their parents. They collect their Eidiyah and compete to see who can collect the most."
+    },
+    "Buttontranslate" : {
+        "title1" : "Home Kit",
+        "title2" : "Greeting Card",
+        "title3" : "Eid Booklet",
+        "title4" : "Eid Identity"
+    },
+    "slidertranslate" : {
+        "title1" : "Home Kit",
+        "title2" : "Greeting Card",
+        "title3" : "Eid Booklet",
+        "title4" : "Eid Identity",
+        "title5" : "Companies Kit"
+    },
+    "greetingSection" : {
+        "title" : "Greeting Cards",
+        "para" : "To share with your loved ones!",
+        "buttondownload" : "Download",
+        "createbutton" : "Create your own"
+    },
+    "rideSection" : {
+        "title" : "Headline here",
+        "para" : "Now, let's move on to the time of the Eid lunch with the family, but we're missing some. Some have already fallen into the Eid coma, and the rest will catch up with them after lunch."
+    },
+    "moneySection" : {
+        "title" : "Headline here",
+        "para" : "After the Eid coma, the excitement renews and we start thinking about where to go and what to do. This is when the Eid activities come into play.",
+        "buttondownload":"View Activities EN"
+    },
+    "footerMain" : {
+        "menuone" : "Privacy",
+        "menutwo" : "Terms & Conditions",
+        "btn" : "Replay The Journey"
+    }
+}

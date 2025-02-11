@@ -1,0 +1,77 @@
+.quoteSection {
+    position: relative;
+    padding: 100px 0 100px;
+    @media screen and (max-width: 1280px){
+        padding: 50px 0 50px;
+    }
+    @media screen and (max-width: 600px){
+        padding: 50px 0 0px;
+    }
+    & .quoteFloat {
+        position: absolute;
+        top: 0;
+        right: 7%;
+        width: 14%;
+        @media screen and (max-width: 600px){
+            display: none;
+        }
+    }
+    & .greetingElements04 {
+        position: absolute;
+        width: 15%;
+        left: 5%;
+        top: 0%;
+        @media screen and (max-width: 600px){
+            width: 17%;
+            left: 10%;
+        }
+        @media screen and (max-width: 414px){
+        }
+    }
+    & .greetingElements05 {
+        position: absolute;
+        width: 3%;
+        left: 16%;
+        top: 8%;
+        @media screen and (max-width: 600px){
+            width: 5%;
+            left: 26%;
+        }
+    }
+    & .greetingElements06 {
+        position: absolute;
+        width: 3%;
+        left: 4%;
+        top: 13%;
+        @media screen and (max-width: 600px){
+            left: 10%;
+            top: 20%;
+            width: 5%;
+        }
+    }
+    & .greetingElements07 {
+        position: absolute;
+        width: 5%;
+        left: 20%;
+        top: 31%;
+        @media screen and (max-width: 600px){
+            width: 7%;
+            left: 28%;
+            top: 33%;
+        }
+    }
+    & .quoteSectionImg {
+        position: relative;
+        width: 48%;
+        margin: 0 auto;
+        @media screen and (max-width: 580px){
+            width: 65%;
+        }
+        &  img {
+            width: 100%;
+        }
+        .quoteNight {
+            display: none;
+        }
+    }
+}
