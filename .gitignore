@@ -25,3 +25,5 @@ yarn-error.log*
 /public/files/
 .tinypng
 *.zip
+
+._*

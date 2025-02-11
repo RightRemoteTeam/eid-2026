@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
-import PreparationSection from "../Components/Home/PreparationSection";
+import HeroSection from "../Components/Home/HeroSection";
 import HappinessSection from "../Components/Home/HappinessSection";
+import DiscoverSection1 from "../Components/Home/DiscoverSection1";
+import DiscoverSection2 from "../Components/Home/DiscoverSection2";
+import Footer from "../Components/Home/Footer";
 import OudSection from "../Components/Home/OudSection";
 import FamilySection from "../Components/Home/FamilySection";
 import ButtonSection from "../Components/Home/ButtonSection";
@@ -38,14 +41,17 @@ export default function Home() {
         message={t("modal.audio_permission_error")}
         onConfirm={handleEnableAudio}
       />
-      <PreparationSection />
+      <HeroSection />
+      <GreetingsCard />
+      <DiscoverSection1 />
+      <DiscoverSection2 />
+      <Footer />
       <HappinessSection />
       <div className="takbeerSound" ref={sectionRef}>
         <OudSection sectionRef={sectionRef} />
         <ButtonSection />
       </div>
       <FamilySection sectionRef={sectionRef} />
-      <GreetingsCard />
       <Ride />
       <Money />
       <Quote />
