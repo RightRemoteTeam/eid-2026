@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { useTheme } from '../ThemeContext';
+import React, { useEffect, useRef } from 'react'
 import { useTranslation } from "react-i18next";
 
 import "../../assets/SCSS/Home/ride.scss"
@@ -18,55 +17,83 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export default function RideSection() {
-    const { theme } = useTheme();
     const { t } = useTranslation();
+    const animPlayed = useRef(false);
+    const sectionRef = useRef(null);
     useEffect(() => {
-        gsap.to([".rideElement0"], {
-            y: 10, // offset by the width of the box
-            x: 20,
-            duration: 1,
-            // rotate:10,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true 
-        });
-        // gsap.to([".rideElement02"], {
-        //     y: 10, // offset by the width of the box
-        //     x: 20,
-        //     duration: 1,
-        //     // rotate:10,
-        //     ease: "power1.inOut",
-        //     repeat: -1,
-        //     yoyo: true 
-        // });
-        // gsap.to([".rideElement01"], {
-        //   // x: 20, // offset by the width of the box
-        //   y: 20,
-        //   duration: 1.5,
-        //   ease: "power1.inOut",
-        //   repeat: -1,
-        //   yoyo: true 
-        // });
-        gsap.to([".rideElement03"], {
-            y: 20,
-            duration: 1.5,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true 
-        });
-        gsap.to(".rideElement04", {
-            y: 20,
-            duration: 1.5,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true 
+        const section = sectionRef.current;
+        gsap.to(section, {
+          scrollTrigger: {
+            trigger: section,
+            start: "top center",
+            end: "bottom center",
+            onEnter: () => {
+              if (!animPlayed.current) {
+                animPlayed.current = true;
+                playIntro()
+              }
+            },
+          }
         });
       }, [])
-
+    const playIntro = () => {
+      gsap.to(".gsaprideElements01", {
+        scale: 1,
+        opacity: 1,
+        duration: 2,
+        x:'90%',
+        repeat: 0,
+        ease: "power1.inOut",
+        yoyo: false
+      });
+      gsap.to(".gsaprideElements02", {
+        scale: 1,
+        opacity: 1,
+        duration: 2,
+        x:'-90%',
+        repeat: 0,
+        ease: "power1.inOut",
+        yoyo: false
+      });
+        gsap.to([".gsapGreetingBalloon"], {
+          y: -15,
+          x: 10,
+          duration: 1.5,
+          rotate:-5,
+          ease: "power1.inOut",
+          repeat: -1,
+          yoyo: true 
+        });
+        gsap.to([".gsapGreetingBalloon"], {
+          y: -25,
+          x: 15,
+          duration: 2,
+          ease: "power1.in",
+          repeat: -1,
+          yoyo: true 
+        });
+        gsap.to([".rideElement0"], {
+            y: -15,
+            x: 10,
+            duration: 1.5,
+            rotate: -5,
+            ease: "power1.inOut",
+            repeat: -1,
+            yoyo: true
+          });
+          gsap.to([".rideElement0"], {
+            y: -25,
+            x: 15,
+            duration: 2,
+            ease: "power1.in",
+            repeat: -1,
+            yoyo: true
+          });
+      }
 
   return (
     <>
-        <section className="rideSection">
+        <section ref={sectionRef} className="rideSection">
             <div className="rideSectionContainer">
                 
                 <div className='rideElements'>
@@ -75,24 +102,24 @@ export default function RideSection() {
                         <img src={rideElement0} className='rideElement0 img-fit' alt="" />
                         </Parallax>
                     </div>
-                    <div className='rideElements01'>
-                        <Parallax translateX={[0, -50]} speed={10}>
-                        <img src={rideElement01} className='rideElement01 img-fit' alt="" />
+                    <div className='rideElements01 gsaprideElements01'>
+                        <Parallax translateX={[0, 50]} scale={[1.2,0.9]} speed={15}>
+                            <img src={rideElement01} className='rideElement01 img-fit' alt="" />
                         </Parallax>
                     </div>
-                    <div className='rideElements02'>
-                        <Parallax translateX={['0px', '50px']} speed={10}>
-                        <img src={rideElement02} className='rideElement02 img-fit' alt="" />
+                    <div className='rideElements02 gsaprideElements02'>
+                        <Parallax translateX={[0, -50]} translateY={[5,-15]} scale={[1.1,0.8]} speed={10}>
+                            <img src={rideElement02} className='rideElement02 img-fit' alt="" />
                         </Parallax>
                     </div>
                     <div className='rideElements03'>
-                        <Parallax translateX={['0px', '50px']} speed={10}>
-                        <img src={rideElement03} className='rideElement03 img-fit' alt="" />
+                        <Parallax  easing={'ease'} translateX={[30,0]} speed={8}>
+                          <img src={rideElement03} className='rideElement03 img-fit' alt="" />
                         </Parallax>
                     </div>
                     <div className='rideElements04'>
-                        <Parallax translateX={['0px', '50px']} speed={10}>
-                        <img src={rideElement04} className='rideElement04 img-fit' alt="" />
+                        <Parallax easing={'ease'} translateX={[30,0]}speed={5}>
+                          <img src={rideElement04} className='rideElement04 img-fit' alt="" />
                         </Parallax>
                     </div>
                 </div>

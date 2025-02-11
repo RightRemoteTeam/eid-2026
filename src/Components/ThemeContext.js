@@ -10,12 +10,15 @@ export const ThemeProvider = ({ children }) => {
   const toggleTheme = () => {
     const newTheme = theme === 'light-mode' ? 'dark-mode' : 'light-mode';
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
+    // localStorage.setItem('theme', newTheme);
   };
 
   useEffect(() => {
-    const localTheme = localStorage.getItem('theme');
-    localTheme && setTheme(localTheme);
+    // const localTheme = localStorage.getItem('theme');
+    // localTheme && setTheme(localTheme);
+    let currentTime=new Date();
+    const currentHour = currentTime.getHours();
+    (currentHour<6 || currentHour>=18) &&  setTheme('dark-mode')
   }, []);
 
   return (

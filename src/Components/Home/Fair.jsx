@@ -17,64 +17,50 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function FairSection() {
     const { theme } = useTheme();
-    useEffect(() => {
-        gsap.to([".fairkite0"], {
-          // x: 20, // offset by the width of the box
-          y: 20,
-          duration: 1.5,
-          ease: "power1.inOut",
-          repeat: -1,
-          yoyo: true 
-        });
-        gsap.to([".fairkite01"], {
-          // x: 20, // offset by the width of the box
-          y: 20,
-          duration: 1.5,
-          ease: "power1.inOut",
-          repeat: -1,
-          yoyo: true 
-        });
-        gsap.to([".fairkite02"], {
-          // x: 20, // offset by the width of the box
-          y: 20,
-          duration: 1.5,
-          ease: "power1.inOut",
-          repeat: -1,
-          yoyo: true 
-        });
-        gsap.to([".fairkite03"], {
-            y: 20,
-            duration: 1.5,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true 
-        });
-        gsap.to(".fairkite04", {
-            y: 20,
-            duration: 1.5,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true 
-        });
-        gsap.to(".fairDay", {
-            y: 20,
-            duration: 1.5,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true 
-        });
-        gsap.to(".fairNight", {
-            y: 20,
-            duration: 1.5,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true 
-        });
-      }, [])
+    // useEffect(() => {
+    //     gsap.to([".fairkite0"], {
+    //       // x: 20, // offset by the width of the box
+    //       y: 20,
+    //       duration: 1.5,
+    //       ease: "power1.inOut",
+    //       repeat: -1,
+    //       yoyo: true 
+    //     });
+    //     gsap.to([".fairkite01"], {
+    //       // x: 20, // offset by the width of the box
+    //       y: 20,
+    //       duration: 1.5,
+    //       ease: "power1.inOut",
+    //       repeat: -1,
+    //       yoyo: true 
+    //     });
+    //     gsap.to([".fairkite02"], {
+    //       // x: 20, // offset by the width of the box
+    //       y: 20,
+    //       duration: 1.5,
+    //       ease: "power1.inOut",
+    //       repeat: -1,
+    //       yoyo: true 
+    //     });
+    //     gsap.to([".fairkite03"], {
+    //         y: 20,
+    //         duration: 1.5,
+    //         ease: "power1.inOut",
+    //         repeat: -1,
+    //         yoyo: true 
+    //     });
+    //     gsap.to(".fairkite04", {
+    //         y: 20,
+    //         duration: 1.5,
+    //         ease: "power1.inOut",
+    //         repeat: -1,
+    //         yoyo: true 
+    //     });
+    //   }, [])
 
   return (
     <>
-        <section className="fairSection">
+        {/* <section className="fairSection">
             <div className="fairSectionContainer">
                 <div className='fairKites'>
                     <div className='fairKites0'>
@@ -112,7 +98,7 @@ export default function FairSection() {
                     </Parallax>
                 </div>
             </div>
-        </section>
+        </section> */}
     </>
   )
 }

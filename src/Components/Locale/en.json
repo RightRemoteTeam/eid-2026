@@ -8,48 +8,71 @@
     },
     "happiness" : {
         "title" : "Eid <br/> Happiness",
-        "description" : "We don't forget the incense and the Eid clothes that we've prepared, and we eagerly await the day to wear them.",
-        "download-button":"Download Eid Toolkit"
+        "description" : "After a whole year of patiently, but eagerly waiting, Eid is finally here! Hands up everyone who missed the incense smells, the outfits and the delicious food? But first, let’s get Eid-ready with our outfits.",
+        "download-button":"Eid Identity"
     },
     "aud":{
         "title":"Headline here",
-        "description":"After getting dressed, it's time for the Takbeerat, and the Eid prayer, with its delightful atmosphere, We exchange greetings and well wishes, and then we hurry to join the family gathering."
+        "description":"Now that we’re ready in our new Eid outfits, it’s time for Takbeer or Eid prayers. Let’s revel in this beautiful moment. Later, let’s join the family gathering and exchange warm greetings with loved ones."
     },
     "family":{
         "title":"Headline here",
-        "description":"After the congratulations, comes the time when the children become wealthier than their parents. They collect their Eidiyah and compete to see who can collect the most."
+        "description":"After that much-needed family time, it’s the kids’ favourite part, Eideyah! Time for them to engage in friendly banter as to who received the most."
     },
     "Buttontranslate" : {
-        "title1" : "Home Kit",
-        "title2" : "Greeting Card",
-        "title3" : "Eid Booklet",
-        "title4" : "Eid Identity"
+        "title1" : "Houses \n Decorations",
+        "title2" : "Greeting \n Cards",
+        "title3" : "Tool \n Kit",
+        "title4" : "Eid Events\n Booklet",
+        "title5" : "Companies \n Decorations"
     },
     "slidertranslate" : {
-        "title1" : "Home Kit",
-        "title2" : "Greeting Card",
-        "title3" : "Eid Booklet",
-        "title4" : "Eid Identity",
-        "title5" : "Companies Kit"
+        "title1" : "Houses Decorations",
+        "title2" : "Greeting Cards",
+        "title3" : "Tool Kit",
+        "title4" : "Eid Events Booklet",
+        "title5" : "Companies Decorations"
     },
     "greetingSection" : {
         "title" : "Greeting Cards",
         "para" : "To share with your loved ones!",
-        "buttondownload" : "Download",
+        "buttondownload" : "Your Greeting",
         "createbutton" : "Create your own"
     },
     "rideSection" : {
         "title" : "Headline here",
-        "para" : "Now, let's move on to the time of the Eid lunch with the family, but we're missing some. Some have already fallen into the Eid coma, and the rest will catch up with them after lunch."
+        "para" : "Next up, a treat for the eyes and a feast for the belly, it’s ‘Eid lunch’ with family. Although we might be missing a few due to food coma, there’s plenty of room for laughter and fun."
     },
     "moneySection" : {
         "title" : "Headline here",
-        "para" : "After the Eid coma, the excitement renews and we start thinking about where to go and what to do. This is when the Eid activities come into play.",
-        "buttondownload":"View Activities EN"
+        "para" : "After we emerge from our Eid coma, everyone’s excited about Eid outings. Where do we go? What adventures can await? Don’t worry, we have you covered, with Eid events.",
+        "buttondownload":"Discover our Eid Events"
     },
     "footerMain" : {
         "menuone" : "Privacy",
         "menutwo" : "Terms & Conditions",
-        "btn" : "Replay The Journey"
+        "btn" : "Replay The Journey",
+        "back_to_journey" : "Back to Eid journey"
+    },
+    "modal" : {
+        "audio_permission_error" : "For better user experience enable the audio access",
+        "button_close" : "OK"
+    },
+    "meta":{
+        "title":"Eid al-Fitr 2024 Identity",
+        "description":"Joyful moments you live, and unforgettable feelings with your family and loved ones."
+    },
+    "DownloadPopup":{
+        "ButtonText":"Download"
+    },
+    "Preview":{
+        "edit":"Edit",
+        "download":"Download"
+    },
+    "Greetings":{
+        "preview":"Preview",
+        "name":"Enter your name",
+        "message":"Type your message here!",
+        "messageLimit":"Maximum 25 characters"
     }
 }

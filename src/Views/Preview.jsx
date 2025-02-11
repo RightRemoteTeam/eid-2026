@@ -1,69 +1,117 @@
-import React, {useRef} from "react";
-import { useLocation, Link, useParams } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import { useLocation, Link, useParams, useOutletContext,useNavigate } from "react-router-dom";
 import fb from "../assets/images/fb.png";
 import x from "../assets/images/twitter.png";
 import whatsapp from "../assets/images/wtsap.png";
 import { useTranslation } from "react-i18next";
 import ENV from "../Components/Constants";
 import "../assets/SCSS/preview.scss"
-import { useScreenshot,createFileName } from 'use-react-screenshot'
-import html2canvas from "html2canvas";
-
+import { saveAs } from 'file-saver'
+import { useTheme } from "../Components/ThemeContext";
 export default function Preview() {
 
-  const ref = useRef(null)
+  const { theme } = useTheme();
   const {t} = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
   const { lang } = useParams();
-  const queryParams = new URLSearchParams(location.search);
-  const card = queryParams.get("card");
-  const name = decodeURIComponent(queryParams.get("name") || "");
-  const message = decodeURIComponent(queryParams.get("message") || "");
-  const [image, takeScreenshot] = useScreenshot();
-  // const getImage = () => takeScreenshot(ref.current).then(download)
-  
- 
-  console.log('message:',message);
-  // const download = (image, { name = "img", extension = "png" } = {}) => {
-  //   console.log("download triggered");
-  //   const a = document.createElement("a");
-  //   a.href = image;
-  //   a.download = createFileName(extension, name);
-  //   a.click();
-  // };
-  const shareOnFacebook = () => {
-    console.log("Share triggered");
-    // getImage()
-    // const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(ENV.SHARE_URL)}?card=${encodeURIComponent(card + 1)}&name=${encodeURIComponent(name)}&message=${encodeURIComponent(message)}`;
-    // window.open(shareUrl, '_blank');
-    html2canvas(ref.current).then(function (canvas) {
-      const link = document.createElement("a");
-      link.download = "test.png";
-      link.href = canvas.toDataURL("image/png");
-      link.click();
+  const [pageLoaded,setPageLoaded] = useOutletContext();
+
+  const { card, name } = location.state || {};
+  const [error, setError] = useState(null);
+  const [image, setImage] = useState(null);
+  const [shareUrl, setShareUrl] = useState(null);
+  const [filename, setFilename] = useState(card+'.png');
+
+
+  useEffect(() => {
+    setPageLoaded(false)
+    console.log('theme:',theme);
+    setImage(`${ENV.APP_URL}/cards/${theme}.jpeg`);
+    setError(null);
+    try {
+      fetch(`${ENV.PHP_SERVER}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        card: card
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .then(data => {
+      if (data.error) {
+        setError(data.error);
+        // navigate('/');
+      }else{
+        setImage(`${data.image}`);
+        setShareUrl(`${ENV.APP_URL}/${lang}/share?id=${data.time}`);
+        setFilename(`${data.time}.png`)
+        setError(null);
+        setPageLoaded(true)
+      }
+    })
+    .catch(error => {
+      setError(error);
+      // navigate('/');
     });
+
+    } catch (error) {
+      setPageLoaded(true);
+      setError(error.message);
+      // navigate('/');
+    } finally {
+      setPageLoaded(true);
+    }
+  }, [])
+  
+  const shareOnFacebook = () => {
+    if (error == null) {
+      const SCL_shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+      window.open(SCL_shareUrl, '_blank');
+    }
   }
 
   const shareOnTwitter = () => {
-    // getImage()
-    const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(`${ENV.SHARE_URL}?card=${card + 1}&name=${name}&message=${message}`)}`;
+
+    const tweetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(`${shareUrl}`)}`;
     window.open(tweetUrl, '_blank');
+  }
+  const shareOnWhatsApp = () => {
+
+    const wtsappUrl = `https://wa.me/?text=${encodeURIComponent(`${shareUrl}`)}`;
+    window.open(wtsappUrl, '_blank');
+  }
+
+  const download = () => {
+    
+    saveAs(image, filename);
+    
   }
 
   return (
     <section className="preview-card-container">
-      <div className="card" id="card" ref={ref} >
+      <div className="card" id="card" >
         <img
-          src={`${process.env.PUBLIC_URL}/cards/g${+card + 1}.png`}
+          src={`${image}`}
           width="100%"
           alt="Eid Mubarak Card"
         />
-        <div className="centered-text ">
+        {/* <div className="centered-text ">
           <p className="name">{name}</p>
           <p className="message">{message}</p>
-        </div>
+        </div> */}
       </div>
       <div className="social-and-buttons">
+      {/*
         <div className="social-icons">
           
             <img onClick={shareOnFacebook} src={fb} alt="fb" />
@@ -72,17 +120,18 @@ export default function Preview() {
             <img onClick={shareOnTwitter} src={x} alt="twitter" />
           
           
-            <img onClick={shareOnTwitter} src={whatsapp} alt="whatsapp" />
+            <img onClick={shareOnWhatsApp} src={whatsapp} alt="whatsapp" />
           
         </div>
+      */}
         <div className="buttons">
           <Link
             to={`/${lang}/greetings`}
             className="btn btn-primary download-btn"
           >
-            Back
+            {t('Preview.edit')}
           </Link>
-          <button type="button">Download</button>
+          <button onClick={download} type="button">{t('Preview.download')}</button>
         </div>
       </div>
     </section>

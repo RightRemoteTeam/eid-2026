@@ -14,9 +14,11 @@ section.aud {
         }
 
         & .section-box {
-            max-width: 70%;
+            max-width: 500px;
             padding: 0;
             margin: auto;
+            position: relative;
+            z-index: 1;
 
             @media only screen and (max-width: $bp-tab) {
                 max-width: 100%;
@@ -31,51 +33,112 @@ section.aud {
     }
 
     & .aud-container {
-        padding: 25% 10px 35%;
+        padding: 50px 10px 100px;
 
         // 82px 10px 25rem
-        @media only screen and (max-width: 900px) {
-            padding: 20% 10px 50%;
-        }
-
         @media only screen and (max-width: 760px) {
-            padding: 15% 10px 40%;
+            padding: 70px 10px 100px;
         }
-
-        @media only screen and (max-width: 600px) {
-            padding: 15% 10px 40%;
+        @media only screen and (max-width: 500px) {
+            padding: 40px 10px 20px;
         }
-
-        @media only screen and (max-width: 480px) {
-            padding: 15% 10px 45%;
+        & .takbeer-img{
+            & .takbeer-text{
+                position: absolute;
+                width: 20%;
+                top: -25%;
+                right: 10%;
+                transform: rotate(40deg);
+                &.takbeer-en{
+                    width: 25%;
+                    @media only screen and (max-width: 760px) {
+                        width: 25%;
+                    }
+                    @media only screen and (max-width: $bp-mobile) {
+                        width: 28%;
+                    }
+                    @media only screen and (max-width: 375px) {
+                        width: 34%;
+                    }
+                }
+                & .takbeerDark{
+                    display: none;
+                }
+                & img {
+                    width: 100%;
+                }
+                @media only screen and (max-width: 760px) {
+                    width: 22%;
+                }
+                @media only screen and (max-width: $bp-mobile) {
+                    width: 25%;
+                }
+                @media only screen and (max-width: 375px) {
+                    width: 28%;
+                }
+            }
         }
+        & .shine-bottom {
+            position: absolute;
+            top: -10%;
+            left: 43%;
+            width: 5%;
+            transform: rotate(-15deg);
 
-        @media only screen and (max-width: 375px) {
-            padding: 20% 10px 50%;
+            & img {
+                width: 100%;
+
+                // @media only screen and (max-width: $bp-small) {
+                //     width: 8rem;
+                // }
+            }
+
+            // @media only screen and (max-width: $bp-tab) {
+            //     right: 2%;
+            //     top: 25%;
+            // }
+
+            @media only screen and (max-width: 760px) {
+                width: 10%;
+            }
+            @media only screen and (max-width: $bp-mobile) {
+                width: 12%;
+            }
+
+            @media only screen and (max-width: 375px) {
+                width: 12%;
+            }
+
+            
         }
-
         & .aud-left-img {
             & .oud-pink-ballon {
                 position: absolute;
-                top: 26%;
-                left: 9%;
-                width: 15%;
+                top: 4%;
+                left: 7%;
+                width: 10%;
 
+                // @media only screen and (max-width: $bp-tab) {
+                //     top: 0px;
+                //     left: 0%;
+                //     width: 16%;
+                // }
+
+                // @media only screen and (max-width: $bp-mobile) {
+                //     top: 0px;
+                //     left: 0%;
+                //     width: 18%;
+                // }
                 @media only screen and (max-width: $bp-tab) {
-                    top: 0px;
-                    left: 0%;
                     width: 16%;
                 }
 
                 @media only screen and (max-width: $bp-mobile) {
-                    top: 0px;
-                    left: 0%;
                     width: 18%;
                 }
-
                 @media only screen and (max-width: 375px) {
-                    top: 0;
-                    left: 0%;
+                    top: 4%;
+                    left: 7%;
                     width: 22%;
                 }
 
@@ -102,22 +165,26 @@ section.aud {
     & .aud-bottom-elements {
         & .oud-green-ballon {
             position: absolute;
-            bottom: 0;
-            left: 15%;
-            width: 18%;
+            bottom: -10%;
+            left: 4%;
+            width: 14%;
 
+            // @media only screen and (max-width: $bp-mobile) {
+            //     bottom: 0%;
+            //     left: 15%;
+            //     width: 22%;
+            // }
+
+            @media only screen and (max-width: 480px) {
+                width: 17%;
+            }
             @media only screen and (max-width: $bp-mobile) {
-                bottom: 0%;
-                left: 15%;
                 width: 22%;
             }
 
             @media only screen and (max-width: 375px) {
-                bottom: 0%;
-    left: 18%;
-    width: 24%;
+                width: 24%;
             }
-
             & img {
                 width: 100%;
             }
@@ -127,21 +194,21 @@ section.aud {
         & .waves {
             & .aud-orange {
                 position: absolute;
-                right: -28%;
-                bottom: 14.5rem;
-                width: 88%;
-                @media only screen and (max-width: $bp-mobile) {
-                right: -34%;
-                bottom: 9.5rem;
-                width: 100%;
-                }
-                @media only screen and (max-width: 375px) {
+                right: -31%;
+                bottom: -4.5rem;
+                width: 68%;
+                // @media only screen and (max-width: $bp-mobile) {
+                //     right: -34%;
+                //     bottom: 9.5rem;
+                //     width: 100%;
+                // }
+                // @media only screen and (max-width: 375px) {
     
-                    position: absolute;
-                    right: -36%;
-                    bottom: 8.5rem;
-                    width: 105%;
-                }
+                //     position: absolute;
+                //     right: -36%;
+                //     bottom: 8.5rem;
+                //     width: 105%;
+                // }
                 & img {
                     width: 100%;
                 }

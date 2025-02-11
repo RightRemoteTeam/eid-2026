@@ -20,7 +20,7 @@
         position: absolute;
         width: 15%;
         left: 5%;
-        top: 0%;
+        top: -20%;
         @media screen and (max-width: 600px){
             width: 17%;
             left: 10%;
@@ -32,7 +32,7 @@
         position: absolute;
         width: 3%;
         left: 16%;
-        top: 8%;
+        top: -22%;
         @media screen and (max-width: 600px){
             width: 5%;
             left: 26%;
@@ -42,7 +42,7 @@
         position: absolute;
         width: 3%;
         left: 4%;
-        top: 13%;
+        top: -7%;
         @media screen and (max-width: 600px){
             left: 10%;
             top: 20%;
@@ -53,7 +53,7 @@
         position: absolute;
         width: 5%;
         left: 20%;
-        top: 31%;
+        top: 11%;
         @media screen and (max-width: 600px){
             width: 7%;
             left: 28%;
@@ -63,7 +63,9 @@
     & .quoteSectionImg {
         position: relative;
         width: 48%;
+        padding-top: 5%;
         margin: 0 auto;
+        z-index: 2;
         @media screen and (max-width: 580px){
             width: 65%;
         }

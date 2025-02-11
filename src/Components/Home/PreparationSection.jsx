@@ -5,31 +5,35 @@ import { useOutletContext } from "react-router-dom"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useParams } from "react-router-dom";
 import "../../assets/SCSS/Home/preparation.scss"
-import introCup from "../../assets/images/PreparationCup.png";
-import introCylinder from "../../assets/images/PreparationJug.png";
-import shineImage from "../../assets/images/img15.png";
-import lineImage from "../../assets/images/FlagsLine1.png";
-import line1M from "../../assets/images/FlagsLine1M.png";
-import line2M from "../../assets/images/FlagLine2M.png";
-import secondLineImage from "../../assets/images/FlagLine2.png";
-import halfBuscuit from "../../assets/images/img10.png"
-import fullBuscuit from "../../assets/images/Biscuit1.png"
-import audioFile from "../../assets/Sounds/4-Eid-music-all.mp3"
-import ArContentImage from "../../assets/images/preparationAr.png"
-import ArDarkContent from "../../assets/images/img_14_2.png"
-import EnContentImage from "../../assets/images/preparationAr.png"
-import EnDarkContentImage from "../../assets/images/img_14_2.png"
-import { useTheme } from "../ThemeContext";
-
+import introCup from "../../assets/images/preparation/preparationCup.png";
+import introCupCoffee from "../../assets/images/preparation/preparationCupCoffee.png";
+import introCylinder from "../../assets/images/preparation/preparationJug.png";
+import shineImage from "../../assets/images/elements/shine01.png";
+import lineImage from "../../assets/images/preparation/flag.png";
+import line1M from "../../assets/images/preparation/flagM.png";
+import line2M from "../../assets/images/preparation/FlagLine2M.png";
+import secondLineImage from "../../assets/images/preparation/flag1.png";
+import halfBuscuit from "../../assets/images/elements/BiscuitHalf.png"
+import fullBuscuit from "../../assets/images/elements/BiscuitFull.png"
+import audioFile from "../../assets/Sounds/1-morning-with-birds.mp3"
+import ArContentImage from "../../assets/images/preparation/preparationArTxt.png"
+import ArDarkContent from "../../assets/images/preparation/preparationArTxtNight.png"
+import EnContentImage from "../../assets/images/preparation/preparationEnTxt.png"
+import EnDarkContentImage from "../../assets/images/preparation/preparationEnTxtNight.png"
+import buzz from "buzz";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PeparationSection() {
     const { lang } = useParams();
-    const { theme } = useTheme();
     const [audioEnabled] = useOutletContext();
-    const [audio] = useState(new Audio(audioFile));
+    const [pageLoaded] = useOutletContext();
+    // const [audio] = useState(new Audio(audioFile));
     const sectionRef = useRef(null);
+    const [aniamtionDone, setAnimationDone] = useState (false);
     const playAudioRef = useRef(audioEnabled);
+    const audioRef= useRef(null)
+    var mySound = new buzz.sound(audioFile);
+    buzz.defaults.loop = true;
     useEffect(() => {
         playAudioRef.current = audioEnabled;
     }, [audioEnabled])
@@ -39,8 +43,8 @@ export default function PeparationSection() {
             scrollTrigger: {
                 trigger: section,
                 start: "top center",
-                end: "bottom 30%",
-                id: "testing end",
+                end: "bottom center",
+                id: "preparation",
                 onEnter: () => {
                     if (audioEnabled) {
                         playBackgroundAudio();
@@ -63,154 +67,169 @@ export default function PeparationSection() {
                 onLeave: (self) => {
                     stopBackgroundAudio();
                 },
-                onUpdate: (scrollTrigger) => {
-                    adjustVolume(scrollTrigger.progress);
-                }
             }
         });
         return () => {
+            ScrollTrigger.getById("preparation").kill(true);
             stopBackgroundAudio();
         };
     }, [audioEnabled])
     const playBackgroundAudio = () => {
         if (audioEnabled === true) {
-            audio.loop = true;
-            audio.play();
+            // audioRef.current.loop = true;
+            // audioRef.current.play();
+            mySound.play();
         }
     }
     const stopBackgroundAudio = () => {
         if (audioEnabled) {
-            audio.pause();
-            audio.currentTime = 0;
-            // console.log("Preparation stop");
-        }
-    }
-    const adjustVolume = (progress) => {
-        if (audio) {
-
-            const maxVolume = 1;
-            const minVolume = 0.2;
-            const targetVolume = maxVolume - (progress * (maxVolume - minVolume));
-
-
-            audio.volume = targetVolume;
+            // audioRef.current.pause();
+            // audioRef.current.currentTime = 0;
+            mySound.stop()
         }
     }
     useEffect(() => {
-        gsap.to([".gsapCup",], {
-            // x: 20, // offset by the width of the box
-            y: 20,
-            duration: 2,
-            rotate: 10,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true
-        });
-        gsap.to(".gsapHeaderShine", {
-            x: 20, // offset by the width of the box
-            y: -20,
-            scale: 1,
-            duration: 2,
-            rotate: 10,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true
-        });
-        gsap.to(".jugImage", {
-            // x: 20, // offset by the width of the box
-            y: 10,
-            scale: 1,
-            duration: 2,
-            rotate: 15,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true
-        });
-        gsap.to([".gsaphalf"], {
-            x: 20, // offset by the width of the box
-            y: 10,
-            duration: 1.5,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true
-        });
-        gsap.to([".gsapfull"], {
-            // x: 20, // offset by the width of the box
-            y: 10,
-            duration: 2,
-            ease: "power1.inOut",
-            repeat: -1,
-            yoyo: true
-        });
-    }, [])
+        if (!aniamtionDone) {
+            setAnimationDone (true)
+            gsap.from([".gsapCup",".gsapCupCoffee"], {
+                delay:1,
+                scale: 2,
+                x: 200, 
+                opacity:0,
+                duration: 0.8,
+                rotate: 15,
+                repeat:0,
+                ease: "power1.out",
+                yoyo: false
+            });
+            gsap.from(".jugImage", {
+                // x: 20, // offset by the width of the box
+                delay:1,
+                scale: 2,
+                x: -200, 
+                opacity:0,
+                duration: 0.8,
+                rotate: -15,
+                repeat:0,
+                ease: "power1.out",
+                yoyo: false
+            });
+    
+            gsap.to(".arContent", {
+                // x: 20, // offset by the width of the box
+                delay:1.4,
+                scale: 0.8,
+                opacity:1,
+                duration: 0.8,
+                repeat:0,
+                ease: "power1.inOut",
+                yoyo: false
+            });
+            gsap.from([".gsaphalf"], {
+                delay:1.4,
+                opacity:0,
+                duration: 0.8,
+                repeat:0,
+                ease: "power1.inOut",
+                yoyo: false
+            });
+            gsap.from([".gsapfull"], {
+                delay:1.5,
+                opacity:0,
+                duration: 0.8,
+                repeat:0,
+                ease: "power1.inOut",
+                yoyo: false
+            });
+    
+            gsap.to(".gsapHeaderShine", {
+                scale: 1.2,
+                duration: 1.5,
+                ease: "power1.inOut",
+                repeat: -1,
+                yoyo: true
+            });
+        }
+    }, [pageLoaded])
     return (
         <>
             <section ref={sectionRef} className="header">
                 <div className="header-container">
                 <div className="header-right-img header-img">
                         <div className="header-shine-image">
-                            <article easing={"easeIn"} className="shine" translateY={[0, 10]} scale={[0, 2]} speed={10}>
+                            <Parallax easing={"easeInOut"} className="shine" scale={[0.6, 1]} speed={10}>
                                 <img
-
                                     src={shineImage}
                                     className="gsapHeaderShine img-fit"
                                     alt=""
                                 />
-                            </article>
+                            </Parallax>
                         </div>
                         <div className="header-jug-image">
-                            <article  className="jug" speed={20}>
-                                <img className="jugImage" src={introCylinder} alt="" />
-                            </article >
+                            <div className="jug">
+                                <Parallax translateY={[0,-10]} translateX={[60,-100]}  speed={-5} scale={[1.2, 1]} rotate={[0,20]}>
+                                    <img className="jugImage" src={introCylinder} alt="" />
+                                </Parallax >
+                            </div>
                             <div className="buscuits">
-                                <article easing={"ease"} className="full" speed={15}>
+                                <Parallax easing={"ease"} className="full" speed={7}>
                                     <img className="gsapfull img-fit" src={fullBuscuit} alt="" />
-                                </article>
-                                <article easing={"ease"} className="half" speed={20}>
+                                </Parallax>
+                                <Parallax easing={"ease"} className="half" speed={2}>
                                     <img className="gsaphalf img-fit" src={halfBuscuit} alt="" />
-                                </article>
+                                </Parallax>
                             </div>
                         </div>
                     </div>   
                     <div className="header-intro-content">
-                        {/* <article className="jug" speed={0}> */}
                         {
                             lang === "en"
                                 ?
-                                <article translateY={[-50,100]} speed={-20} className="arContent">
+                                <Parallax scale={[0.8,1.1]} speed={-10} className="arContent">
                                     <img src={EnContentImage} className="light-preparation-Qoute" alt="" />
                                     <img src={EnDarkContentImage} className="dark-preparation-Qoute" alt="" />
-                                </article>
+                                </Parallax>
                                 :
-                                <div className="arContent">
+                                <Parallax scale={[0.8,1.1]} speed={-10} className="arContent">
                                     <img src={ArContentImage} className="light-preparation-Qoute" alt="" />
                                     <img src={ArDarkContent} className="dark-preparation-Qoute" alt="" />
-                                </div>
+                                </Parallax>
                         }
-                        {/* </article> */}
                     </div>
 
                     <div className="header-left-img header-img">
                         <div className="header-cup-image">
-                            <Parallax easing={"easeInOut"} className="intro-cup"   speed={20}>
-                                <img className="gsapCup" src={introCup} alt="" />
+                            <div className="intro-cup">
+                                <Parallax easing={"easeInOut"} translateY={[-50, 120]} speed={5} rotate={[-10,0]} translateX={[-60,30]}>
+                                    <img className="gsapCup" src={introCup} alt="" />
+                                </Parallax>
+                            </div>
+                            <div className="intro-cup">
+                                <Parallax easing={"easeInOut"} translateY={[-50, 120]} speed={5} rotate={[-10,0]} translateX={[-60,30]}>
+                                    <img className="gsapCupCoffee" src={introCupCoffee} alt="" />
+                                </Parallax>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="preparation-bottom-images-flag">
+                    <div className="celeberationLine-group">
+                        <div className="line-1">
+                            <Parallax easing={"ease"}  speed={10}>
+                                <img src={lineImage}  alt="" />
+                                <img src={line1M} className="img-fit" alt="" />
+                            </Parallax>
+                        </div>
+                        <div className="line-2">
+                            <Parallax easing={"ease"}  speed={-5}>
+                                <img src={secondLineImage} alt="" />
+                                <img src={line2M} className="img-fit" alt="" />
                             </Parallax>
                         </div>
                     </div>
                 </div>
             </section>
-            <div className="preparation-bottom-images">
-                <div className="celeberationLine-group">
-                    <article easing={"ease"} className="line-1" speed={15}>
-                        <img src={lineImage}  alt="" />
-                        <img src={line1M} className="img-fit" alt="" />
-                    </article>
-                    <article easing={"ease"} className="line-2" speed={5}>
-                        <img src={secondLineImage} alt="" />
-                        <img src={line2M} className="img-fit" alt="" />
-                    </article>
-                </div>
-            </div>
+            {/* <audio ref={audioRef} src={audioFile} style={{display:'none'}}/> */}
         </>
     )
 }

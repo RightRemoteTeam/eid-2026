@@ -1,9 +1,6 @@
 .moneySection {
-    padding: 150px 0 50px;
+    padding: 70px 0 50px;
     position: relative;
-    @media screen and (max-width: 1280px){
-        padding: 100px 0 50px;
-    }
     & .moneyElements {
         & .moneyElements0 {
             position: absolute;
@@ -72,6 +69,7 @@
             position: absolute;
             bottom: 10%;
             right: 8%;
+            z-index: 9;
             @media screen and (max-width: 680px){
                 width: 70px;
                 position: absolute;
@@ -113,25 +111,27 @@
         text-align: center;
         max-width: 500px;
         position: relative;
+        z-index: 9;
         @media screen and (max-width: 680px){
-            max-width: 180px;
+            max-width: 300px;
             position: relative;
         }
         h2 {
             color: #54b55c;
         }
         p {
-            font-weight: 400;
             color: #000;
         }
         & .btn.btn-primary {
             margin: 40px 0 0;
             display: block;
             width: 100%;
+            /*
             box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
             -webkit-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
             -moz-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
             background: #8a59c8;
+            */
             padding: 15px 0;
             @media screen and (max-width: 680px){
                 width: 100%;
@@ -139,18 +139,20 @@
                 padding: 10px 0;
             }
         }
+        /*
         & .btn.btn-primary:hover{
             background-color: #fff !important;
             color: #5C5C5C;
         }
+        */
         & .btnLogo {
             margin-top: 30px;
             a{
                 display: inline-block;
                 padding: 3px;
                 border-radius: 10px;
-                border: 1px solid #804DBF;
-                background: #fff;
+                //border: 1px solid #804DBF;
+                //background: #fff;
                 @media screen and (max-width: 680px){
                     width: 70px;
                 }

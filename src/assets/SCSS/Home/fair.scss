@@ -76,9 +76,13 @@
     }
     & .footerMainGroup {
         position: relative;
+        & >div{
+            z-index: 6;
+        }
         & .layer01Wrap {
             position: relative;
             width: 100%;
+            z-index: 0;
         }
         & .layer01aWrap {
             position: relative;

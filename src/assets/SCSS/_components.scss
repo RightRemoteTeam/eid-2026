@@ -12,13 +12,20 @@
     }
 
     & p {
-        font-size: 1.8rem;
+        font-size: 3rem;
         font-weight: 300;
         font-family: inherit;
         margin-top: 1rem;
         margin-bottom: 3rem;
+        position: relative;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 20px;
+        }
     }
 
+}
+a{
+    cursor: pointer;
 }
 body.rtl{
     p{
@@ -71,23 +78,33 @@ body.rtl{
     text-decoration: none;
 }
 .btn.btn-primary{
-    font-size: 1.6rem;
+    font-size: 18px;
     font-weight: 500;
+    font-family: inherit;
     padding: 1rem 4rem;
-    background-color: $button-color;
     display: block;
-    color: $color-white;
+    border: none;
     width: fit-content;
     margin: 0 auto;
+    cursor: pointer;
     border-radius: 50rem;
+    /*
+    color: $color-white;
+    background-color: $button-color;
     box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
     -webkit-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
     -moz-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
+    */
+    @media only screen and (max-width: $bp-small) {
+        font-size: 16px;
+    }
 }
 .dark-mode  .btn.btn-primary{
-    box-shadow: -1px 0px 23px -11px rgba(0, 0, 0, 0.69);
-    -webkit-box-shadow: -1px 0px 23px -11px rgba(0, 0, 0, 0.69);
-    -moz-box-shadow: -1px 0px 23px -11px rgba(0, 0, 0, 0.69);
+    /*
+    box-shadow: -1px 0px 25px -8px rgb(255 200 54);
+    -webkit-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
+    -moz-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
+    */
     background: $dark-button-color;
     color: $dark-button-text-color;
 }
