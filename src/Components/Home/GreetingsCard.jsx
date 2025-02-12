@@ -17,7 +17,7 @@ import greetingGiftBox01 from "../../assets/images/greetingcard/giftbox.png";
 import greetingSweet01 from "../../assets/images/greetingcard/sweet1.png";
 import greetingGoldCash from "../../assets/images/greetingcard/goldcash.png";
 import greetingGreenCash from "../../assets/images/greetingcard/greencash.png";
-import greetingElement08 from "../../assets/images/elements/BiscuitFull.png";
+import greetingDarkCard from "../../assets/images/greetingcard/darkcard.png";
 import greetingElement09 from "../../assets/images/greetingElement09.png";
 import greetingCard01 from "../../assets/images/greetingcard/card2.png";
 import greetingCard02 from "../../assets/images/greetingcard/card3.png";
@@ -153,283 +153,173 @@ export default function GreetingSection() {
         url={downloadLink}
       />
       <section ref={sectionRef} className="greetingSection">
-          <div className="greetingTopSection">
-            <div className="decoration1">
-            <Parallax easing={"ease"}  speed={10}>
-              <img
-                src={greetingsTopDecoration01}
-                className="greetingsTopDecoration01 img-fit"
-                alt=""
-              />
-              </Parallax>
-            </div>
-            <div className="decoration2">
-            <Parallax easing={"ease"}  speed={10}>
-              <img
-                src={greetingsTopDecoration02}
-                className="greetingsTopDecoration02 img-fit"
-                alt=""
-              />
-              </Parallax>
-            </div>
-            <div className="balloon1">
-            <Parallax speed={10} translateY={[ 0, -100]}>
-            <div className="gsapGreetingBalloon">
-              <img
-                src={greetingsTopBalloon1}
-                className="greetingsTopBalloon1 img-fit"
-                alt=""
-              />
-              </div>
-              </Parallax>
-            </div>
-
-            <div className="balloon2">
-            <Parallax translateY={[0, -100]} speed={10}>
-            <div className="gsapGreetingGreenBalloon">
-              <img
-                src={greetingsTopBalloon2}
-                className="greetingsTopBalloon2 img-fit"
-                alt=""
-              />
-            </div>
-            </Parallax>
-            </div>
-            <div className="greetingsTop01">
-              <img
-                src={greetingsTopElement01}
-                className="greetingsTopElement01 img-fit"
-                alt=""
-              />
-            </div>
-            <div className="greetingsTop02">
-              <img
-                src={greetingsTopElement02}
-                className="greetingsTopElement02 img-fit"
-                alt=""
-              />
-              <button className="btn btn-primary download-btn">
-                {" "}
-                Eid Identity{" "}
-              </button>
-            </div>
-          </div>
         <div className="greetingSectionContainer">
           <div className="greetingSectionHeading">
-            <p>
-              Now that we’re ready in our new Eid outfits, it’s time for Takbeer
-              or Eid prayers. Let’s revel in this beautiful moment. Later, Let’s
-              join the family gathering and exchange warm greetings with loved
-              ones.
-            </p>
+            <p>Now that we’re ready in our new Eid outfits, it’s time for
+              Takbeer or Eid prayers. Let’s revel in this beautiful moment.
+              Later, Let’s join the family gathering and exchange warm
+              greetings with loved ones.</p>
           </div>
-          <div className="greetingElements">
+          <div className='greetingElements'>
             <div className="greetingCards">
-              <div className="greetingElements01">
-                {lang === "en" ? (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard02}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard02}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                )}
+              <div className='greetingElements01'>
+                {
+                  lang === "en"
+                    ?
+                    <div className='greetingCardContainer'>
+                      <img src={greetingCard01} className='greetingElement01 img-fit' alt="" />
+                      <button
+                        className="btn btn-primary download-btn">
+                        {t("greetingSection.buttondownload")}
+                      </button>
+                    </div>
+                    :
+                    <div className='greetingCardContainer'>
+                      <img src={greetingCard01} className='greetingElement01 img-fit' alt="" />
+                      <button
+                        className="btn btn-primary download-btn">
+                        {t("greetingSection.buttondownload")}
+                      </button>
+                    </div>
+
+                }
               </div>
-              <div className="greetingElements01">
-                {lang === "en" ? (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard01}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard01}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                )}
+              <div className='greetingElements01'>
+                {
+                  lang === "en"
+                    ?
+                    <div className='greetingCardContainer'>
+                      <img src={greetingCard02} className='greetingElement01 img-fit' alt="" />
+                      <button
+                        className="btn btn-primary download-btn">
+                        {t("greetingSection.buttondownload")}
+                      </button>
+                    </div>
+                    :
+                    <div className='greetingCardContainer'>
+                      <img src={greetingCard02} className='greetingElement01 img-fit' alt="" />
+                      <button
+                        className="btn btn-primary download-btn">
+                        {t("greetingSection.buttondownload")}
+                      </button>
+                    </div>
+
+                }
               </div>
-              <div className="greetingElements01">
-                {lang === "en" ? (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard01}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard01}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                )}
+              <div className='greetingElements01'>
+                {
+                  lang === "en"
+                    ?
+                    <div className='greetingCardContainer'>
+                      <img src={greetingCard02} className='greetingElement01 img-fit' alt="" />
+                      <button
+                        className="btn btn-primary download-btn">
+                        {t("greetingSection.buttondownload")}
+                      </button>
+                    </div>
+                    :
+                    <div className='greetingCardContainer'>
+                      <img src={greetingCard02} className='greetingElement01 img-fit' alt="" />
+                      <button
+                        className="btn btn-primary download-btn">
+                        {t("greetingSection.buttondownload")}
+                      </button>
+                    </div>
+
+                }
               </div>
-              <div className="greetingElements01">
-                {lang === "en" ? (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard01}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard01}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                )}
+              <div className='greetingElements01'>
+                {
+                  lang === "en"
+                    ?
+                    <div className='greetingCardContainer'>
+                      <img src={greetingCard02} className='greetingElement01 img-fit' alt="" />
+                      <button
+                        className="btn btn-primary download-btn">
+                        {t("greetingSection.buttondownload")}
+                      </button>
+                    </div>
+                    :
+                    <div className='greetingCardContainer'>
+                      <img src={greetingCard02} className='greetingElement01 img-fit' alt="" />
+                      <button
+                        className="btn btn-primary download-btn">
+                        {t("greetingSection.buttondownload")}
+                      </button>
+                    </div>
+
+                }
               </div>
             </div>
-            <div className="greetingElements03">
-              <Parallax speed={5} translateY={["0px", "-150px"]}>
+            <div className='greetingElements03'>
+              <Parallax speed={10} translateY={['0px', '-250px']}>
                 <div className="gsapGreetingBalloon">
-                  <img
-                    src={greetingBaloon01}
-                    className="greetingElement03 img-fit"
-                    alt=""
-                  />
+                  <img src={greetingBaloon01} className='greetingElement03 img-fit' alt="" />
                 </div>
               </Parallax>
             </div>
-            <div className="greetingElements04">
-              <Parallax speed={10} translateX={["-100px", "0px"]}>
+            <div className='greetingElements04'>
+              <Parallax speed={10} translateX={['-100px', '0px']}>
                 <div className="gsapGreetingCloth">
-                  <img
-                    src={greetingCloth01}
-                    className="greetingElement04 img-fit"
-                    alt=""
-                  />
+                  <img src={greetingCloth01} className='greetingElement04 img-fit' alt="" />
                 </div>
               </Parallax>
             </div>
-            <div className="greetingElements05">
-              <Parallax translateY={["0px", "-200px"]} speed={15}>
+            <div className='greetingElements05'>
+              <Parallax translateY={['0px', '-200px']} speed={20}>
                 <div className="gsapGreetingGiftBox">
-                  <img
-                    src={greetingGiftBox01}
-                    className="greetingElement05 img-fit"
-                    alt=""
-                  />
+                  <img src={greetingGiftBox01} className='greetingElement05 img-fit' alt="" />
                 </div>
               </Parallax>
             </div>
-            <div className="greetingElements06">
-              <Parallax speed={15} translateY={["0px", "-150px"]}>
+            <div className='greetingElements06'>
+              <Parallax speed={20} translateY={['0px', '-200px']}>
                 <div className="gsapGreetingSweet">
-                  <img
-                    src={greetingSweet01}
-                    className="greetingElement06 img-fit"
-                    alt=""
-                  />
+                  <img src={greetingSweet01} className='greetingElement06 img-fit' alt="" />
                 </div>
               </Parallax>
             </div>
-            <div className="greetingElements07">
-              <Parallax speed={5} translateX={["0px", "50px"]}>
+            <div className='greetingElements07'>
+              <Parallax speed={5} translateX={['0px', '100px']}>
                 <div className="gsapGreetingGoldCash">
-                  <img
-                    src={greetingGoldCash}
-                    className="greetingElement07 img-fit"
-                    alt=""
-                  />
+                  <img src={greetingGoldCash} className='greetingElement07 img-fit' alt="" />
                 </div>
               </Parallax>
             </div>
-            <div className="greetingElements08">
-              <Parallax translateX={["0px", "-50px"]} speed={15}>
-                <img
-                  src={greetingGreenCash}
-                  className="greetingElement08 img-fit"
-                  alt=""
-                />
-              </Parallax>
-            </div>
-            <div className="greetingElements09">
-              <Parallax translateX={["0px", "-50px"]} speed={15}>
-                <div className="gsapGreetingGreenBalloon">
-                  <img
-                    src={greetingElement09}
-                    className="greetingElement09 img-fit"
-                    alt=""
-                  />
-                </div>
+            <div className='greetingElements08'>
+              <Parallax translateX={['0px', '-50px']} speed={15}>
+                <img src={greetingGreenCash} className='greetingElement08 img-fit' alt="" />
               </Parallax>
             </div>
           </div>
           <div className="section-box">
-            <Parallax
-              translateX={[2, 0]}
-              speed={5}
-              className="section-card-container"
-            >
-              <div className="greetingCardContainer">
-                <img
-                  src={greetingCard01}
-                  className="greetingElement01"
-                  alt=""
-                />
+            <Parallax translateX={[2, 0]} speed={5} className='section-card-container'>
+              <div className='greetingCardContainer'>
+                <img src={greetingDarkCard} className='greetingElement01' alt="" />
               </div>
-              <div className="greetingCardContainer">
-                <img
-                  src={greetingCard01}
-                  className="greetingElement01"
-                  alt=""
-                />
+              <div className='greetingCardContainer'>
+                <img src={greetingCard01} className='greetingElement01' alt="" />
               </div>
             </Parallax>
 
-            <div className="section-box-container">
+            <div className='section-box-container'>
               <h1>Greetings Card</h1>
-              <h1
-                dangerouslySetInnerHTML={{ __html: t("greetingSection.para") }}
-              />
+              <h1 dangerouslySetInnerHTML={{ __html: t("greetingSection.para") }} />
 
+              <div className='section-box-btns'>
+                <button
+                  className="btn btn-primary download-btn">
+                  {t("greetingSection.buttondownload")}
+                </button>
+                <button
+                  className="btn btn-primary download-btn">
+                  {t("greetingSection.buttondownload")}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section >
               <div className="section-box-btns">
                 <button className="btn btn-primary download-btn">
                   {t("greetingSection.buttondownload")}
