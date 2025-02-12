@@ -248,42 +248,42 @@ export default function GreetingSection() {
             </div>
           </div>
           <div className='greetingElements03'>
-            <Parallax>
+            <Parallax speed={5} translateY={['0px', '-150px']}>
               <div className="gsapGreetingBalloon">
                 <img src={greetingBaloon01} className='greetingElement03 img-fit' alt="" />
               </div>
             </Parallax>
           </div>  
           <div className='greetingElements04'>
-            <Parallax>
+            <Parallax speed={10} translateX={['-100px', '0px']}>
               <div className="gsapGreetingCloth">
                 <img src={greetingCloth01} className='greetingElement04 img-fit' alt="" />
               </div>
             </Parallax>
           </div>
           <div className='greetingElements05'>
-            <Parallax>
+            <Parallax translateY={['0px','-200px']} speed={15}>
               <div className="gsapGreetingGiftBox">
                 <img src={greetingGiftBox01} className='greetingElement05 img-fit' alt="" />
               </div>
             </Parallax>
           </div>
           <div className='greetingElements06'>
-            <Parallax>
+            <Parallax speed={15} translateY={['0px', '-150px']}>
               <div className="gsapGreetingSweet">
                 <img src={greetingSweet01} className='greetingElement06 img-fit' alt="" />
               </div>
             </Parallax>
           </div>
           <div className='greetingElements07'>
-            <Parallax>
+            <Parallax speed={5} translateX={['0px', '50px']}>
               <div className="gsapGreetingGoldCash">
                 <img src={greetingGoldCash} className='greetingElement07 img-fit' alt="" />
               </div>
             </Parallax>
           </div>
           <div className='greetingElements08'>
-            <Parallax>
+            <Parallax translateX={['0px', '-50px']} speed={15}>
               <img src={greetingGreenCash} className='greetingElement08 img-fit' alt="" />
             </Parallax>
           </div>
