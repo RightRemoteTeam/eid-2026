@@ -153,7 +153,68 @@ export default function GreetingSection() {
         url={downloadLink}
       />
       <section ref={sectionRef} className="greetingSection">
-        <div className="greetingSectionContainer">
+      <div className="greetingTopSection">
+            <div className="decoration1">
+            <Parallax easing={"ease"}  speed={10}>
+              <img
+                src={greetingsTopDecoration01}
+                className="greetingsTopDecoration01 img-fit"
+                alt=""
+              />
+              </Parallax>
+            </div>
+            <div className="decoration2">
+            <Parallax easing={"ease"}  speed={10}>
+              <img
+                src={greetingsTopDecoration02}
+                className="greetingsTopDecoration02 img-fit"
+                alt=""
+              />
+              </Parallax>
+            </div>
+            <div className="balloon1">
+            <Parallax speed={10} translateY={[ 0, -100]}>
+            <div className="gsapGreetingBalloon">
+              <img
+                src={greetingsTopBalloon1}
+                className="greetingsTopBalloon1 img-fit"
+                alt=""
+              />
+              </div>
+              </Parallax>
+            </div>
+
+            <div className="balloon2">
+            <Parallax translateY={[0, -100]} speed={10}>
+            <div className="gsapGreetingGreenBalloon">
+              <img
+                src={greetingsTopBalloon2}
+                className="greetingsTopBalloon2 img-fit"
+                alt=""
+              />
+            </div>
+            </Parallax>
+            </div>
+            <div className="greetingsTop01">
+              <img
+                src={greetingsTopElement01}
+                className="greetingsTopElement01 img-fit"
+                alt=""
+              />
+            </div>
+            <div className="greetingsTop02">
+              <img
+                src={greetingsTopElement02}
+                className="greetingsTopElement02 img-fit"
+                alt=""
+              />
+              <button className="btn btn-primary download-btn">
+                {" "}
+                Eid Identity{" "}
+              </button>
+            </div>
+          </div>
+          <div className="greetingSectionContainer">
           <div className="greetingSectionHeading">
             <p>Now that we’re ready in our new Eid outfits, it’s time for
               Takbeer or Eid prayers. Let’s revel in this beautiful moment.
@@ -319,18 +380,7 @@ export default function GreetingSection() {
             </div>
           </div>
         </div>
-      </section >
-              <div className="section-box-btns">
-                <button className="btn btn-primary download-btn">
-                  {t("greetingSection.buttondownload")}
-                </button>
-                <button className="btn btn-primary download-btn">
-                  {t("greetingSection.buttondownload")}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+    
       </section>
     </>
   );
