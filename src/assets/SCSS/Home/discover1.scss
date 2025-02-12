@@ -1,5 +1,35 @@
 @import "../variables";
 
-section.discover1 {
-    
+.discover-section-1 {
+    height: 2500px;
+    margin-top: 270px;
+    background-color: black;
+
+    .discover-sec-1-container {
+        position: relative;
+        height: 100%;
+        img {
+            width: 100%;
+        }
+        .discoverElement01 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            width: 60%;
+
+            .trail-container {
+                position: absolute;
+                top: 75%;
+                right: 0;
+            }
+        }
+        .discoverElement02 {
+            position: absolute;
+            top: 17%;
+            right: 0;
+            z-index: 1;
+            width: 60%;
+        }
+    }
 }
