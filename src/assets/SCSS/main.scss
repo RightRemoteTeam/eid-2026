@@ -17,17 +17,16 @@ body{
     justify-content: space-between;
     flex-flow: wrap;
     padding: 0;
-    height: unset;
-    box-shadow: -1px 0px 200px 89px rgba(144,45,245,0.17);
-    -webkit-box-shadow: -1px 0px 200px 89px rgba(144,45,245,0.17);
-    -moz-box-shadow: -1px 0px 200px 89px rgba(144,45,245,0.17);
+    //height: unset;
+    height: 200px;
     position: relative;
     width: 100%;
     z-index: 9;
     @media screen and (max-width: 767px){
-        background: #fff;
+        height:130px;
     }
     & .navbar-container {
+        height: 100%;
         max-width: 1360px;
         padding: 0 20px;
         width: 100%;
@@ -39,13 +38,13 @@ body{
         width: 100%;
         
         @media screen and (max-width: 991px){
-            padding: 10px 20px 0;
+            padding: 0 20px;
         }
         @media screen and (max-width: 767px){
-            padding: 0px 10px 0;
+            padding: 0 10px;
         }
         @media screen and (max-width: 500px){
-            padding: 10px 10px 0;
+            padding: 0;
         }
         & .headerLeft{
             width: 33.33%;
@@ -68,7 +67,7 @@ body{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 1px solid rgb(144, 44, 245);
+                    border: 3px solid #0182B0;
                     /*
                     box-shadow: -1px 0px 7px -3px rgb(144, 44, 245);
                     box-shadow: -1px 0px 7px -3px rgb(144, 44, 245);
@@ -81,7 +80,7 @@ body{
                         margin-bottom: 5px
                     }
                     & span {
-                        color: #902CF5;
+                        color: #0182B0;
                         font-size: 14px;
                         display: block;
                         width: 100%;
@@ -96,6 +95,54 @@ body{
                     }
                 }
             }
+
+        }
+
+        & .navbar-logo {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 33.33%;
+            & .logo-box {
+                width: 100%;
+                background-color:transparent;
+                //width: 20rem;
+                padding: 0;
+                & img{
+                    width: 125px;
+                    @media screen and (max-width: 1280px){
+                        // width: 100px;
+                        width: 130px;
+                    }
+                    @media screen and (min-width: 1281px){
+                        width: 160px;
+                    }
+                    @media screen and (max-width: 991px){
+                        width: 120px;
+                    }
+                    @media screen and (max-width: 767px){
+                        width: 85px;
+                    }
+                    @media screen and (max-width: 500px){
+                        width: 75px;
+                    }
+                    @media screen and (max-width: 390px){
+                        width: 65px;
+                    }
+                }
+            }
+        }
+        & .headerRight{
+            width: 33.33%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            @media screen and (max-width: 767px){
+                flex-flow: column-reverse;
+                align-items: center;
+            }
             & .switch-container {
                 width: 85px;
                 height: 35px;
@@ -105,7 +152,7 @@ body{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                border: 1px solid rgb(144, 44, 245);
+                border: 3px solid #0182B0;
                 /*
                 box-shadow: -1px 0px 7px -3px rgb(144, 44, 245);
                 box-shadow: -1px 0px 7px -3px rgb(144, 44, 245);
@@ -143,7 +190,7 @@ body{
                     }
                 }
                 & .switch-button[disabled] {
-                    background: #902cf5!important;
+                    background: #0182B0!important;
                     & img {
                         filter: brightness(0) invert(1);
                     }
@@ -151,70 +198,6 @@ body{
                 & .switch-button:not([disabled]) {
                     background: transparent !important;
                 }
-            }
-
-        }
-
-        & .navbar-logo {
-            flex: unset;
-            position: relative;
-            width: 33.33%;
-            & .logo-box {
-                width: 100%;
-                top: 5.5rem;
-                background-color: transparent;
-                width: 20rem;
-                padding: 0;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-                @media screen and (max-width: 1280px){
-                    top: 4rem;
-                }
-                @media screen and (max-width: 991px){
-                    top: 30px;
-                }
-                @media screen and (max-width: 767px){
-                    top: 15px;
-                    width: 100%;
-                }
-                @media screen and (max-width: 480px){
-                    top: 5px;
-                }
-                @media screen and (max-width: 390px){
-                    top: 5px;
-                }
-                & img{
-                    width: 125px;
-                    @media screen and (max-width: 1280px){
-                        // width: 100px;
-                        width: 130px;
-                    }
-                    @media screen and (min-width: 1281px){
-                        width: 160px;
-                    }
-                    @media screen and (max-width: 991px){
-                        width: 60px;
-                    }
-                    @media screen and (max-width: 767px){
-                        width: 85px;
-                    }
-                    @media screen and (max-width: 500px){
-                        width: 75px;
-                    }
-                    @media screen and (max-width: 390px){
-                        width: 65px;
-                    }
-                }
-            }
-        }
-        & .headerRight{
-            width: 33.33%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            @media screen and (max-width: 767px){
-                flex-flow: column-reverse;
-                align-items: center;
             }
             & .visibleMode {
                 margin-right: 0;
@@ -296,43 +279,6 @@ body{
                 }
             }
             
-        }
-    }
-    & .overlayHeader {
-        background-size: cover;
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        @media screen and (min-width: 1680px){
-            top: -35px;
-        }
-        & img {
-            width: 100%;
-        }
-    }
-    & .overlayHeaderNight{
-        background-size: cover;
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        width: 100%;
-        position: absolute;
-        top: 0px;
-        display: none;
-        @media screen and (min-width: 1680px){
-            top: -35px;
-        }
-        & img {
-            width: 100%;
-        }
-    }
-    & .HeaderCommon{
-        @media screen and (max-width: 767px){
-            top: 20px;
-        }
-        @media screen and (max-width: 580px){
-            top: 40px;
         }
     }
 }
