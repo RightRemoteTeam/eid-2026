@@ -7,7 +7,7 @@ import data from "../Locale/en-new.json";
 import CartWheel from "../../assets/images/discover/cart-wheel.png";
 import Cloud from "../../assets/images/discover/cloud.png";
 import FireWorks from "../../assets/images/discover/fireworks.png";
-import { t } from "i18next";
+import EnjoySaudi from "../../assets/images/discover/enjoy-saudi-logo.png";
 
 // Register the ScrollTrigger plugin with gsap
 gsap.registerPlugin(ScrollTrigger);
@@ -35,7 +35,14 @@ export default function DiscoverSection2() {
           </div>
 
           <div className="cartwheel-fireworks">
-            <img src={FireWorks} alt="fireworks" />
+            <Parallax
+              translateX={[30, 10]}
+              scale={[0.1, 1]}
+              opacity={[0.3, 1]}
+              speed={30}
+            >
+              <img src={FireWorks} alt="fireworks" />
+            </Parallax>
           </div>
           <div className="cartwheel-cloud-img-2">
             <Parallax
@@ -46,6 +53,15 @@ export default function DiscoverSection2() {
             >
               <img src={Cloud} alt="cloud" />
             </Parallax>
+          </div>
+        </div>
+      </div>
+      <div className="desc-container-2">
+        <p className="section-desc-2">{data.discover.description2}</p>
+        <div className="discover-events-container ">
+          <button className="btn btn-primary">Discover our EID events</button>
+          <div>
+            <img src={EnjoySaudi} alt="Enjoy Saudi" />
           </div>
         </div>
       </div>
