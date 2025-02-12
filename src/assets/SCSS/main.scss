@@ -798,10 +798,12 @@ footer.footerMain {
     //box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
     //-webkit-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
     //-moz-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
-    background: #8a59c8;
+    background: #005339;
     color: white;
+    width: 100%;
     &:hover {
-        background-color: #f5c547!important;
+        background-color: #FDC100!important;
+        color: #005339;
         //box-shadow: -1px 0px 25px -8px rgb(255, 200, 54);
     }
 }
