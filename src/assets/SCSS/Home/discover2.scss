@@ -1,5 +1,70 @@
 @import "../variables";
 
-section.discover2 {
-    
+.discover-section-2 {
+    position: relative;
+    height: 2500px;
+
+    .desc-container-1 {
+        position: absolute;
+        top: 5%;
+        right: 50%;
+        transform: translate(50%, 0);
+        width: 55%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+
+        .section-desc-1 {
+            color: #000;
+            text-align: center;
+            font-family: "Space Grotesk";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+        }
+    }
+
+    .discover-cartwheel-container {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        z-index: 4;
+
+        .container-content {
+            position: relative;
+
+            .cartwheel-fireworks {
+                top: 15%;
+                left: 50%;
+                z-index: -2;
+            }
+
+            .cartwheel-cloud-img-1,
+            .cartwheel-fireworks,
+            .cartwheel-cloud-img-2 {
+                position: absolute;
+            }
+
+            .cartwheel-cloud-img-1 {
+                top: 35%;
+                left: 30%;
+                z-index: -3;
+
+                img {
+                    height: 49px;
+                    width: 359px;
+                }
+            }
+
+            .cartwheel-cloud-img-2 {
+                top: 40%;
+                left: 60%;
+                z-index: -1;
+            }
+
+        }
+    }
 }
