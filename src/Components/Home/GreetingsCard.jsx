@@ -5,12 +5,14 @@ import { useTheme } from "../ThemeContext";
 import { Parallax } from "react-scroll-parallax";
 
 import "../../assets/SCSS/Home/greetingsCard.scss";
+import greetingsTopBg from "../../assets/images/greetings/greetingsTopBg.png";
 import greetingsTopDecoration01 from "../../assets/images/greetings/greetings_decoration_1.png";
 import greetingsTopDecoration02 from "../../assets/images/greetings/greetings_decoration_2.png";
 import greetingsTopElement01 from "../../assets/images/greetings/greetings_1.png";
 import greetingsTopElement02 from "../../assets/images/greetings/greetings_2.png";
 import greetingsTopBalloon1 from "../../assets/images/greetings/greetings_balloon_1.png";
 import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloon_2.png";
+import greetingSectionBg from "../../assets/images/greetingcard/greetingSectionBg.png";
 import greetingBaloon01 from "../../assets/images/greetingcard/baloon3.png";
 import greetingCloth01 from "../../assets/images/greetingcard/yellowcloth.png";
 import greetingGiftBox01 from "../../assets/images/greetingcard/giftbox.png";
@@ -159,10 +161,8 @@ export default function GreetingSection() {
       />
       <section ref={sectionRef} className="greetingSection">
         <div className="greetingTopSection">
-          <div className="greetingSectionHeading2">
-            After that much-needed family time, It’s the kid’s favorite
-            part, Eideyah! Time for them to engage in friendly banter
-            as to who received the most.
+          <div className="greetingsTop-bg">
+          <img src={greetingsTopBg} className="greetingsTopBg img-fit" alt="" />
           </div>
           <div className="decoration1">
             <Parallax translateY={['0px', '-100px']} speed={10}>
@@ -174,7 +174,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="decoration2">
-            <Parallax translateY={['0px', '-350px']} speed={30}>
+            <Parallax translateY={['0px', '-200px']} speed={30}>
               <img
                 src={greetingsTopDecoration02}
                 className="greetingsTopDecoration02 img-fit"
@@ -200,6 +200,17 @@ export default function GreetingSection() {
                 <img
                   src={greetingsTopBalloon2}
                   className="greetingsTopBalloon2 img-fit"
+                  alt=""
+                />
+              </div>
+            </Parallax>
+          </div>
+          <div className="balloon3">
+            <Parallax translateY={[0, -100]} speed={10}>
+              <div className="gsapGreetingGreenBalloon">
+                <img
+                  src={greetingsTopBalloon2}
+                  className="greetingsTopBalloon3 img-fit"
                   alt=""
                 />
               </div>
@@ -259,12 +270,15 @@ export default function GreetingSection() {
           </div>
 
           <div className='greetingTop07'>
-            <Parallax translateY={['0px', '-300px']} speed={20}>
+            <Parallax translateY={['0px', '-100px']} speed={20}>
               <img src={discoverGiftBox01} className='gift-box-img-1 img-fit' alt="giftbox" />
             </Parallax>
           </div>
         </div>
         <div className="greetingSectionContainer">
+          <div className="greetingsSection-bg">
+             <img src={greetingSectionBg} className='greetingsSectionBg img-fit' alt="" />
+          </div>
           <div className="greetingSectionHeading">
             <p>Now that we’re ready in our new Eid outfits, it’s time for
               Takbeer or Eid prayers. Let’s revel in this beautiful moment.
