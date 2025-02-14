@@ -164,6 +164,13 @@ export default function GreetingSection() {
           <div className="greetingsTop-bg">
           <img src={greetingsTopBg} className="greetingsTopBg img-fit" alt="" />
           </div>
+          <div className="greetingTop-heading-1">
+          Welcome Eid, the holiday that makes
+          everyone happy and joyful! Get
+          dressed up, prepare the gifts and
+          Eidiya, and of course, your outfit is
+          absolutely on point
+          </div>
           <div className="decoration1">
             <Parallax translateY={['0px', '-100px']} speed={10}>
               <img
@@ -273,6 +280,14 @@ export default function GreetingSection() {
             <Parallax translateY={['0px', '-100px']} speed={20}>
               <img src={discoverGiftBox01} className='gift-box-img-1 img-fit' alt="giftbox" />
             </Parallax>
+          </div>
+          <div className="greetingTop-heading-2">
+          After we get everything ready, we perform
+          the Eid prayer, and immerse ourselves in the
+          beautiful festive atmosphere. Afterward, we
+          visit and greet our loved ones, showering
+          them with affection, and then sit down to
+          chat with the family
           </div>
         </div>
         <div className="greetingSectionContainer">
