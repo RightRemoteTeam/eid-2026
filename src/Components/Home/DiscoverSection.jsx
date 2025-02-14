@@ -97,7 +97,7 @@ export default function DiscoverSection() {
   return (
     <section ref={sectionRef} className="discover-section">
       <div className="discover-section-background">
-        <img src={Background} className="img-fit"/>
+        <img src={Background} className="img-fit" />
       </div>
       <div className="desc-container-1">
         <p className="section-desc-1">{data.discover.description1}</p>
@@ -174,7 +174,7 @@ export default function DiscoverSection() {
         <p className="section-desc-2">{data.discover.description2}</p>
         <div className="discover-events-container ">
           <button className="btn btn-primary">Discover our EID events</button>
-          <div>
+          <div className="logo-container">
             <img src={EnjoySaudi} alt="Enjoy Saudi" />
           </div>
         </div>
