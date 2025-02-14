@@ -302,16 +302,31 @@
 .greetingSection {
     .greetingTopSection{
         position: relative;
-        height: 1400px;
+        height: 2100px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        background-color: aqua;
+
+        .greetingSectionHeading2 {
+            width: 70%;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 500;
+            color: #005339;
+            margin-bottom: 106px;
+            position: absolute;
+            top: -3%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
         .decoration1{
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
+            z-index: 1;
 
             .greetingsTopDecoration01 {
                 width: 100%;
@@ -320,9 +335,10 @@
         
         .decoration2{
             position: absolute;
-            top: 16%;
+            top: 15%;
             left: 0;
             width: 100%;
+            z-index: 5;
 
             .greetingsTopDecoration02{
                 width: 100%;
@@ -332,23 +348,24 @@
 
         .balloon1{
             position: absolute;
-            top:45%;
+            top:36%;
             left: 9%;
             width: 13.1%;
         }
 
         .balloon2{
             position: absolute;
-            top:54%;
+            top:30%;
             right: 7%;
             width: 18.2%;
         }
 
         .greetingsTop01{
             position: relative;
-            top: 27%;
+            top: 23%;
             width: 18.2%;
             margin: 0 auto;
+            z-index: 2;
         }
 
         .greetingsTop02{
@@ -358,11 +375,111 @@
             position: relative;
             bottom: 0%;
             margin: 0 auto;
+            z-index: 10;
         } 
+
+        .greetingTop03 {
+            position: absolute;
+            top: 55%;
+            right: 0;
+            z-index: 4;
+            width: 40%;
+
+            .building-img-1 {
+                margin-left: auto;
+                margin-right: 50px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .trail-container {
+                position: absolute;
+                top: 67%;
+                right: 0;
+                width: 100%;
+                overflow: visible;
+
+                .trail-whole{
+                    position: relative;
+
+                    .trail-img {
+                        transform: scale(1.35);
+                        transform-origin: top right;
+                        width: 100%;
+                    }
+
+                    .trail-carpet-container {
+                        position: absolute;
+                        top: 35%;
+                        right: 0;
+                        width: 100%;
+                    }
+                    .trail-carpet {
+                        transform: scale(1.1);
+                        width: 100%;
+                    }
+                }
+
+               
+            }
+        }
+
+        .greetingTop04 {
+            position: absolute;
+            width: 7%;
+            top: 60%;
+            left: 85%;
+            z-index: 5;
+
+            img {
+                width: 100%;
+            }
+        }
+        .greetingTop05 {
+            position: absolute;
+            width: 6%;
+            top: 60%;
+            left: 90%;
+            z-index: 3;
+            
+            .green-baloon-1 {
+                transform: rotate(-70deg);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .greetingTop06 {
+            position: absolute;
+            width: 40%;
+            top: 50%;
+            left: 44%;
+            z-index: 3;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .greetingTop07 {
+            position: absolute;
+            width: 12.9%;
+            top: 87%;
+            left: 82%;
+            z-index: 5;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 
     & .greetingSectionContainer{
-        padding: 50px 0 50px;
+        margin-top: 165px;
         position: relative;
         width: 100%;
         @media screen and (max-width: 1366px){
@@ -389,6 +506,17 @@
             font-weight: 500;
             color: #005339;
             margin-bottom: 106px;
+        }
+        .greetingSectionHeading2 {
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 500;
+            color: #005339;
+            margin-bottom: 106px;
+            position: absolute;
+            top: -20%;
         }
         & .greetingElements {
             & img {

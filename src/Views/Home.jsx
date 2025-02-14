@@ -3,8 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import HeroSection from "../Components/Home/HeroSection";
 import HappinessSection from "../Components/Home/HappinessSection";
-import DiscoverSection1 from "../Components/Home/DiscoverSection1";
-import DiscoverSection2 from "../Components/Home/DiscoverSection2";
+import DiscoverSection from "../Components/Home/DiscoverSection";
 import Footer from "../Components/Home/Footer";
 import OudSection from "../Components/Home/OudSection";
 import FamilySection from "../Components/Home/FamilySection";
@@ -30,7 +29,7 @@ export default function Home() {
   }, [pageLoaded]);
 
   const handleEnableAudio = () => {
-    console.log('pop up close triggered');
+    console.log("pop up close triggered");
     setAudioEnabled(true);
     setIsModalOpen(false);
   };
@@ -43,8 +42,7 @@ export default function Home() {
       />
       <HeroSection />
       <GreetingsCard />
-      <DiscoverSection1 />
-      <DiscoverSection2 />
+      <DiscoverSection />
       <Footer />
       <HappinessSection />
       <div className="takbeerSound" ref={sectionRef}>
