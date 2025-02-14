@@ -1,15 +1,21 @@
 @import "../variables";
 
 section.header {
-
+    font-size: 0;
+    
     .posAbsImg{
         position: absolute;
     }
 
     .header-container{
-        height: 94vw;
         position: relative;
         width: 100%;
+
+        .headerBg{
+            position: relative;
+            width: 100%;
+            z-index: 0;
+        }
 
         .layer01Wrap{
             width: 23%;

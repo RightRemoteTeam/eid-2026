@@ -301,12 +301,17 @@
 }
 .greetingSection {
     .greetingTopSection{
+        font-size: 0;
         position: relative;
-        height: 2100px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: aqua;
+
+        .greetingsTop-bg{
+            position: relative;
+            width: 100%;
+            z-index: 0;
+        }
 
         .greetingSectionHeading2 {
             width: 70%;
@@ -323,7 +328,7 @@
 
         .decoration1{
             position: absolute;
-            top: 0;
+            top: 5%;
             left: 0;
             width: 100%;
             z-index: 1;
@@ -335,7 +340,7 @@
         
         .decoration2{
             position: absolute;
-            top: 15%;
+            top: 14%;
             left: 0;
             width: 100%;
             z-index: 5;
@@ -348,21 +353,33 @@
 
         .balloon1{
             position: absolute;
-            top:36%;
+            top:25%;
             left: 9%;
             width: 13.1%;
         }
 
         .balloon2{
             position: absolute;
-            top:30%;
+            top: 25%;
             right: 7%;
             width: 18.2%;
         }
+        
+        .balloon3{
+            position: absolute;
+            top: 58%;
+            left: 7%;
+            width: 14.2%;
+
+            .greetingsTopBalloon3{
+                transform: rotate(-50deg);
+            }
+        }
+
 
         .greetingsTop01{
-            position: relative;
-            top: 23%;
+            position: absolute;
+            top: 20%;
             width: 18.2%;
             margin: 0 auto;
             z-index: 2;
@@ -372,15 +389,15 @@
             display: flex;
             flex-direction: column;
             gap: 14px;
-            position: relative;
-            bottom: 0%;
-            margin: 0 auto;
+            position: absolute;
+            bottom: 20%;
+            right: 30%;
             z-index: 10;
         } 
 
         .greetingTop03 {
             position: absolute;
-            top: 55%;
+            top: 40%;
             right: 0;
             z-index: 4;
             width: 40%;
@@ -429,7 +446,7 @@
         .greetingTop04 {
             position: absolute;
             width: 7%;
-            top: 60%;
+            top: 40%;
             left: 85%;
             z-index: 5;
 
@@ -440,7 +457,7 @@
         .greetingTop05 {
             position: absolute;
             width: 6%;
-            top: 60%;
+            top: 40%;
             left: 90%;
             z-index: 3;
             
@@ -454,6 +471,7 @@
         }
 
         .greetingTop06 {
+            display: none;
             position: absolute;
             width: 40%;
             top: 50%;
@@ -468,7 +486,7 @@
         .greetingTop07 {
             position: absolute;
             width: 12.9%;
-            top: 87%;
+            top: 57%;
             left: 82%;
             z-index: 5;
 
@@ -479,7 +497,7 @@
     }
 
     & .greetingSectionContainer{
-        margin-top: 165px;
+        font-size: 0;
         position: relative;
         width: 100%;
         @media screen and (max-width: 1366px){

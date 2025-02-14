@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useLocation, Link, useParams } from "react-router-dom";
 import { AudioToggleButton } from "../Functions";
+import navBarBg from "../../assets/images/navbar/navbarBg.png";
 // import { ToggleThemeButton } from "../Functions";
 import ENV from "../Constants";
 import { useTheme } from "../ThemeContext";
@@ -42,6 +43,9 @@ export default function Navbar({ audioEnabled, setAudioEnabled }) {
   return (
     <>
       <nav className={`navbar ${theme}`}>
+        <div className="navbar-bg">
+          <img src={navBarBg} alt="" className="img-fit"/>
+        </div>
         <div className="navbar-container">
           <div className="headerLeft">
             <div className="navbar-language">
