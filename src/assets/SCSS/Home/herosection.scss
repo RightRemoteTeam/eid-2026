@@ -1,629 +1,147 @@
 @import "../variables";
 
 section.header {
-    // background-color: orangered;
-    padding-top: 10%;
-    position: relative;
-    width: 100vw;
 
+    .posAbsImg{
+        position: absolute;
+    }
 
-    // @media only screen and (max-width: 1440px) {
-    //     // flex-direction: column;
-    //     height: calc(85vh - 10rem);
-    // }
+    .header-container{
+        height: 94vw;
+        position: relative;
+        width: 100%;
 
-    // @media only screen and (max-width: 814px) {
-    //     // flex-direction: column;
-    //     height: calc(85vh - 10rem);
-    // }
-
-    // @media only screen and (max-width: 768px) {
-    //     // flex-direction: column;
-    //     height: calc(85vh - 10rem);
-    // }
-
-    // @media only screen and (max-width: 480px) {
-    //     // flex-direction: column;
-    //     height: calc(85vh - 10rem);
-    // }
-
-    // @media only screen and (max-width: 425px) {
-    //     // flex-direction: column;
-    //     height: calc(85vh - 10rem);
-    // }
-
-    & .header-container {
-        // display: flex;
-        height: 100%;
-        // align-items: center;
-        // justify-content: center;
-
-        @media only screen and (max-width: $bp-tab) {
-            // flex-direction: column;
-        }
-
-        & .header-intro-content {
-            height: 100%;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            margin-top: 0%;
-            & .section-box {
-                width: 30%;
-                margin: 0 auto;
-
-                @media only screen and (max-width: $bp-smallest) {
-                    width: 60%;
-                }
-            }
-
-            & .arContent {
-                width: 100%;
-                margin: 0 auto;
-                position: relative;
-                z-index: 8;
-                @media only screen and (max-width:$bp-small) {
-                    width: 60%;
-                }
-
-                @media only screen and (max-width: 375px) {
-                    width: 70%;
-                }
-
-                & img {
-                    width: 100%;
-                }
-            }
-        & .happiness-img {
-
-            .gsapHappinessSmokeMachine, .gsapHappinessSmoke {
-                scale: 0;
-                opacity: 0.5;
-            }
-            // position: relative;
-            flex: 1;
-
-            &.happiness-left-img {
-                height: 100%;
-                // position: relative;
-            }
-
-            img {
-                max-width: 100%;
-            }
-
-            & .shineIcon {
-                position: absolute;
-                top: 10%;
-                translate: easei-ime;
-                right: 0rem;
-                width: 5%;
-
-                & img {
-                    transform: rotate(-20deg);
-                    width: 100%;
-                }
-
-            }
-
-            & .ballonImag {
-                position: absolute;
-                top: 2%;
-                left: 10%;
-                z-index: 9;
-                width: 15%;
-
-                & img {
-                    width: 100%;
-
-                    // transform: rotate(-40deg);
-                    // @media only screen and (max-width: $bp-tab) {
-                    //     transform: rotate(0deg);
-                    // }
-                    // @media only screen and (max-width: $bp-small) {
-                    //     width: 15rem;
-                    // }
-                }
-
-                @media only screen and (max-width: $bp-tab) {
-                    width: 17%;
-                    top: 28%;
-                    left: -2%;
-                }
-
-                @media only screen and (max-width: $bp-mobile) {
-                    width: 20%;
-                    top: 20%;
-                    left: -2rem;
-                }
-
-                @media only screen and (max-width: 375px) {
-                    width: 24%;
-                    top: 14%;
-                    left: -2rem;
-                }
-
-            }
-
-            & .smokeImage {
-                position: absolute;
-                // z-index: 9;
-                left: 13%;
-                top: -5%;
-                width: 10%;
-
-                @media only screen and (max-width: $bp-tab) {
-                    width: 12%;
-                    top: 24%;
-                    left: 2%;
-                }
-
-                @media only screen and (max-width: $bp-mobile) {
-                    width: 12%;
-                    top: 13%;
-                    left: 2%;
-                }
-
-                @media only screen and (max-width: 375px) {
-                    width: 12%;
-                    top: 7%;
-                    left: 2%;
-                }
-
-                & img {
-                    width: 100%;
-                }
-            }
-
-            &.happiness-right-img {
-                & .kiteImg {
-                    position: absolute;
-                    right: 10%;
-                    top: 45%;
-                    width: 17%;
-
-                    & img {
-                        width: 100%;
-
-                        @media only screen and (max-width: $bp-small) {
-                            width: 17rem;
-                        }
-                    }
-
-                    @media only screen and (max-width: $bp-tab) {
-                        right: -2%;
-                        top: unset;
-                    }
-
-                    @media only screen and (max-width: $bp-mobile) {
-                        right: -2%;
-                        top: 55%;
-                        width: 20%;
-                    }
-
-                    @media only screen and (max-width: 375px) {
-                        right: -2%;
-                        top: 63%;
-                        width: 20%;
-                    }
-                }
-
-                & .shineImage {
-                    position: absolute;
-                    top: -8%;
-                    right: 24%;
-                    width: 7%;
-
-                    & img {
-                        width: 100%;
-                        transform: rotate(-16deg) scaleX(-1);
-
-                        @media only screen and (max-width: $bp-tab) {
-                            transform: rotate(10deg) scaleX(-1);
-                        }
-
-                        // @media only screen and (max-width: $bp-small) {
-                        //     width: 8rem;
-                        // }
-                    }
-
-                    // @media only screen and (max-width: $bp-tab) {
-                    //     right: 2%;
-                    //     top: 25%;
-                    // }
-
-                    // @media only screen and (max-width: $bp-smallest) {
-                    //     bottom: 20%;
-                    // }
-                    @media only screen and (max-width: $bp-tab) {
-                        top: 24%;
-                        right: 10%;
-                        width: 8%;
-                    }
-
-                    @media only screen and (max-width: $bp-mobile) {
-                        top: 12%;
-                        right: 10%;
-                        width: 13%;
-                    }
-
-                    @media only screen and (max-width: 375px) {
-                        top: 5%;
-                        right: 15%;
-                        width: 13%;
-                    }
-                }
-            }
+        .layer01Wrap{
+            width: 23%;
+            left: 38%;
+            top: 20%;
         }
         
-            & h1 {
-                color: $primary-color;
-            }
-
+        .layer02Wrap{
+            width: 50%;
+            left: -5%;
+            top: 0%;
+            z-index: 3;
         }
+
+        .layer03Wrap{
+            width: 50%;
+            right: -5%;
+            top: 0%;
+            z-index: 3;
+        }
+
+        .layer04Wrap{
+            width: 50%;
+            left: -5%;
+            top: 35%;
+            z-index: 3;
+        }
+
+        .layer05Wrap{
+            width: 50%;
+            right: -5%;
+            top: 35%;
+            z-index: 3;
+        }
+
+        .layer06Wrap{
+            width: 50%;
+            left: -5%;
+            top: 4%;
+            z-index: 2;
+        }
+
+        .layer07Wrap{
+            width: 50%;
+            right: -5%;
+            top: 4%;
+            z-index: 2;
+        }
+
+        .layer08Wrap{
+            width: 10%;
+            left: 33%;
+            top: 18%;
+            z-index: 4;
+        }
+
+        .layer09Wrap{
+            width: 10%;
+            right: 33%;
+            top: 18%;
+            z-index: 4;
+        }
+
+        .layer10Wrap{
+            width: 18%;
+            left: -8%;
+            top: 48%;
+            z-index: 4;
+        }
+
+        .layer12Wrap{
+            width: 6%;
+            left: 14%;
+            bottom: 48%;
+            z-index: 4;
+        }
+
+        .layer13Wrap{
+            width: 10%;
+            left: 23%;
+            top: 35%;
+            z-index: 4;
+        }
+
+        .layer14Wrap{
+            width: 8%;
+            left: 22%;
+            top: 48%;
+            z-index: 4;
+        }
+
+        .layer15Wrap{
+            width: 6%;
+            left: 37%;
+            top: 36%;
+            z-index: 4;
+        }
+
+        .layer16Wrap{
+            width: 5%;
+            right: 37%;
+            top: 36%;
+            z-index: 4;
+        }
+
+        .layer18Wrap{
+            width: 8%;
+            right: 27%;
+            top: 42%;
+            z-index: 4;
+        }
+
+        .layer19Wrap{
+            width: 9%;
+            right: 14%;
+            top: 35%;
+            z-index: 4;
+        }
+
+        .layer20Wrap{
+            width: 3%;
+            left: 49%;
+            top: 41%;
+            z-index: 4;
+        }
+
+
+
+
+
+
+
     }
-
-    & .header-img {
-        img {
-            max-width: 100%;
-        }
-
-        flex: 1;
-    }
-
-    & .header-left-img {
-        & .header-cup-image {
-            & .intro-cup {
-                bottom: 32%;
-                right: 30%;
-                position: absolute;
-                width: 13%;
-                z-index: 9;
-                @media only screen and (max-width: 1280px) {
-                    bottom: 35%;
-                    right: 31%;
-                }
-                @media only screen and (max-width:$bp-tab) {
-                    right: 14%;
-                    width: 16%;
-                    bottom: 18%;
-                }
-                @media only screen and (max-width:760px) {
-                    bottom: 33%;
-                    width: 23%;
-                    right: 14%;
-                }
-                @media only screen and (max-width:580px) {
-                    bottom: 48%;
-                    width: 34%;
-                    right: 2%;
-                    transform: translateY(48%);
-                }
-
-                @media only screen and (max-width: 375px) {
-                    right: -8%;
-    width: 42%;
-    bottom: 38%;
-    transform: translateY(38%);
-                }
-
-                & img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-    & .header-right-img {
-        text-align: center;
-
-        & .header-shine-image {
-            & .shine {
-                position: absolute;
-                top: 25%;
-                right: 12%;
-                width: 6%;
-                @media only screen and (max-width: $bp-tab) {
-                    width: 8%;
-                    top: 14%;
-                    right:12%;
-                }
-                @media only screen and (max-width: $bp-mobile) {
-                    width: 14%;
-                    top: 14%;
-                    right:11%;
-                }
-                @media only screen and (max-width: 375px) {
-                    width: 16%;
-                    top: 14%;
-                    right: 9%;
-                }
-
-                & img {
-                    width: 100%;
-                }
-            }
-        }
-
-        & .header-jug-image {
-            & .jug {
-                position: absolute;
-                top: 30%;
-                left: 32%;
-                width: 18%;
-                z-index: 9;
-                @media only screen and (max-width: 1440px) {
-                    width: 14%;
-                    left: 36%;
-                }
-                @media only screen and (max-width: $bp-tab) {
-                    left: 24%;
-                    width: 18%;
-                    top: 10%;
-                }
-                @media only screen and (max-width: 760px) {
-                    width: 24%;
-                    top: 22%;
-                    left: 30%;                
-                }
-                @media only screen and (max-width: 580px) {
-                    width: 34%;
-                    top: 36%;
-                    left: 23%;
-                    transform: translateY(-36%);
-                }
-
-                @media only screen and (max-width: 375px) {
-                    transform: translateY(-22%);
-                    width: 42%;
-                    top: 25%;
-                    left: 20%;
-                }
-
-                & img {
-                    width: 100%;
-                }
-            }
-
-            & .buscuits {
-                & .full {
-                    position: absolute;
-                    z-index: 3;
-                    bottom: 20%;
-                    right: 10.5%;
-                    width: 7%;
-
-                    @media only screen and (max-width: $bp-mobile) {
-                        width: 14%;
-                    }
-
-                    @media only screen and (max-width: 375px) {
-                        width: 16%;
-                    }
-
-                    & img {
-                        width: 10rem;
-                        width: 100%;
-                    }
-                }
-
-                & .half {
-                    position: absolute;
-                    z-index: 3;
-                    bottom: 20%;
-                    right: 28%;
-                    width: 4%;
-
-                    @media only screen and (max-width: $bp-mobile) {
-                        width: 12%;
-                        right: 28%;
-                        bottom: 15%;
-                    }
-                    @media only screen and (max-width: 580px) {
-                        width: 10%;
-                        right: 32%;
-                    }
-
-
-                    & img {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-    &  .preparation-bottom-images-flag {
-        height: 70vh;
-        width: 100%;
-        position: relative;
-       
-        @media only screen and (max-width: 1440px) {
-            bottom: -15%;
-            position: absolute;
-        }
-        @media only screen and (min-width: 1441px) {
-            height: 6vh;
-        }
-        // @media only screen and (max-width: 600px) {
-        //     height: 38vh;
-        // }
-    
-        // @media only screen and (max-width: 600px) {
-        //     height: 26vh;
-        // }
-    
-        // @media only screen and (max-width: 480px) {
-        //     height: 16vh;
-        // }
-    
-        // @media only screen and (max-width: 375px) {
-        //     height: 8vh;
-        // }
-    
-        // .guitar-left-image {
-        //     & .guitar {
-        //         position: absolute;
-        //         bottom: -22rem;
-        //         left: 12%;
-    
-        //         & img {
-        //             width: 30rem;
-        //             // @media only screen and (max-width: $bp-large) {
-        //             //     width: 27rem;
-        //             // }
-        //         }
-    
-        //         @media only screen and (max-width: $bp-tab) {
-        //             display: none;
-        //         }
-        //     }
-        // }
-    
-        & .celeberationLine-group {
-            & .line-1 {
-                position: absolute;
-                right: 0px;
-                z-index: 1;
-                width: 120%;
-                width: 100%;
-                bottom: -20%;
-                //
-                
-                @media only screen and (max-width: $bp-tab) {
-                    width: 100%;
-                }
-                @media only screen and (max-width: 760px) {
-                    margin-bottom: 40px;
-                }
-    
-                & img {
-                    width: 100%;
-    
-                    &:first-child {
-                        @media only screen and (max-width: $bp-tab) {
-                            display: none;
-                        }
-                    }
-    
-                    &:last-child {
-                        display: none;
-    
-                        @media only screen and (max-width: $bp-tab) {
-                            display: initial;
-                        }
-                    }
-                }
-    
-                // @media only screen and (max-width: $bp-tab) {
-                //     bottom: 0%;
-                // }
-    
-                // @media only screen and (max-width: $bp-small) {
-                //     bottom: -197%;
-                // }
-    
-                // @media only screen and (max-width: $bp-mobile) {
-                //     bottom: -82%;
-                // }
-    
-                // @media only screen and (max-width: 375px) {
-                //     bottom: -44%;
-                // }
-    
-                // @media only screen and (min-width: 761px) {
-                //     bottom: -46rem;
-                // }
-    
-                // @media only screen and (min-width: $bp-medium) {
-                //     bottom: -108%;
-                // }
-                // @media only screen and (max-width: 1365px) {
-                //     bottom: 2%;
-                // }
-    
-                // @media only screen and (min-width: 1440px) {
-                //     bottom: -55rem;
-                // }
-                // @media only screen and (min-width: 1680px) {
-                //     bottom: -70rem;
-                // }
-    
-                // @media only screen and (max-width: $bp-tab) {
-                //     bottom: -5rem;
-                // }
-    
-            }
-    
-            & .line-2 {
-                position: absolute;
-                right: 0rem;
-                z-index: 0;
-                width: 100%;
-                bottom: 10%;
-                & img {
-                    width: 100%;
-    
-                    &:first-child {
-                        @media only screen and (max-width: $bp-tab) {
-                            display: none;
-                        }
-                    }
-    
-                    &:last-child {
-                        display: none;
-    
-                        @media only screen and (max-width: $bp-tab) {
-                            display: initial;
-                        }
-                    }
-                }
-
-
-                // @media only screen and (max-width: $bp-tab) {
-                //     bottom: -90%;
-                // }
-    
-                // @media only screen and (max-width: $bp-small) {
-                //     bottom: -50%;
-                // }
-    
-                // @media only screen and (max-width: $bp-mobile) {
-                //     bottom: -38%;
-                // }
-    
-                // @media only screen and (max-width: 375px) {
-                //     bottom: -3%;
-                // }
-    
-                // @media only screen and (min-width: 761px) {
-                //     bottom: -28rem;
-                // }
-    
-                // @media only screen and (min-width: $bp-medium) {
-                //     bottom: -13%;
-                // }
-                // @media only screen and (max-width: 1365px) {
-                //     bottom: 2%;
-                // }
-    
-                // @media only screen and (min-width: 1366px) {
-                //     bottom: -20rem;
-                // }
-    
-                // @media only screen and (min-width: 1440px) {
-                //     bottom: -20rem;
-                // }
-                // @media only screen and (min-width: 1600px) {
-                //     bottom: -15rem;
-                // }
-                // @media only screen and (min-width: 1680px) {
-                //     bottom: -25rem;
-                // }
-    
-                // @media only screen and (max-width: $bp-tab) {
-                //     bottom: -17rem;
-                // }
-            }
-        }
-    }
+   
 }
