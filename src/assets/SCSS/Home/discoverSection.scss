@@ -1,6 +1,6 @@
 @import "../variables";
 
-.discover-section-2 {
+.discover-section {
     position: relative;
     height: 2500px;
     background-color: #000;
@@ -18,10 +18,10 @@
 
         .section-desc-1,
         .section-desc-2 {
-            color: #fff;
+            color: #FFF;
             text-align: center;
             font-family: "Space Grotesk";
-            font-size: 40px;
+            font-size: 36px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -102,6 +102,40 @@
 
             .giantwheel-fireworks {
                 position: absolute;
+            }
+
+        }
+    }
+
+    .discover-gift-container {
+        position: absolute;
+        width: 40%;
+        top: 10%;
+        right: 0;
+        z-index: 4;
+
+        .container-content {
+            position: relative;
+
+            .balloon-img {
+                position: relative;
+                right: -55%;
+
+                img {
+                    width: 45%;
+                }
+            }
+
+            .giftbox-img {
+                position: absolute;
+                z-index: 4;
+                top: 115%;
+                right: -40%;
+                width: 100%;
+
+                img {
+                    width: 30%;
+                }
             }
 
         }
