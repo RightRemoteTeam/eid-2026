@@ -6,6 +6,9 @@ import { Parallax } from "react-scroll-parallax";
 
 import "../../assets/SCSS/Home/greetingsCard.scss";
 import greetingsTopBg from "../../assets/images/greetings/greetingsTopBg.png";
+import greetingsTopCloud1 from "../../assets/images/greetings/greetingsTopCloud.svg";
+import greetingsTopCloud2 from "../../assets/images/greetings/greetingsTopCloud.svg";
+import greetingsTopBirds from "../../assets/images/greetings/greetingsTopBirds.svg";
 import greetingsTopDecoration01 from "../../assets/images/greetings/greetings_decoration_1.png";
 import greetingsTopDecoration02 from "../../assets/images/greetings/greetings_decoration_2.png";
 import greetingsTopElement01 from "../../assets/images/greetings/greetings_1.png";
@@ -15,11 +18,16 @@ import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloo
 import greetingSectionBg from "../../assets/images/greetingcard/greetingSectionBg.png";
 import greetingBaloon01 from "../../assets/images/greetingcard/baloon3.png";
 import greetingCloth01 from "../../assets/images/greetingcard/yellowcloth.png";
-import greetingGiftBox01 from "../../assets/images/greetingcard/giftbox.png";
+import greetingCup01 from "../../assets/images/common/dallah.svg";
 import greetingSweet01 from "../../assets/images/greetingcard/sweet1.png";
 import greetingGoldCash from "../../assets/images/greetingcard/goldcash.png";
 import greetingGreenCash from "../../assets/images/greetingcard/greencash.png";
 import greetingDarkCard from "../../assets/images/greetingcard/darkcard.png";
+import greetingCup from "../../assets/images/common/cup.png";
+import greetingGrass from "../../assets/images/greetingcard/grass.png";
+import greetingLeaf from "../../assets/images/common/leaf.png";
+import greetingSun from "../../assets/images/common/sun.png";
+import greetingCandy from "../../assets/images/common/candy.svg";
 import greetingCard01 from "../../assets/images/greetingcard/card2.png";
 import greetingCard02 from "../../assets/images/greetingcard/card3.png";
 import discoverBuilding01 from "../../assets/images/discover/building01.svg"
@@ -161,7 +169,7 @@ export default function GreetingSection() {
       />
       <section ref={sectionRef} className="greetingSection">
         <div className="greetingTopSection">
-          <div className="greetingsTop-bg">
+          <div className="greetingTop-bg">
           <img src={greetingsTopBg} className="greetingsTopBg img-fit" alt="" />
           </div>
           <div className="greetingTop-heading-1">
@@ -171,6 +179,32 @@ export default function GreetingSection() {
           Eidiya, and of course, your outfit is
           absolutely on point
           </div>
+          <div className="greetingsTop-cloud-1">
+            <img
+              src={greetingsTopCloud1}
+              className="greetingsTopCloud1 img-fit"
+              alt=""
+            />
+          </div>
+
+          <div className="greetingsTop-cloud-2">
+            <img
+              src={greetingsTopCloud2}
+              className="greetingsTopCloud2 img-fit"
+              alt=""
+            />
+          </div>
+
+          <div className="greetingsTop-birds">
+            <img
+              src={greetingsTopBirds}
+              className="greetingsTopBirds img-fit"
+              alt=""
+            />
+          </div>
+
+
+
           <div className="decoration1">
             <Parallax translateY={['0px', '-100px']} speed={10}>
               <img
@@ -294,12 +328,6 @@ export default function GreetingSection() {
           <div className="greetingsSection-bg">
              <img src={greetingSectionBg} className='greetingsSectionBg img-fit' alt="" />
           </div>
-          <div className="greetingSectionHeading">
-            <p>Now that we’re ready in our new Eid outfits, it’s time for
-              Takbeer or Eid prayers. Let’s revel in this beautiful moment.
-              Later, Let’s join the family gathering and exchange warm
-              greetings with loved ones.</p>
-          </div>
           <div className='greetingElements'>
             <div className="greetingCards">
               <div className='greetingElements01'>
@@ -365,7 +393,6 @@ export default function GreetingSection() {
                         {t("greetingSection.buttondownload")}
                       </button>
                     </div>
-
                 }
               </div>
               <div className='greetingElements01'>
@@ -391,7 +418,8 @@ export default function GreetingSection() {
                 }
               </div>
             </div>
-            <div className='greetingElements03'>
+          </div>
+          <div className='greetingElements03'>
               <Parallax speed={10} translateY={['0px', '-250px']}>
                 <div className="gsapGreetingBalloon">
                   <img src={greetingBaloon01} className='greetingElement03 img-fit' alt="" />
@@ -408,7 +436,7 @@ export default function GreetingSection() {
             <div className='greetingElements05'>
               <Parallax translateY={['0px', '-200px']} speed={20}>
                 <div className="gsapGreetingGiftBox">
-                  <img src={greetingGiftBox01} className='greetingElement05 img-fit' alt="" />
+                  <img src={greetingCup01} className='greetingElement05 img-fit' alt="" />
                 </div>
               </Parallax>
             </div>
@@ -431,20 +459,41 @@ export default function GreetingSection() {
                 <img src={greetingGreenCash} className='greetingElement08 img-fit' alt="" />
               </Parallax>
             </div>
-          </div>
+            <div className='greetingElements09'>
+              <Parallax translateX={['0px', '-50px']} speed={15}>
+                <img src={greetingCup} className='greetingElement09 img-fit' alt="" />
+              </Parallax>
+            </div>
+            <div className='greetingElements10'>
+                <img src={greetingGrass} className='greetingElement10 img-fit' alt="" />
+            </div>
+            <div className='greetingElements11'>
+                <img src={greetingLeaf} className='greetingElement11 img-fit' alt="" />
+            </div>
+            <div className='greetingElements12'>
+                <img src={greetingBaloon01} className='greetingElement12 img-fit' alt="" />
+            </div>
+            <div className='greetingElements13'>
+                <img src={greetingSun} className='greetingElement13 img-fit' alt="" />
+            </div>
+            <div className='greetingElements14'>
+                <img src={greetingCandy} className='greetingElement14 img-fit' alt="" />
+            </div>
+
+
           <div className="section-box">
-            <Parallax translateX={[2, 0]} speed={5} className='section-card-container'>
+            <div className='section-card-container'>
               <div className='greetingCardContainer'>
                 <img src={greetingDarkCard} className='greetingElement01' alt="" />
               </div>
               <div className='greetingCardContainer'>
                 <img src={greetingCard01} className='greetingElement01' alt="" />
               </div>
-            </Parallax>
+            </div>
 
             <div className='section-box-container'>
-              <h1>Greetings Card</h1>
-              <h1 dangerouslySetInnerHTML={{ __html: t("greetingSection.para") }} />
+              <h1 dangerouslySetInnerHTML={{ __html: t("greetingSection.title") }} />
+              <h2 dangerouslySetInnerHTML={{ __html: t("greetingSection.para") }} />
 
               <div className='section-box-btns'>
                 <button
