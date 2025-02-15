@@ -8,13 +8,22 @@ import Background from "../../assets/images/discover/background.png";
 import GiantWheel from "../../assets/images/discover/giant-wheel.png";
 import YellowCarpet from "../../assets/images/common/yellow-carpet.png";
 import FireWorks from "../../assets/images/discover/fireworks.png";
-import OrangeBalloon from "../../assets/images/common/orange-balloon.svg";
-import GiftBox from "../../assets/images/common/gift-box.svg";
+import OrangeBalloon from "../../assets/images/common/orange-balloon.png";
+import GiftBox from "../../assets/images/common/gift-box.png";
 import Donut from "../../assets/images/common/donut.png";
 import SweetsPlate from "../../assets/images/common/sweets-plate.png";
 import GreenBalloon from "../../assets/images/common/green-balloon.png";
 import Sparkles from "../../assets/images/discover/sparkles.png";
-import EnjoySaudi from "../../assets/images/discover/enjoy-saudi-logo.png";
+import TopBill from "../../assets/images/discover/bill-01.png";
+import CenterBill from "../../assets/images/discover/bill-02.png";
+import BottomBill from "../../assets/images/common/bill-01.png";
+import Wallet from "../../assets/images/discover/wallet.png";
+import Candy from "../../assets/images/discover/candy.png";
+import RedCarpet from "../../assets/images/common/red-carpet.png";
+import YellowConfetti from "../../assets/images/common/yellow-confetti.png";
+import EnjoySaudiLogo from "../../assets/images/logos/enjoy-saudi.png";
+import EidEventsLogo from "../../assets/images/logos/eid-events.png";
+import GEALogo from "../../assets/images/logos/general-entertainment-authority.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,6 +154,16 @@ export default function DiscoverSection() {
         </div>
       </div>
 
+      <div className="desc-container-2">
+        <p className="section-desc-2">{data.discover.description2}</p>
+        <div className="discover-events-container ">
+          <button className="btn btn-primary">Discover our EID events</button>
+          <div className="logo-container">
+            <img src={EnjoySaudiLogo} alt="Enjoy Saudi" />
+          </div>
+        </div>
+      </div>
+
       <div className="discover-sweets-container">
         <div className="container-content">
           <div className="donut-img">
@@ -170,12 +189,65 @@ export default function DiscoverSection() {
         </div>
       </div>
 
-      <div className="desc-container-2">
-        <p className="section-desc-2">{data.discover.description2}</p>
-        <div className="discover-events-container ">
-          <button className="btn btn-primary">Discover our EID events</button>
-          <div className="logo-container">
-            <img src={EnjoySaudi} alt="Enjoy Saudi" />
+      <div className="discover-bills-container">
+        <div className="container-content">
+          <div className="sparkles-inverted-img">
+            <Parallax speed={5}>
+              <img src={Sparkles} alt="sparkles" />
+            </Parallax>
+          </div>
+          <div className="flying-bills-container">
+            <Parallax speed={5}>
+              <div className="bills-container-content">
+                <div className="top-bill">
+                  <Parallax translateX={[6, 0]} speed={7}>
+                    <img src={TopBill} alt="bill" />
+                  </Parallax>
+                </div>
+                <div className="center-bill">
+                  <Parallax translateX={[5, 0]} speed={5}>
+                    <img src={CenterBill} alt="bill" />
+                  </Parallax>
+                </div>
+                <div className="bottom-bill">
+                  <Parallax translateX={[7, 0]} speed={10}>
+                    <img src={BottomBill} alt="bill" />
+                  </Parallax>
+                </div>
+                <div className="bill-and-wallet">
+                  <Parallax speed={8}>
+                    <img src={Wallet} alt="wallet" />
+                  </Parallax>
+                </div>
+              </div>
+            </Parallax>
+          </div>
+          <div className="candy-img">
+            <Parallax translateX={[8, 0]} speed={10}>
+              <img src={Candy} alt="candy" />
+            </Parallax>
+          </div>
+          <div className="redcarpet-img">
+            <Parallax translateX={[10, 0]} speed={15}>
+              <img src={RedCarpet} alt="carpet" />
+            </Parallax>
+          </div>
+          <div className="confetti-img">
+            <Parallax translateX={[7, 0]} speed={10}>
+              <img src={YellowConfetti} alt="confetti" />
+            </Parallax>
+          </div>
+        </div>
+      </div>
+
+      <div className="discover-section-logos">
+        <div className="logo-container">
+          <div className="eid-events-logo">
+            <img src={EidEventsLogo} alt="Eid Events" />
+          </div>
+          <div className="vertical-seperator"></div>
+          <div className="gea-logo">
+            <img src={GEALogo} alt="GEA" />
           </div>
         </div>
       </div>
