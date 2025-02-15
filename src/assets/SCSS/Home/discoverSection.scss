@@ -13,7 +13,7 @@
         position: absolute;
         right: 50%;
         transform: translate(50%, 0);
-        width: 40%;
+        width: 35%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -33,13 +33,13 @@
     }
 
     .desc-container-1 {
-        top: 6%;
+        top: 5%;
     }
 
     .desc-container-2 {
         flex-direction: column;
         justify-content: center;
-        top: 35%;
+        top: 30%;
 
         .discover-events-container {
             margin-top: 80px;
@@ -204,6 +204,158 @@
                 }
             }
 
+        }
+    }
+
+    .discover-bills-container {
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 40%;
+        z-index: 4;
+
+        .container-content {
+            position: relative;
+
+            .flying-bills-container {
+                position: relative;
+                left: 15%;
+                width: 100%;
+                z-index: 4;
+
+                .bills-container-content {
+                    position: relative;
+
+                    .bill-and-wallet {
+                        position: relative;
+                        left: 50%;
+                        width: 100%;
+
+                        img {
+                            width: 25%;
+                        }
+                    }
+
+                    .top-bill {
+                        position: absolute;
+                        top: -100%;
+                        left: 20%;
+                        width: 100%;
+
+                        img {
+                            width: 18%;
+                        }
+                    }
+
+                    .center-bill {
+                        position: absolute;
+                        top: -70%;
+                        left: 40%;
+                        width: 100%;
+
+                        img {
+                            width: 15%;
+                        }
+                    }
+
+                    .bottom-bill {
+                        position: absolute;
+                        top: -35%;
+                        left: 30%;
+                        z-index: 4;
+                        width: 100%;
+
+                        img {
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+
+            .sparkles-inverted-img {
+                position: absolute;
+                z-index: 4;
+                top: -225%;
+                left: -10%;
+                width: 100%;
+                rotate: 180deg;
+
+                img {
+                    width: 55%;
+                }
+            }
+
+            .candy-img {
+                position: absolute;
+                top: -15%;
+                left: 15%;
+                width: 100%;
+
+                img {
+                    width: 30%;
+                }
+            }
+
+            .redcarpet-img {
+                position: absolute;
+                z-index: 4;
+                top: 55%;
+                left: -35%;
+                width: 145%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .confetti-img {
+                position: absolute;
+                top: 220%;
+                left: 40%;
+                width: 100%;
+                z-index: 5;
+
+                img {
+                    width: 25%;
+                }
+            }
+
+        }
+    }
+
+    .discover-section-logos {
+        position: absolute;
+        bottom: 5%;
+        right: 50%;
+        transform: translate(50%, 0);
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            .eid-events-logo {
+                width: 40%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .gea-logo {
+                width: 30%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .vertical-seperator {
+                width: 2px;
+                background-color: #FFF;
+                align-self: stretch;
+            }
         }
     }
 }
