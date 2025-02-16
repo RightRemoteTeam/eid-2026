@@ -5,38 +5,38 @@ import { useTheme } from "../ThemeContext";
 import { Parallax } from "react-scroll-parallax";
 
 import "../../assets/SCSS/Home/greetingsCard.scss";
-import greetingsTopBg from "../../assets/images/greetings/greetingsTopBg.png";
-import greetingsTopCloud1 from "../../assets/images/greetings/greetingsTopCloud.svg";
-import greetingsTopCloud2 from "../../assets/images/greetings/greetingsTopCloud.svg";
-import greetingsTopBirds from "../../assets/images/greetings/greetingsTopBirds.svg";
-import greetingsTopDecoration01 from "../../assets/images/greetings/greetings_decoration_1.png";
-import greetingsTopDecoration02 from "../../assets/images/greetings/greetings_decoration_2.png";
+import greetingTopBg from "../../assets/images/greetings/greetingTopBg.png";
+import greetingTopCloud1 from "../../assets/images/greetings/greetingsTopCloud.svg";
+import greetingTopCloud2 from "../../assets/images/greetings/greetingsTopCloud.svg";
+import greetingTopBirds from "../../assets/images/greetings/greetingsTopBirds.svg";
+import greetingTopDecoration01 from "../../assets/images/greetings/greetings_decoration_1.png";
+import greetingTopDecoration02 from "../../assets/images/greetings/greetings_decoration_2.png";
 import greetingsTopElement01 from "../../assets/images/greetings/greetings_1.png";
 import greetingsTopElement02 from "../../assets/images/greetings/greetings_2.png";
 import greetingsTopBalloon1 from "../../assets/images/greetings/greetings_balloon_1.png";
 import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloon_2.png";
-import greetingSectionBg from "../../assets/images/greetingcard/greetingSectionBg.png";
-import greetingBaloon01 from "../../assets/images/greetingcard/baloon3.png";
-import greetingCloth01 from "../../assets/images/greetingcard/yellowcloth.png";
+import greetingSectionBg from "../../assets/images/greetings/greetingBottomBg.png";
+import greetingBaloon01 from "../../assets/images/greetings/baloon3.png";
+import greetingCloth01 from "../../assets/images/greetings/yellowcloth.png";
 import greetingCup01 from "../../assets/images/common/dallah.svg";
-import greetingSweet01 from "../../assets/images/greetingcard/sweet1.png";
-import greetingGoldCash from "../../assets/images/greetingcard/goldcash.png";
-import greetingGreenCash from "../../assets/images/greetingcard/greencash.png";
-import greetingDarkCard from "../../assets/images/greetingcard/darkcard.png";
+import greetingSweet01 from "../../assets/images/greetings/sweet1.png";
+import greetingGoldCash from "../../assets/images/greetings/goldcash.png";
+import greetingGreenCash from "../../assets/images/greetings/greencash.png";
+import greetingDarkCard from "../../assets/images/greetings/darkcard.png";
 import greetingCup from "../../assets/images/common/cup.png";
-import greetingGrass from "../../assets/images/greetingcard/grass.png";
+import greetingGrass from "../../assets/images/greetings/grass.png";
 import greetingLeaf from "../../assets/images/common/leaf.png";
 import greetingSun from "../../assets/images/common/sun.png";
 import greetingCandy from "../../assets/images/common/candy.svg";
-import greetingCard01 from "../../assets/images/greetingcard/card2.png";
-import greetingCard02 from "../../assets/images/greetingcard/card3.png";
+import greetingCard01 from "../../assets/images/greetings/card2.png";
+import greetingCard02 from "../../assets/images/greetings/card3.png";
 import discoverBuilding01 from "../../assets/images/discover/building01.svg"
-import discoverBaloon01 from "../../assets/images/greetingcard/baloon3.png"
+import discoverBaloon01 from "../../assets/images/greetings/baloon3.png"
 import discoverBaloon02 from "../../assets/images/discover/green-baloon.png"
 import discoverTrail01 from "../../assets/images/discover/trail.svg"
 import discoverTrail02 from "../../assets/images/discover/red-carpet.png"
 import discoverDecoration01 from "../../assets/images/greetings/greetings_decoration_2.png"
-import discoverGiftBox01 from "../../assets/images/greetingcard/giftbox.png";
+import discoverGiftBox01 from "../../assets/images/greetings/giftbox.png";
 import yellowLeaf from "../../assets/images/common/yellow-leaf.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -171,7 +171,7 @@ export default function GreetingSection() {
       <section ref={sectionRef} className="greetingSection">
         <div className="greetingTopSection">
           <div className="greetingTop-bg">
-          <img src={greetingsTopBg} className="greetingsTopBg img-fit" alt="" />
+          <img src={greetingTopBg} className="greetingTopBg" alt="" />
           </div>
           <div className="greetingTop-heading-1">
           Welcome Eid, the holiday that makes
@@ -180,26 +180,26 @@ export default function GreetingSection() {
           Eidiya, and of course, your outfit is
           absolutely on point
           </div>
-          <div className="greetingsTop-cloud-1">
+          <div className="greetingTop-cloud-1">
             <img
-              src={greetingsTopCloud1}
-              className="greetingsTopCloud1 img-fit"
+              src={greetingTopCloud1}
+              className="greetingTopCloud1 img-fit"
               alt=""
             />
           </div>
 
-          <div className="greetingsTop-cloud-2">
+          <div className="greetingTop-cloud-2">
             <img
-              src={greetingsTopCloud2}
-              className="greetingsTopCloud2 img-fit"
+              src={greetingTopCloud2}
+              className="greetingTopCloud2 img-fit"
               alt=""
             />
           </div>
 
-          <div className="greetingsTop-birds">
+          <div className="greetingTop-birds">
             <img
-              src={greetingsTopBirds}
-              className="greetingsTopBirds img-fit"
+              src={greetingTopBirds}
+              className="greetingTopBirds img-fit"
               alt=""
             />
           </div>
@@ -209,8 +209,8 @@ export default function GreetingSection() {
           <div className="decoration1">
             <Parallax translateY={['0px', '-100px']} speed={10}>
               <img
-                src={greetingsTopDecoration01}
-                className="greetingsTopDecoration01 img-fit"
+                src={greetingTopDecoration01}
+                className="greetingTopDecoration01 img-fit"
                 alt=""
               />
             </Parallax>
@@ -218,8 +218,8 @@ export default function GreetingSection() {
           <div className="decoration2">
             <Parallax translateY={['0px', '-200px']} speed={30}>
               <img
-                src={greetingsTopDecoration02}
-                className="greetingsTopDecoration02 img-fit"
+                src={greetingTopDecoration02}
+                className="greetingTopDecoration02 img-fit"
                 alt=""
               />
             </Parallax>
@@ -229,7 +229,7 @@ export default function GreetingSection() {
               <div className="gsapGreetingBalloon">
                 <img
                   src={greetingsTopBalloon1}
-                  className="greetingsTopBalloon1 img-fit"
+                  className="greetingTopBalloon1 img-fit"
                   alt=""
                 />
               </div>
@@ -252,23 +252,23 @@ export default function GreetingSection() {
               <div className="gsapGreetingGreenBalloon">
                 <img
                   src={greetingsTopBalloon2}
-                  className="greetingsTopBalloon3 img-fit"
+                  className="greetingTopBalloon3 img-fit"
                   alt=""
                 />
               </div>
             </Parallax>
           </div>
-          <div className="greetingsTop01">
+          <div className="greetingTop01">
             <img
               src={greetingsTopElement01}
-              className="greetingsTopElement01 img-fit"
+              className="greetingTopElement01 img-fit"
               alt=""
             />
           </div>
-          <div className="greetingsTop02">
+          <div className="greetingTop02">
             <img
               src={greetingsTopElement02}
-              className="greetingsTopElement02 img-fit"
+              className="greetingTopElement02 img-fit"
               alt=""
             />
             <button className="btn btn-primary download-btn">
@@ -331,9 +331,9 @@ export default function GreetingSection() {
           chat with the family
           </div>
         </div>
-        <div className="greetingSectionContainer">
-          <div className="greetingsSection-bg">
-             <img src={greetingSectionBg} className='greetingsSectionBg img-fit' alt="" />
+        <div className="greetingBottomSection">
+          <div className="greetingBottom-bg">
+             <img src={greetingSectionBg} className='greetingsSectionBg' alt="" />
           </div>
           <div className='greetingElements'>
             <div className="greetingCards">
@@ -487,7 +487,7 @@ export default function GreetingSection() {
                 <img src={greetingCandy} className='greetingElement14 img-fit' alt="" />
             </div>
             <div className='greetingElements15'>
-                <img src={greetingsTopBirds} className='greetingElement15 img-fit' alt="" />
+                <img src={greetingTopBirds} className='greetingElement15 img-fit' alt="" />
             </div>
 
           <div className="section-box">
