@@ -44,7 +44,7 @@ export default function Navbar({ audioEnabled, setAudioEnabled }) {
     <>
       <nav className={`navbar ${theme}`}>
         <div className="navbar-bg">
-          <img src={navBarBg} alt="" className="img-fit"/>
+          <img src={navBarBg} alt=""/>
         </div>
         <div className="navbar-container">
           <div className="headerLeft">
