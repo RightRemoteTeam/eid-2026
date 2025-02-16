@@ -37,6 +37,7 @@ import discoverTrail01 from "../../assets/images/discover/trail.svg"
 import discoverTrail02 from "../../assets/images/discover/red-carpet.png"
 import discoverDecoration01 from "../../assets/images/greetings/greetings_decoration_2.png"
 import discoverGiftBox01 from "../../assets/images/greetingcard/giftbox.png";
+import yellowLeaf from "../../assets/images/common/yellow-leaf.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoogleAnalytics } from "../GoogleAnalytics";
@@ -315,6 +316,12 @@ export default function GreetingSection() {
               <img src={discoverGiftBox01} className='gift-box-img-1 img-fit' alt="giftbox" />
             </Parallax>
           </div>
+          
+          <div className='greetingTop08'>
+            <Parallax translateY={['0px', '-100px']} speed={20}>
+              <img src={yellowLeaf} className='yellow-leaf img-fit' alt="" />
+            </Parallax>
+          </div>
           <div className="greetingTop-heading-2">
           After we get everything ready, we perform
           the Eid prayer, and immerse ourselves in the
@@ -479,7 +486,9 @@ export default function GreetingSection() {
             <div className='greetingElements14'>
                 <img src={greetingCandy} className='greetingElement14 img-fit' alt="" />
             </div>
-
+            <div className='greetingElements15'>
+                <img src={greetingsTopBirds} className='greetingElement15 img-fit' alt="" />
+            </div>
 
           <div className="section-box">
             <div className='section-card-container'>
