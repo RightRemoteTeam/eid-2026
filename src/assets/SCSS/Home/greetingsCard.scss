@@ -452,6 +452,10 @@
             transform: translate(50%, 0);
             width: 13%;
             z-index: 10;
+
+            .btn{
+                padding: 11px 0;
+            }
         } 
 
         .greetingTop03 {
@@ -505,8 +509,8 @@
         .greetingTop04 {
             position: absolute;
             width: 7%;
-            top: 40%;
-            left: 85%;
+            top: 46%;
+            right: 8%;
             z-index: 5;
 
             img {
@@ -516,8 +520,8 @@
         .greetingTop05 {
             position: absolute;
             width: 6%;
-            top: 40%;
-            left: 90%;
+            top: 44%;
+            right: 5%;
             z-index: 3;
             
             .green-baloon-1 {
@@ -545,12 +549,24 @@
         .greetingTop07 {
             position: absolute;
             width: 12.9%;
-            top: 57%;
-            left: 82%;
+            top: 66%;
+            right: 4%;
             z-index: 5;
 
             img {
                 width: 100%;
+            }
+        }
+
+        .greetingTop08{
+            position: absolute;
+            width: 6.7%;
+            top: 38.5%;
+            right: 7.2%;
+            z-index: 5;
+
+            img {
+                transform: scaleX(-1) rotate(45deg);
             }
         }
     }
@@ -576,6 +592,7 @@
             top: 2%;
             right: 50%;
             transform: translate(50%, 0);
+            width: 62%;
 
 
             & img {
@@ -612,26 +629,12 @@
                     height: 100%;
                 }
                 & .greetingElements01 {
-                    // position: absolute;
-                    // top: 7%;
-                    // left: 32%;
-                    @media screen and (max-width:  $bp-tab){
-                        width: 30%;
-                        // left: 44%;
-                    }
-                    @media screen and (max-width: $bp-mobile){
-                        width: 38%;
-                        // left: 42%;
-                    }
-                    @media screen and (max-width: 375px){
-                        width: 35%;
-                        // left: 42%;
-                    }
+                    width: 25%;
+                
 
                     .btn{
                         font-size: 20px;
-                        padding: 18px 42px;
-                        white-space: nowrap;
+                        padding: 18px 0;
                         font-weight: 600;
                     }
                 }
@@ -736,6 +739,13 @@
             top: 61.4%;
         }
 
+        & .greetingElements15{
+            position: absolute;
+            width: 24.6%;
+            right: -5%;
+            top: 76.4%;
+        }
+
 
         & .section-box {
             position: absolute;
@@ -780,7 +790,7 @@
                     .btn{
                         font-size: 28px;
                         font-weight: 600;
-                        padding: 2rem 0;
+                        padding: 17px 0;
                     }
                 }
             }
