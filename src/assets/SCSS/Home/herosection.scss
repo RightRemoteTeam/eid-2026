@@ -18,14 +18,16 @@ section.header {
         }
 
         .layer01Wrap{
-            width: 23%;
-            left: 38%;
-            top: 20%;
+            width: 20%;
+            left: 50%;
+            top: 30%;
+            z-index: 10;
+            transform: translateX(-50%);
         }
         
         .layer02Wrap{
             width: 50%;
-            left: -5%;
+            left: -6%;
             top: 0%;
             z-index: 3;
         }
@@ -39,15 +41,15 @@ section.header {
 
         .layer04Wrap{
             width: 50%;
-            left: -5%;
-            top: 35%;
+            left: -6%;
+            top: 40%;
             z-index: 3;
         }
 
         .layer05Wrap{
             width: 50%;
             right: -5%;
-            top: 35%;
+            top: 40%;
             z-index: 3;
         }
 
@@ -60,85 +62,85 @@ section.header {
 
         .layer07Wrap{
             width: 50%;
-            right: -5%;
-            top: 4%;
+            right: -11%;
+            top: 02%;
             z-index: 2;
         }
 
         .layer08Wrap{
             width: 10%;
-            left: 33%;
-            top: 18%;
+            left: 30%;
+            top: 20%;
             z-index: 4;
         }
 
         .layer09Wrap{
             width: 10%;
-            right: 33%;
-            top: 18%;
+            right: 30%;
+            top: 20%;
             z-index: 4;
         }
 
         .layer10Wrap{
             width: 18%;
-            left: -8%;
+            left: -6%;
             top: 48%;
-            z-index: 4;
+            z-index: 2;
         }
 
         .layer12Wrap{
             width: 6%;
-            left: 14%;
-            bottom: 48%;
+            left: 7%;
+            bottom: 44%;
             z-index: 4;
         }
 
         .layer13Wrap{
             width: 10%;
-            left: 23%;
-            top: 35%;
+            left: 18%;
+            top: 42%;
             z-index: 4;
         }
 
         .layer14Wrap{
             width: 8%;
-            left: 22%;
-            top: 48%;
+            left: 13%;
+            top: 55%;
             z-index: 4;
         }
 
         .layer15Wrap{
             width: 6%;
-            left: 37%;
-            top: 36%;
+            left: 30%;
+            top: 46%;
             z-index: 4;
         }
 
         .layer16Wrap{
             width: 5%;
-            right: 37%;
-            top: 36%;
+            right: 30%;
+            top: 46%;
             z-index: 4;
         }
 
         .layer18Wrap{
             width: 8%;
-            right: 27%;
-            top: 42%;
+            right:20%;
+            top: 52%;
             z-index: 4;
         }
 
         .layer19Wrap{
             width: 9%;
-            right: 14%;
-            top: 35%;
+            right: 8%;
+            top: 50%;
             z-index: 4;
         }
 
         .layer20Wrap{
             width: 3%;
             left: 49%;
-            top: 41%;
+            top: 50%;
             z-index: 4;
         }
 
