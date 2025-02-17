@@ -3,7 +3,8 @@ import "../../assets/SCSS/Home/discoverSection.scss";
 import { Parallax } from "react-scroll-parallax";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import data from "../Locale/en-new.json";
+
+import { useTranslation } from "react-i18next";
 import Background from "../../assets/images/discover/background.png";
 import GiantWheel from "../../assets/images/discover/giant-wheel.png";
 import YellowCarpet from "../../assets/images/common/yellow-carpet.png";
@@ -30,6 +31,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function DiscoverSection() {
   const animPlayed = useRef(false);
   const sectionRef = useRef(null);
+  const {t} = useTranslation();
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -109,7 +111,7 @@ export default function DiscoverSection() {
         <img src={Background} />
       </div>
       <div className="desc-container-1">
-        <p className="section-desc-1">{data.discover.description1}</p>
+        <p className="section-desc-1">{t("discover.description1")}</p>
       </div>
 
       <div className="discover-giantwheel-container">
@@ -155,9 +157,9 @@ export default function DiscoverSection() {
       </div>
 
       <div className="desc-container-2">
-        <p className="section-desc-2">{data.discover.description2}</p>
+        <p className="section-desc-2">{t("discover.description2")}</p>
         <div className="discover-events-container ">
-          <button className="btn btn-primary">Discover our EID events</button>
+          <button className="btn btn-primary">{t("buttons.title8")}</button>
           <div className="logo-container">
             <img src={EnjoySaudiLogo} alt="Enjoy Saudi" />
           </div>

@@ -150,9 +150,7 @@ export default function GreetingSection() {
             <img src={greetingTopBg} className="greetingTopBg" alt="" />
           </div>
           <div className="greetingTop-heading-1">
-            Welcome Eid, the holiday that makes everyone happy and joyful! Get
-            dressed up, prepare the gifts and Eidiya, and of course, your outfit
-            is absolutely on point
+            {t("greetingSection.description1")}
           </div>
           <div className="greetingTop-cloud-1">
             <img
@@ -252,7 +250,7 @@ export default function GreetingSection() {
               download
               className="btn btn-primary download-btn"
             >
-              {t("happiness.download-button")}
+              {t("buttons.title1")}
             </button>
           </div>
           <div className="greetingTop03">
@@ -322,10 +320,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingTop-heading-2">
-            After we get everything ready, we perform the Eid prayer, and
-            immerse ourselves in the beautiful festive atmosphere. Afterward, we
-            visit and greet our loved ones, showering them with affection, and
-            then sit down to chat with the family
+            {t("greetingSection.description2")}
           </div>
         </div>
         <div className="greetingBottomSection">
@@ -339,104 +334,54 @@ export default function GreetingSection() {
           <div className="greetingElements">
             <div className="greetingCards">
               <div className="greetingElements01">
-                {lang === "en" ? (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard01}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard01}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                )}
+                <div className="greetingCardContainer">
+                  <img
+                    src={greetingCard01}
+                    className="greetingElement01 img-fit"
+                    alt=""
+                  />
+                  <button className="btn btn-primary download-btn">
+                    {t("buttons.title2")}
+                  </button>
+                </div>
+
               </div>
               <div className="greetingElements01">
-                {lang === "en" ? (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard02}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard02}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                )}
+                <div className="greetingCardContainer">
+                  <img
+                    src={greetingCard02}
+                    className="greetingElement01 img-fit"
+                    alt=""
+                  />
+                  <button className="btn btn-primary download-btn">
+                    {t("buttons.title3")}
+                  </button>
+                </div>
+
               </div>
               <div className="greetingElements01">
-                {lang === "en" ? (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard02}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard02}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                )}
+                <div className="greetingCardContainer">
+                  <img
+                    src={greetingCard02}
+                    className="greetingElement01 img-fit"
+                    alt=""
+                  />
+                  <button className="btn btn-primary download-btn">
+                    {t("buttons.title4")}
+                  </button>
+                </div>
               </div>
               <div className="greetingElements01">
-                {lang === "en" ? (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard02}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="greetingCardContainer">
-                    <img
-                      src={greetingCard02}
-                      className="greetingElement01 img-fit"
-                      alt=""
-                    />
-                    <button className="btn btn-primary download-btn">
-                      {t("greetingSection.buttondownload")}
-                    </button>
-                  </div>
-                )}
+                <div className="greetingCardContainer">
+                  <img
+                    src={greetingCard02}
+                    className="greetingElement01 img-fit"
+                    alt=""
+                  />
+                  <button className="btn btn-primary download-btn">
+                    {t("buttons.title5")}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -584,10 +529,10 @@ export default function GreetingSection() {
 
               <div className="section-box-btns">
                 <button className="btn btn-primary download-btn">
-                  {t("greetingSection.buttondownload")}
+                  {t("buttons.title6")}
                 </button>
                 <button className="btn btn-primary download-btn">
-                  {t("greetingSection.buttondownload")}
+                  {t("buttons.title7")}
                 </button>
               </div>
             </div>

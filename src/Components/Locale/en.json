@@ -2,77 +2,51 @@
     "header": {
         "language": "عربي"
     },
-    "preparation" : {
-        "title" : "Eid <br/> Preparation",
-        "description" : "Hello to the Eid that we've been waiting for a year."
+    "buttons": {
+        "title1": "Eid Identity",
+        "title2": "EID EVENTS BOOKLET",
+        "title3": "GREETING CARDS",
+        "title4": "HOUSES DECORATION",
+        "title5": "COMPANIES DECORATION",
+        "title6": "Your Greeting",
+        "title7": "Create Your Own",
+        "title8": "Discover our Eid Events"
     },
-    "happiness" : {
-        "title" : "Eid <br/> Happiness",
-        "description" : "After a whole year of patiently, but eagerly waiting, Eid is finally here! Hands up everyone who missed the incense smells, the outfits and the delicious food? But first, let’s get Eid-ready with our outfits.",
-        "download-button":"Eid Identity"
+    "greetingSection": {
+        "title": "Download greeting cards",
+        "para": "To share the joy with your loved ones",
+        "description1": "Welcome Eid, the holiday that makes everyone happy and joyful! Get dressed up, prepare the gifts and Eidiya, and of course, your outfit is absolutely on point.",
+        "description2": "After we get everything ready, we perform the Eid prayer, and immerse ourselves in the beautiful festive atmosphere. Afterward, we visit and greet our loved ones, showering them with affection, and then sit down to chat with the family"
     },
-    "aud":{
-        "title":"Headline here",
-        "description":"Now that we’re ready in our new Eid outfits, it’s time for Takbeer or Eid prayers. Let’s revel in this beautiful moment. Later, let’s join the family gathering and exchange warm greetings with loved ones."
+    "discover": {
+        "description1": "Next up, a treat for the eyes and a feast for the belly, It’s ‘Eid lunch’ with family. Although we might be missing a few due to food coma, there’s plenty of room for laughter and fun.",
+        "description2": "After we emerge from our Eid coma, everyone’s excited about Eid outings. Where do we go? What adventures can await? Don’t worry, we have you covered, with Eid events."
     },
-    "family":{
-        "title":"Headline here",
-        "description":"After that much-needed family time, it’s the kids’ favourite part, Eideyah! Time for them to engage in friendly banter as to who received the most."
+    "footerMain": {
+        "menuone": "Privacy",
+        "menutwo": "Terms & Conditions",
+        "btn": "Replay The Journey",
+        "back_to_journey": "Back to Eid journey"
     },
-    "Buttontranslate" : {
-        "title1" : "Houses \n Decorations",
-        "title2" : "Greeting \n Cards",
-        "title3" : "Tool \n Kit",
-        "title4" : "Eid Events\n Booklet",
-        "title5" : "Companies \n Decorations"
+    "modal": {
+        "audio_permission_error": "For better user experience enable the audio access",
+        "button_close": "OK"
     },
-    "slidertranslate" : {
-        "title1" : "Houses Decorations",
-        "title2" : "Greeting Cards",
-        "title3" : "Tool Kit",
-        "title4" : "Eid Events Booklet",
-        "title5" : "Companies Decorations"
+    "meta": {
+        "title": "Eid al-Fitr 2024 Identity",
+        "description": "Joyful moments you live, and unforgettable feelings with your family and loved ones."
     },
-    "greetingSection" : {
-        "title" : "Download greeting cards",
-        "para" : "To share the joy with your loved ones",
-        "buttondownload" : "Your Greeting",
-        "createbutton" : "Create your own"
+    "DownloadPopup": {
+        "ButtonText": "Download"
     },
-    "rideSection" : {
-        "title" : "Headline here",
-        "para" : "Next up, a treat for the eyes and a feast for the belly, it’s ‘Eid lunch’ with family. Although we might be missing a few due to food coma, there’s plenty of room for laughter and fun."
+    "Preview": {
+        "edit": "Edit",
+        "download": "Download"
     },
-    "moneySection" : {
-        "title" : "Headline here",
-        "para" : "After we emerge from our Eid coma, everyone’s excited about Eid outings. Where do we go? What adventures can await? Don’t worry, we have you covered, with Eid events.",
-        "buttondownload":"Discover our Eid Events"
-    },
-    "footerMain" : {
-        "menuone" : "Privacy",
-        "menutwo" : "Terms & Conditions",
-        "btn" : "Replay The Journey",
-        "back_to_journey" : "Back to Eid journey"
-    },
-    "modal" : {
-        "audio_permission_error" : "For better user experience enable the audio access",
-        "button_close" : "OK"
-    },
-    "meta":{
-        "title":"Eid al-Fitr 2024 Identity",
-        "description":"Joyful moments you live, and unforgettable feelings with your family and loved ones."
-    },
-    "DownloadPopup":{
-        "ButtonText":"Download"
-    },
-    "Preview":{
-        "edit":"Edit",
-        "download":"Download"
-    },
-    "Greetings":{
-        "preview":"Preview",
-        "name":"Enter your name",
-        "message":"Type your message here!",
-        "messageLimit":"Maximum 25 characters"
+    "Greetings": {
+        "preview": "Preview",
+        "name": "Enter your name",
+        "message": "Type your message here!",
+        "messageLimit": "Maximum 25 characters"
     }
 }
