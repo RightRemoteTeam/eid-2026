@@ -10,7 +10,6 @@ import FamilySection from "../Components/Home/FamilySection";
 import ButtonSection from "../Components/Home/ButtonSection";
 import GreetingsCard from "../Components/Home/GreetingsCard";
 import Money from "../Components/Home/Money";
-import Quote from "../Components/Home/Quote";
 import AudioPermissionModal from "../Components/Home/AudioPermissionModal";
 export default function Home() {
   const { t } = useTranslation();
@@ -50,7 +49,7 @@ export default function Home() {
       </div>
       <FamilySection sectionRef={sectionRef} />
       <Money />
-      <Quote />
+      {/* <Quote /> */}
     </>
   );
 }
