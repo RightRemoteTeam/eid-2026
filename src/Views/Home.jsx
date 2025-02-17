@@ -14,14 +14,15 @@ import AudioPermissionModal from "../Components/Home/AudioPermissionModal";
 export default function Home() {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
-  const [audioEnabled, setAudioEnabled, pageLoaded] = useOutletContext();
+  const [setAudioEnabled, pageLoaded] = useOutletContext();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (pageLoaded) {
       setTimeout(() => {
-        setIsModalOpen(true);
+        // Audio permission modal disabled for phase 1
+        setIsModalOpen(false);
       }, 1500);
     }
   }, [pageLoaded]);
