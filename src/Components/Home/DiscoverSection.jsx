@@ -106,7 +106,7 @@ export default function DiscoverSection() {
   return (
     <section ref={sectionRef} className="discover-section">
       <div className="discover-section-background">
-        <img src={Background} className="img-fit" />
+        <img src={Background} />
       </div>
       <div className="desc-container-1">
         <p className="section-desc-1">{data.discover.description1}</p>

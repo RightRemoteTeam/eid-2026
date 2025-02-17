@@ -6,6 +6,10 @@
 
     .discover-section-background {
         position: relative;
+
+        img {
+            width: 100%;
+        }
     }
 
     .desc-container-1,
@@ -24,10 +28,34 @@
             color: #FFF;
             text-align: center;
             font-family: "Space Grotesk";
-            font-size: 36px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+
+            @media (min-width: 826px) {
+                font-size: 24px;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 24px;
+            }
+
+            @media (min-width: 1280px) {
+                font-size: 26px;
+            }
+
+            @media (min-width: 1420px) {
+                font-size: 30px;
+            }
+
+            @media (min-width: 1620px) {
+                font-size: 34px;
+            }
+
+            @media (min-width: 1820px) {
+                font-size: 36px;
+            }
 
         }
     }
