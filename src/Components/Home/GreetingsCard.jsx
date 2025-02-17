@@ -5,9 +5,8 @@ import { Parallax } from "react-scroll-parallax";
 
 import "../../assets/SCSS/Home/greetingsCard.scss";
 import greetingTopBg from "../../assets/images/greetings/greetingTopBg.png";
-import greetingTopCloud1 from "../../assets/images/greetings/greetingsTopCloud.svg";
-import greetingTopCloud2 from "../../assets/images/greetings/greetingsTopCloud.svg";
-import greetingTopBirds from "../../assets/images/greetings/greetingsTopBirds.svg";
+import greetingTopCloud from "../../assets/images/greetings/greetingsTopCloud.png";
+import greetingTopBirds from "../../assets/images/greetings/greetingsTopBirds.png";
 import greetingTopDecoration01 from "../../assets/images/greetings/greetings_decoration_1.png";
 import greetingTopDecoration02 from "../../assets/images/greetings/greetings_decoration_2.png";
 import greetingsTopElement01 from "../../assets/images/greetings/greetings_1.png";
@@ -17,7 +16,7 @@ import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloo
 import greetingSectionBg from "../../assets/images/greetings/greetingBottomBg.png";
 import greetingballoon01 from "../../assets/images/greetings/balloon3.png";
 import greetingCloth01 from "../../assets/images/greetings/yellowcloth.png";
-import greetingCup01 from "../../assets/images/common/dallah.svg";
+import greetingCup01 from "../../assets/images/common/dallah.png";
 import greetingSweet01 from "../../assets/images/greetings/sweet1.png";
 import greetingGoldCash from "../../assets/images/greetings/goldcash.png";
 import greetingGreenCash from "../../assets/images/greetings/greencash.png";
@@ -27,7 +26,7 @@ import greetingCup from "../../assets/images/common/cup.png";
 import greetingGrass from "../../assets/images/greetings/grass.png";
 import greetingLeaf from "../../assets/images/common/leaf.png";
 import greetingSun from "../../assets/images/common/sun.png";
-import greetingCandy from "../../assets/images/common/candy.svg";
+import greetingCandy from "../../assets/images/common/candy.png";
 import greetingCard01 from "../../assets/images/greetings/card2.png";
 import greetingCard02 from "../../assets/images/greetings/card3.png";
 import discoverBuilding01 from "../../assets/images/discover/building01.svg";
@@ -37,7 +36,7 @@ import discoverTrail01 from "../../assets/images/discover/trail.svg";
 import discoverTrail02 from "../../assets/images/discover/red-carpet.png";
 import discoverDecoration01 from "../../assets/images/greetings/greetings_decoration_2.png";
 import discoverGiftBox01 from "../../assets/images/greetings/giftbox.png";
-import yellowLeaf from "../../assets/images/common/yellow-leaf.svg";
+import yellowLeaf from "../../assets/images/common/yellow-leaf.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoogleAnalytics } from "../GoogleAnalytics";
@@ -155,7 +154,7 @@ export default function GreetingSection() {
           </div>
           <div className="greetingTop-cloud-1">
             <img
-              src={greetingTopCloud1}
+              src={greetingTopCloud}
               className="greetingTopCloud1 img-fit"
               alt=""
             />
@@ -163,7 +162,7 @@ export default function GreetingSection() {
 
           <div className="greetingTop-cloud-2">
             <img
-              src={greetingTopCloud2}
+              src={greetingTopCloud}
               className="greetingTopCloud2 img-fit"
               alt=""
             />
