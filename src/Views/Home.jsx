@@ -9,7 +9,6 @@ import OudSection from "../Components/Home/OudSection";
 import FamilySection from "../Components/Home/FamilySection";
 import ButtonSection from "../Components/Home/ButtonSection";
 import GreetingsCard from "../Components/Home/GreetingsCard";
-import Ride from "../Components/Home/Ride";
 import Money from "../Components/Home/Money";
 import Quote from "../Components/Home/Quote";
 import AudioPermissionModal from "../Components/Home/AudioPermissionModal";
@@ -50,7 +49,6 @@ export default function Home() {
         <ButtonSection />
       </div>
       <FamilySection sectionRef={sectionRef} />
-      <Ride />
       <Money />
       <Quote />
     </>
