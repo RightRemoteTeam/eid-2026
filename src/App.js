@@ -3,7 +3,7 @@ import "./assets/SCSS/main.scss";
 import { Outlet, useParams, useLocation  } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
+import Footer from "./Components/Home/Footer"
 import { checkLang } from "./Components/Functions";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "./Components/ThemeContext";
@@ -78,7 +78,7 @@ function App() {
             setAudioEnabled={setAudioEnabled}
           />
           <Outlet context={[audioEnabled, setAudioEnabled, pageLoaded, setPageLoaded]} />
-          <Footer audioEnabled={audioEnabled} />
+          <Footer/>
         </div>
       )}
     </>
