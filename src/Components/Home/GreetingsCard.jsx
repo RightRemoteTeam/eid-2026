@@ -171,7 +171,7 @@ export default function GreetingSection() {
           <div className="greetingTop-birds">
             <img
               src={greetingTopBirds}
-              className="greetingTopBirds img-fit"
+              className="greetingTopBirds img-fit"  
               alt=""
             />
           </div>
@@ -340,7 +340,12 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn">
+                  <button className="btn btn-primary download-btn"
+                   onClick={() => {
+                    triggerEvent("Eid_Identity_2024_click", "link_click");
+                    setModalData(ENV.TOOLKIT, pdfThumbnail);
+                  }}
+                  href={ENV.TOOLKIT}>
                     {t("buttons.title2")}
                   </button>
                 </div>
@@ -353,7 +358,11 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn">
+                  <button className="btn btn-primary download-btn"
+                  onClick={() => {
+                    triggerEvent("Eid_Identity_2024_click", "link_click");
+                    setModalData(ENV.TOOLKIT, pdfThumbnail);
+                  }}>
                     {t("buttons.title3")}
                   </button>
                 </div>
@@ -366,7 +375,11 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn">
+                  <button className="btn btn-primary download-btn"
+                   onClick={() => {
+                    triggerEvent("Eid_Identity_2024_click", "link_click");
+                    setModalData(ENV.TOOLKIT, pdfThumbnail);
+                  }}>
                     {t("buttons.title4")}
                   </button>
                 </div>
@@ -378,7 +391,11 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn">
+                  <button className="btn btn-primary download-btn"
+                  onClick={() => {
+                    triggerEvent("Eid_Identity_2024_click", "link_click");
+                    setModalData(ENV.TOOLKIT, pdfThumbnail);
+                  }}>
                     {t("buttons.title5")}
                   </button>
                 </div>
@@ -535,7 +552,11 @@ export default function GreetingSection() {
               />
 
               <div className="section-box-btns">
-                <button className="btn btn-primary download-btn">
+                <button className="btn btn-primary download-btn"
+                 onClick={() => {
+                  triggerEvent("Eid_Identity_2024_click", "link_click");
+                  setModalData(ENV.TOOLKIT, pdfThumbnail);
+                }}>
                   {t("buttons.title6")}
                 </button>
                 <button className="btn btn-primary download-btn">
