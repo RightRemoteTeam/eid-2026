@@ -18,14 +18,14 @@ export default function Home() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    if (pageLoaded) {
-      setTimeout(() => {
-        // Audio permission modal disabled for phase 1
-        setIsModalOpen(false);
-      }, 1500);
-    }
-  }, [pageLoaded]);
+  // useEffect(() => {
+  //   if (pageLoaded) {
+  //     setTimeout(() => {
+  //       // Audio permission modal disabled for phase 1
+  //       setIsModalOpen(false);
+  //     }, 1500);
+  //   }
+  // }, [pageLoaded]);
 
   const handleEnableAudio = () => {
     console.log("pop up close triggered");
@@ -34,11 +34,11 @@ export default function Home() {
   };
   return (
     <>
-      <AudioPermissionModal
+      {/* <AudioPermissionModal
         isOpen={isModalOpen}
         message={t("modal.audio_permission_error")}
         onConfirm={handleEnableAudio}
-      />
+      /> */}
       <HeroSection />
       <GreetingsCard />
       <DiscoverSection />
