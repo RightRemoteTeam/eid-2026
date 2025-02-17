@@ -14,13 +14,14 @@ import greetingsTopElement02 from "../../assets/images/greetings/greetings_2.png
 import greetingsTopBalloon1 from "../../assets/images/greetings/greetings_balloon_1.png";
 import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloon_2.png";
 import greetingSectionBg from "../../assets/images/greetings/greetingBottomBg.png";
-import greetingBaloon01 from "../../assets/images/greetings/baloon3.png";
+import greetingballoon01 from "../../assets/images/greetings/balloon3.png";
 import greetingCloth01 from "../../assets/images/greetings/yellowcloth.png";
 import greetingCup01 from "../../assets/images/common/dallah.png";
 import greetingSweet01 from "../../assets/images/greetings/sweet1.png";
 import greetingGoldCash from "../../assets/images/greetings/goldcash.png";
 import greetingGreenCash from "../../assets/images/greetings/greencash.png";
-import greetingDarkCard from "../../assets/images/greetings/darkcard.png";
+import greetingDarkCard from "../../assets/images/greetings/dark-greeting-card.png";
+import greetingCard from "../../assets/images/greetings/greeting-card.png";
 import greetingCup from "../../assets/images/common/cup.png";
 import greetingGrass from "../../assets/images/greetings/grass.png";
 import greetingLeaf from "../../assets/images/common/leaf.png";
@@ -29,8 +30,8 @@ import greetingCandy from "../../assets/images/common/candy.png";
 import greetingCard01 from "../../assets/images/greetings/card2.png";
 import greetingCard02 from "../../assets/images/greetings/card3.png";
 import discoverBuilding01 from "../../assets/images/discover/building01.svg";
-import discoverBaloon01 from "../../assets/images/greetings/baloon3.png";
-import discoverBaloon02 from "../../assets/images/discover/green-baloon.png";
+import discoverballoon01 from "../../assets/images/greetings/balloon3.png";
+import discoverballoon02 from "../../assets/images/discover/green-balloon.png";
 import discoverTrail01 from "../../assets/images/discover/trail.svg";
 import discoverTrail02 from "../../assets/images/discover/red-carpet.png";
 import discoverDecoration01 from "../../assets/images/greetings/greetings_decoration_2.png";
@@ -281,18 +282,18 @@ export default function GreetingSection() {
           </div>
           <div className="greetingTop04">
             <Parallax translateY={["0px", "-150px"]} speed={30}>
-              <div className="gsapDiscoverYellowBaloon">
-                <img src={discoverBaloon01} alt="Discover Building" />
+              <div className="gsapGreetingBalloon">
+                <img src={discoverballoon01} alt="Discover Building" />
               </div>
             </Parallax>
           </div>
           <div className="greetingTop05">
             <Parallax translateX={["0px", "-1px"]} speed={5}>
-              <div className="gsapDiscoverGreenBaloon">
+              <div className="gsapGreetingGreenBalloon">
                 <img
-                  src={discoverBaloon02}
-                  alt="Discover baloon"
-                  className="green-baloon-1"
+                  src={discoverballoon02}
+                  alt="Discover balloon"
+                  className="green-balloon-1"
                 />
               </div>
             </Parallax>
@@ -304,7 +305,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="greetingTop07">
-            <Parallax translateY={["0px", "-100px"]} speed={20}>
+            <Parallax translateY={["0px", "-200px"]} speed={30}>
               <img
                 src={discoverGiftBox01}
                 className="gift-box-img-1 img-fit"
@@ -383,12 +384,15 @@ export default function GreetingSection() {
                 </div>
               </div>
             </div>
+            <div className="greetingTop-heading-3">
+              {t("greetingSection.description3")}
+            </div>
           </div>
           <div className="greetingElements03">
             <Parallax speed={10} translateY={["0px", "-250px"]}>
               <div className="gsapGreetingBalloon">
                 <img
-                  src={greetingBaloon01}
+                  src={greetingballoon01}
                   className="greetingElement03 img-fit"
                   alt=""
                 />
@@ -465,15 +469,17 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingElements11">
-            <img
-              src={greetingLeaf}
-              className="greetingElement11 img-fit"
-              alt=""
-            />
+            <Parallax translateY={["0px", "-50px"]} speed={10}>
+              <img
+                src={greetingLeaf}
+                className="greetingElement11 img-fit"
+                alt=""
+              />
+            </Parallax>
           </div>
           <div className="greetingElements12">
             <img
-              src={greetingBaloon01}
+              src={greetingballoon01}
               className="greetingElement12 img-fit"
               alt=""
             />
@@ -486,11 +492,13 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingElements14">
-            <img
-              src={greetingCandy}
-              className="greetingElement14 img-fit"
-              alt=""
-            />
+            <Parallax translateY={["0px", "-100px"]} rotate={[0,30]} speed={10}>
+              <img
+                src={greetingCandy}
+                className="greetingElement14 img-fit"
+                alt=""
+              />
+            </Parallax>
           </div>
           <div className="greetingElements15">
             <img
@@ -505,15 +513,15 @@ export default function GreetingSection() {
               <div className="greetingCardContainer">
                 <img
                   src={greetingDarkCard}
-                  className="greetingElement01"
-                  alt=""
+                  className="greetingElement01 greetingMainCard"
+                  alt="Greeting card"
                 />
               </div>
               <div className="greetingCardContainer">
                 <img
-                  src={greetingCard01}
-                  className="greetingElement01"
-                  alt=""
+                  src={greetingCard}
+                  className="greetingElement01 greetingMainCard"
+                  alt="Greeting card"
                 />
               </div>
             </div>

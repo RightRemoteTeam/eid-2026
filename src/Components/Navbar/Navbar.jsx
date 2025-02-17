@@ -44,7 +44,7 @@ export default function Navbar({ audioEnabled, setAudioEnabled }) {
     <>
       <nav className={`navbar ${theme}`}>
         <div className="navbar-bg">
-          <img src={navBarBg} alt=""/>
+          <img src={navBarBg} alt="" />
         </div>
         <div className="navbar-container">
           <div className="headerLeft">
@@ -84,10 +84,6 @@ export default function Navbar({ audioEnabled, setAudioEnabled }) {
                 setAudioEnabled={setAudioEnabled}
               />
             </div>
-
-            {/* <div className='visibleMode'>
-                        <ToggleThemeButton theme={theme} toggleTheme={toggleTheme} />
-                    </div> */}
             <div className="eidEvents">
               <Link to={ENV.EID_EVENT} target="blank">
                 Eid Events

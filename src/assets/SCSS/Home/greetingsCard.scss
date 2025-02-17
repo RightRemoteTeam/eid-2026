@@ -373,6 +373,8 @@
             bottom: 0%;
             right: 50%;
             transform: translate(50%, 0);
+            width: 40%;
+            margin-bottom: 100px;
 
             @media only screen and (max-width: $bp-tab) {
                 width: 80%;
@@ -528,7 +530,7 @@
             right: 5%;
             z-index: 3;
             
-            .green-baloon-1 {
+            .green-balloon-1 {
                 transform: rotate(-70deg);
             }
 
@@ -600,6 +602,29 @@
             margin-bottom: 106px;
             position: absolute;
             top: -20%;
+        }
+
+
+        .greetingTop-heading-3 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #005339;
+            position: absolute;
+            z-index: 2;
+            right: 50%;
+            transform: translate(50%, 0);
+            width: 40%;
+            margin-top: 100px;
+
+            @media only screen and (max-width: $bp-tab) {
+                width: 80%;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                font-size: 20px;
+                
+            }
         }
         & .greetingElements {
             position: absolute;
@@ -784,6 +809,10 @@
 
                 .greetingCardContainer{
                     width: 50%;
+
+                    .greetingMainCard {
+                        border-radius: 20px;
+                    }
 
                     img{
                         width: 100%;

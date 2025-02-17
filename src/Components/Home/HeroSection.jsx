@@ -188,12 +188,12 @@ export default function HeroSection() {
             </Parallax>
           </div>
           <div className="layer06Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 70]}>
+            <Parallax speed={10} translateY={[0, -60]} translateX={[0, 60]}>
                 <img src={layer06} className="layer-06 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer07Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 70]}>
+            <Parallax speed={10} translateY={[0, -50]} translateX={[0, 50]}>
                 <img src={layer07} className="layer-07 img-fit" alt="" />
             </Parallax>
           </div>
@@ -203,12 +203,12 @@ export default function HeroSection() {
             </Parallax>
           </div>
           <div className="layer09Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 50]}>
+            <Parallax speed={10} translateY={[0, -50]} translateX={[0, 50]}>
               <img src={layer09} className="layer-09 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer10Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 50]}>
+            <Parallax speed={10} translateY={[0, -50]} translateX={[0, 50]}>
               <img src={layer10} className="layer-10 img-fit" alt="" />
             </Parallax>
           </div>
