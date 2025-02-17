@@ -1,10 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
-import HeroSection from "../Components/Home/HeroSection";
-import DiscoverSection from "../Components/Home/DiscoverSection";
-import GreetingsCard from "../Components/Home/GreetingsCard";
 import AudioPermissionModal from "../Components/Home/AudioPermissionModal";
+import HeroSection from "../Components/Home/HeroSection";
+import FamilySection from "../Components/Home/FamilySection";
+import ButtonSection from "../Components/Home/ButtonSection";
+import GreetingsCard from "../Components/Home/GreetingsCard";
+import DiscoverSection from "../Components/Home/DiscoverSection";
+// import HappinessSection from "../Components/Home/HappinessSection";
+// import OudSection from "../Components/Home/OudSection";
+// import Money from "../Components/Home/Money";
+
 export default function Home() {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
@@ -36,14 +42,13 @@ export default function Home() {
       <HeroSection />
       <GreetingsCard />
       <DiscoverSection />
-      {/* <HappinessSection />
-      <div className="takbeerSound" ref={sectionRef}>
+      {/* <HappinessSection /> */}
+      {/* <div className="takbeerSound" ref={sectionRef}>
         <OudSection sectionRef={sectionRef} />
         <ButtonSection />
-      </div>
-      <FamilySection sectionRef={sectionRef} />
-      <Money /> */}
-      {/* <Quote /> */}
+      </div> */}
+      {/* <FamilySection sectionRef={sectionRef} /> */}
+      {/* <Money /> */}
     </>
   );
 }
