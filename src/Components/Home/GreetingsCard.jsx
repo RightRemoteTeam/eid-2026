@@ -15,7 +15,8 @@ import greetingsTopCandy from "../../assets/images/greetings/candy.png";
 import greetingsTopElement02 from "../../assets/images/greetings/greetings_2.png";
 import greetingsTopBalloon1 from "../../assets/images/greetings/greetings_balloon_1.png";
 import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloon_2.png";
-import greetingSectionBg from "../../assets/images/greetings/greetingBottomBg.png";
+import greetingBottomBg from "../../assets/images/greetings/greetingBottomBg.png";
+import greetingBottomMobileBg from "../../assets/images/greetings/greetingBottomMobileBg.png";
 import greetingballoon01 from "../../assets/images/greetings/balloon3.png";
 import greetingCloth01 from "../../assets/images/greetings/yellowcloth.png";
 import greetingCup01 from "../../assets/images/common/dallah.png";
@@ -31,10 +32,10 @@ import greetingSun from "../../assets/images/common/sun.png";
 import greetingCandy from "../../assets/images/common/candy.png";
 import greetingCard01 from "../../assets/images/greetings/card2.png";
 import greetingCard02 from "../../assets/images/greetings/card3.png";
-import discoverBuilding01 from "../../assets/images/discover/building01.svg";
+import discoverBuilding01 from "../../assets/images/greetings/building01.png";
 import discoverballoon01 from "../../assets/images/greetings/balloon3.png";
 import discoverballoon02 from "../../assets/images/discover/green-balloon.png";
-import discoverTrail01 from "../../assets/images/discover/trail.svg";
+import discoverTrail01 from "../../assets/images/greetings/trail.png";
 import discoverTrail02 from "../../assets/images/discover/red-carpet.png";
 import discoverDecoration01 from "../../assets/images/greetings/greetings_decoration_2.png";
 import discoverGiftBox01 from "../../assets/images/greetings/giftbox.png";
@@ -269,7 +270,7 @@ export default function GreetingSection() {
           </div>
           <div className="greetingTop03">
             <Parallax
-              translateY={["0px", "-50px"]}
+              translateY={["0px", "-30px"]}
               speed={20}
               className="building-img-1"
             >
@@ -283,13 +284,11 @@ export default function GreetingSection() {
                   className="trail-img"
                 />
                 <div className="trail-carpet-container">
-                  <Parallax speed={5} translateX={["5px", "0px"]}>
                     <img
                       src={discoverTrail02}
                       alt="trail-carpet"
                       className="trail-carpet"
                     />
-                  </Parallax>
                 </div>
               </div>
             </div>
@@ -339,11 +338,10 @@ export default function GreetingSection() {
         </div>
         <div className="greetingBottomSection">
           <div className="greetingBottom-bg">
-            <img
-              src={greetingSectionBg}
-              className="greetingsSectionBg"
-              alt=""
-            />
+          <picture>
+          <source srcSet={greetingBottomMobileBg} media="(max-width: 768px)" />
+          <img src={greetingBottomBg} alt="Greetings Bottom Background" />
+          </picture>
           </div>
           <div className="greetingElements">
             <div className="greetingCards">
