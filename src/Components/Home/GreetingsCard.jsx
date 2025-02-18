@@ -183,7 +183,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="decoration1">
-            <Parallax translateY={["0px", "-100px"]} speed={10}>
+            <Parallax translateY={[0,-30]} speed={10}>
               <img
                 src={greetingTopDecoration01}
                 className="greetingTopDecoration01 img-fit"
@@ -192,7 +192,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="decoration2">
-            <Parallax translateY={["0px", "-200px"]} speed={30}>
+            <Parallax translateY={[0,-40]} speed={30}>
               <img
                 src={greetingTopDecoration02}
                 className="greetingTopDecoration02 img-fit"
@@ -270,7 +270,7 @@ export default function GreetingSection() {
           </div>
           <div className="greetingTop03">
             <Parallax
-              translateY={["0px", "-30px"]}
+              translateY={[0,-8]}
               speed={20}
               className="building-img-1"
             >
@@ -296,14 +296,14 @@ export default function GreetingSection() {
             </div>
           </div>
           <div className="greetingTop04">
-            <Parallax translateY={["0px", "-150px"]} speed={30}>
+            <Parallax translateY={[0,-100]} speed={10}>
               <div className="gsapGreetingBalloon">
                 <img src={discoverballoon01} alt="Discover Building" />
               </div>
             </Parallax>
           </div>
           <div className="greetingTop05">
-            <Parallax translateX={["0px", "-1px"]} speed={5}>
+            <Parallax translateX={[0,-2]} speed={2}>
               <div className="gsapGreetingGreenBalloon">
                 <img
                   src={discoverballoon02}
@@ -320,7 +320,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="greetingTop07">
-            <Parallax translateY={["0px", "-200px"]} speed={30}>
+            <Parallax translateY={[0,-100]} speed={30}>
               <img
                 src={discoverGiftBox01}
                 className="gift-box-img-1 img-fit"
