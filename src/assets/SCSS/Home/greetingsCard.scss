@@ -1,9 +1,11 @@
 @import "../variables";
-.greetings-card-container{
+
+.greetings-card-container {
     padding-top: 210px;
     position: relative;
     z-index: 9;
     padding-bottom: 30px;
+
     .layout {
         display: flex;
         justify-content: center;
@@ -14,62 +16,67 @@
         width: 100%;
         margin: 0 auto;
         width: 100%;
-        @media screen and (max-width: 1280px){
-            width: 90%; 
+
+        @media screen and (max-width: 1280px) {
+            width: 90%;
         }
-      }
-      
-      .card-column {
+    }
+
+    .card-column {
         flex: 1;
         display: grid;
         grid-template-columns: repeat(3, 2fr);
         gap: 20px;
         padding-right: 10px;
 
-        
-      }
-      
-      .input-column {
+
+    }
+
+    .input-column {
         flex: 1;
         display: flex;
         flex-direction: column;
         padding-left: 10px;
-        max-width: 400px; 
-      }
-      
-      .card {
+        max-width: 400px;
+    }
+
+    .card {
         position: relative;
-      }
-      .card-error{
+    }
+
+    .card-error {
         &:first-child {
             border: 5px solid #f20c1c;
             animation: grow-border 2s ease-in-out infinite;
-          }
-        
-          @keyframes grow-border {
-            from {
-              border-width: 0;
-            }
-            to {
-              border-width: 5px;
-            }
-          }
-      }
+        }
 
-      
-      
-      .card-radio {
+        @keyframes grow-border {
+            from {
+                border-width: 0;
+            }
+
+            to {
+                border-width: 5px;
+            }
+        }
+    }
+
+
+
+    .card-radio {
         position: absolute;
         top: 9px;
         right: 10px;
         transform: scale(1.5);
         display: none;
-      }
-      .card-label {
+    }
+
+    .card-label {
         position: relative;
         display: inline-block;
-      }
-      .card-label::after {
+    }
+
+    .card-label::after {
         content: '';
         position: absolute;
         top: 7px;
@@ -84,8 +91,9 @@
         transition: all 0.3s;
         opacity: 0;
         // transform: scale(0);
-      }
-      .card:nth-child(even){
+    }
+
+    .card:nth-child(even) {
         .card-label::after {
             content: '';
             position: absolute;
@@ -101,9 +109,10 @@
             transition: all 0.3s;
             opacity: 1;
         }
-      
-      }
-      .card:nth-child(odd){
+
+    }
+
+    .card:nth-child(odd) {
         .card-label::after {
             content: '';
             position: absolute;
@@ -119,9 +128,10 @@
             transition: all 0.3s;
             opacity: 1;
         }
-      
-      }
-      .card-radio:checked + .card-label::after {
+
+    }
+
+    .card-radio:checked+.card-label::after {
         content: "✓";
         font-size: 17px;
         color: #fff;
@@ -130,21 +140,22 @@
         background: #8a59c8;
         line-height: 31px;
         border: 2px solid #fff;
-      }
-      .card-image {
+    }
+
+    .card-image {
         width: 100%;
         height: auto;
         border-radius: 14px;
-        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-      }
-      
-      .message-input {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .message-input {
         padding: 18px;
         margin-bottom: 20px;
         border-radius: 12px;
         border: none;
-        height: 150px; 
-        resize: none; 
+        height: 150px;
+        resize: none;
         display: block;
         box-shadow: 0px 0px 16px 0px rgba(167, 120, 231, 0.16);
         box-shadow: 0px 0px 16px 0px rgba(167, 120, 231, 0.16);
@@ -154,13 +165,14 @@
         font-size: 16px;
         color: #4A4A4A;
         font-family: "Space Grotesk", sans-serif;
-      }
-      .input-error{
-        
-            border: 2px solid #f20c1c !important;
+    }
+
+    .input-error {
+
+        border: 2px solid #f20c1c !important;
         //     animation: grow-border 2s linear infinite;
-        
-        
+
+
         // @keyframes grow-border {
         //     from {
         //         transform: rotate(0deg);
@@ -170,7 +182,8 @@
         //       }
         // }
     }
-      .name-input {
+
+    .name-input {
         padding: 18px;
         margin-bottom: 20px;
         border-radius: 12px;
@@ -186,11 +199,12 @@
         color: #4A4A4A;
         font-family: "Space Grotesk", sans-serif;
     }
-    .messsageLimit{
+
+    .messsageLimit {
         padding: 5px;
     }
-      
-      .preview-button {
+
+    .preview-button {
         border: none;
         color: white;
         cursor: pointer;
@@ -208,75 +222,87 @@
         width: 220px;
         margin: 20px auto 0;
         font-size: 16px;
-      }
-      .preview-button:hover {
+    }
+
+    .preview-button:hover {
         background: #fff !important;
         color: #5C5C5C;
-      }
-        @media screen and (max-width: 1024px){
-            .card-column {
-                display: flex;
-                flex-flow: wrap;
-                justify-content: space-between;
-                flex: unset;
-                width: 60%;
-                gap: 0;
-            }
-            .input-column {
-                    width: 40%;
-                    flex: unset;
-            }
-            .card {
-                width: 48%;
-                margin-bottom: 20px;
-            }
-            .card:nth-child(3) {
-                order: 1;
-            }
-            .card:nth-child(6) {
-                order: 1;
-            }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .card-column {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+            flex: unset;
+            width: 60%;
+            gap: 0;
         }
-      @media (max-width: 800px) {
-        .layout {
-          flex-direction: column;
-        }
-      
+
         .input-column {
-          width: 100%;
-          max-width: none;
-          padding-left: 0;
+            width: 40%;
+            flex: unset;
         }
-      
+
+        .card {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .card:nth-child(3) {
+            order: 1;
+        }
+
+        .card:nth-child(6) {
+            order: 1;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .layout {
+            flex-direction: column;
+        }
+
+        .input-column {
+            width: 100%;
+            max-width: none;
+            padding-left: 0;
+        }
+
         .card-column {
             width: 100%;
             margin-bottom: 25px;
         }
+
         .message-input {
             height: 100px;
         }
-      }
-      @media (max-width: 680px) {
-        .preview-button{
+    }
+
+    @media (max-width: 680px) {
+        .preview-button {
             width: 100%;
             margin: 7px 0;
             padding: 10px 0;
         }
-        .card:nth-child(even) .card-label::after, .card:nth-child(odd) .card-label::after {
+
+        .card:nth-child(even) .card-label::after,
+        .card:nth-child(odd) .card-label::after {
             width: 20px;
             height: 20px;
         }
-        .card-radio:checked + .card-label::after {
+
+        .card-radio:checked+.card-label::after {
             font-size: 13px;
             line-height: 22px;
         }
-      }
+    }
 }
 
 
 
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .greetings-card-container {
         padding-top: 18%;
     }
@@ -284,13 +310,14 @@
 
 
 .dark-mode {
-    
+
     & .preview-card-container {
         background-color: #8956C9;
     }
+
     & .greetings-card-container {
-        & .preview-button{
-            
+        & .preview-button {
+
             box-shadow: -1px 0px 25px -8px rgb(255 200 54);
             -webkit-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
             -moz-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
@@ -299,33 +326,38 @@
         }
     }
 }
+
 .greetingSection {
-    .greetingTopSection{
+    .greetingTopSection {
         font-size: 0;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        .greetingTop-bg{
+        .greetingTop-bg {
             position: relative;
             width: 100%;
             z-index: 0;
 
-            img{
+            img {
                 width: 100%;
             }
         }
 
-        .greetingTop-cloud-1{
+        .greetingTop-cloud-1 {
             position: absolute;
-            z-index: 1;
+            z-index: 0;
             top: 6%;
             left: 12%;
             width: 20%;
+
+            @media only screen and (max-width: 767px) {
+                top: 17%;
+            }
         }
 
-        .greetingTop-cloud-2{
+        .greetingTop-cloud-2 {
             position: absolute;
             z-index: 1;
             top: 42%;
@@ -334,15 +366,21 @@
             width: 20%;
         }
 
-        .greetingTop-birds{
+        .greetingTop-birds {
             position: absolute;
             z-index: 1;
             top: 42%;
             left: 20%;
             width: 18%;
+
+
+            @media only screen and (max-width: 767px) {
+                top: 38.50%;
+                width: 25%;
+            }
         }
 
-        .greetingTop-heading-1{
+        .greetingTop-heading-1 {
             position: absolute;
             z-index: 2;
             top: 0%;
@@ -353,13 +391,19 @@
             right: 50%;
             transform: translate(50%, 0);
 
-            @media only screen and (max-width: 1440px) {
-                width: 75%;
+            @media only screen and (max-width: 1252px) {
+                top: -10%;
             }
 
-            @media only screen and (max-width: $bp-mobile) {
+            @media only screen and (max-width: 936px) {
                 font-size: 20px;
-                
+                top: -5%;
+            }
+
+            @media only screen and (max-width: 767px) {
+                font-size: 20px;
+                width: 70%;
+                top: -5%;
             }
         }
 
@@ -370,23 +414,33 @@
             color: #005339;
             position: absolute;
             z-index: 2;
-            bottom: 0%;
+            bottom: 5%;
             right: 50%;
             transform: translate(50%, 0);
             width: 40%;
-            margin-bottom: 100px;
 
-            @media only screen and (max-width: $bp-tab) {
+            @media only screen and (max-width: 1050px) {
                 width: 80%;
+                bottom: 0;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 24px;
+                width: 70%;
+                bottom: 10%;
             }
 
-            @media only screen and (max-width: $bp-mobile) {
-                font-size: 20px;
-                
+            @media only screen and (max-width: 618px) {
+                font-size: 18px;
+                width: 85%;
+                bottom: 8%;
             }
+            @media only screen and (max-width: 378px) {
+                bottom: 0%;
+            }
+
         }
 
-        .decoration1{
+        .decoration1 {
             position: absolute;
             z-index: 3;
             top: 6%;
@@ -397,9 +451,13 @@
             .greetingTopDecoration01 {
                 width: 100%;
             }
+
+            @media only screen and (max-width: 767px) {
+                top: 14.7%;
+            }
         }
-        
-        .decoration2{
+
+        .decoration2 {
             position: absolute;
             z-index: 3;
             top: 15%;
@@ -407,70 +465,106 @@
             width: 100%;
             z-index: 5;
 
-            .greetingTopDecoration02{
+            .greetingTopDecoration02 {
                 width: 100%;
+            }
+
+            @media only screen and (max-width: 767px) {
+                top: 23%;
             }
         }
 
 
-        .balloon1{
+        .balloon1 {
             position: absolute;
-            top:25%;
+            top: 25%;
             left: 9%;
             width: 13.1%;
+
+            @media only screen and (max-width: 767px) {
+                top: 24.50%;
+            }
         }
 
-        .balloon2{
+        .balloon2 {
             position: absolute;
             top: 25%;
             right: 7%;
             width: 18.2%;
+
+            @media only screen and (max-width: 767px) {
+                top: 26%;
+            }
         }
-        
-        .balloon3{
+
+        .balloon3 {
             position: absolute;
             top: 58%;
             left: 7%;
             width: 14.2%;
 
-            .greetingTopBalloon3{
+            .greetingTopBalloon3 {
                 transform: rotate(-50deg);
+            }
+
+            @media only screen and (max-width: 767px) {
+                top: 50%;
+                width: 20%;
+                left: 0%;
             }
         }
 
 
-        .greetingTop01{
+        .greetingTop01 {
             position: absolute;
             top: 20%;
             width: 14%;
             right: 50%;
             transform: translate(50%, 0);
             z-index: 2;
+
+            @media only screen and (max-width: 767px) {
+                top: 23%;
+                width: 18%;
+            }
         }
 
-        .greetingTop-candy{
+        .greetingTop-candy {
             position: absolute;
             top: 27%;
             width: 9%;
             left: 40%;
             z-index: 3;
+
+            @media only screen and (max-width: 767px) {
+                top: 28%;
+            }
         }
 
-        .greetingTop02{
+        .greetingTop02 {
             display: flex;
             flex-direction: column;
             gap: 14px;
             position: absolute;
-            bottom: 22%;
+            top: 65%;
             right: 50%;
             transform: translate(50%, 0);
             width: 13%;
             z-index: 10;
 
-            .btn{
+            .btn {
                 padding: 11px 0;
             }
-        } 
+
+            @media only screen and (max-width: 1240px) {
+                width: 20.67%;
+                top: 56%;
+            }
+            @media only screen and (max-width: 767px) {
+                top: 56%;
+                width: 37.67%;
+            }
+        }
 
         .greetingTop03 {
             position: absolute;
@@ -490,31 +584,52 @@
 
             .trail-container {
                 position: absolute;
-                top: 66%;
+                top: 70%;
                 right: 0;
                 width: 100%;
                 overflow: visible;
 
-                .trail-whole{
+                .trail-whole {
                     position: relative;
 
                     .trail-img {
                         transform-origin: top right;
+                        transform: scale(1.3);
                         width: 100%;
                     }
 
                     .trail-carpet-container {
                         position: absolute;
-                        top: 35%;
+                        top: 40%;
                         right: 0;
-                        width: 100%;
+                        width: 85%;
                     }
+
                     .trail-carpet {
                         width: 100%;
                     }
                 }
+            }
 
-               
+
+            @media only screen and (max-width: 767px) {
+                top: 40%;
+                width: 70%;
+
+                .building-img-1 {
+                    margin-right: 10px;
+                }
+
+                .trail-container {
+                    top: 67%;
+
+                    .trail-whole {
+
+                        .trail-carpet-container {
+                            top: 50%;
+                        }
+                    }
+                }
             }
         }
 
@@ -522,26 +637,38 @@
             position: absolute;
             width: 7%;
             top: 46%;
-            right: 8%;
+            right: 9%;
             z-index: 5;
 
             img {
                 width: 100%;
             }
+
+            @media only screen and (max-width: 767px) {
+                top: 45%;
+
+            }
+
         }
+
         .greetingTop05 {
             position: absolute;
             width: 6%;
             top: 44%;
             right: 5%;
             z-index: 3;
-            
+
             .green-balloon-1 {
                 transform: rotate(-70deg);
             }
 
             img {
                 width: 100%;
+            }
+
+            @media only screen and (max-width: 767px) {
+                top: 42%;
+
             }
         }
 
@@ -561,16 +688,20 @@
         .greetingTop07 {
             position: absolute;
             width: 12.9%;
-            top: 66%;
+            top: 70%;
             right: 4%;
             z-index: 5;
 
             img {
                 width: 100%;
             }
+
+            @media only screen and (max-width: 767px) {
+                top: 60%;
+            }
         }
 
-        .greetingTop08{
+        .greetingTop08 {
             position: absolute;
             width: 6.7%;
             top: 38.5%;
@@ -580,20 +711,24 @@
             img {
                 transform: scaleX(-1) rotate(45deg);
             }
+
+            @media only screen and (max-width: 767px) {
+                top: 40%;
+            }
         }
     }
 
-    & .greetingBottomSection{
+    & .greetingBottomSection {
         font-size: 0;
         position: relative;
         width: 100%;
 
-        .greetingBottom-bg{
+        .greetingBottom-bg {
             position: relative;
             width: 100%;
             z-index: 0;
 
-            img{
+            img {
                 width: 100%;
             }
         }
@@ -627,13 +762,9 @@
                 width: 80%;
             }
 
-            @media only screen and (max-width: $bp-mobile) {
+            @media only screen and (max-width: 767px) {
                 font-size: 20px;
-                
-            }
 
-            @media(max-width: 767px){
-                top: 27.6%;
             }
         }
         & .greetingElements {
@@ -672,6 +803,7 @@
                     width: 100%;
                     height: 100%;
                 }
+
                 & .greetingElements01 {
                     flex: 1;    
                     
@@ -709,20 +841,15 @@
                     gap: 20px;
                 }
             }
-            
+
         }
+
         & .greetingElements03 {
             position: absolute;
             width: 10%;
             left: 6%;
             top: 21.6%;
             z-index: 4;
-
-            @media(max-width: 767px){
-                top: 27.6%;
-                width: 18.6%;
-                left: -5%;
-            }
         }
         & .greetingElements04 {
             position: absolute;
@@ -730,14 +857,6 @@
             left: 0;
             top: 35%;
             z-index: 0;
-
-            
-            @media(max-width: 767px){
-                width: 67.2%;
-                top: 40%;
-            }
-
-
         }
         & .greetingElements05 {
             position: absolute;
@@ -745,30 +864,18 @@
             left: 24%;
             top: 35%;
             z-index: 5;
-
-            @media(max-width: 767px){
-                top: 42%;
-            }
         }
         & .greetingElements06 {
             position: absolute;
             width: 5%;
             left: 17%;
             top: 39%;
-
-            @media(max-width: 767px){
-                top: 43%;
-            }
         }
         & .greetingElements07 {
             position: absolute;
             width: 11%;
             right: 5%;
             top: 4.8%;
-
-            @media(max-width: 767px){
-                top: 0%;
-            }
         }
         & .greetingElements08{
             position: absolute;
@@ -783,7 +890,7 @@
 
         }
 
-        & .greetingElements09{
+        & .greetingElements09 {
             position: absolute;
             width: 12%;
             left: 18%;
@@ -793,14 +900,14 @@
                 top: 43%;
             }
 
-            img{
+            img {
                 transform: rotate(-25deg);
             }
            
 
         }
 
-        & .greetingElements10{
+        & .greetingElements10 {
             position: absolute;
             width: 8%;
             left: 29%;
@@ -811,17 +918,11 @@
             }
         }
 
-        & .greetingElements11{
+        & .greetingElements11 {
             position: absolute;
             width: 12.5%;
             right: 17.7%;
             top: 27.4%;
-
-            @media(max-width: 767px){
-                width: 22.5%;
-                top: -1%;
-
-            }
         }
         
         & .greetingElements12{
@@ -836,12 +937,18 @@
                 width: 20;
             }
 
-            img{
+            
+            @media(max-width: 767px){
+                top: 25.14%;
+                width: 20;
+            }
+
+            img {
                 transform: rotate(45deg);
             }
         }
 
-        & .greetingElements13{
+        & .greetingElements13 {
             position: absolute;
             width: 7.6%;
             right: 20%;
@@ -852,15 +959,15 @@
                 right: 27.6%;
             }
         }
-        
-        & .greetingElements14{
+
+        & .greetingElements14 {
             position: absolute;
             width: 11.25%;
             right: 8%;
             top: 61.4%;
         }
 
-        & .greetingElements15{
+        & .greetingElements15 {
             position: absolute;
             width: 24.6%;
             right: -5%;
@@ -886,19 +993,11 @@
                 padding-top: 9%;
                 color: #E93323;
                 font-family: "IBM Plex Sans Arabic";
-
-                @media(max-width: 767px){
-                    font-size: 24px;
-                }
             }
             h2 {
                 font-size: 36px;
                 color: #333;
                 font-family: "IBM Plex Sans Arabic";
-
-                @media(max-width: 767px){
-                    font-size: 20px;
-                }
             }
             .section-card-container{
                 display: flex;
@@ -911,7 +1010,7 @@
                  gap: 30px;
                 }
 
-                .greetingCardContainer{
+                .greetingCardContainer {
                     width: 50%;
 
                     @media(max-width: 767px){
@@ -924,17 +1023,19 @@
                         border-radius: 20px;
                     }
 
-                    img{
+                    img {
                         width: 100%;
                         height: 100%;
                     }
                 }
             }
+
             .section-box-container {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
+
                 .section-box-btns {
                     display: flex;
                     gap: 20px;
@@ -948,11 +1049,6 @@
                         font-size: 28px;
                         font-weight: 600;
                         padding: 17px 0;
-
-                        @media(max-width: 767px){
-                            font-size: 18px;
-                            padding: 14px 0;
-                        }
                     }
                 }
             }
