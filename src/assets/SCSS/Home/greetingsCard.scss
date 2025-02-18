@@ -753,10 +753,10 @@
             color: #005339;
             position: absolute;
             z-index: 2;
+            top: 24.5%;
             right: 50%;
             transform: translate(50%, 0);
             width: 40%;
-            margin-top: 100px;
 
             @media only screen and (max-width: $bp-tab) {
                 width: 80%;
@@ -767,7 +767,6 @@
 
             }
         }
-
         & .greetingElements {
             position: absolute;
             top: 2%;
@@ -775,41 +774,29 @@
             transform: translate(50%, 0);
             width: 62%;
 
+            @media(max-width: 1280px){
+                width: 75%;
+            }
+
+            @media(max-width: 1280px){
+                width: 82%;
+            }
 
             & img {
                 width: 100%;
             }
 
-            & .greetingElements0 {
-                position: absolute;
-                width: 8%;
-                bottom: -10%;
-                left: 1%;
-
-                @media screen and (max-width: 767px) {
-                    left: 1%;
-                }
-
-                @media screen and (max-width: 680px) {
-                    bottom: unset;
-                    top: 30%;
-                    left: 3%;
-                }
-
-                @media screen and (max-width: 480px) {
-                    left: 6%;
-                }
-
-                @media screen and (max-width: 414px) {
-                    width: 10%;
-                    left: 2%;
-                }
-            }
-
-            & .greetingCards {
+            & .greetingCards{
                 display: flex;
                 justify-content: center;
-                gap: 33px;
+                gap: 30px;
+                width: 100%;
+
+                @media(max-width: 767px){
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr); 
+                     gap: 20px;
+                }
 
                 & img {
                     border-radius: 20px;
@@ -818,13 +805,33 @@
                 }
 
                 & .greetingElements01 {
-                    width: 25%;
+                    flex: 1;    
+                    
+                    @media(max-width: 767px){
+                        flex: unset;
+                    }
 
-
-                    .btn {
-                        font-size: 16px;
+                    .btn{
+                        font-size: 18px;
                         padding: 18px 0;
                         font-weight: 600;
+
+                        @media(max-width: 1680px){
+                            font-size: 16px;
+                        }
+
+                        @media(max-width: 1480px){
+                            font-size: 14px;
+                        }
+
+                        @media(max-width: 1280px){
+                            padding: 10px 0;
+                            font-size: 12px;
+                        }
+
+                        @media(max-width: 1080px){
+                            font-size: 12px;
+                        }
                     }
                 }
 
@@ -844,7 +851,6 @@
             top: 21.6%;
             z-index: 4;
         }
-
         & .greetingElements04 {
             position: absolute;
             width: 52%;
@@ -852,46 +858,52 @@
             top: 35%;
             z-index: 0;
         }
-
         & .greetingElements05 {
             position: absolute;
             width: 12%;
             left: 24%;
-            top: 37%;
+            top: 35%;
             z-index: 5;
         }
-
         & .greetingElements06 {
             position: absolute;
             width: 5%;
             left: 17%;
             top: 39%;
         }
-
         & .greetingElements07 {
             position: absolute;
             width: 11%;
             right: 5%;
             top: 4.8%;
         }
-
-        & .greetingElements08 {
+        & .greetingElements08{
             position: absolute;
             width: 10%;
             left: 5%;
             top: 44%;
+
+            
+            @media(max-width: 767px){
+                top: 43%;
+            }
+
         }
 
         & .greetingElements09 {
             position: absolute;
             width: 12%;
-            left: 14%;
-            top: 40%;
+            left: 18%;
+            top: 42%;
+
+            @media(max-width: 767px){
+                top: 43%;
+            }
 
             img {
                 transform: rotate(-25deg);
             }
-
+           
 
         }
 
@@ -900,6 +912,10 @@
             width: 8%;
             left: 29%;
             top: 33%;
+
+            @media(max-width: 767px){
+                top: 39%;
+            }
         }
 
         & .greetingElements11 {
@@ -908,12 +924,24 @@
             right: 17.7%;
             top: 27.4%;
         }
-
-        & .greetingElements12 {
+        
+        & .greetingElements12{
             position: absolute;
             width: 15.8%;
             right: -5%;
             top: 22.3%;
+
+            
+            @media(max-width: 767px){
+                top: 25.14%;
+                width: 20;
+            }
+
+            
+            @media(max-width: 767px){
+                top: 25.14%;
+                width: 20;
+            }
 
             img {
                 transform: rotate(45deg);
@@ -925,6 +953,11 @@
             width: 7.6%;
             right: 20%;
             top: 46.1%;
+
+            @media(max-width: 767px){
+                top: 44%;
+                right: 27.6%;
+            }
         }
 
         & .greetingElements14 {
@@ -950,24 +983,41 @@
             width: 46%;
             text-align: center;
 
+            @media(max-width: 767px){
+                width: 82%;
+                bottom: 2%;
+            }
+
             h1 {
+                font-size: 36px;
                 padding-top: 9%;
                 color: #E93323;
                 font-family: "IBM Plex Sans Arabic";
             }
-
             h2 {
+                font-size: 36px;
                 color: #333;
                 font-family: "IBM Plex Sans Arabic";
             }
-
-            .section-card-container {
+            .section-card-container{
                 display: flex;
                 gap: 20px;
                 justify-content: center;
+                align-items: center;
+
+                @media(max-width: 767px){
+                 flex-direction: column;
+                 gap: 30px;
+                }
 
                 .greetingCardContainer {
                     width: 50%;
+
+                    @media(max-width: 767px){
+                        width: 100%;
+                    }
+
+
 
                     .greetingMainCard {
                         border-radius: 20px;
@@ -991,8 +1041,12 @@
                     gap: 20px;
                     margin-top: 15px;
 
-                    .btn {
-                        font-size: 16px;
+                    @media(max-width: 767px){
+                        flex-direction: column;
+                       }
+
+                    .btn{
+                        font-size: 28px;
                         font-weight: 600;
                         padding: 17px 0;
                     }
