@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { useTranslation } from "react-i18next";
 import Background from "../../assets/images/discover/background.png";
+import MobileBackground from "../../assets/images/discover/mobile-background.png";
 import GiantWheel from "../../assets/images/discover/giant-wheel.png";
 import YellowCarpet from "../../assets/images/common/yellow-carpet.png";
 import FireWorks from "../../assets/images/discover/fireworks.png";
@@ -108,7 +109,10 @@ export default function DiscoverSection() {
   return (
     <section ref={sectionRef} className="discover-section">
       <div className="discover-section-background">
-        <img src={Background} />
+        <picture>
+          <source srcSet={MobileBackground} media="(max-width: 768px)" />
+          <img src={Background} alt="" />
+        </picture>
       </div>
       <div className="desc-container-1">
         <p className="section-desc-1">{t("discover.description1")}</p>
@@ -240,7 +244,12 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="confetti-img">
-            <Parallax translateX={[0, -20]} translateY={[0,10]} rotate={[0,30]} speed={10}>
+            <Parallax
+              translateX={[0, -20]}
+              translateY={[0, 10]}
+              rotate={[0, 30]}
+              speed={10}
+            >
               <img src={YellowConfetti} alt="confetti" />
             </Parallax>
           </div>
