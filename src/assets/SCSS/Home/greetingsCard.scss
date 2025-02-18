@@ -490,7 +490,7 @@
 
             .trail-container {
                 position: absolute;
-                top: 66%;
+                top: 71%;
                 right: 0;
                 width: 100%;
                 overflow: visible;
@@ -500,14 +500,15 @@
 
                     .trail-img {
                         transform-origin: top right;
+                        transform: scale(1.3);
                         width: 100%;
                     }
 
                     .trail-carpet-container {
                         position: absolute;
-                        top: 35%;
+                        top: 40%;
                         right: 0;
-                        width: 100%;
+                        width: 85%;
                     }
                     .trail-carpet {
                         width: 100%;
