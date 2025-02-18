@@ -8,14 +8,15 @@ import "../../assets/SCSS/Home/herosection.scss";
 import audioFile from "../../assets/Sounds/1-morning-with-birds.mp3";
 import buzz from "buzz";
 import headerBg from "../../assets/images/heroSection/headerBg.png";
+import headerMobileBg from "../../assets/images/heroSection/headerMobileBg.png";
 import layer01 from "../../assets/images/heroSection/layer01.png";
 import layer02 from "../../assets/images/common/orange-balloon.png";
 import layer03 from "../../assets/images/common/green-balloon.png";
 import layer04 from "../../assets/images/heroSection/layer04.png";
 import layer05 from "../../assets/images/heroSection/layer05.png";
-import layer06 from "../../assets/images/common/sweets-plate.png";
+import layer06 from "../../assets/images/heroSection/layer06.png";
 import layer07 from "../../assets/images/common/candy.png";
-import layer08 from "../../assets/images/common/gift-box.png";
+import layer08 from "../../assets/images/heroSection/layer08.png";
 import layer09 from "../../assets/images/heroSection/layer09.png";
 import layer10 from "../../assets/images/heroSection/layer10.png";
 import layer11 from "../../assets/images/heroSection/layer11.png";
@@ -158,7 +159,10 @@ export default function HeroSection() {
       <section ref={sectionRef} className="header">
         <div className="header-container">
           <div className="header-bg">
-            <img src={headerBg} className="headerBg img-fit" alt="" />
+          <picture>
+          <source srcSet={headerMobileBg} media="(max-width: 768px)" />
+          <img src={headerBg} alt="Hero Background" />
+          </picture>
           </div>
           <div className="layer01Wrap posAbsImg">
           <img src={layer01} className="layer-01 img-fit" alt="" />
@@ -188,7 +192,7 @@ export default function HeroSection() {
             </Parallax>
           </div>
           <div className="layer06Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -60]} translateX={[0, 60]}>
+            <Parallax speed={10} translateY={[0, -50]} translateX={[0, 50]}>
                 <img src={layer06} className="layer-06 img-fit" alt="" />
             </Parallax>
           </div>

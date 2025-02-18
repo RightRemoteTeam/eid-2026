@@ -11,10 +11,14 @@ section.header {
         position: relative;
         width: 100%;
 
-        .headerBg{
+        .header-bg{
             position: relative;
             width: 100%;
             z-index: 0;
+
+            img{
+                width: 100%;
+            }
         }
 
         .layer01Wrap{
@@ -33,6 +37,10 @@ section.header {
             left: 35%;
             z-index: 2;
             width: 14%;
+
+            @media(max-width: 767px){
+                top: 24%;
+            }
         }
 
 
@@ -41,6 +49,10 @@ section.header {
             right: 35%;
             top: 28%;
             z-index: 2;
+            
+            @media(max-width: 767px){
+                top: 24%;
+            }
         }
 
         .layer04Wrap{
@@ -48,6 +60,10 @@ section.header {
             left: 36%;
             top: 37%;
             z-index: 2;
+
+            @media(max-width: 767px){
+                top: 31%;
+            }
         }
 
         .layer05Wrap{
@@ -55,6 +71,10 @@ section.header {
             right: 37%;
             top: 36%;
             z-index: 2;
+
+            @media(max-width: 767px){
+                top: 31%;
+            }
         }
 
         .layer06Wrap{
@@ -63,8 +83,8 @@ section.header {
             top: 65%;
             z-index: 2;
 
-            img{
-                transform: rotate(-60deg);
+            @media(max-width: 767px){
+                top: 54%;
             }
         }
 
@@ -73,24 +93,35 @@ section.header {
             left: 11%;
             top: 73%;
             z-index: 2;
+            
+            @media(max-width: 767px){
+                top: 60%;
+            }
+
         }
         
         .layer08Wrap{
             width: 10%;
-            left: 23%;
+            left: 24%;
             top: 60%;
             z-index: 4;
 
-            img{
-                transform: scaleX(-1)
+            @media(max-width: 767px){
+                top: 48%;
             }
         }
 
         .layer09Wrap{
             width: 13.5%;
-            left: 25%;
+            left: 21%;
             top: 68%;
             z-index: 4;
+
+            @media(max-width: 767px){
+                top: 57%;
+            }
+
+
         }
 
         
@@ -99,6 +130,10 @@ section.header {
             left: 35%;
             top: 60%;
             z-index: 4;
+
+            @media(max-width: 767px){
+                top: 51%;
+            }
         }
 
         .layer11Wrap{
@@ -106,6 +141,10 @@ section.header {
             right: 35%;
             top: 60%;
             z-index: 4;
+
+            @media(max-width: 767px){
+                top: 51%;
+            }
         }
 
         .layer12Wrap{
@@ -113,6 +152,10 @@ section.header {
             right: 15%;
             top: 58%;
             z-index: 4;
+
+            @media(max-width: 767px){
+                top: 49%;
+            }
         }
 
         .layer13Wrap{
@@ -120,6 +163,10 @@ section.header {
             right:20%;
             top: 69%;
             z-index: 4;
+
+            @media(max-width: 767px){
+                top: 57%;
+            }
         }
 
         .layer14Wrap{
@@ -127,6 +174,10 @@ section.header {
             right: 4%;
             top: 68%;
             z-index: 4;
+
+            @media(max-width: 767px){
+                top: 51%;
+            }
         }
 
         .layer20Wrap{

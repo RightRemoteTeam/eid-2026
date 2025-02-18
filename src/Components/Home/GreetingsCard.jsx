@@ -5,11 +5,13 @@ import { Parallax } from "react-scroll-parallax";
 
 import "../../assets/SCSS/Home/greetingsCard.scss";
 import greetingTopBg from "../../assets/images/greetings/greetingTopBg.png";
+import greetingTopMobileBg from "../../assets/images/greetings/greetingTopMobileBg.png";
 import greetingTopCloud from "../../assets/images/greetings/greetingsTopCloud.png";
 import greetingTopBirds from "../../assets/images/greetings/greetingsTopBirds.png";
 import greetingTopDecoration01 from "../../assets/images/greetings/greetings_decoration_1.png";
 import greetingTopDecoration02 from "../../assets/images/greetings/greetings_decoration_2.png";
 import greetingsTopElement01 from "../../assets/images/greetings/greetings_1.png";
+import greetingsTopCandy from "../../assets/images/greetings/candy.png";
 import greetingsTopElement02 from "../../assets/images/greetings/greetings_2.png";
 import greetingsTopBalloon1 from "../../assets/images/greetings/greetings_balloon_1.png";
 import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloon_2.png";
@@ -147,7 +149,10 @@ export default function GreetingSection() {
       <section ref={sectionRef} className="greetingSection">
         <div className="greetingTopSection">
           <div className="greetingTop-bg">
-            <img src={greetingTopBg} className="greetingTopBg" alt="" />
+          <picture>
+          <source srcSet={greetingTopMobileBg} media="(max-width: 768px)" />
+          <img src={greetingTopBg} alt="Greetings-Top Background" />
+          </picture>
           </div>
           <div className="greetingTop-heading-1">
             {t("greetingSection.description1")}
@@ -234,6 +239,15 @@ export default function GreetingSection() {
               className="greetingTopElement01 img-fit"
               alt=""
             />
+          </div>
+          <div className="greetingTop-candy">
+          <Parallax speed={10} translateY={[0, -70]}>
+            <img
+              src={greetingsTopCandy}
+              className="greetingTopCandy img-fit"
+              alt=""
+            />
+            </Parallax>
           </div>
           <div className="greetingTop02">
             <img

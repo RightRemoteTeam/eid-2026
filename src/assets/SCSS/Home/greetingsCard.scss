@@ -442,10 +442,18 @@
         .greetingTop01{
             position: absolute;
             top: 20%;
-            width: 18.2%;
+            width: 14%;
             right: 50%;
             transform: translate(50%, 0);
             z-index: 2;
+        }
+
+        .greetingTop-candy{
+            position: absolute;
+            top: 27%;
+            width: 9%;
+            left: 40%;
+            z-index: 3;
         }
 
         .greetingTop02{
