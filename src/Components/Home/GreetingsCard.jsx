@@ -242,7 +242,7 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingTop-candy">
-          <Parallax speed={10} translateY={[0, -70]}>
+          <Parallax speed={10} translateY={[0, -70]} rotate={[-20, 20]}>
             <img
               src={greetingsTopCandy}
               className="greetingTopCandy img-fit"
@@ -328,11 +328,11 @@ export default function GreetingSection() {
           </div>
 
           <div className="greetingTop08">
-            <Parallax translateY={["0px", "-100px"]} speed={20}>
+            <Parallax translateY={["0px", "-100px"]} rotate={[0,50]} speed={20}>
               <img src={yellowLeaf} className="yellow-leaf img-fit" alt="" />
             </Parallax>
           </div>
-          <div className="greetingTop-heading-2">
+          <div className="greetingTop-heading-2" dir="rtl">
             {t("greetingSection.description2")}
           </div>
         </div>
@@ -498,7 +498,7 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingElements11">
-            <Parallax translateY={["0px", "-50px"]} speed={10}>
+            <Parallax translateY={["0px", "-100px"]} rotate={[-20,20]} speed={10}>
               <img
                 src={greetingLeaf}
                 className="greetingElement11 img-fit"
@@ -507,11 +507,13 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements12">
+          <Parallax translateY={["0px", "-100px"]} rotate={[0,-10]} speed={10}>
             <img
               src={greetingballoon01}
               className="greetingElement12 img-fit"
               alt=""
             />
+          </Parallax>
           </div>
           <div className="greetingElements13">
             <img

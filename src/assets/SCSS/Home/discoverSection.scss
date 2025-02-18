@@ -17,72 +17,136 @@
         position: absolute;
         right: 50%;
         transform: translate(50%, 0);
-        width: 35%;
+        width: 90%;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 5;
+        z-index: 10;
+
+        @media (min-width: 768px) {
+            width: 70%
+        }
+
+        @media (min-width: 1024px) {
+            width: 55%
+        }
+
+        @media (min-width: 1480px) {
+            width: 35%
+        }
 
         .section-desc-1,
         .section-desc-2 {
             color: #FFF;
             text-align: center;
             font-family: "Space Grotesk";
-            font-size: 16px;
+            font-size: 20px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
 
-            @media (min-width: 826px) {
-                font-size: 24px;
-            }
-
             @media (min-width: 1024px) {
-                font-size: 24px;
+                font-size: 22px;
             }
 
             @media (min-width: 1280px) {
-                font-size: 26px;
+                font-size: 23px;
             }
 
-            @media (min-width: 1420px) {
-                font-size: 30px;
+            @media (min-width: 1480px) {
+                font-size: 24px;
             }
-
-            @media (min-width: 1620px) {
-                font-size: 34px;
-            }
-
-            @media (min-width: 1820px) {
-                font-size: 36px;
-            }
-
         }
     }
 
     .desc-container-1 {
-        top: 5%;
+        top: 2%;
+
+        @media (min-width: 1480px) {
+            top: 5%
+        }
     }
 
     .desc-container-2 {
         flex-direction: column;
         justify-content: center;
-        top: 30%;
+        top: 40%;
 
         .discover-events-container {
-            margin-top: 80px;
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
             gap: 50px;
 
             .btn {
-                min-width: 500px;
-                padding: 0.75rem 4rem;
+                font-size: 20px;
+                min-width: 350px;
+                padding: 2rem 4rem;
             }
 
             .logo-container {
                 display: flex;
                 justify-content: center;
+
+                img {
+                    width: 20%;
+                }
+            }
+        }
+
+        @media (min-width: 860px) {
+            .discover-events-container {
+                margin-top: 45px;
+
+                .logo-container {
+                    img {
+                        width: 24%;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .discover-events-container {
+                margin-top: 50px;
+
+                .logo-container {
+                    img {
+                        width: 28%;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .discover-events-container {
+                margin-top: 50px;
+
+                .btn {
+                    font-size: 23px;
+                }
+
+                .logo-container {
+                    img {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1480px) {
+            .discover-events-container {
+                margin-top: 80px;
+
+                .btn {
+                    font-size: 24px;
+                }
+
+                .logo-container {
+                    img {
+                        width: 32%;
+                    }
+                }
             }
         }
     }
@@ -119,7 +183,7 @@
             }
 
             .giantwheel-fireworks {
-                top: 30%;
+                top: 35%;
                 left: 50%;
                 z-index: -2;
                 width: 100%;
@@ -136,6 +200,18 @@
 
             .giantwheel-fireworks {
                 position: absolute;
+            }
+
+            .donut-img {
+                position: absolute;
+                top: 100%;
+                left: 45%;
+                width: 100%;
+                z-index: 5;
+
+                img {
+                    width: 15%;
+                }
             }
 
         }
@@ -178,7 +254,7 @@
     .discover-sweets-container {
         position: absolute;
         width: 40%;
-        top: 40%;
+        top: 48%;
         left: 0;
         z-index: 4;
 
@@ -197,16 +273,16 @@
                 }
             }
 
-            .donut-img {
-                position: absolute;
-                top: -65%;
-                left: 45%;
-                width: 100%;
+            // .donut-img {
+            //     position: absolute;
+            //     top: -65%;
+            //     left: 45%;
+            //     width: 100%;
 
-                img {
-                    width: 15%;
-                }
-            }
+            //     img {
+            //         width: 15%;
+            //     }
+            // }
 
             .balloon-img {
                 position: absolute;
@@ -237,7 +313,7 @@
 
     .discover-bills-container {
         position: absolute;
-        top: 45%;
+        top: 60%;
         right: 0;
         width: 40%;
         z-index: 4;
@@ -364,7 +440,7 @@
             gap: 30px;
 
             .eid-events-logo {
-                width: 40%;
+                width: 25%;
 
                 img {
                     width: 100%;
@@ -372,7 +448,7 @@
             }
 
             .gea-logo {
-                width: 30%;
+                width: 20%;
 
                 img {
                     width: 100%;
@@ -383,6 +459,55 @@
                 width: 2px;
                 background-color: #FFF;
                 align-self: stretch;
+            }
+
+            @media (min-width: 860px) {
+                .eid-events-logo {
+                    width: 27%;
+
+                }
+
+                .gea-logo {
+                    width: 22%;
+
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .eid-events-logo {
+                    width: 30%;
+
+                }
+
+                .gea-logo {
+                    width: 24%;
+
+                }
+            }
+
+            @media (min-width: 1280px) {
+                .eid-events-logo {
+                    width: 32%;
+
+                }
+
+                .gea-logo {
+                    width: 25%;
+
+                }
+            }
+
+            @media (min-width: 1480px) {
+
+                .eid-events-logo {
+                    width: 35%;
+
+                }
+
+                .gea-logo {
+                    width: 26%;
+
+                }
             }
         }
     }

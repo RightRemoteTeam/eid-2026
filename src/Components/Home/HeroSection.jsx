@@ -182,12 +182,12 @@ export default function HeroSection() {
             </Parallax>
           </div>
           <div className="layer04Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 70]}>
+            <Parallax speed={10} translateY={[0, -70]} translateX={[0, -50]} rotate={[0,30]}>
                 <img src={layer04} className="layer-04 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer05Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, -70]}>
+            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 50]} rotate={[0,-20]}>
                 <img src={layer05} className="layer-05 img-fit" alt="" />
             </Parallax>
           </div>
@@ -202,12 +202,12 @@ export default function HeroSection() {
             </Parallax>
           </div>
           <div className="layer08Wrap posAbsImg">
-            <Parallax translateY={[0, -60]} translateX={[0, 50]}>
+            <Parallax translateY={[0, -60]} translateX={[0, 50]} speed={10} >
               <img src={layer08} className="layer-08 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer09Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -50]} translateX={[0, 50]}>
+            <Parallax speed={5} translateY={[0, -50]} translateX={[0, 50]}>
               <img src={layer09} className="layer-09 img-fit" alt="" />
             </Parallax>
           </div>
@@ -217,12 +217,12 @@ export default function HeroSection() {
             </Parallax>
           </div>
           <div className="layer11Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -60]} translateX={[0, -50]}>
+            <Parallax speed={5} translateY={[0, -60]} translateX={[0, -50]}>
               <img src={layer11} className="layer-11 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer12Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -60]} translateX={[0, -50]}>
+            <Parallax speed={5} translateY={[0, -50]} translateX={[0, -50]}>
               <img src={layer12} className="layer-12 img-fit" alt="" />
             </Parallax>
           </div>
