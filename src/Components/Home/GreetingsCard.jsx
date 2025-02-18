@@ -46,6 +46,8 @@ import { GoogleAnalytics } from "../GoogleAnalytics";
 import DownloadFilePopup from "./DownloadPopup";
 import pdfThumbnail from "../../assets/images/happiness/toolkitThumbnail.png";
 import ENV from "../Constants";
+import useIsMobile from "../Hooks/useIsMobile";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,6 +56,8 @@ export default function GreetingSection() {
   const [pdfthumbnail, setPdfthumbnail] = useState("");
   const [downloadLink, setDownloadLink] = useState("");
   const [targetEventName, setTargetEventName] = useState("");
+
+  const isMobile = useIsMobile();
 
   const { t } = useTranslation();
   const { lang } = useParams();
@@ -87,23 +91,44 @@ export default function GreetingSection() {
     });
   }, []);
   const playIntro = () => {
-    gsap.to([".gsapGreetingBalloon"], {
-      y: -15,
-      x: 10,
-      duration: 1.5,
-      rotate: -5,
-      ease: "power1.inOut",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.to([".gsapGreetingBalloon"], {
-      y: -25,
-      x: 15,
-      duration: 2,
-      ease: "power1.in",
-      repeat: -1,
-      yoyo: true,
-    });
+    if(isMobile){
+      gsap.to([".gsapGreetingBalloon"], {
+        y: -3,
+        x: 2,
+        duration: 1.2,
+        rotate: -2,
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+      });
+      gsap.to([".gsapGreetingBalloon"], {
+        y: -8,
+        x: 4,
+        duration: 2,
+        ease: "power1.in",
+        repeat: -1,
+        yoyo: true,
+      });
+    }
+    else {
+      gsap.to([".gsapGreetingBalloon"], {
+        y: -15,
+        x: 10,
+        duration: 1.5,
+        rotate: -5,
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+      });
+      gsap.to([".gsapGreetingBalloon"], {
+        y: -25,
+        x: 15,
+        duration: 2,
+        ease: "power1.in",
+        repeat: -1,
+        yoyo: true,
+      });
+    }
 
     gsap.to([".gsapGreetingGreenBalloon"], {
       y: 25,
