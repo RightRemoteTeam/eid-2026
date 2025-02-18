@@ -150,10 +150,10 @@ export default function GreetingSection() {
       <section ref={sectionRef} className="greetingSection">
         <div className="greetingTopSection">
           <div className="greetingTop-bg">
-          <picture>
-          <source srcSet={greetingTopMobileBg} media="(max-width: 768px)" />
-          <img src={greetingTopBg} alt="Greetings-Top Background" />
-          </picture>
+            <picture>
+              <source srcSet={greetingTopMobileBg} media="(max-width: 768px)" />
+              <img src={greetingTopBg} alt="Greetings-Top Background" />
+            </picture>
           </div>
           <div className="greetingTop-heading-1">
             {t("greetingSection.description1")}
@@ -177,7 +177,7 @@ export default function GreetingSection() {
           <div className="greetingTop-birds">
             <img
               src={greetingTopBirds}
-              className="greetingTopBirds img-fit"  
+              className="greetingTopBirds img-fit"
               alt=""
             />
           </div>
@@ -242,12 +242,12 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingTop-candy">
-          <Parallax speed={10} translateY={[0, -70]} rotate={[-20, 20]}>
-            <img
-              src={greetingsTopCandy}
-              className="greetingTopCandy img-fit"
-              alt=""
-            />
+            <Parallax speed={10} translateY={[0, -70]} rotate={[-20, 20]}>
+              <img
+                src={greetingsTopCandy}
+                className="greetingTopCandy img-fit"
+                alt=""
+              />
             </Parallax>
           </div>
           <div className="greetingTop02">
@@ -284,11 +284,13 @@ export default function GreetingSection() {
                   className="trail-img"
                 />
                 <div className="trail-carpet-container">
+                  <Parallax translateY={[0,-10]} translateX={[10,0]} speed={10}>
                     <img
                       src={discoverTrail02}
                       alt="trail-carpet"
                       className="trail-carpet"
                     />
+                  </Parallax>
                 </div>
               </div>
             </div>
@@ -328,7 +330,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="greetingTop08">
-            <Parallax translateY={["0px", "-100px"]} rotate={[0,50]} speed={20}>
+            <Parallax translateY={["0px", "-100px"]} rotate={[0, 50]} speed={20}>
               <img src={yellowLeaf} className="yellow-leaf img-fit" alt="" />
             </Parallax>
           </div>
@@ -338,10 +340,10 @@ export default function GreetingSection() {
         </div>
         <div className="greetingBottomSection">
           <div className="greetingBottom-bg">
-          <picture>
-          <source srcSet={greetingBottomMobileBg} media="(max-width: 768px)" />
-          <img src={greetingBottomBg} alt="Greetings Bottom Background" />
-          </picture>
+            <picture>
+              <source srcSet={greetingBottomMobileBg} media="(max-width: 768px)" />
+              <img src={greetingBottomBg} alt="Greetings Bottom Background" />
+            </picture>
           </div>
           <div className="greetingElements">
             <div className="greetingCards">
@@ -353,11 +355,11 @@ export default function GreetingSection() {
                     alt=""
                   />
                   <button className="btn btn-primary download-btn"
-                   onClick={() => {
-                    triggerEvent("Eid_Identity_2024_click", "link_click");
-                    setModalData(ENV.TOOLKIT, pdfThumbnail);
-                  }}
-                  href={ENV.TOOLKIT}>
+                    onClick={() => {
+                      triggerEvent("Eid_Identity_2024_click", "link_click");
+                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    }}
+                    href={ENV.TOOLKIT}>
                     {t("buttons.title2")}
                   </button>
                 </div>
@@ -371,10 +373,10 @@ export default function GreetingSection() {
                     alt=""
                   />
                   <button className="btn btn-primary download-btn"
-                  onClick={() => {
-                    triggerEvent("Eid_Identity_2024_click", "link_click");
-                    setModalData(ENV.TOOLKIT, pdfThumbnail);
-                  }}>
+                    onClick={() => {
+                      triggerEvent("Eid_Identity_2024_click", "link_click");
+                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    }}>
                     {t("buttons.title3")}
                   </button>
                 </div>
@@ -388,10 +390,10 @@ export default function GreetingSection() {
                     alt=""
                   />
                   <button className="btn btn-primary download-btn"
-                   onClick={() => {
-                    triggerEvent("Eid_Identity_2024_click", "link_click");
-                    setModalData(ENV.TOOLKIT, pdfThumbnail);
-                  }}>
+                    onClick={() => {
+                      triggerEvent("Eid_Identity_2024_click", "link_click");
+                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    }}>
                     {t("buttons.title4")}
                   </button>
                 </div>
@@ -404,10 +406,10 @@ export default function GreetingSection() {
                     alt=""
                   />
                   <button className="btn btn-primary download-btn"
-                  onClick={() => {
-                    triggerEvent("Eid_Identity_2024_click", "link_click");
-                    setModalData(ENV.TOOLKIT, pdfThumbnail);
-                  }}>
+                    onClick={() => {
+                      triggerEvent("Eid_Identity_2024_click", "link_click");
+                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    }}>
                     {t("buttons.title5")}
                   </button>
                 </div>
@@ -498,7 +500,7 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingElements11">
-            <Parallax translateY={["0px", "-100px"]} rotate={[-20,20]} speed={10}>
+            <Parallax translateY={["0px", "-100px"]} rotate={[-20, 20]} speed={10}>
               <img
                 src={greetingLeaf}
                 className="greetingElement11 img-fit"
@@ -507,13 +509,13 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements12">
-          <Parallax translateY={["0px", "-100px"]} rotate={[0,-10]} speed={10}>
-            <img
-              src={greetingballoon01}
-              className="greetingElement12 img-fit"
-              alt=""
-            />
-          </Parallax>
+            <Parallax translateY={["0px", "-100px"]} rotate={[0, -10]} speed={10}>
+              <img
+                src={greetingballoon01}
+                className="greetingElement12 img-fit"
+                alt=""
+              />
+            </Parallax>
           </div>
           <div className="greetingElements13">
             <img
@@ -523,7 +525,7 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingElements14">
-            <Parallax translateY={["0px", "-100px"]} rotate={[0,30]} speed={10}>
+            <Parallax translateY={["0px", "-100px"]} rotate={[0, 30]} speed={10}>
               <img
                 src={greetingCandy}
                 className="greetingElement14 img-fit"
@@ -567,10 +569,10 @@ export default function GreetingSection() {
 
               <div className="section-box-btns">
                 <button className="btn btn-primary download-btn"
-                 onClick={() => {
-                  triggerEvent("Eid_Identity_2024_click", "link_click");
-                  setModalData(ENV.TOOLKIT, pdfThumbnail);
-                }}>
+                  onClick={() => {
+                    triggerEvent("Eid_Identity_2024_click", "link_click");
+                    setModalData(ENV.TOOLKIT, pdfThumbnail);
+                  }}>
                   {t("buttons.title6")}
                 </button>
                 <button className="btn btn-primary download-btn">
