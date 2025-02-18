@@ -315,7 +315,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="greetingTop08">
-            <Parallax translateY={["0px", "-100px"]} speed={20}>
+            <Parallax translateY={["0px", "-100px"]} rotate={[0,50]} speed={20}>
               <img src={yellowLeaf} className="yellow-leaf img-fit" alt="" />
             </Parallax>
           </div>
