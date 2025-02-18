@@ -475,9 +475,9 @@
         .greetingTop03 {
             position: absolute;
             top: 40%;
-            right: 2%;
+            right: 0%;
             z-index: 4;
-            width: 45%;
+            width: 55%;
 
             .building-img-1 {
                 margin-left: auto;
@@ -490,7 +490,7 @@
 
             .trail-container {
                 position: absolute;
-                top: 67%;
+                top: 66%;
                 right: 0;
                 width: 100%;
                 overflow: visible;
@@ -499,7 +499,6 @@
                     position: relative;
 
                     .trail-img {
-                        transform: scale(1.35);
                         transform-origin: top right;
                         width: 100%;
                     }
@@ -511,7 +510,6 @@
                         width: 100%;
                     }
                     .trail-carpet {
-                        transform: scale(1.1);
                         width: 100%;
                     }
                 }
