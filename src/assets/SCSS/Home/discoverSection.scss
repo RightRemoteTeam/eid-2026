@@ -17,7 +17,7 @@
         position: absolute;
         right: 50%;
         transform: translate(50%, 0);
-        width: 90%;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -60,7 +60,7 @@
     }
 
     .desc-container-1 {
-        top: 2%;
+        top: 3%;
 
         @media (min-width: 1480px) {
             top: 5%
@@ -70,7 +70,11 @@
     .desc-container-2 {
         flex-direction: column;
         justify-content: center;
-        top: 40%;
+        top: 45%;
+
+        @media (min-width: 1480px) {
+            top: 40%
+        }
 
         .discover-events-container {
             margin-top: 40px;
@@ -153,10 +157,15 @@
 
     .discover-giantwheel-container {
         position: absolute;
-        width: 40%;
-        top: 5%;
+        width: 50%;
+        top: 20%;
         left: 0;
         z-index: 4;
+
+        @media (min-width: 767.5px) {
+            top: 5%;
+            width: 40%;
+        }
 
         .container-content {
             position: relative;
@@ -219,10 +228,16 @@
 
     .discover-gift-container {
         position: absolute;
-        width: 40%;
-        top: 5%;
+        width: 50%;
+        top: 20%;
         right: 0;
         z-index: 4;
+
+
+        @media (min-width: 767.5px) {
+            top: 5%;
+            width: 40%;
+        }
 
         .container-content {
             position: relative;
@@ -253,10 +268,15 @@
 
     .discover-sweets-container {
         position: absolute;
-        width: 40%;
-        top: 48%;
+        width: 50%;
+        top: 70%;
         left: 0;
         z-index: 4;
+
+        @media (min-width: 767.5px) {
+            top: 48%;
+            width: 40%;
+        }
 
         .container-content {
             position: relative;
@@ -313,10 +333,15 @@
 
     .discover-bills-container {
         position: absolute;
-        top: 60%;
+        top: 75%;
         right: 0;
-        width: 40%;
+        width: 50%;
         z-index: 4;
+
+        @media (min-width: 767.5px) {
+            top: 60%;
+            width: 40%;
+        }
 
         .container-content {
             position: relative;
