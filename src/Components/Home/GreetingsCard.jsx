@@ -333,7 +333,7 @@ export default function GreetingSection() {
               <img src={yellowLeaf} className="yellow-leaf img-fit" alt="" />
             </Parallax>
           </div>
-          <div className="greetingTop-heading-2">
+          <div className="greetingTop-heading-2" dir="rtl">
             {t("greetingSection.description2")}
           </div>
         </div>
