@@ -182,12 +182,12 @@ export default function HeroSection() {
             </Parallax>
           </div>
           <div className="layer04Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 70]}>
+            <Parallax speed={10} translateY={[0, -70]} translateX={[0, -50]} rotate={[0,30]}>
                 <img src={layer04} className="layer-04 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer05Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, -70]}>
+            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 50]} rotate={[0,-20]}>
                 <img src={layer05} className="layer-05 img-fit" alt="" />
             </Parallax>
           </div>

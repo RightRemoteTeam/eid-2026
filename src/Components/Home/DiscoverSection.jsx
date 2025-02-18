@@ -235,7 +235,7 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="confetti-img">
-            <Parallax translateX={[10, 0]} speed={10}>
+            <Parallax translateX={[0, -20]} translateY={[0,10]} rotate={[0,30]} speed={10}>
               <img src={YellowConfetti} alt="confetti" />
             </Parallax>
           </div>
