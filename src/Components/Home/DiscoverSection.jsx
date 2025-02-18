@@ -31,7 +31,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function DiscoverSection() {
   const animPlayed = useRef(false);
   const sectionRef = useRef(null);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -122,7 +122,7 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="giantwheel-carpet">
-            <Parallax speed={15}>
+            <Parallax speed={5}>
               <img src={YellowCarpet} alt="carpet" />
             </Parallax>
           </div>
@@ -136,6 +136,11 @@ export default function DiscoverSection() {
               className="fireworks-container"
             >
               <img src={FireWorks} alt="fireworks" />
+            </Parallax>
+          </div>
+          <div className="donut-img">
+            <Parallax translateX={[0, 8]} speed={10}>
+              <img src={Donut} alt="fireworks" />
             </Parallax>
           </div>
         </div>
@@ -168,11 +173,11 @@ export default function DiscoverSection() {
 
       <div className="discover-sweets-container">
         <div className="container-content">
-          <div className="donut-img">
+          {/* <div className="donut-img">
             <Parallax translateX={[0, 8]} speed={25}>
               <img src={Donut} alt="fireworks" />
             </Parallax>
-          </div>
+          </div> */}
           <div className="sweetsplate-img">
             <Parallax translateX={[0, 8]} speed={10}>
               <img src={SweetsPlate} alt="sweets" />
@@ -225,7 +230,7 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="candy-img">
-            <Parallax translateY={[0,-50]} rotate={[0,20]} speed={10}>
+            <Parallax translateY={[0, -50]} rotate={[0, 20]} speed={10}>
               <img src={Candy} alt="candy" />
             </Parallax>
           </div>
@@ -235,7 +240,7 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="confetti-img">
-            <Parallax translateX={[10, 0]} speed={10}>
+            <Parallax translateX={[15, 0]} speed={20}>
               <img src={YellowConfetti} alt="confetti" />
             </Parallax>
           </div>
