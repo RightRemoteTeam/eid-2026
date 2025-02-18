@@ -23,6 +23,10 @@
         justify-content: center;
         z-index: 10;
 
+        @media (min-width: 578px) and (max-width: 767px) {
+            width: 75%;
+        }
+
         @media (min-width: 768px) {
             width: 70%
         }
@@ -44,6 +48,10 @@
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+
+            @media (min-width: 578px) and (max-width: 768px) {
+                font-size: 24px;
+            }
 
             @media (min-width: 1024px) {
                 font-size: 22px;
@@ -72,6 +80,10 @@
         justify-content: center;
         top: 45%;
 
+        @media (min-width: 578px) and (max-width: 768px) {
+            top: 40%;
+        }
+
         @media (min-width: 1480px) {
             top: 40%
         }
@@ -86,6 +98,10 @@
                 font-size: 20px;
                 min-width: 350px;
                 padding: 2rem 4rem;
+
+                @media (max-width: 380px) {
+                    min-width: 300px;
+                }
             }
 
             .logo-container {
@@ -94,6 +110,16 @@
 
                 img {
                     width: 20%;
+                }
+            }
+        }
+
+        @media (min-width: 578px) and (max-width: 768px) {
+            .discover-events-container {
+                .logo-container {
+                    img {
+                        width: 35%;
+                    }
                 }
             }
         }
@@ -162,7 +188,11 @@
         left: 0;
         z-index: 4;
 
-        @media (min-width: 767.5px) {
+        @media (min-width: 578px) and (max-width: 768px) {
+            top: 17%;
+        }
+
+        @media (min-width: 768.5px) {
             top: 5%;
             width: 40%;
         }
@@ -228,13 +258,16 @@
 
     .discover-gift-container {
         position: absolute;
-        width: 50%;
+        width: 60%;
         top: 20%;
         right: 0;
         z-index: 4;
 
+        @media (min-width: 578px) and (max-width: 768px) {
+            top: 17%;
+        }
 
-        @media (min-width: 767.5px) {
+        @media (min-width: 768.5px) {
             top: 5%;
             width: 40%;
         }
@@ -268,12 +301,20 @@
 
     .discover-sweets-container {
         position: absolute;
-        width: 50%;
+        width: 40%;
         top: 70%;
         left: 0;
         z-index: 4;
 
-        @media (min-width: 767.5px) {
+        @media (max-width: 380px) {
+            top: 75%;
+        }
+
+        @media (min-width: 578px) and (max-width: 768px) {
+            top: 65%;
+        }
+
+        @media (min-width: 768.5px) {
             top: 48%;
             width: 40%;
         }
@@ -338,7 +379,13 @@
         width: 50%;
         z-index: 4;
 
-        @media (min-width: 767.5px) {
+
+        @media (max-width: 380px) {
+            top: 78%;
+            width: 40%;
+        }
+
+        @media (min-width: 768.5px) {
             top: 60%;
             width: 40%;
         }
@@ -454,18 +501,26 @@
 
     .discover-section-logos {
         position: absolute;
-        bottom: 5%;
+        bottom: 2%;
         right: 50%;
         transform: translate(50%, 0);
+
+        @media (min-width: 768.5px) {
+            bottom: 5%;
+        }
 
         .logo-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
+
+            @media (min-width: 768.5px) {
+                gap: 30px;
+            }
 
             .eid-events-logo {
-                width: 25%;
+                width: 100%;
 
                 img {
                     width: 100%;
@@ -473,7 +528,7 @@
             }
 
             .gea-logo {
-                width: 20%;
+                width: 100%;
 
                 img {
                     width: 100%;
@@ -486,7 +541,7 @@
                 align-self: stretch;
             }
 
-            @media (min-width: 860px) {
+            @media (min-width: 768.5px) {
                 .eid-events-logo {
                     width: 27%;
 
