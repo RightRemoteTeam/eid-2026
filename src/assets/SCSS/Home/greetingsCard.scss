@@ -692,6 +692,8 @@
             right: 4%;
             z-index: 5;
 
+
+
             img {
                 width: 100%;
             }
@@ -758,17 +760,16 @@
             transform: translate(50%, 0);
             width: 40%;
 
-            @media only screen and (max-width: $bp-tab) {
-                width: 80%;
-            }
-
             @media only screen and (max-width: 767px) {
+                width: 82%;
                 font-size: 20px;
+                top: 27.6%;
 
             }
         }
         & .greetingElements {
             position: absolute;
+            z-index: 5;
             top: 2%;
             right: 50%;
             transform: translate(50%, 0);
@@ -850,6 +851,13 @@
             left: 6%;
             top: 21.6%;
             z-index: 4;
+
+            @media(max-width: 767px){
+                top: 27.1%;
+                width: 18.6%;
+                left:-4%;
+            }
+
         }
         & .greetingElements04 {
             position: absolute;
@@ -857,6 +865,11 @@
             left: 0;
             top: 35%;
             z-index: 0;
+
+            @media(max-width: 767px){
+                top: 38.9%;
+                width: 67.2%;
+            }
         }
         & .greetingElements05 {
             position: absolute;
@@ -864,18 +877,31 @@
             left: 24%;
             top: 35%;
             z-index: 5;
+
+            
+            @media(max-width: 767px){
+                top: 41%;
+            }
         }
         & .greetingElements06 {
             position: absolute;
             width: 5%;
             left: 17%;
             top: 39%;
+
+            @media(max-width: 767px){
+                top: 40%;
+            }
         }
         & .greetingElements07 {
             position: absolute;
             width: 11%;
             right: 5%;
             top: 4.8%;
+
+            @media(max-width: 767px){
+                top: 0%;
+            }
         }
         & .greetingElements08{
             position: absolute;
@@ -885,7 +911,7 @@
 
             
             @media(max-width: 767px){
-                top: 43%;
+                top: 42%;
             }
 
         }
@@ -895,10 +921,6 @@
             width: 12%;
             left: 18%;
             top: 42%;
-
-            @media(max-width: 767px){
-                top: 43%;
-            }
 
             img {
                 transform: rotate(-25deg);
@@ -923,6 +945,11 @@
             width: 12.5%;
             right: 17.7%;
             top: 27.4%;
+
+            @media(max-width: 767px){
+                top: -2%;
+                width: 22.5%;
+            }
         }
         
         & .greetingElements12{
@@ -933,14 +960,9 @@
 
             
             @media(max-width: 767px){
-                top: 25.14%;
-                width: 20;
-            }
-
-            
-            @media(max-width: 767px){
-                top: 25.14%;
-                width: 20;
+                top: 27.1%;
+                width: 29.3%;
+                right: -11%;
             }
 
             img {
@@ -965,6 +987,16 @@
             width: 11.25%;
             right: 8%;
             top: 61.4%;
+
+            @media(max-width: 767px){
+                top: 45.5%;
+                width: 15%;
+                right: 0%;
+
+                img{
+                    transform:rotate(45deg);
+                }
+            }
         }
 
         & .greetingElements15 {
@@ -972,6 +1004,10 @@
             width: 24.6%;
             right: -5%;
             top: 76.4%;
+
+            @media(max-width: 767px){
+                top: 89.4%;
+            }
         }
 
 
@@ -984,7 +1020,7 @@
             text-align: center;
 
             @media(max-width: 767px){
-                width: 82%;
+                width: 83%;
                 bottom: 2%;
             }
 
@@ -993,11 +1029,22 @@
                 padding-top: 9%;
                 color: #E93323;
                 font-family: "IBM Plex Sans Arabic";
+
+                @media(max-width: 767px){
+                    font-size: 24px;
+                    font-weight: 500;
+                    padding-top: 15%;
+                }
             }
             h2 {
                 font-size: 36px;
                 color: #333;
                 font-family: "IBM Plex Sans Arabic";
+
+                @media(max-width: 767px){
+                    font-size: 20px;
+                    font-weight: 500;
+                }
             }
             .section-card-container{
                 display: flex;
@@ -1043,12 +1090,20 @@
 
                     @media(max-width: 767px){
                         flex-direction: column;
+                        gap: 15px;
                        }
 
                     .btn{
                         font-size: 28px;
                         font-weight: 600;
                         padding: 17px 0;
+
+                        @media(max-width: 767px){
+                            padding: 14px 0;
+                            font-size: 18px;
+                           }
+
+
                     }
                 }
             }

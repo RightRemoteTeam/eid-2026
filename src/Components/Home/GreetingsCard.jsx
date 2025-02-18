@@ -456,7 +456,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements04">
-            <Parallax speed={10} translateX={["-50px", "0px"]}>
+            <Parallax speed={5} translateX={["-50px", "0px"]}>
               <div className="gsapGreetingCloth">
                 <img
                   src={greetingCloth01}
@@ -467,7 +467,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements05">
-            <Parallax translateY={["0px", "-100px"]} speed={20}>
+            <Parallax translateY={["0", "-100"]} speed={8}>
               <div className="gsapGreetingGiftBox">
                 <img
                   src={greetingCup01}
@@ -478,7 +478,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements06">
-            <Parallax speed={20} translateY={["0px", "-100px"]}>
+            <Parallax speed={5} translateY={["0", "-100"]}>
               <div className="gsapGreetingSweet">
                 <img
                   src={greetingSweet01}
@@ -489,7 +489,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements07">
-            <Parallax speed={5} translateX={["0", "100"]}>
+            <Parallax speed={5} translateX={["0", "50"]} >
               <div className="gsapGreetingGoldCash">
                 <img
                   src={greetingGoldCash}
@@ -500,7 +500,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements08">
-            <Parallax translateX={["0", "-50"]} speed={10}>
+            <Parallax translateX={["0", "-50"]} speed={5}>
               <img
                 src={greetingGreenCash}
                 className="greetingElement08 img-fit"
@@ -509,7 +509,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements09">
-            <Parallax translateX={["0", "-50"]} speed={10}>
+            <Parallax translateX={["0", "-50"]} speed={5}>
               <img
                 src={greetingCup}
                 className="greetingElement09 img-fit"
