@@ -99,10 +99,16 @@
             flex-direction: column;
             gap: 50px;
 
-            .btn {
-                font-size: 16px;
+            .discover-events-button {
                 min-width: 350px;
-                padding: 2rem 4rem;
+
+                .btn {
+                    font-size: 16px;
+                    padding: 2rem 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
                 @media (max-width: 380px) {
                     min-width: 300px;

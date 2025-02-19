@@ -3,9 +3,10 @@ import "../../assets/SCSS/Home/discoverSection.scss";
 import { Parallax } from "react-scroll-parallax";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useParams } from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ENV from "../Constants";
+import { GoogleAnalytics } from "../GoogleAnalytics";
 import Background from "../../assets/images/discover/background.png";
 import MobileBackground from "../../assets/images/discover/mobile-background.png";
 import GiantWheel from "../../assets/images/discover/giant-wheel.png";
@@ -34,10 +35,21 @@ gsap.registerPlugin(ScrollTrigger);
 export default function DiscoverSection() {
   const animPlayed = useRef(false);
   const sectionRef = useRef(null);
+  const { lang } = useParams();
   const { t } = useTranslation();
   const isMobile = useIsMobile();
   const { lang } = useParams();
 
+  const { trackEvent } = GoogleAnalytics();
+  const triggerEvent = (event_label, event_category) => {
+    console.log("event_label:", event_label);
+    trackEvent({
+      action: "click",
+      category: event_category,
+      label: event_label,
+      value: 1,
+    });
+  };
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -179,7 +191,16 @@ export default function DiscoverSection() {
       <div className="desc-container-2">
         <p className="section-desc-2" dir={lang === "ar" ? "rtl" : "ltr"}>{t("discover.description2")}</p>
         <div className="discover-events-container ">
-          <button className="btn btn-primary" dir={lang === "ar" ? "rtl" : "ltr"}>{t("buttons.title8")}</button>
+          <div className="discover-events-button">
+            <Link
+              className="btn btn-primary"
+              dir={lang === "ar" ? "rtl" : "ltr"}
+              to={`${ENV.EID_EVENT}${lang}/${ENV.EID_EVENT_QUERY_PARAM}`}
+              onClick={triggerEvent("Eid_Events_2024", "link_click")}
+            >
+              {t("buttons.title8")}
+            </Link>
+          </div>
           <div className="logo-container">
             <img src={EnjoySaudiLogo} alt="Enjoy Saudi" />
           </div>
