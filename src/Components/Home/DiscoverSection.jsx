@@ -3,8 +3,8 @@ import "../../assets/SCSS/Home/discoverSection.scss";
 import { Parallax } from "react-scroll-parallax";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import ENV from "../Constants";
 import { GoogleAnalytics } from "../GoogleAnalytics";
 import Background from "../../assets/images/discover/background.png";
@@ -38,6 +38,7 @@ export default function DiscoverSection() {
   const { lang } = useParams();
   const { t } = useTranslation();
   const isMobile = useIsMobile();
+  const { lang } = useParams();
 
   const { trackEvent } = GoogleAnalytics();
   const triggerEvent = (event_label, event_category) => {
@@ -130,7 +131,7 @@ export default function DiscoverSection() {
           <img src={Background} alt="" />
         </picture>
       </div>
-      <div className="desc-container-1">
+      <div className="desc-container-1" dir={lang === "ar" ? "rtl" : "ltr"}>
         <p className="section-desc-1">{t("discover.description1")}</p>
       </div>
 
@@ -188,11 +189,12 @@ export default function DiscoverSection() {
       </div>
 
       <div className="desc-container-2">
-        <p className="section-desc-2">{t("discover.description2")}</p>
+        <p className="section-desc-2" dir={lang === "ar" ? "rtl" : "ltr"}>{t("discover.description2")}</p>
         <div className="discover-events-container ">
           <div className="discover-events-button">
             <Link
               className="btn btn-primary"
+              dir={lang === "ar" ? "rtl" : "ltr"}
               to={`${ENV.EID_EVENT}${lang}/${ENV.EID_EVENT_QUERY_PARAM}`}
               onClick={triggerEvent("Eid_Events_2024", "link_click")}
             >
