@@ -37,18 +37,55 @@ function App() {
   }, [location, trackPageView]);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setPageLoaded(true);
+    const handleAllImagesLoaded = () => {
+      const images = document.querySelectorAll("img");
+      let loadedImagesCount = 0;
+      const totalImages = images.length;
+  
+      // If there are no images, mark page as loaded immediately.
+      if (totalImages === 0) {
+        setPageLoaded(true);
+        return;
+      }
+  
+      // Function to be called on each image load/error
+      const onImageLoad = () => {
+        loadedImagesCount++;
+        if (loadedImagesCount === totalImages) {
+          setPageLoaded(true);
+        }
+      };
+  
+      // Loop through images and attach event listeners if needed.
+      images.forEach((img) => {
+        if (img.complete) {
+          // If image is already loaded, increment count.
+          loadedImagesCount++;
+        } else {
+          // Otherwise, wait for it to load (or error).
+          img.addEventListener("load", onImageLoad);
+          img.addEventListener("error", onImageLoad);
+        }
+      });
+  
+      // In case all images were already loaded.
+      if (loadedImagesCount === totalImages) {
+        setPageLoaded(true);
+      }
     };
-    if (document.readyState === 'complete') {
-      setPageLoaded(true);
+  
+    if (document.readyState === "complete") {
+      // If the document is already complete, check images immediately.
+      handleAllImagesLoaded();
     } else {
-      window.addEventListener('load', handleLoad);
+      // Otherwise, wait for the window load event which fires after all assets have been loaded.
+      window.addEventListener("load", handleAllImagesLoaded);
     }
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, [pageLoaded]);
+  
+    // Cleanup the event listener on unmount.
+    return () => window.removeEventListener("load", handleAllImagesLoaded);
+  }, []);
+  
 
   useEffect(() => {
     checkLang(i18n, lang);
