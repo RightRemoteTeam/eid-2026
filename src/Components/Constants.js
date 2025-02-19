@@ -5,7 +5,7 @@ export default Object.freeze({
     APP_LANG: 'ar', //ar, en
     EID_EVENT: "https://enjoy.sa/",
     EID_EVENT_EN: "https://enjoy.sa/en",
-    EID_EVENT_QUERY_PARAM: "search?eventCategoriesIds=212800&page=1",
+    EID_EVENT_QUERY_PARAM: "events?eventCategoriesIds=256767",
     BOOKLET:"./files/Eid-Events-Booklet.pdf",
     GREETING_CARD:"./files/Eid-Greeting-Cards.zip",
     TOOLKIT:"./files/Eid-Al-Fitr24-Toolkit.zip",
