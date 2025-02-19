@@ -20,11 +20,15 @@ body {
     justify-content: space-between;
     flex-flow: wrap;
     padding: 0;
-    height: unset;
     position: relative;
     width: 100%;
     z-index: 9;
     font-size: 0;
+    height: calc((291 / 1920) * 100%);
+
+    @media (max-width: 768px) {
+        height: calc((151 / 430) * 100%);
+    }
 
     .navbar-bg {
         position: relative;

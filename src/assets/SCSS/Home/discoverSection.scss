@@ -2,7 +2,12 @@
 
 .discover-section {
     position: relative;
+    height: calc((3227 / 1920) * 100%);
     font-size: 0;
+
+    @media (max-width: 768px) {
+        height: calc((1626 / 430) * 100%);
+    }
 
     .discover-section-background {
         position: relative;

@@ -2,6 +2,11 @@
 
 section.header {
     font-size: 0;
+    height: calc((1844 / 1920) * 100%);
+
+    @media (max-width: 768px) {
+        height: calc((490 / 430) * 100%);
+    }
     
     .posAbsImg{
         position: absolute;
