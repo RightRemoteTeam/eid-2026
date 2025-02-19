@@ -38,7 +38,6 @@ export default function DiscoverSection() {
   const { lang } = useParams();
   const { t } = useTranslation();
   const isMobile = useIsMobile();
-  const { lang } = useParams();
 
   const { trackEvent } = GoogleAnalytics();
   const triggerEvent = (event_label, event_category) => {
@@ -189,7 +188,9 @@ export default function DiscoverSection() {
       </div>
 
       <div className="desc-container-2">
-        <p className="section-desc-2" dir={lang === "ar" ? "rtl" : "ltr"}>{t("discover.description2")}</p>
+        <p className="section-desc-2" dir={lang === "ar" ? "rtl" : "ltr"}>
+          {t("discover.description2")}
+        </p>
         <div className="discover-events-container ">
           <div className="discover-events-button">
             <Link
