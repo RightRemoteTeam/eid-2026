@@ -76,7 +76,18 @@ body.rtl{
 
 .btn{
     text-decoration: none;
+ 
 }
+
+button.btn.btn-primary:disabled{
+    background-color: #ccc !important; 
+    color: #666 !important;         
+    cursor: not-allowed !important;    
+    opacity: 0.8;          
+    border-color: #bbb;   
+    box-shadow: none;
+}
+
 .btn.btn-primary{
     font-size: 16px;
     font-weight: 500;
