@@ -12,7 +12,6 @@ import greetingTopDecoration01 from "../../assets/images/greetings/greetings_dec
 import greetingTopDecoration02 from "../../assets/images/greetings/greetings_decoration_2.png";
 import greetingsTopElement01 from "../../assets/images/greetings/greetings_1.png";
 import greetingsTopCandy from "../../assets/images/greetings/candy.png";
-import greetingsTopElement02 from "../../assets/images/greetings/greetings_2.png";
 import greetingsTopBalloon1 from "../../assets/images/greetings/greetings_balloon_1.png";
 import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloon_2.png";
 import greetingBottomBg from "../../assets/images/greetings/greetingBottomBg.png";
@@ -23,8 +22,6 @@ import greetingCup01 from "../../assets/images/common/dallah.png";
 import greetingSweet01 from "../../assets/images/greetings/sweet1.png";
 import greetingGoldCash from "../../assets/images/greetings/goldcash.png";
 import greetingGreenCash from "../../assets/images/greetings/greencash.png";
-import greetingDarkCard from "../../assets/images/greetings/dark-greeting-card.png";
-import greetingCard from "../../assets/images/greetings/greeting-card.png";
 import greetingCup from "../../assets/images/common/cup.png";
 import greetingGrass from "../../assets/images/greetings/grass.png";
 import greetingLeaf from "../../assets/images/common/leaf.png";
@@ -32,6 +29,10 @@ import greetingSun from "../../assets/images/common/sun.png";
 import greetingCandy from "../../assets/images/common/candy.png";
 import greetingCard01 from "../../assets/images/greetings/card2.png";
 import greetingCard02 from "../../assets/images/greetings/card3.png";
+import greetingCard03 from "../../assets/images/greetings/C1.png";
+import greetingCard04 from "../../assets/images/greetings/C2.png";
+import greetingCard05 from "../../assets/images/greetings/C3.png";
+import greetingCard06 from "../../assets/images/greetings/C4.png";
 import discoverBuilding01 from "../../assets/images/greetings/building01.png";
 import discoverballoon01 from "../../assets/images/greetings/balloon3.png";
 import discoverballoon02 from "../../assets/images/discover/green-balloon.png";
@@ -91,7 +92,7 @@ export default function GreetingSection() {
     });
   }, []);
   const playIntro = () => {
-    if(isMobile){
+    if (isMobile) {
       gsap.to([".gsapGreetingBalloon"], {
         y: -3,
         x: 2,
@@ -180,7 +181,7 @@ export default function GreetingSection() {
               <img src={greetingTopBg} alt="Greetings-Top Background" />
             </picture>
           </div>
-          <div className="greetingTop-heading-1">
+          <div className="greetingTop-heading-1" dir={lang === "ar" ? "rtl" : "ltr"}>
             {t("greetingSection.description1")}
           </div>
           <div className="greetingTop-cloud-1">
@@ -208,7 +209,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="decoration1">
-            <Parallax translateY={[0,-30]} speed={10}>
+            <Parallax translateY={[0, -30]} speed={10}>
               <img
                 src={greetingTopDecoration01}
                 className="greetingTopDecoration01 img-fit"
@@ -217,7 +218,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="decoration2">
-            <Parallax translateY={[0,-40]} speed={30}>
+            <Parallax translateY={[0, -40]} speed={30}>
               <img
                 src={greetingTopDecoration02}
                 className="greetingTopDecoration02 img-fit"
@@ -277,7 +278,7 @@ export default function GreetingSection() {
           </div>
           <div className="greetingTop02">
             <img
-              src={greetingsTopElement02}
+              src={greetingCard02}
               className="greetingTopElement02 img-fit"
               alt=""
             />
@@ -289,13 +290,14 @@ export default function GreetingSection() {
               href={ENV.TOOLKIT}
               download
               className="btn btn-primary download-btn"
+              dir={lang === "ar" ? "rtl" : "ltr"}
             >
               {t("buttons.title1")}
             </button>
           </div>
           <div className="greetingTop03">
             <Parallax
-              translateY={[0,-8]}
+              translateY={[0, -8]}
               speed={20}
               className="building-img-1"
             >
@@ -309,7 +311,7 @@ export default function GreetingSection() {
                   className="trail-img"
                 />
                 <div className="trail-carpet-container">
-                  <Parallax translateY={[0,-10]} translateX={[10,0]} speed={10}>
+                  <Parallax translateY={[0, -10]} translateX={[10, 0]} speed={10}>
                     <img
                       src={discoverTrail02}
                       alt="trail-carpet"
@@ -321,14 +323,14 @@ export default function GreetingSection() {
             </div>
           </div>
           <div className="greetingTop04">
-            <Parallax translateY={[0,-100]} speed={10}>
+            <Parallax translateY={[0, -100]} speed={10}>
               <div className="gsapGreetingBalloon">
                 <img src={discoverballoon01} alt="Discover Building" />
               </div>
             </Parallax>
           </div>
           <div className="greetingTop05">
-            <Parallax translateX={[0,-2]} speed={2}>
+            <Parallax translateX={[0, -2]} speed={2}>
               <div className="gsapGreetingGreenBalloon">
                 <img
                   src={discoverballoon02}
@@ -345,7 +347,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="greetingTop07">
-            <Parallax translateY={[0,-100]} speed={30}>
+            <Parallax translateY={[0, -100]} speed={30}>
               <img
                 src={discoverGiftBox01}
                 className="gift-box-img-1 img-fit"
@@ -359,7 +361,7 @@ export default function GreetingSection() {
               <img src={yellowLeaf} className="yellow-leaf img-fit" alt="" />
             </Parallax>
           </div>
-          <div className="greetingTop-heading-2">
+          <div className="greetingTop-heading-2" dir={lang === "ar" ? "rtl" : "ltr"}>
             {t("greetingSection.description2")}
           </div>
         </div>
@@ -371,79 +373,153 @@ export default function GreetingSection() {
             </picture>
           </div>
           <div className="greetingElements">
-            <div className="greetingCards">
-              <div className="greetingElements01">
-                <div className="greetingCardContainer">
-                  <img
-                    src={greetingCard01}
-                    className="greetingElement01 img-fit"
-                    alt=""
-                  />
-                  <button className="btn btn-primary download-btn"
-                    onClick={() => {
-                      triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.TOOLKIT, pdfThumbnail);
-                    }}
-                    href={ENV.TOOLKIT}>
-                    {t("buttons.title2")}
-                  </button>
-                </div>
+            <div className="greetingCards" dir={lang === "ar" ? "rtl" : "ltr"}>
+              {lang === "ar" ? (
+                <>
+                  <div className="greetingElements01">
+                    <div className="greetingCardContainer">
+                      <img
+                        src={greetingCard03}
+                        className="greetingElement01 img-fit"
+                        alt=""
+                      />
+                      <button className="btn btn-primary download-btn"
+                        onClick={() => {
+                          triggerEvent("Eid_Identity_2024_click", "link_click");
+                          setModalData(ENV.TOOLKIT, pdfThumbnail);
+                        }}
+                        href={ENV.TOOLKIT}>
+                        {t("buttons.title2")}
+                      </button>
+                    </div>
 
-              </div>
-              <div className="greetingElements01">
-                <div className="greetingCardContainer">
-                  <img
-                    src={greetingCard02}
-                    className="greetingElement01 img-fit"
-                    alt=""
-                  />
-                  <button className="btn btn-primary download-btn"
-                    onClick={() => {
-                      triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.TOOLKIT, pdfThumbnail);
-                    }}>
-                    {t("buttons.title3")}
-                  </button>
-                </div>
+                  </div>
+                  <div className="greetingElements01">
+                    <div className="greetingCardContainer">
+                      <img
+                        src={greetingCard05}
+                        className="greetingElement01 img-fit"
+                        alt=""
+                      />
+                      <button className="btn btn-primary download-btn"
+                        onClick={() => {
+                          triggerEvent("Eid_Identity_2024_click", "link_click");
+                          setModalData(ENV.TOOLKIT, pdfThumbnail);
+                        }}>
+                        {t("buttons.title4")}
+                      </button>
+                    </div>
+                  </div>
+                  <div className="greetingElements01">
+                    <div className="greetingCardContainer">
+                      <img
+                        src={greetingCard06}
+                        className="greetingElement01 img-fit"
+                        alt=""
+                      />
+                      <button className="btn btn-primary download-btn"
+                        onClick={() => {
+                          triggerEvent("Eid_Identity_2024_click", "link_click");
+                          setModalData(ENV.TOOLKIT, pdfThumbnail);
+                        }}>
+                        {t("buttons.title5")}
+                      </button>
+                    </div>
+                  </div>
+                  <div className="greetingElements01">
+                    <div className="greetingCardContainer">
+                      <img
+                        src={greetingCard04}
+                        className="greetingElement01 img-fit"
+                        alt=""
+                      />
+                      <button className="btn btn-primary download-btn"
+                        onClick={() => {
+                          triggerEvent("Eid_Identity_2024_click", "link_click");
+                          setModalData(ENV.TOOLKIT, pdfThumbnail);
+                        }}>
+                        {t("buttons.title3")}
+                      </button>
+                    </div>
 
-              </div>
-              <div className="greetingElements01">
-                <div className="greetingCardContainer">
-                  <img
-                    src={greetingCard02}
-                    className="greetingElement01 img-fit"
-                    alt=""
-                  />
-                  <button className="btn btn-primary download-btn"
-                    onClick={() => {
-                      triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.TOOLKIT, pdfThumbnail);
-                    }}>
-                    {t("buttons.title4")}
-                  </button>
-                </div>
-              </div>
-              <div className="greetingElements01">
-                <div className="greetingCardContainer">
-                  <img
-                    src={greetingCard02}
-                    className="greetingElement01 img-fit"
-                    alt=""
-                  />
-                  <button className="btn btn-primary download-btn"
-                    onClick={() => {
-                      triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.TOOLKIT, pdfThumbnail);
-                    }}>
-                    {t("buttons.title5")}
-                  </button>
-                </div>
-              </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="greetingElements01">
+                    <div className="greetingCardContainer">
+                      <img
+                        src={greetingCard03}
+                        className="greetingElement01 img-fit"
+                        alt=""
+                      />
+                      <button className="btn btn-primary download-btn"
+                        onClick={() => {
+                          triggerEvent("Eid_Identity_2024_click", "link_click");
+                          setModalData(ENV.TOOLKIT, pdfThumbnail);
+                        }}
+                        href={ENV.TOOLKIT}>
+                        {t("buttons.title2")}
+                      </button>
+                    </div>
+
+                  </div>
+                  <div className="greetingElements01">
+                    <div className="greetingCardContainer">
+                      <img
+                        src={greetingCard04}
+                        className="greetingElement01 img-fit"
+                        alt=""
+                      />
+                      <button className="btn btn-primary download-btn"
+                        onClick={() => {
+                          triggerEvent("Eid_Identity_2024_click", "link_click");
+                          setModalData(ENV.TOOLKIT, pdfThumbnail);
+                        }}>
+                        {t("buttons.title3")}
+                      </button>
+                    </div>
+
+                  </div>
+                  <div className="greetingElements01">
+                    <div className="greetingCardContainer">
+                      <img
+                        src={greetingCard05}
+                        className="greetingElement01 img-fit"
+                        alt=""
+                      />
+                      <button className="btn btn-primary download-btn"
+                        onClick={() => {
+                          triggerEvent("Eid_Identity_2024_click", "link_click");
+                          setModalData(ENV.TOOLKIT, pdfThumbnail);
+                        }}>
+                        {t("buttons.title4")}
+                      </button>
+                    </div>
+                  </div>
+                  <div className="greetingElements01">
+                    <div className="greetingCardContainer">
+                      <img
+                        src={greetingCard06}
+                        className="greetingElement01 img-fit"
+                        alt=""
+                      />
+                      <button className="btn btn-primary download-btn"
+                        onClick={() => {
+                          triggerEvent("Eid_Identity_2024_click", "link_click");
+                          setModalData(ENV.TOOLKIT, pdfThumbnail);
+                        }}>
+                        {t("buttons.title5")}
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
-          <div className="greetingTop-heading-3">
-              {t("greetingSection.description3")}
-            </div>
+          <div className="greetingTop-heading-3" dir={lang === "ar" ? "rtl" : "ltr"}>
+            {t("greetingSection.description3")}
+          </div>
           <div className="greetingElements03">
             <Parallax speed={10} translateY={["0", "-150"]}>
               <div className="gsapGreetingBalloon">
@@ -535,13 +611,13 @@ export default function GreetingSection() {
           </div>
           <div className="greetingElements12">
             <Parallax speed={10} translateY={["0", "-100"]}>
-             <div className="gsapGreetingBalloon">
-             <img
-              src={greetingballoon01}
-              className="greetingElement12 img-fit"
-              alt=""
-              />
-            </div>
+              <div className="gsapGreetingBalloon">
+                <img
+                  src={greetingballoon01}
+                  className="greetingElement12 img-fit"
+                  alt=""
+                />
+              </div>
             </Parallax>
           </div>
           <div className="greetingElements13">
@@ -572,21 +648,21 @@ export default function GreetingSection() {
             <div className="section-card-container">
               <div className="greetingCardContainer">
                 <img
-                  src={greetingDarkCard}
+                  src={greetingCard04}
                   className="greetingElement01 greetingMainCard"
                   alt="Greeting card"
                 />
               </div>
               <div className="greetingCardContainer">
                 <img
-                  src={greetingCard}
+                  src={greetingCard01}
                   className="greetingElement01 greetingMainCard"
                   alt="Greeting card"
                 />
               </div>
             </div>
 
-            <div className="section-box-container">
+            <div className="section-box-container" dir={lang === "ar" ? "rtl" : "ltr"}>
               <h1
                 dangerouslySetInnerHTML={{ __html: t("greetingSection.title") }}
               />

@@ -3,6 +3,7 @@ import "../../assets/SCSS/Home/discoverSection.scss";
 import { Parallax } from "react-scroll-parallax";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useParams } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
 import Background from "../../assets/images/discover/background.png";
@@ -35,6 +36,8 @@ export default function DiscoverSection() {
   const sectionRef = useRef(null);
   const { t } = useTranslation();
   const isMobile = useIsMobile();
+  const { lang } = useParams();
+
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -116,7 +119,7 @@ export default function DiscoverSection() {
           <img src={Background} alt="" />
         </picture>
       </div>
-      <div className="desc-container-1">
+      <div className="desc-container-1" dir={lang === "ar" ? "rtl" : "ltr"}>
         <p className="section-desc-1">{t("discover.description1")}</p>
       </div>
 
@@ -174,9 +177,9 @@ export default function DiscoverSection() {
       </div>
 
       <div className="desc-container-2">
-        <p className="section-desc-2">{t("discover.description2")}</p>
+        <p className="section-desc-2" dir={lang === "ar" ? "rtl" : "ltr"}>{t("discover.description2")}</p>
         <div className="discover-events-container ">
-          <button className="btn btn-primary">{t("buttons.title8")}</button>
+          <button className="btn btn-primary" dir={lang === "ar" ? "rtl" : "ltr"}>{t("buttons.title8")}</button>
           <div className="logo-container">
             <img src={EnjoySaudiLogo} alt="Enjoy Saudi" />
           </div>
