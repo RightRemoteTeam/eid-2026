@@ -564,6 +564,10 @@
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
+
+                    .greetingElement01 {
+                        border-radius: 18px;
+                    }
                 }
             }
 

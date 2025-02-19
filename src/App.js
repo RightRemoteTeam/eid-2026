@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./assets/SCSS/main.scss";
-import { Outlet, useParams, useLocation  } from "react-router-dom";
+import { Outlet, useParams, useLocation } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer"
@@ -8,7 +8,7 @@ import { checkLang } from "./Components/Functions";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "./Components/ThemeContext";
 import ReactGA from 'react-ga4';
-import {GoogleAnalytics} from "./Components/GoogleAnalytics";
+import { GoogleAnalytics } from "./Components/GoogleAnalytics";
 import ENV from "./Components/Constants";
 
 function App() {
@@ -37,18 +37,65 @@ function App() {
   }, [location, trackPageView]);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setPageLoaded(true);
+    let timeout;
+  
+    const checkIfImagesLoaded = () => {
+      requestAnimationFrame(() => {
+        const images = document.querySelectorAll("img"); // Get all images after DOM update
+        let loadedImages = 0;
+        let totalImages = images.length;
+    
+        if (totalImages === 0) {
+          console.warn("No images found. Forcing page load.");
+          setPageLoaded(true);
+          return;
+        }
+  
+        const imageLoaded = () => {
+          loadedImages++;
+          if (loadedImages === totalImages) {
+            clearTimeout(timeout);
+            console.log("All images loaded!");
+            setPageLoaded(true);
+          }
+        };
+  
+        images.forEach((img) => {
+          if (img.complete) {
+            imageLoaded();
+          } else {
+            imageLoaded();
+            img.addEventListener("load", imageLoaded);
+            img.addEventListener("error", imageLoaded);
+          }
+        });
+  
+        // Fallback in case images fail to load
+        timeout = setTimeout(() => {
+          console.warn("Forcing loader to hide after timeout.");
+          setPageLoaded(true);
+        }, 5000);
+      });
     };
-    if (document.readyState === 'complete') {
-      setPageLoaded(true);
+  
+    setTimeout(() => checkIfImagesLoaded(), 300); // Delay execution slightly to ensure React has rendered
+  
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (!pageLoaded) {
+      document.body.style.overflow = "hidden"; // Disable scroll
     } else {
-      window.addEventListener('load', handleLoad);
+      document.body.style.overflow = ""; // Restore scroll
     }
+  
     return () => {
-      window.removeEventListener('load', handleLoad);
+      document.body.style.overflow = ""; // Cleanup in case of unmount
     };
   }, [pageLoaded]);
+  
+
 
   useEffect(() => {
     checkLang(i18n, lang);
@@ -63,24 +110,22 @@ function App() {
 
   return (
     <>
-      {!pageLoaded ? (
-        <div className={`preLoader visible`}>
+      {!pageLoaded &&
+        <div className={`preLoader ${pageLoaded ? "hidden" : "visible"}`}>
           <div className="spinner"></div>
         </div>
-      ) : (
-        <div
-          className={`wrapper ${theme} ${lang === "en" ? "ltr" : "rtl"} ${
-            pageLoaded ? "visible" : "invisible"
+      }
+      <div
+        className={`wrapper ${theme} ${lang === "en" ? "ltr" : "rtl"} ${pageLoaded ? "visible" : "invisible"
           }`}
-        >
-          <Navbar
-            audioEnabled={audioEnabled}
-            setAudioEnabled={setAudioEnabled}
-          />
-          <Outlet context={[audioEnabled, setAudioEnabled, pageLoaded, setPageLoaded]} />
-          <Footer/>
-        </div>
-      )}
+      >
+        <Navbar
+          audioEnabled={audioEnabled}
+          setAudioEnabled={setAudioEnabled}
+        />
+        <Outlet context={[audioEnabled, setAudioEnabled, pageLoaded, setPageLoaded]} />
+        <Footer />
+      </div>
     </>
   );
 }

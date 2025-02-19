@@ -27,12 +27,12 @@ import greetingGrass from "../../assets/images/greetings/grass.png";
 import greetingLeaf from "../../assets/images/common/leaf.png";
 import greetingSun from "../../assets/images/common/sun.png";
 import greetingCandy from "../../assets/images/common/candy.png";
-import greetingCard01 from "../../assets/images/greetings/card2.png";
 import greetingCard02 from "../../assets/images/greetings/card3.png";
-import greetingCard03 from "../../assets/images/greetings/C1.png";
-import greetingCard04 from "../../assets/images/greetings/C2.png";
-import greetingCard05 from "../../assets/images/greetings/C3.png";
-import greetingCard06 from "../../assets/images/greetings/C4.png";
+import greetingCard03 from "../../assets/images/greetings/c1.png";
+import greetingCard05 from "../../assets/images/greetings/c3.png";
+import greetingCard06 from "../../assets/images/greetings/c4.png";
+import greetingCard07 from "../../assets/images/greetings/greeting-card.png";
+import greetingCard08 from "../../assets/images/greetings/dark-greeting-card.png";
 import discoverBuilding01 from "../../assets/images/greetings/building01.png";
 import discoverballoon01 from "../../assets/images/greetings/balloon3.png";
 import discoverballoon02 from "../../assets/images/discover/green-balloon.png";
@@ -373,148 +373,78 @@ export default function GreetingSection() {
             </picture>
           </div>
           <div className="greetingElements">
-            <div className="greetingCards" dir={lang === "ar" ? "rtl" : "ltr"}>
-              {lang === "ar" ? (
-                <>
-                  <div className="greetingElements01">
-                    <div className="greetingCardContainer">
-                      <img
-                        src={greetingCard03}
-                        className="greetingElement01 img-fit"
-                        alt=""
-                      />
-                      <button className="btn btn-primary download-btn"
-                        onClick={() => {
-                          triggerEvent("Eid_Identity_2024_click", "link_click");
-                          setModalData(ENV.TOOLKIT, pdfThumbnail);
-                        }}
-                        href={ENV.TOOLKIT}>
-                        {t("buttons.title2")}
-                      </button>
-                    </div>
+            <div className="greetingCards">
+              <div className="greetingElements01">
+                <div className="greetingCardContainer">
+                  <img
+                    src={greetingCard03}
+                    className="greetingElement01 img-fit"
+                    alt=""
+                  />
+                  <button className="btn btn-primary download-btn"
+                    onClick={() => {
+                      triggerEvent("Eid_Identity_2024_click", "link_click");
+                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    }}
+                    href={ENV.TOOLKIT}
+                    dir={lang === "ar" ? "rtl" : "ltr"}>
+                    {t("buttons.title2")}
+                  </button>
+                </div>
 
-                  </div>
-                  <div className="greetingElements01">
-                    <div className="greetingCardContainer">
-                      <img
-                        src={greetingCard05}
-                        className="greetingElement01 img-fit"
-                        alt=""
-                      />
-                      <button className="btn btn-primary download-btn"
-                        onClick={() => {
-                          triggerEvent("Eid_Identity_2024_click", "link_click");
-                          setModalData(ENV.TOOLKIT, pdfThumbnail);
-                        }}>
-                        {t("buttons.title4")}
-                      </button>
-                    </div>
-                  </div>
-                  <div className="greetingElements01">
-                    <div className="greetingCardContainer">
-                      <img
-                        src={greetingCard06}
-                        className="greetingElement01 img-fit"
-                        alt=""
-                      />
-                      <button className="btn btn-primary download-btn"
-                        onClick={() => {
-                          triggerEvent("Eid_Identity_2024_click", "link_click");
-                          setModalData(ENV.TOOLKIT, pdfThumbnail);
-                        }}>
-                        {t("buttons.title5")}
-                      </button>
-                    </div>
-                  </div>
-                  <div className="greetingElements01">
-                    <div className="greetingCardContainer">
-                      <img
-                        src={greetingCard04}
-                        className="greetingElement01 img-fit"
-                        alt=""
-                      />
-                      <button className="btn btn-primary download-btn"
-                        onClick={() => {
-                          triggerEvent("Eid_Identity_2024_click", "link_click");
-                          setModalData(ENV.TOOLKIT, pdfThumbnail);
-                        }}>
-                        {t("buttons.title3")}
-                      </button>
-                    </div>
+              </div>
+              <div className="greetingElements01">
+                <div className="greetingCardContainer">
+                  <img
+                    src={greetingCard08}
+                    className="greetingElement01 img-fit"
+                    alt=""
+                  />
+                  <button className="btn btn-primary download-btn"
+                    onClick={() => {
+                      triggerEvent("Eid_Identity_2024_click", "link_click");
+                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    }}
+                    dir={lang === "ar" ? "rtl" : "ltr"}>
+                    {t("buttons.title3")}
+                  </button>
+                </div>
 
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="greetingElements01">
-                    <div className="greetingCardContainer">
-                      <img
-                        src={greetingCard03}
-                        className="greetingElement01 img-fit"
-                        alt=""
-                      />
-                      <button className="btn btn-primary download-btn"
-                        onClick={() => {
-                          triggerEvent("Eid_Identity_2024_click", "link_click");
-                          setModalData(ENV.TOOLKIT, pdfThumbnail);
-                        }}
-                        href={ENV.TOOLKIT}>
-                        {t("buttons.title2")}
-                      </button>
-                    </div>
-
-                  </div>
-                  <div className="greetingElements01">
-                    <div className="greetingCardContainer">
-                      <img
-                        src={greetingCard04}
-                        className="greetingElement01 img-fit"
-                        alt=""
-                      />
-                      <button className="btn btn-primary download-btn"
-                        onClick={() => {
-                          triggerEvent("Eid_Identity_2024_click", "link_click");
-                          setModalData(ENV.TOOLKIT, pdfThumbnail);
-                        }}>
-                        {t("buttons.title3")}
-                      </button>
-                    </div>
-
-                  </div>
-                  <div className="greetingElements01">
-                    <div className="greetingCardContainer">
-                      <img
-                        src={greetingCard05}
-                        className="greetingElement01 img-fit"
-                        alt=""
-                      />
-                      <button className="btn btn-primary download-btn"
-                        onClick={() => {
-                          triggerEvent("Eid_Identity_2024_click", "link_click");
-                          setModalData(ENV.TOOLKIT, pdfThumbnail);
-                        }}>
-                        {t("buttons.title4")}
-                      </button>
-                    </div>
-                  </div>
-                  <div className="greetingElements01">
-                    <div className="greetingCardContainer">
-                      <img
-                        src={greetingCard06}
-                        className="greetingElement01 img-fit"
-                        alt=""
-                      />
-                      <button className="btn btn-primary download-btn"
-                        onClick={() => {
-                          triggerEvent("Eid_Identity_2024_click", "link_click");
-                          setModalData(ENV.TOOLKIT, pdfThumbnail);
-                        }}>
-                        {t("buttons.title5")}
-                      </button>
-                    </div>
-                  </div>
-                </>
-              )}
+              </div>
+              <div className="greetingElements01">
+                <div className="greetingCardContainer">
+                  <img
+                    src={greetingCard05}
+                    className="greetingElement01 img-fit"
+                    alt=""
+                  />
+                  <button className="btn btn-primary download-btn"
+                    onClick={() => {
+                      triggerEvent("Eid_Identity_2024_click", "link_click");
+                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    }}
+                    dir={lang === "ar" ? "rtl" : "ltr"}>
+                    {t("buttons.title4")}
+                  </button>
+                </div>
+              </div>
+              <div className="greetingElements01">
+                <div className="greetingCardContainer">
+                  <img
+                    src={greetingCard06}
+                    className="greetingElement01 img-fit"
+                    alt=""
+                  />
+                  <button className="btn btn-primary download-btn"
+                    onClick={() => {
+                      triggerEvent("Eid_Identity_2024_click", "link_click");
+                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    }}
+                    dir={lang === "ar" ? "rtl" : "ltr"}>
+                    {t("buttons.title5")}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div className="greetingTop-heading-3" dir={lang === "ar" ? "rtl" : "ltr"}>
@@ -648,14 +578,14 @@ export default function GreetingSection() {
             <div className="section-card-container">
               <div className="greetingCardContainer">
                 <img
-                  src={greetingCard04}
+                  src={greetingCard08}
                   className="greetingElement01 greetingMainCard"
                   alt="Greeting card"
                 />
               </div>
               <div className="greetingCardContainer">
                 <img
-                  src={greetingCard01}
+                  src={greetingCard07}
                   className="greetingElement01 greetingMainCard"
                   alt="Greeting card"
                 />
