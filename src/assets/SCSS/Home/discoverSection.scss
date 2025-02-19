@@ -53,6 +53,10 @@
             font-weight: 500;
             line-height: normal;
 
+            @media (max-width: 350px) {
+                font-size: 5.25vw;
+            }
+
             @media (min-width: 578px) and (max-width: 768px) {
                 font-size: 24px;
             }
@@ -107,7 +111,14 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    @media (max-width: 350px) {
+                        font-size: 5.25vw;
+                        width: 80vw;
+                        padding: 4vw 0;
+                    }
                 }
+
 
                 @media (max-width: 380px) {
                     min-width: 300px;
@@ -120,6 +131,16 @@
 
                 img {
                     width: 20%;
+                }
+            }
+        }
+
+        @media (max-width: 350px) {
+            .discover-events-container {
+                .logo-container {
+                    img {
+                        width: 20vw;
+                    }
                 }
             }
         }
