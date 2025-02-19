@@ -45,7 +45,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoogleAnalytics } from "../GoogleAnalytics";
 import DownloadFilePopup from "./DownloadPopup";
-import pdfThumbnail from "../../assets/images/happiness/toolkitThumbnail.png";
+import pdfThumbnail_identity from "../../assets/images/downloadable/pdfThumbnail_identity.png";
+import pdfThumbnail_booket from "../../assets/images/downloadable/pdfThumbnail_booket.png";
+import pdfThumbnail_greetingcards from "../../assets/images/downloadable/pdfThumbnail_greetingcards.png";
+import pdfThumbnail_house_decorations from "../../assets/images/downloadable/pdfThumbnail_house_decorations.png";
+import pdfThumbnail_company_decorations from "../../assets/images/downloadable/pdfThumbnail_company_decorations.png";
 import ENV from "../Constants";
 import useIsMobile from "../Hooks/useIsMobile";
 
@@ -285,9 +289,9 @@ export default function GreetingSection() {
             <button
               onClick={() => {
                 triggerEvent("Eid_Identity_2024_click", "link_click");
-                setModalData(ENV.TOOLKIT, pdfThumbnail);
+                setModalData(ENV.IDENTITY, pdfThumbnail_identity);
               }}
-              href={ENV.TOOLKIT}
+              href={ENV.IDENTITY}
               download
               className="btn btn-primary download-btn"
               dir={lang === "ar" ? "rtl" : "ltr"}
@@ -381,12 +385,13 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn"
+                  <button className="btn btn-primary download-btn disabled"
                     onClick={() => {
                       triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                      setModalData(ENV.BOOKLET, pdfThumbnail_booket);
                     }}
-                    href={ENV.TOOLKIT}
+                    disabled={true}
+                    href={ENV.BOOKLET}
                     dir={lang === "ar" ? "rtl" : "ltr"}>
                     {t("buttons.title2")}
                   </button>
@@ -403,8 +408,9 @@ export default function GreetingSection() {
                   <button className="btn btn-primary download-btn"
                     onClick={() => {
                       triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                      setModalData(ENV.GREETING_CARD, pdfThumbnail_greetingcards);
                     }}
+                    href={ENV.GREETING_CARD}
                     dir={lang === "ar" ? "rtl" : "ltr"}>
                     {t("buttons.title3")}
                   </button>
@@ -421,8 +427,9 @@ export default function GreetingSection() {
                   <button className="btn btn-primary download-btn"
                     onClick={() => {
                       triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                      setModalData(ENV.HOUSE_DECORATION_HORIZANTAL, pdfThumbnail_house_decorations);
                     }}
+                    href={ENV.HOUSE_DECORATION_HORIZANTAL}
                     dir={lang === "ar" ? "rtl" : "ltr"}>
                     {t("buttons.title4")}
                   </button>
@@ -438,8 +445,9 @@ export default function GreetingSection() {
                   <button className="btn btn-primary download-btn"
                     onClick={() => {
                       triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.TOOLKIT, pdfThumbnail);
+                      setModalData(ENV.COMPANY_DECORATION_HORIZANTAL, pdfThumbnail_company_decorations);
                     }}
+                    href={ENV.COMPANY_DECORATION_HORIZANTAL}
                     dir={lang === "ar" ? "rtl" : "ltr"}>
                     {t("buttons.title5")}
                   </button>
@@ -585,7 +593,7 @@ export default function GreetingSection() {
               </div>
               <div className="greetingCardContainer">
                 <img
-                  src={greetingCard07}
+                  src={greetingCard07} 
                   className="greetingElement01 greetingMainCard"
                   alt="Greeting card"
                 />
@@ -604,7 +612,7 @@ export default function GreetingSection() {
                 <button className="btn btn-primary download-btn"
                   onClick={() => {
                     triggerEvent("Eid_Identity_2024_click", "link_click");
-                    setModalData(ENV.TOOLKIT, pdfThumbnail);
+                    setModalData(ENV.pdfThumbnail_greetingcards, pdfThumbnail_greetingcards);
                   }}>
                   {t("buttons.title6")}
                 </button>

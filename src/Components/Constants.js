@@ -6,11 +6,13 @@ export default Object.freeze({
     EID_EVENT: "https://enjoy.sa/",
     EID_EVENT_EN: "https://enjoy.sa/en",
     EID_EVENT_QUERY_PARAM: "events?eventCategoriesIds=256767",
-    BOOKLET:"./files/Eid-Events-Booklet.pdf",
-    GREETING_CARD:"./files/Eid-Greeting-Cards.zip",
-    TOOLKIT:"./files/Eid-Al-Fitr24-Toolkit.zip",
-    HOUSE_DECORATION_HORIZANTAL:"./files/Eid-House-Decoration-H.zip",
-    COMPANY_DECORATION_HORIZANTAL:"./files/Eid-Companies-Decoration-H.zip",
+    BOOKLET:"./files/Eid_Events_Booklet.pdf",
+    IDENTITY:"./files/Eid_AlFitr_2025_Booklet.pdf",
+    GREETING_CARD:"./files/Eid_Greeing_Cards.zip",
+    HOUSE_DECORATION_HORIZANTAL:"./files/EidEvents_Deco_House.pdf",
+    COMPANY_DECORATION_HORIZANTAL:"./files/EidEvents_Deco_Companies.pdf",
     GA:"G-QY2LL1BM4R",
     PHP_SERVER: "/api/"
 });
+
+//BOOKLET: currenlty disabled
