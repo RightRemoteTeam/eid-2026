@@ -28,9 +28,9 @@ import greetingLeaf from "../../assets/images/common/leaf.png";
 import greetingSun from "../../assets/images/common/sun.png";
 import greetingCandy from "../../assets/images/common/candy.png";
 import greetingCard02 from "../../assets/images/greetings/card3.png";
-import greetingCard03 from "../../assets/images/greetings/C1.png";
-import greetingCard05 from "../../assets/images/greetings/C3.png";
-import greetingCard06 from "../../assets/images/greetings/C4.png";
+import greetingCard03 from "../../assets/images/greetings/c1.png";
+import greetingCard05 from "../../assets/images/greetings/c3.png";
+import greetingCard06 from "../../assets/images/greetings/c4.png";
 import greetingCard07 from "../../assets/images/greetings/greeting-card.png";
 import greetingCard08 from "../../assets/images/greetings/dark-greeting-card.png";
 import discoverBuilding01 from "../../assets/images/greetings/building01.png";
@@ -392,7 +392,7 @@ export default function GreetingSection() {
             </picture>
           </div>
           <div className="greetingElements">
-            <div className="greetingCards">
+            <div className="greetingCards"  dir={lang === "ar" ? "rtl" : "ltr"}>
               <div className="greetingElements01">
                 <div className="greetingCardContainer">
                   <img
