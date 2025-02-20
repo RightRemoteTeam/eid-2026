@@ -137,7 +137,7 @@ export default function DiscoverSection() {
       <div className="discover-giantwheel-container">
         <div className="container-content">
           <div className="giantwheel-img">
-            <Parallax shouldAlwaysCompleteAnimation={true}
+            <Parallax 
               translateX={isMobile ? [0, 4] : [0, 8]}
               speed={isMobile ? 5 : 10}
             >
@@ -145,13 +145,13 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="giantwheel-carpet">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={isMobile ? 3 : 5}>
+            <Parallax  speed={isMobile ? 3 : 5}>
               <img src={YellowCarpet} alt="carpet" />
             </Parallax>
           </div>
 
           <div className="giantwheel-fireworks">
-            <Parallax shouldAlwaysCompleteAnimation={true}
+            <Parallax 
               translateX={isMobile ? [0, 4] : [0, 8]}
               scale={[0.2, 1]}
               opacity={[0.5, 1]}
@@ -162,7 +162,7 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="donut-img">
-            <Parallax shouldAlwaysCompleteAnimation={true}
+            <Parallax 
               translateX={isMobile ? [0, 4] : [0, 8]}
               speed={isMobile ? 7 : 10}
             >
@@ -175,12 +175,12 @@ export default function DiscoverSection() {
       <div className="discover-gift-container">
         <div className="container-content">
           <div className="balloon-img">
-            <Parallax shouldAlwaysCompleteAnimation={true} translateX={[10, 0]} speed={isMobile ? 2 : 5}>
+            <Parallax  translateX={[10, 0]} speed={isMobile ? 2 : 5}>
               <img src={OrangeBalloon} alt="balloon" />
             </Parallax>
           </div>
           <div className="giftbox-img">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={isMobile ? 5 : 10}>
+            <Parallax  speed={isMobile ? 5 : 10}>
               <img src={GiftBox} alt="gift" />
             </Parallax>
           </div>
@@ -212,7 +212,7 @@ export default function DiscoverSection() {
       <div className="discover-sweets-container">
         <div className="container-content">
           <div className="sweetsplate-img">
-            <Parallax shouldAlwaysCompleteAnimation={true}
+            <Parallax 
               translateX={isMobile ? [0, 4] : [0, 8]}
               speed={isMobile ? 5 : 10}
             >
@@ -220,12 +220,12 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="balloon-img">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={isMobile ? 8 : 15}>
+            <Parallax  speed={isMobile ? 8 : 15}>
               <img src={GreenBalloon} alt="balloon" />
             </Parallax>
           </div>
           <div className="sparkles-img">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={isMobile ? 3 : 5}>
+            <Parallax  speed={isMobile ? 3 : 5}>
               <img src={Sparkles} alt="sparkles" />
             </Parallax>
           </div>
@@ -235,15 +235,15 @@ export default function DiscoverSection() {
       <div className="discover-bills-container">
         <div className="container-content">
           <div className="sparkles-inverted-img">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={isMobile ? 3 : 5}>
+            <Parallax  speed={isMobile ? 3 : 5}>
               <img src={Sparkles} alt="sparkles" />
             </Parallax>
           </div>
           <div className="flying-bills-container">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={isMobile ? 3 : 5}>
+            <Parallax  speed={isMobile ? 3 : 5}>
               <div className="bills-container-content">
                 <div className="top-bill">
-                  <Parallax shouldAlwaysCompleteAnimation={true}
+                  <Parallax 
                     translateX={isMobile ? [3, 0] : [6, 0]}
                     speed={isMobile ? 4 : 7}
                   >
@@ -251,7 +251,7 @@ export default function DiscoverSection() {
                   </Parallax>
                 </div>
                 <div className="center-bill">
-                  <Parallax shouldAlwaysCompleteAnimation={true}
+                  <Parallax 
                     translateX={isMobile ? [2.5, 0] : [5, 0]}
                     speed={isMobile ? 3 : 5}
                   >
@@ -259,7 +259,7 @@ export default function DiscoverSection() {
                   </Parallax>
                 </div>
                 <div className="bottom-bill">
-                  <Parallax shouldAlwaysCompleteAnimation={true}
+                  <Parallax 
                     translateX={isMobile ? [3.5, 0] : [7, 0]}
                     speed={isMobile ? 5 : 10}
                   >
@@ -267,7 +267,7 @@ export default function DiscoverSection() {
                   </Parallax>
                 </div>
                 <div className="bill-and-wallet">
-                  <Parallax shouldAlwaysCompleteAnimation={true} speed={isMobile ? 4 : 8}>
+                  <Parallax  speed={isMobile ? 4 : 8}>
                     <img src={Wallet} alt="wallet" />
                   </Parallax>
                 </div>
@@ -275,7 +275,7 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="candy-img">
-            <Parallax shouldAlwaysCompleteAnimation={true}
+            <Parallax 
               translateY={isMobile ? [0, -25] : [0, -50]}
               rotate={isMobile ? [0, 10] : [0, 20]}
               speed={isMobile ? 5 : 10}
@@ -284,7 +284,7 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="redcarpet-img">
-            <Parallax shouldAlwaysCompleteAnimation={true}
+            <Parallax 
               translateX={isMobile ? [5, 0] : [10, 0]}
               speed={isMobile ? 8 : 15}
             >
@@ -292,7 +292,7 @@ export default function DiscoverSection() {
             </Parallax>
           </div>
           <div className="confetti-img">
-            <Parallax shouldAlwaysCompleteAnimation={true}
+            <Parallax 
               translateX={isMobile ? [0, -10] : [0, -20]}
               translateY={isMobile ? [0, 5] : [0, 10]}
               rotate={isMobile ? [0, 15] : [0, 30]}
