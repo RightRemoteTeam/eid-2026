@@ -43,7 +43,7 @@ function App() {
 
     const checkIfImagesLoaded = () => {
       requestAnimationFrame(() => {
-        const images = document.querySelectorAll("img"); // Get all images after DOM update
+        const images = document.querySelectorAll("img:not(.saudi-logo)"); // Get all images after DOM update
         let loadedImages = 0;
         let totalImages = images.length;
 
@@ -67,18 +67,11 @@ function App() {
           if (img.complete) {
             imageLoaded();
           } else {
-            imageLoaded();
             img.addEventListener("load", imageLoaded);
             img.addEventListener("error", imageLoaded);
           }
         });
 
-        // Fallback in case images fail to load
-        timeout = setTimeout(() => {
-          console.warn("Forcing loader to hide after timeout.");
-          setPageLoaded(true);
-          parallaxController.update();
-        }, 5000);
       });
     };
 

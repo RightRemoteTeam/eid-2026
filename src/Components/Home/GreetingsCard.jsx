@@ -214,7 +214,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="decoration1">
-            <Parallax translateY={[0, -30]} speed={10}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, -30]} speed={10}>
               <img
                 src={greetingTopDecoration01}
                 className="greetingTopDecoration01 img-fit"
@@ -223,7 +223,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="decoration2">
-            <Parallax translateY={[0, -40]} speed={30}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, -40]} speed={30}>
               <img
                 src={greetingTopDecoration02}
                 className="greetingTopDecoration02 img-fit"
@@ -232,7 +232,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="balloon1">
-            <Parallax speed={10} translateY={[0, -100]}>
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -100]}>
               <div className="gsapGreetingBalloon">
                 <img
                   src={greetingsTopBalloon1}
@@ -244,7 +244,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="balloon2">
-            <Parallax translateY={[0, -100]} speed={10}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, -100]} speed={10}>
               <div className="gsapGreetingGreenBalloon">
                 <img
                   src={greetingsTopBalloon2}
@@ -255,7 +255,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="balloon3">
-            <Parallax translateY={[0, -100]} speed={10}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, -100]} speed={10}>
               <div className="gsapGreetingGreenBalloon">
                 <img
                   src={greetingsTopBalloon2}
@@ -273,7 +273,7 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingTop-candy">
-            <Parallax speed={10} translateY={[0, -70]} rotate={[-20, 20]}>
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -70]} rotate={[-20, 20]}>
               <img
                 src={greetingsTopCandy}
                 className="greetingTopCandy img-fit"
@@ -301,7 +301,7 @@ export default function GreetingSection() {
             </button>
           </div>
           <div className="greetingTop03">
-            <Parallax
+            <Parallax shouldAlwaysCompleteAnimation={true}
               translateY={[0, -8]}
               speed={20}
               className="building-img-1"
@@ -316,7 +316,7 @@ export default function GreetingSection() {
                   className="trail-img"
                 />
                 <div className="trail-carpet-container">
-                  <Parallax
+                  <Parallax shouldAlwaysCompleteAnimation={true}
                     translateY={[0, -10]}
                     translateX={[10, 0]}
                     speed={10}
@@ -332,14 +332,14 @@ export default function GreetingSection() {
             </div>
           </div>
           <div className="greetingTop04">
-            <Parallax translateY={[0, -100]} speed={10}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, -100]} speed={10}>
               <div className="gsapGreetingBalloon">
                 <img src={discoverballoon01} alt="Discover Building" />
               </div>
             </Parallax>
           </div>
           <div className="greetingTop05">
-            <Parallax translateX={[0, -2]} speed={2}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateX={[0, -2]} speed={2}>
               <div className="gsapGreetingGreenBalloon">
                 <img
                   src={discoverballoon02}
@@ -350,13 +350,13 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingTop06">
-            <Parallax translateX={["0px", "-1px"]} speed={5}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateX={["0px", "-1px"]} speed={5}>
               <img src={discoverDecoration01} alt="Discover Decoration" />
             </Parallax>
           </div>
 
           <div className="greetingTop07">
-            <Parallax translateY={[0, -100]} speed={30}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, -100]} speed={30}>
               <img
                 src={discoverGiftBox01}
                 className="gift-box-img-1 img-fit"
@@ -366,7 +366,7 @@ export default function GreetingSection() {
           </div>
 
           <div className="greetingTop08">
-            <Parallax
+            <Parallax shouldAlwaysCompleteAnimation={true}
               translateY={["0px", "-100px"]}
               rotate={[0, 50]}
               speed={20}
@@ -492,7 +492,7 @@ export default function GreetingSection() {
             {t("greetingSection.description3")}
           </div>
           <div className="greetingElements03">
-            <Parallax speed={10} translateY={["0", "-150"]}>
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={["0", "-150"]}>
               <div className="gsapGreetingBalloon">
                 <img
                   src={greetingballoon01}
@@ -503,7 +503,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements04">
-            <Parallax speed={5} translateX={["-50px", "0px"]}>
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={5} translateX={["-50px", "0px"]}>
               <div className="gsapGreetingCloth">
                 <img
                   src={greetingCloth01}
@@ -514,7 +514,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements05">
-            <Parallax translateY={["0", "-100"]} speed={8}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={["0", "-100"]} speed={8}>
               <div className="gsapGreetingGiftBox">
                 <img
                   src={greetingCup01}
@@ -525,7 +525,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements06">
-            <Parallax speed={5} translateY={["0", "-100"]}>
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={5} translateY={["0", "-100"]}>
               <div className="gsapGreetingSweet">
                 <img
                   src={greetingSweet01}
@@ -536,7 +536,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements07">
-            <Parallax speed={5} translateX={["0", "50"]}>
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={5} translateX={["0", "50"]}>
               <div className="gsapGreetingGoldCash">
                 <img
                   src={greetingGoldCash}
@@ -547,7 +547,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements08">
-            <Parallax translateX={["0", "-50"]} speed={5}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateX={["0", "-50"]} speed={5}>
               <img
                 src={greetingGreenCash}
                 className="greetingElement08 img-fit"
@@ -556,7 +556,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements09">
-            <Parallax translateX={["0", "-50"]} speed={5}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateX={["0", "-50"]} speed={5}>
               <img
                 src={greetingCup}
                 className="greetingElement09 img-fit"
@@ -572,7 +572,7 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingElements11">
-            <Parallax translateY={["0", "-50"]} speed={10}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={["0", "-50"]} speed={10}>
               <img
                 src={greetingLeaf}
                 className="greetingElement11 img-fit"
@@ -581,7 +581,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements12">
-            <Parallax speed={10} translateY={["0", "-100"]}>
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={["0", "-100"]}>
               <div className="gsapGreetingBalloon">
                 <img
                   src={greetingballoon01}
@@ -599,7 +599,7 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingElements14">
-            <Parallax
+            <Parallax shouldAlwaysCompleteAnimation={true}
               translateY={["0px", "-100px"]}
               rotate={[0, 30]}
               speed={10}

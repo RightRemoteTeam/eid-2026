@@ -32,6 +32,7 @@ export default function Footer() {
           <img
             src="https://raqmi.dga.gov.sa/PlatformsApi/api/Attachments/9e4271bc-8229-4bb3-9ad0-b1b000de9ec4"
             alt="Footer Logo"
+            className="saudi-logo"
             style={{
               display: "flex",
               flex: 1,
