@@ -3,13 +3,14 @@ import "./assets/SCSS/main.scss";
 import { Outlet, useParams, useLocation } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer"
+import Footer from "./Components/Footer/Footer";
 import { checkLang } from "./Components/Functions";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "./Components/ThemeContext";
-import ReactGA from 'react-ga4';
+import ReactGA from "react-ga4";
 import { GoogleAnalytics } from "./Components/GoogleAnalytics";
 import ENV from "./Components/Constants";
+import { useParallaxController } from "react-scroll-parallax";
 
 function App() {
   const GA_MEASUREMENT_ID = ENV.GA;
@@ -21,6 +22,7 @@ function App() {
   const [pageLoaded, setPageLoaded] = useState(false);
   const location = useLocation();
   const { trackPageView } = GoogleAnalytics();
+  const parallaxController = useParallaxController();
 
   function initializeGA() {
     if (!initialized) {
@@ -38,28 +40,29 @@ function App() {
 
   useEffect(() => {
     let timeout;
-  
+
     const checkIfImagesLoaded = () => {
       requestAnimationFrame(() => {
         const images = document.querySelectorAll("img"); // Get all images after DOM update
         let loadedImages = 0;
         let totalImages = images.length;
-    
+
         if (totalImages === 0) {
           console.warn("No images found. Forcing page load.");
           setPageLoaded(true);
           return;
         }
-  
+
         const imageLoaded = () => {
           loadedImages++;
           if (loadedImages === totalImages) {
             clearTimeout(timeout);
             console.log("All images loaded!");
             setPageLoaded(true);
+            parallaxController.update();
           }
         };
-  
+
         images.forEach((img) => {
           if (img.complete) {
             imageLoaded();
@@ -69,17 +72,18 @@ function App() {
             img.addEventListener("error", imageLoaded);
           }
         });
-  
+
         // Fallback in case images fail to load
         timeout = setTimeout(() => {
           console.warn("Forcing loader to hide after timeout.");
           setPageLoaded(true);
+          parallaxController.update();
         }, 5000);
       });
     };
-  
+
     setTimeout(() => checkIfImagesLoaded(), 300); // Delay execution slightly to ensure React has rendered
-  
+
     return () => clearTimeout(timeout);
   }, []);
 
@@ -89,13 +93,11 @@ function App() {
     } else {
       document.body.style.overflow = ""; // Restore scroll
     }
-  
+
     return () => {
       document.body.style.overflow = ""; // Cleanup in case of unmount
     };
   }, [pageLoaded]);
-  
-
 
   useEffect(() => {
     checkLang(i18n, lang);
@@ -110,20 +112,20 @@ function App() {
 
   return (
     <>
-      {!pageLoaded &&
+      {!pageLoaded && (
         <div className={`preLoader ${pageLoaded ? "hidden" : "visible"}`}>
           <div className="spinner"></div>
         </div>
-      }
+      )}
       <div
-        className={`wrapper ${theme} ${lang === "en" ? "ltr" : "rtl"} ${pageLoaded ? "visible" : "invisible"
-          }`}
+        className={`wrapper ${theme} ${lang === "en" ? "ltr" : "rtl"} ${
+          pageLoaded ? "visible" : "invisible"
+        }`}
       >
-        <Navbar
-          audioEnabled={audioEnabled}
-          setAudioEnabled={setAudioEnabled}
+        <Navbar audioEnabled={audioEnabled} setAudioEnabled={setAudioEnabled} />
+        <Outlet
+          context={[audioEnabled, setAudioEnabled, pageLoaded, setPageLoaded]}
         />
-        <Outlet context={[audioEnabled, setAudioEnabled, pageLoaded, setPageLoaded]} />
         <Footer />
       </div>
     </>
