@@ -2,18 +2,16 @@ import React from "react";
 //import { useTranslation } from 'react-i18next';
 //import { useModal } from './ModalContext';
 import { GoogleAnalytics } from "./GoogleAnalytics";
-import moonIcon from "./../assets/images/nav/moon.png";
-import sunIcon from "./../assets/images/nav/sun.png";
 import playIcon from "./../assets/images/icons/play-audio.png";
 import pauseIcon from "./../assets/images/icons/pause-audio.png";
 
 export const ToggleThemeButton = ({ theme, toggleTheme }) => {
   const isDarkMode = theme === "dark-mode";
-  const icon = isDarkMode ? moonIcon : sunIcon;
+  //const icon = isDarkMode ? moonIcon : sunIcon;
 
   return (
     <div className={`toggle-button ${theme}`} onClick={toggleTheme}>
-      <img src={icon} className="icon" alt="Toggle icon" />
+      <img src={""} className="icon" alt="Toggle icon" />
     </div>
   );
 };
