@@ -265,11 +265,25 @@
             z-index: 10;
 
             .btn {
-                padding: 11px 0;
+                font-size: 16px;
+                padding: 18px 0;
+                font-weight: 600;
 
-                @media (max-width: 300px) {
-                    font-size: 5.25vw;
-                    padding: 2vw 0;
+                @media(max-width: 1680px) {
+                    font-size: 16px;
+                }
+
+                @media(max-width: 1480px) {
+                    font-size: 14px;
+                }
+
+                @media(max-width: 1280px) {
+                    padding: 10px 0;
+                    font-size: 12px;
+                }
+
+                @media(max-width: 1080px) {
+                    font-size: 12px;
                 }
             }
 
