@@ -195,7 +195,7 @@ export default function DiscoverSection() {
           <div className="discover-events-button">
             <Link
               className="btn btn-primary"
-              target='_blank'
+              target="_blank"
               dir={lang === "ar" ? "rtl" : "ltr"}
               to={`${ENV.EID_EVENT}${lang}/${ENV.EID_EVENT_QUERY_PARAM}`}
               onClick={triggerEvent("Eid_Events_2024", "link_click")}
@@ -315,6 +315,7 @@ export default function DiscoverSection() {
           </div>
         </div>
       </div>
+      <div className="discover-section-bottom-filler"></div>
     </section>
   );
 }

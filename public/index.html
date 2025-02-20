@@ -10,16 +10,13 @@
   <meta name="description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها. فعاليات العيد والفرحة تزيد" />
 
   <meta name="theme-color" content="#000000" />
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:image" content="" />
+  <meta property="og:image" content="%PUBLIC_URL%/Eid-al-Fitr-2025-Identity.png" />
 
   <link rel="icon" href="./favicon.ico" />
   <link rel="shortcut icon" href="./favicon.ico" />
   <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -35,18 +32,6 @@
     rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-5XTWPQV"></script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let ogImageMeta = document.querySelector('meta[property="og:image"]');
-
-      if (ogImageMeta) {
-        let imagePath = "/Eid-al-Fitr-2025-Identity.png";
-        let fullImageUrl = window.location.origin + imagePath;
-        ogImageMeta.setAttribute("content", fullImageUrl);
-      }
-    });
-  </script>
 </head>
 
 <body>
@@ -63,7 +48,6 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5XTWPQV');
   </script>
-
 </body>
 
 </html>
