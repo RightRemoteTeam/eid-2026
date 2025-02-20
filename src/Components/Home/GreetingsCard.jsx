@@ -53,7 +53,6 @@ import pdfThumbnail_company_decorations from "../../assets/images/downloadable/p
 import ENV from "../Constants";
 import useIsMobile from "../Hooks/useIsMobile";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function GreetingSection() {
@@ -114,8 +113,7 @@ export default function GreetingSection() {
         repeat: -1,
         yoyo: true,
       });
-    }
-    else {
+    } else {
       gsap.to([".gsapGreetingBalloon"], {
         y: -15,
         x: 10,
@@ -185,7 +183,10 @@ export default function GreetingSection() {
               <img src={greetingTopBg} alt="Greetings-Top Background" />
             </picture>
           </div>
-          <div className="greetingTop-heading-1" dir={lang === "ar" ? "rtl" : "ltr"}>
+          <div
+            className="greetingTop-heading-1"
+            dir={lang === "ar" ? "rtl" : "ltr"}
+          >
             {t("greetingSection.description1")}
           </div>
           <div className="greetingTop-cloud-1">
@@ -315,7 +316,11 @@ export default function GreetingSection() {
                   className="trail-img"
                 />
                 <div className="trail-carpet-container">
-                  <Parallax translateY={[0, -10]} translateX={[10, 0]} speed={10}>
+                  <Parallax
+                    translateY={[0, -10]}
+                    translateX={[10, 0]}
+                    speed={10}
+                  >
                     <img
                       src={discoverTrail02}
                       alt="trail-carpet"
@@ -361,18 +366,28 @@ export default function GreetingSection() {
           </div>
 
           <div className="greetingTop08">
-            <Parallax translateY={["0px", "-100px"]} rotate={[0, 50]} speed={20}>
+            <Parallax
+              translateY={["0px", "-100px"]}
+              rotate={[0, 50]}
+              speed={20}
+            >
               <img src={yellowLeaf} className="yellow-leaf img-fit" alt="" />
             </Parallax>
           </div>
-          <div className="greetingTop-heading-2" dir={lang === "ar" ? "rtl" : "ltr"}>
+          <div
+            className="greetingTop-heading-2"
+            dir={lang === "ar" ? "rtl" : "ltr"}
+          >
             {t("greetingSection.description2")}
           </div>
         </div>
         <div className="greetingBottomSection">
           <div className="greetingBottom-bg">
             <picture>
-              <source srcSet={greetingBottomMobileBg} media="(max-width: 768px)" />
+              <source
+                srcSet={greetingBottomMobileBg}
+                media="(max-width: 768px)"
+              />
               <img src={greetingBottomBg} alt="Greetings Bottom Background" />
             </picture>
           </div>
@@ -385,18 +400,19 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn disabled"
+                  <button
+                    className="btn btn-primary download-btn disabled"
                     onClick={() => {
                       triggerEvent("Eid_Identity_2024_click", "link_click");
                       setModalData(ENV.BOOKLET, pdfThumbnail_booket);
                     }}
                     disabled={true}
                     href={ENV.BOOKLET}
-                    dir={lang === "ar" ? "rtl" : "ltr"}>
+                    dir={lang === "ar" ? "rtl" : "ltr"}
+                  >
                     {t("buttons.title2")}
                   </button>
                 </div>
-
               </div>
               <div className="greetingElements01">
                 <div className="greetingCardContainer">
@@ -405,17 +421,21 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn"
+                  <button
+                    className="btn btn-primary download-btn"
                     onClick={() => {
                       triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.GREETING_CARD, pdfThumbnail_greetingcards);
+                      setModalData(
+                        ENV.GREETING_CARD,
+                        pdfThumbnail_greetingcards
+                      );
                     }}
                     href={ENV.GREETING_CARD}
-                    dir={lang === "ar" ? "rtl" : "ltr"}>
+                    dir={lang === "ar" ? "rtl" : "ltr"}
+                  >
                     {t("buttons.title3")}
                   </button>
                 </div>
-
               </div>
               <div className="greetingElements01">
                 <div className="greetingCardContainer">
@@ -424,13 +444,18 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn"
+                  <button
+                    className="btn btn-primary download-btn"
                     onClick={() => {
                       triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.HOUSE_DECORATION_HORIZANTAL, pdfThumbnail_house_decorations);
+                      setModalData(
+                        ENV.HOUSE_DECORATION_HORIZANTAL,
+                        pdfThumbnail_house_decorations
+                      );
                     }}
                     href={ENV.HOUSE_DECORATION_HORIZANTAL}
-                    dir={lang === "ar" ? "rtl" : "ltr"}>
+                    dir={lang === "ar" ? "rtl" : "ltr"}
+                  >
                     {t("buttons.title4")}
                   </button>
                 </div>
@@ -442,20 +467,28 @@ export default function GreetingSection() {
                     className="greetingElement01 img-fit"
                     alt=""
                   />
-                  <button className="btn btn-primary download-btn"
+                  <button
+                    className="btn btn-primary download-btn"
                     onClick={() => {
                       triggerEvent("Eid_Identity_2024_click", "link_click");
-                      setModalData(ENV.COMPANY_DECORATION_HORIZANTAL, pdfThumbnail_company_decorations);
+                      setModalData(
+                        ENV.COMPANY_DECORATION_HORIZANTAL,
+                        pdfThumbnail_company_decorations
+                      );
                     }}
                     href={ENV.COMPANY_DECORATION_HORIZANTAL}
-                    dir={lang === "ar" ? "rtl" : "ltr"}>
+                    dir={lang === "ar" ? "rtl" : "ltr"}
+                  >
                     {t("buttons.title5")}
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <div className="greetingTop-heading-3" dir={lang === "ar" ? "rtl" : "ltr"}>
+          <div
+            className="greetingTop-heading-3"
+            dir={lang === "ar" ? "rtl" : "ltr"}
+          >
             {t("greetingSection.description3")}
           </div>
           <div className="greetingElements03">
@@ -503,7 +536,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements07">
-            <Parallax speed={5} translateX={["0", "50"]} >
+            <Parallax speed={5} translateX={["0", "50"]}>
               <div className="gsapGreetingGoldCash">
                 <img
                   src={greetingGoldCash}
@@ -566,7 +599,11 @@ export default function GreetingSection() {
             />
           </div>
           <div className="greetingElements14">
-            <Parallax translateY={["0px", "-100px"]} rotate={[0, 30]} speed={10}>
+            <Parallax
+              translateY={["0px", "-100px"]}
+              rotate={[0, 30]}
+              speed={10}
+            >
               <img
                 src={greetingCandy}
                 className="greetingElement14 img-fit"
@@ -593,14 +630,17 @@ export default function GreetingSection() {
               </div>
               <div className="greetingCardContainer">
                 <img
-                  src={greetingCard07} 
+                  src={greetingCard07}
                   className="greetingElement01 greetingMainCard"
                   alt="Greeting card"
                 />
               </div>
             </div>
 
-            <div className="section-box-container" dir={lang === "ar" ? "rtl" : "ltr"}>
+            <div
+              className="section-box-container"
+              dir={lang === "ar" ? "rtl" : "ltr"}
+            >
               <h1
                 dangerouslySetInnerHTML={{ __html: t("greetingSection.title") }}
               />
@@ -609,14 +649,23 @@ export default function GreetingSection() {
               />
 
               <div className="section-box-btns">
-                <button className="btn btn-primary download-btn"
+                <button
+                  className="btn btn-primary download-btn"
+                  disabled={true}
                   onClick={() => {
                     triggerEvent("Eid_Identity_2024_click", "link_click");
-                    setModalData(ENV.pdfThumbnail_greetingcards, pdfThumbnail_greetingcards);
-                  }}>
+                    setModalData(
+                      ENV.pdfThumbnail_greetingcards,
+                      pdfThumbnail_greetingcards
+                    );
+                  }}
+                >
                   {t("buttons.title6")}
                 </button>
-                <button className="btn btn-primary download-btn">
+                <button
+                  className="btn btn-primary download-btn"
+                  disabled={true}
+                >
                   {t("buttons.title7")}
                 </button>
               </div>
