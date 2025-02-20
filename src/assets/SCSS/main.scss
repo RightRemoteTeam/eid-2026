@@ -405,20 +405,6 @@ body {
         }
     }
 
-    // & .fairSection {
-    //     position: relative;
-
-    //     & .fairSectionGroup {
-    //         .fairDay {
-    //             display: none;
-    //         }
-
-    //         .fairNight {
-    //             display: block;
-    //         }
-    //     }
-    // }
-
     & .quoteSection {
         & .quoteSectionImg {
             .quoteDay {
@@ -485,26 +471,6 @@ body {
                 }
             }
         }
-    }
-
-    & .moneySection {
-        .section-box {
-            h2 {
-                color: #f5d159 !important;
-            }
-
-            p {
-                color: #fff;
-            }
-
-            & .btnLogo {
-                a {
-                    //border: 1px solid #eee;
-                    //background: #fff;
-                }
-            }
-        }
-
     }
 
 }

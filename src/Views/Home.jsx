@@ -9,7 +9,6 @@ import GreetingsCard from "../Components/Home/GreetingsCard";
 import DiscoverSection from "../Components/Home/DiscoverSection";
 // import HappinessSection from "../Components/Home/HappinessSection";
 // import OudSection from "../Components/Home/OudSection";
-// import Money from "../Components/Home/Money";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -48,7 +47,6 @@ export default function Home() {
         <ButtonSection />
       </div> */}
       {/* <FamilySection sectionRef={sectionRef} /> */}
-      {/* <Money /> */}
     </>
   );
 }
