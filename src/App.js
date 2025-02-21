@@ -47,7 +47,7 @@ function App() {
         let loadedImages = 0;
         let totalImages = images.length;
 
-        if (totalImages === 0) {
+        if (totalImages === 0 && document.readyState === 'complete') {
           console.warn("No images found. Forcing page load.");
           setPageLoaded(true);
           return;
@@ -55,7 +55,7 @@ function App() {
 
         const imageLoaded = () => {
           loadedImages++;
-          if (loadedImages === totalImages) {
+          if (loadedImages === totalImages && document.readyState === 'complete') {
             clearTimeout(timeout);
             console.log("All images loaded!");
             setPageLoaded(true);
