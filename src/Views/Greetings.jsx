@@ -78,14 +78,14 @@ const Greetings = () => {
             name="name"
             value={name}
             onChange={handleName}
-            maxlength="25"
+            maxLength="25"
           />
           <textarea
             className={`message-input ${messageError ? "input-error" : ""}`}
             placeholder={t("Greetings.message")}
             value={message}
             onChange={handleMessage}
-            maxlength="175"
+            maxLength="175"
           />
           <button className="preview-button" onClick={handlePreview}>
             {t("Greetings.preview")}
