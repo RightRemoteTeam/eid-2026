@@ -12,7 +12,8 @@ import MobileBackground from "../../assets/images/discover/mobile-background.png
 import GiantWheel from "../../assets/images/discover/giant-wheel.png";
 import YellowCarpet from "../../assets/images/common/yellow-carpet.png";
 import FireWorks from "../../assets/images/discover/fireworks.png";
-import OrangeBalloon from "../../assets/images/common/orange-balloon.png";
+import Trophy from "../../assets/images/discover/trophy.png";
+import Smoke from "../../assets/images/discover/smoke.png";
 import GiftBox from "../../assets/images/common/gift-box.png";
 import Donut from "../../assets/images/common/donut.png";
 import SweetsPlate from "../../assets/images/common/sweets-plate.png";
@@ -174,10 +175,15 @@ export default function DiscoverSection() {
 
       <div className="discover-gift-container">
         <div className="container-content">
-          <div className="balloon-img">
-            <Parallax translateX={[10, 0]} speed={isMobile ? 2 : 5}>
-              <img src={OrangeBalloon} alt="balloon" />
+          <div className="trophy-img">
+            <Parallax translateX={[10, 0]}  speed={isMobile ? 2 : 5}>
+              <img src={Trophy} alt="trophy" className="img-fit"/>
             </Parallax>
+            <div className="smoke-img">
+            <Parallax translateX={[10, 0]}  speed={isMobile ? 2 : 5}>
+              <img src={Smoke} alt="smoke" className="img-fit" />
+            </Parallax>
+          </div>
           </div>
           <div className="giftbox-img">
             <Parallax speed={isMobile ? 5 : 10}>
