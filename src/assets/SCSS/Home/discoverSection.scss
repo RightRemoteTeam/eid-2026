@@ -307,14 +307,21 @@
         .container-content {
             position: relative;
 
-            .balloon-img {
+
+            .trophy-img {
                 position: relative;
                 right: -55%;
-
-                img {
-                    width: 45%;
-                }
+                width: 40%;
             }
+
+            
+            .smoke-img{
+                position: absolute;
+                top: -10%;
+                left: 4%;
+                width: 55%;
+            }
+
 
             .giftbox-img {
                 position: absolute;
