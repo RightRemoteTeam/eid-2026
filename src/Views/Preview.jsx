@@ -17,7 +17,7 @@ export default function Preview() {
   const { lang } = useParams();
   const [pageLoaded,setPageLoaded] = useOutletContext();
 
-  const { card, name } = location.state || {};
+  const { card, name, message} = location.state || {};
   const [error, setError] = useState(null);
   const [image, setImage] = useState(null);
   const [shareUrl, setShareUrl] = useState(null);
@@ -37,7 +37,8 @@ export default function Preview() {
       },
       body: JSON.stringify({
         name: name,
-        card: card
+        card: card,
+        message: message,
       })
     })
     .then(response => {

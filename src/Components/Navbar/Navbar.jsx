@@ -16,7 +16,8 @@ export default function Navbar({ audioEnabled, setAudioEnabled }) {
   const { theme } = useTheme();
   const { t, i18n } = useTranslation();
 
-  const { lang } = useParams();
+  const { lang, "*":rest } = useParams();
+  const opacity = ['greetings', 'preview', 'share'].includes(rest) ? 0 : 1;
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ export default function Navbar({ audioEnabled, setAudioEnabled }) {
         <div className="navbar-bg">
         <picture>
         <source srcSet={navBarMobileBg} media="(max-width: 768px)" />
-        <img src={navBarBg} alt="Navbar Background" />
+        <img src={navBarBg} alt="Navbar Background" style={{opacity}}/>
         </picture>
         </div>
         <div className="navbar-container">
