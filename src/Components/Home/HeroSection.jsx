@@ -111,80 +111,80 @@ export default function HeroSection() {
       <section ref={sectionRef} className="header">
         <div className="header-container">
           <div className="header-bg">
-          <picture>
-          <source srcSet={headerMobileBg} media="(max-width: 768px)" />
-          <img src={headerBg} alt="Hero Background"/>
-          </picture>
+            <picture>
+              <source srcSet={headerMobileBg} media="(max-width: 768px)" />
+              <img src={headerBg} alt="Hero Background" />
+            </picture>
           </div>
           <div className="layer01Wrap posAbsImg">
-          <img src={layer01} className="layer-01 img-fit" alt=""/>
+            <img src={layer01} className="layer-01 img-fit" alt="" />
           </div>
           <div className="layer02Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, -70]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -70]} translateX={[0, -70]} >
               <div className="gsapBaloon">
                 <img src={layer02} className="layer-02 img-fit" alt="" />
               </div>
             </Parallax>
           </div>
           <div className="layer03Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 70]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -70]} translateX={[0, 70]} >
               <div className="gsapBaloon2">
                 <img src={layer03} className="layer-09 img-fit" alt="" />
               </div>
             </Parallax>
           </div>
           <div className="layer04Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, -50]} rotate={[0,30]} >
-                <img src={layer04} className="layer-04 img-fit" alt="" />
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -70]} translateX={[0, -50]} rotate={[0, 30]} >
+              <img src={layer04} className="layer-04 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer05Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -70]} translateX={[0, 50]} rotate={[0,-20]} >
-                <img src={layer05} className="layer-05 img-fit" alt="" />
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -70]} translateX={[0, 50]} rotate={[0, -20]} >
+              <img src={layer05} className="layer-05 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer06Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -50]} translateX={[0, 50]} >
-                <img src={layer06} className="layer-06 img-fit" alt="" />
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -50]} translateX={[0, 50]} >
+              <img src={layer06} className="layer-06 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer07Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -50]} translateX={[0, 50]} >
-                <img src={layer07} className="layer-07 img-fit" alt="" />
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -50]} translateX={[0, 50]} >
+              <img src={layer07} className="layer-07 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer08Wrap posAbsImg">
-            <Parallax translateY={[0, -60]} translateX={[0, 50]} speed={10} >
-              <img src={layer08} className="layer-08 img-fit" alt="" />
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, -60]} translateX={[0, 50]} speed={10}>
+              <img src={layer08} className="layer-08 img-fit" alt=""/>
             </Parallax>
           </div>
           <div className="layer09Wrap posAbsImg">
-            <Parallax speed={5} translateY={[0, -50]} translateX={[0, 50]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={5} translateY={[0, -50]} translateX={[0, 50]} >
               <img src={layer09} className="layer-09 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer10Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -50]} translateX={[0, 50]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -50]} translateX={[0, 50]} >
               <img src={layer10} className="layer-10 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer11Wrap posAbsImg">
-            <Parallax speed={5} translateY={[0, -60]} translateX={[0, -50]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={5} translateY={[0, -60]} translateX={[0, -50]} >
               <img src={layer11} className="layer-11 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer12Wrap posAbsImg">
-            <Parallax speed={5} translateY={[0, -50]} translateX={[0, -50]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={5} translateY={[0, -50]} translateX={[0, -50]} >
               <img src={layer12} className="layer-12 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer13Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -80]} translateX={[0, -50]} > 
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -80]} translateX={[0, -50]} >
               <img src={layer13} className="layer-13 img-fit" alt="" />
             </Parallax>
           </div>
           <div className="layer14Wrap posAbsImg">
-            <Parallax speed={10} translateY={[0, -60]} translateX={[0, -50]} > 
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -60]} translateX={[0, -50]} >
               <img src={layer14} className="layer-14 img-fit" alt="" />
             </Parallax>
           </div>
