@@ -9,7 +9,7 @@ import audioFile from "../../assets/Sounds/1-morning-with-birds.mp3";
 import buzz from "buzz";
 import headerBg from "../../assets/images/heroSection/headerBg.png";
 import headerMobileBg from "../../assets/images/heroSection/headerMobileBg.png";
-import layer01 from "../../assets/images/heroSection/layer01.png";
+import layer01 from "../../assets/images/heroSection/layer01-temp.png";
 import layer02 from "../../assets/images/common/orange-balloon.png";
 import layer03 from "../../assets/images/common/green-balloon.png";
 import layer04 from "../../assets/images/heroSection/layer04.png";
