@@ -68,54 +68,6 @@ export default function HeroSection() {
   useEffect(() => {
     if (!aniamtionDone) {
       setAnimationDone(true);
-      gsap.from([".gsapCup", ".gsapCupCoffee"], {
-        delay: 1,
-        scale: 2,
-        x: 200,
-        opacity: 0,
-        duration: 0.8,
-        rotate: 15,
-        repeat: 0,
-        ease: "power1.out",
-        yoyo: false,
-      });
-      gsap.from(".jugImage", {
-        // x: 20, // offset by the width of the box
-        delay: 1,
-        scale: 2,
-        x: -200,
-        opacity: 0,
-        duration: 0.8,
-        rotate: -15,
-        repeat: 0,
-        ease: "power1.out",
-        yoyo: false,
-      });
-
-      gsap.from([".gsaphalf"], {
-        delay: 1.4,
-        opacity: 0,
-        duration: 0.8,
-        repeat: 0,
-        ease: "power1.inOut",
-        yoyo: false,
-      });
-      gsap.from([".gsapfull"], {
-        delay: 1.5,
-        opacity: 0,
-        duration: 0.8,
-        repeat: 0,
-        ease: "power1.inOut",
-        yoyo: false,
-      });
-
-      gsap.to(".gsapHeaderShine", {
-        scale: 1.2,
-        duration: 1.5,
-        ease: "power1.inOut",
-        repeat: -1,
-        yoyo: true,
-      });
 
       gsap.to([".gsapBaloon"], {
         y: -8,
