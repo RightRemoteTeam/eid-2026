@@ -30,15 +30,6 @@ function App() {
       initialized = true;
     }
   }
-
-  const forceRepaint = () => {
-    document.body.style.display = "none";
-    void document.body.offsetHeight;
-    document.body.style.display = "";
-
-    console.log("Forcing a browser repaint...");
-  };
-
   useEffect(() => {
     initializeGA();
   }, []);
@@ -48,21 +39,56 @@ function App() {
   }, [location, trackPageView]);
 
   useEffect(() => {
-    const handleLoad = () => {
-      forceRepaint();
-      parallaxController.update();
-      setPageLoaded(true);
+    let timeout;
+
+    const checkIfImagesLoaded = () => {
+      requestAnimationFrame(() => {
+        const images = document.querySelectorAll("img:not(.saudi-logo)"); // Get all images after DOM update
+        let loadedImages = 0;
+        let totalImages = images.length;
+
+        if (totalImages === 0) {
+          console.warn("No images found. Forcing page load.");
+          setPageLoaded(true);
+          return;
+        }
+
+        const imageLoaded = () => {
+          loadedImages++;
+          if (loadedImages === totalImages) {
+            clearTimeout(timeout);
+            console.log("All images loaded!");
+            setPageLoaded(true);
+            parallaxController.update();
+          }
+        };
+
+        images.forEach((img) => {
+          if (img.complete) {
+            imageLoaded();
+          } else {
+            img.addEventListener("load", imageLoaded);
+            img.addEventListener("error", imageLoaded);
+          }
+        });
+
+      });
     };
-    if (document.readyState === "complete") {
-      forceRepaint();
-      parallaxController.update();
-      setPageLoaded(true);
+
+    setTimeout(() => checkIfImagesLoaded(), 300); // Delay execution slightly to ensure React has rendered
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (!pageLoaded) {
+      document.body.style.overflow = "hidden"; // Disable scroll
     } else {
-      window.addEventListener("load", handleLoad);
+      document.body.style.overflow = ""; // Restore scroll
     }
 
     return () => {
-      window.removeEventListener("load", handleLoad);
+      document.body.style.overflow = ""; // Cleanup in case of unmount
     };
   }, [pageLoaded]);
 
