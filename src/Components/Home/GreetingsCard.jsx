@@ -17,6 +17,8 @@ import greetingsTopBalloon2 from "../../assets/images/greetings/greetings_balloo
 import greetingBottomBg from "../../assets/images/greetings/greetingBottomBg.png";
 import greetingBottomMobileBg from "../../assets/images/greetings/greetingBottomMobileBg.png";
 import greetingballoon01 from "../../assets/images/greetings/balloon3.png";
+import greetingInstrument from "../../assets/images/greetings/instrument.png";
+import greetingMusic from "../../assets/images/greetings/music.png";
 import greetingCloth01 from "../../assets/images/greetings/yellowcloth.png";
 import greetingCup01 from "../../assets/images/common/dallah.png";
 import greetingSweet01 from "../../assets/images/greetings/sweet1.png";
@@ -501,11 +503,22 @@ export default function GreetingSection() {
           >
             {t("greetingSection.description3")}
           </div>
-          <div className="greetingElements03">
+          <div className="greetingElementsInstrument">
             <Parallax speed={10} translateY={["0", "-150"]}>
               <div className="gsapGreetingBalloon">
                 <img
-                  src={greetingballoon01}
+                  src={greetingInstrument}
+                  className="greetingElement03 img-fit"
+                  alt=""
+                />
+              </div>
+            </Parallax>
+          </div>
+          <div className="greetingElementsMusic">
+            <Parallax speed={10} translateY={["0", "-150"]}>
+              <div className="gsapGreetingBalloon">
+                <img
+                  src={greetingMusic}
                   className="greetingElement03 img-fit"
                   alt=""
                 />
@@ -575,11 +588,13 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements10">
+           <Parallax  speed={3}>
             <img
               src={greetingGrass}
               className="greetingElement10 img-fit"
               alt=""
             />
+             </Parallax>
           </div>
           <div className="greetingElements11">
             <Parallax translateY={["0", "-50"]} speed={10}>
