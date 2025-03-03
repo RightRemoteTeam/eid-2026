@@ -57,7 +57,7 @@ function App() {
           loadedImages++;
           if (loadedImages === totalImages) {
             clearTimeout(timeout);
-            console.log("All images loaded!");
+            console.log("All images loaded!!");
             setPageLoaded(true);
             parallaxController.update();
           }
