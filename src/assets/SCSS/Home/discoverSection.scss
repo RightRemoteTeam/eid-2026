@@ -314,8 +314,8 @@
                 width: 40%;
             }
 
-            
-            .smoke-img{
+
+            .smoke-img {
                 position: absolute;
                 top: -10%;
                 left: 4%;
@@ -387,7 +387,7 @@
             .balloon-img {
                 position: absolute;
                 z-index: 4;
-                top: 70%;
+                top: 100%;
                 left: -13%;
                 width: 100%;
 
@@ -453,7 +453,7 @@
 
                     .top-bill {
                         position: absolute;
-                        top: -100%;
+                        top: -105%;
                         left: 20%;
                         width: 100%;
 
@@ -464,7 +464,7 @@
 
                     .center-bill {
                         position: absolute;
-                        top: -70%;
+                        top: -75%;
                         left: 40%;
                         width: 100%;
 
@@ -475,7 +475,7 @@
 
                     .bottom-bill {
                         position: absolute;
-                        top: -35%;
+                        top: -40%;
                         left: 30%;
                         z-index: 4;
                         width: 100%;
@@ -502,6 +502,7 @@
 
             .candy-img {
                 position: absolute;
+                z-index: 5;
                 top: -15%;
                 left: 5%;
                 width: 100%;
@@ -514,7 +515,7 @@
             .redcarpet-img {
                 position: absolute;
                 z-index: 4;
-                top: 55%;
+                top: 165%;
                 left: -35%;
                 width: 145%;
 
@@ -525,7 +526,7 @@
 
             .confetti-img {
                 position: absolute;
-                top: 220%;
+                top: 275%;
                 left: 40%;
                 width: 100%;
                 z-index: 5;
@@ -630,6 +631,7 @@
             }
         }
     }
+
     .discover-section-bottom-filler {
         height: 2px;
         width: 100%;
