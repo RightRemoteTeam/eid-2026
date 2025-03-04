@@ -7,16 +7,14 @@ import { useTranslation } from "react-i18next";
 import ENV from "../Components/Constants";
 import "../assets/SCSS/preview.scss"
 import { saveAs } from 'file-saver'
-import { useTheme } from "../Components/ThemeContext";
 export default function Preview() {
 
-  const { theme } = useTheme();
   const {t} = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const { lang } = useParams();
   const [pageLoaded,setPageLoaded] = useOutletContext();
-
+  const [theme, setTheme] = useState("dark-mode");
   const { card, name, message} = location.state || {};
   const [error, setError] = useState(null);
   const [image, setImage] = useState(null);
@@ -112,7 +110,7 @@ export default function Preview() {
         </div> */}
       </div>
       <div className="social-and-buttons">
-      {/*
+      
         <div className="social-icons">
           
             <img onClick={shareOnFacebook} src={fb} alt="fb" />
@@ -124,7 +122,7 @@ export default function Preview() {
             <img onClick={shareOnWhatsApp} src={whatsapp} alt="whatsapp" />
           
         </div>
-      */}
+     
         <div className="buttons">
           <Link
             to={`/${lang}/greetings`}

@@ -406,6 +406,7 @@ export default function GreetingSection() {
                   />
                   <button
                     className="btn btn-primary download-btn disabled"
+                    disabled={true}
                     onClick={() => {
                       triggerEvent(
                         "Eid_Events_Booklet_2025_click",
@@ -413,7 +414,6 @@ export default function GreetingSection() {
                       );
                       setModalData(ENV.BOOKLET, pdfThumbnail_booket);
                     }}
-                    disabled={true}
                     href={ENV.BOOKLET}
                     dir={lang === "ar" ? "rtl" : "ltr"}
                   >
@@ -678,9 +678,9 @@ export default function GreetingSection() {
                 <button
                   className="btn btn-primary download-btn"
                   onClick={() => {
-                    triggerEvent("Eid_Identity_2024_click", "link_click");
+                    triggerEvent("Eid_Identity_2025_click", "link_click");
                     setModalData(
-                      ENV.pdfThumbnail_greetingcards,
+                      ENV.GREETING_CARD,
                       pdfThumbnail_greetingcards
                     );
                   }}

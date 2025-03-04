@@ -120,21 +120,21 @@ export default function HeroSection() {
             <img src={layer01} className="layer-01 img-fit" alt="" />
           </div>
           <div className="layer02Wrap posAbsImg">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -70]} translateX={[0, -70]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -50]} translateX={[0, -50]} >
               <div className="gsapBaloon">
                 <img src={layer02} className="layer-02 img-fit" alt="" />
               </div>
             </Parallax>
           </div>
           <div className="layer03Wrap posAbsImg">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -70]} translateX={[0, 70]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -50]} translateX={[0, 50]} >
               <div className="gsapBaloon2">
                 <img src={layer03} className="layer-09 img-fit" alt="" />
               </div>
             </Parallax>
           </div>
           <div className="layer04Wrap posAbsImg">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -70]} translateX={[0, -50]} rotate={[0, 30]} >
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -50]} translateX={[0, -50]} rotate={[0, 30]} >
               <img src={layer04} className="layer-04 img-fit" alt="" />
             </Parallax>
           </div>
