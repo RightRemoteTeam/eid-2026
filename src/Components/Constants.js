@@ -2,7 +2,7 @@ export default Object.freeze({
       
     // APP_URL: 'https://eid.gea.gov.sa',
     // APP_URL: 'https://gea-eid-p2.stocker.team',
-    APP_URL: 'http://localhost:8080/BT-gea-eid-2024-laravel',
+    APP_URL: 'https://eid25.stocker.team',
     APP_LANG: 'ar', //ar, en
     EID_EVENT: "https://enjoy.sa/",
     EID_EVENT_EN: "https://enjoy.sa/en",

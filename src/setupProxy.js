@@ -3,7 +3,7 @@ module.exports = function (app) {
     app.use(
         '/api',
         createProxyMiddleware({
-            target: 'http://localhost:8080/BT-gea-eid-2024-laravel',
+            target: 'https://eid25.stocker.team',
             changeOrigin: true,
         })
     );

@@ -1,5 +1,5 @@
 import "../assets/SCSS/greetings.scss";
-
+import ENV from "../Components/Constants";
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -62,7 +62,7 @@ const Greetings = () => {
               />
               <label htmlFor={`radio-${index}`} className="card-label">
                 <img
-                  src={`${process.env.PUBLIC_URL}/cards/g${index + 1}.jpg`}
+                  src={`${ENV.APP_URL}/cards/g${index + 1}.jpg`}
                   alt={`Card ${index + 1}`}
                   className="card-image"
                 />

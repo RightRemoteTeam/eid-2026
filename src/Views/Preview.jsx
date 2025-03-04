@@ -52,7 +52,7 @@ export default function Preview() {
         // navigate('/');
       }else{
         setImage(`${data.image}`);
-        setShareUrl(`${ENV.APP_URL}/${lang}/share?id=${data.time}`);
+        setShareUrl(`${ENV.APP_URL}/api/share.php?id=${data.time}`);
         setFilename(`${data.time}.png`)
         setError(null);
         setPageLoaded(true)
