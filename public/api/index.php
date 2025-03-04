@@ -1,7 +1,8 @@
 <?php
-
+// echo phpinfo();
+// exit();
 // error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+//ini_set('display_errors', 1);
 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
@@ -32,22 +33,25 @@ $content = trim(file_get_contents("php://input"));
 $decoded = json_decode($content, true);
 // echo "<pre>".print_r($decoded)."</pre>";
 // exit();
-// $name = $_GET['name'];
-// $card = $_GET['card'];
+// $name = $_POST['name'];
+//     $message = $_POST['message'];
+//     $card = $_POST['card'];
 
 if (is_array($decoded)) {
-  if (isset($decoded['name']) && isset($decoded['card'])) {
+  if (isset($decoded['name']) && isset($decoded['message']) && isset($decoded['card'])) {
     $name = filter_var($decoded['name'], FILTER_SANITIZE_STRING);
+    $message = filter_var($decoded['message'], FILTER_SANITIZE_STRING);
     $card = check_card($decoded['card']);
-    if (!empty($name) && !empty($card)) {
+    if (!empty($name) && !empty($message)) {
       $response['name'] = $name;
+      $response['message'] = $message;
       $response['card'] = $card;
     } else {
-      $response['error'] = 'Name and Card cannot be empty.';
+      $response['error'] = 'Name,Message and Card cannot be empty.';
       $response['success'] = false;
     }
   } else {
-    $response['error'] = 'Missing name or card.';
+    $response['error'] = 'Missing name or message or card.';
     $response['success'] = false;
   }
 } else {
@@ -56,7 +60,7 @@ if (is_array($decoded)) {
 }
 
 
-if (!empty($name) && !empty($card)) {
+if (!empty($name) && !empty($message) && !empty($card)) {
     $imagePath = $_SERVER['DOCUMENT_ROOT'].'/api/cards/g'.$card.'.jpg';
     $fontPath = $_SERVER['DOCUMENT_ROOT']."/api/font/IBM_Plex_Sans/IBMPlexSansArabic-Bold.ttf";
     $image = new Imagick();
@@ -77,13 +81,13 @@ if (!empty($name) && !empty($card)) {
     
     $messageDraw->setFillColor(new ImagickPixel($fontcolor));
 
+
     centerText($image, $nameDraw, $name, 850);
 
     centerText($image, $messageDraw, $message, 400);
 
-    
-
     $image->drawImage($nameDraw);
+    $image->drawImage($messageDraw);
     if(!is_dir('images')){
         mkdir('images',0755);
     }
@@ -92,10 +96,11 @@ if (!empty($name) && !empty($card)) {
     $image->writeImage($_SERVER['DOCUMENT_ROOT'].'/api/'.$image_name);
     $response['success'] = true;
 
-    
+    $scheme = $_SERVER['SERVER_SCHEME'];
     $host = $_SERVER['HTTP_HOST'];
     $port = ($_SERVER['SERVER_PORT'] == '80' || $_SERVER['SERVER_PORT'] == '443') ? '' : ':' . $_SERVER['SERVER_PORT'];
-
+    // $baseUrl = $scheme . '://' . $host . $port;
+    // $baseUrl = 'http://' . $host . $port;
     $baseUrl = 'http://' . $host . $port;
 
     $response['image']=$baseUrl.'/api/'.$image_name;
@@ -107,9 +112,10 @@ if (!empty($name) && !empty($card)) {
 $responseData = json_encode($response);
 echo $responseData;
 
-if (!empty($name) && !empty($card)) {
+if (!empty($name) && !empty($message) && !empty($card)) {
     // Clear memory
     $nameDraw->clear();
+    $messageDraw->clear();
     $image->clear();
     $image->destroy();
 }
