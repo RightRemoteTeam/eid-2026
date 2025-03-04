@@ -5,6 +5,7 @@
     position: relative;
     z-index: 9;
     padding-bottom: 30px;
+    flex: 1;
 
     .layout {
         display: flex;
@@ -105,7 +106,7 @@
             text-align: center;
             line-height: 25px;
             border-radius: 50%;
-            border: 2px solid #986DD4;
+            border: 2px solid #005339;
             transition: all 0.3s;
             opacity: 1;
         }
@@ -124,7 +125,7 @@
             text-align: center;
             line-height: 25px;
             border-radius: 50%;
-            border: 2px solid #986DD4;
+            border: 2px solid #005339;
             transition: all 0.3s;
             opacity: 1;
         }
@@ -137,7 +138,7 @@
         color: #fff;
         opacity: 1;
         transform: scale(1);
-        background: #8a59c8;
+        background: #005339;
         line-height: 31px;
         border: 2px solid #fff;
     }
