@@ -47,7 +47,7 @@ const Greetings = () => {
     <section className="greetings-card-container">
       <div className="layout">
         <div className="card-column">
-          {Array.from({ length: 10 }, (_, index) => (
+          {Array.from({ length: 2 }, (_, index) => (
             <div
               key={index}
               className={`card ${cardError ? "card-error" : ""}`}
@@ -62,7 +62,7 @@ const Greetings = () => {
               />
               <label htmlFor={`radio-${index}`} className="card-label">
                 <img
-                  src={`${process.env.PUBLIC_URL}/cards/g${index + 1}.png`}
+                  src={`${process.env.PUBLIC_URL}/cards/g${index + 1}.jpg`}
                   alt={`Card ${index + 1}`}
                   className="card-image"
                 />

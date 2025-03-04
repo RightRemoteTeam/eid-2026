@@ -57,26 +57,29 @@ if (is_array($decoded)) {
 
 
 if (!empty($name) && !empty($card)) {
-    $imagePath = $_SERVER['DOCUMENT_ROOT'].'/api/cards/g'.$card.'.png';
+    $imagePath = $_SERVER['DOCUMENT_ROOT'].'/api/cards/g'.$card.'.jpg';
     $fontPath = $_SERVER['DOCUMENT_ROOT']."/api/font/IBM_Plex_Sans/IBMPlexSansArabic-Bold.ttf";
     $image = new Imagick();
     $image->readImage($imagePath);
     $image_width = $image->getImageWidth();
 
-    $whitCards = array('1','2','3','4','5');
-    $fontcolor = "rgb(128, 77, 191)";
-    if (!in_array($card, $whitCards)) {
-        $fontcolor = "white";
-    }
+    $fontcolor = ($card == '1') ? "white" : "#005339";
 
     $nameDraw = new ImagickDraw();
     $nameDraw->setFont($fontPath);
-    $nameDraw->setFontSize(40);
+    $nameDraw->setFontSize(100);
     $nameDraw->setFillColor(new ImagickPixel($fontcolor));
 
 
-   
-    centerText($image, $nameDraw, $name, 450);
+    $messageDraw = new ImagickDraw();
+    $messageDraw->setFont($fontPath);
+    $messageDraw->setFontSize(70);
+    
+    $messageDraw->setFillColor(new ImagickPixel($fontcolor));
+
+    centerText($image, $nameDraw, $name, 850);
+
+    centerText($image, $messageDraw, $message, 400);
 
     
 
@@ -85,7 +88,7 @@ if (!empty($name) && !empty($card)) {
         mkdir('images',0755);
     }
     $time = time();
-    $image_name = 'images/'.$time.'.png';
+    $image_name = 'images/'.$time.'.jpg';
     $image->writeImage($_SERVER['DOCUMENT_ROOT'].'/api/'.$image_name);
     $response['success'] = true;
 
