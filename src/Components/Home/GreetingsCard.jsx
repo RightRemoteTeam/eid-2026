@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
@@ -676,7 +677,6 @@ export default function GreetingSection() {
               <div className="section-box-btns">
                 <button
                   className="btn btn-primary download-btn"
-                  disabled={true}
                   onClick={() => {
                     triggerEvent("Eid_Identity_2024_click", "link_click");
                     setModalData(
@@ -687,12 +687,11 @@ export default function GreetingSection() {
                 >
                   {t("buttons.title6")}
                 </button>
-                <button
+                <Link to={`/${lang}/greetings`}
                   className="btn btn-primary download-btn"
-                  disabled={true}
                 >
                   {t("buttons.title7")}
-                </button>
+                </Link>
               </div>
             </div>
           </div>
