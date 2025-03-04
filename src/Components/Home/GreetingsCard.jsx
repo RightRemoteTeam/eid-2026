@@ -548,7 +548,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements06">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={5} translateY={["0", "-100"]}>
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={6} translateY={["0", "-100"]}>
               <div className="gsapGreetingSweet">
                 <img
                   src={greetingSweet01}
@@ -588,7 +588,7 @@ export default function GreetingSection() {
             </Parallax>
           </div>
           <div className="greetingElements10">
-           <Parallax shouldAlwaysCompleteAnimation={true}  speed={3}>
+           <Parallax shouldAlwaysCompleteAnimation={true}  speed={5}>
             <img
               src={greetingGrass}
               className="greetingElement10 img-fit"
@@ -597,7 +597,7 @@ export default function GreetingSection() {
              </Parallax>
           </div>
           <div className="greetingElements11">
-            <Parallax shouldAlwaysCompleteAnimation={true} translateY={["0", "-50"]} speed={10}>
+            <Parallax shouldAlwaysCompleteAnimation={true} translateY={["0", "-100"]} speed={10}>
               <img
                 src={greetingLeaf}
                 className="greetingElement11 img-fit"
