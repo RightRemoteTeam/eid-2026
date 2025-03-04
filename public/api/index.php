@@ -101,7 +101,7 @@ if (!empty($name) && !empty($message) && !empty($card)) {
     $port = ($_SERVER['SERVER_PORT'] == '80' || $_SERVER['SERVER_PORT'] == '443') ? '' : ':' . $_SERVER['SERVER_PORT'];
     // $baseUrl = $scheme . '://' . $host . $port;
     // $baseUrl = 'http://' . $host . $port;
-    $baseUrl = 'http://' . $host . $port;
+    $baseUrl = 'https://' . $host . $port;
 
     $response['image']=$baseUrl.'/api/'.$image_name;
     $response['time']=$time;

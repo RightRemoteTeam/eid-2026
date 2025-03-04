@@ -2,10 +2,10 @@
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 
-$cards = 'images/'.$id.'.png';
+$cards = 'images/'.$id.'.jpg';
 
 if ($id !=null && $id > 0 && file_exists($cards)) {
-    $image = 'http://'.$_SERVER['HTTP_HOST'].'/api/images/'.$id.'.png';
+    $image = 'https://'.$_SERVER['HTTP_HOST'].'/api/images/'.$id.'.jpg';
 }else{
     $image =null;
 }
