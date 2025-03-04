@@ -314,7 +314,6 @@ export default function DiscoverSection() {
           <div className="candy-img">
             <Parallax
               shouldAlwaysCompleteAnimation={true}
-              //translateY={isMobile ? [0, -25] : [0, -50]}
               rotate={isMobile ? [0, 10] : [0, 20]}
               speed={isMobile ? 5 : 10}
             >
@@ -334,7 +333,6 @@ export default function DiscoverSection() {
             <Parallax
               shouldAlwaysCompleteAnimation={true}
               translateX={isMobile ? [0, -10] : [0, -20]}
-              //translateY={isMobile ? [4, 0] : [8, 0]}
               rotate={isMobile ? [0, 15] : [0, 30]}
               speed={isMobile ? 6 : 12}
             >
