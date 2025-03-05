@@ -258,12 +258,23 @@ export default function GreetingSection() {
               </div>
             </Parallax>
           </div>
-          <div className="balloon3">
-            <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, -100]} speed={10}>
-              <div className="gsapGreetingGreenBalloon">
+          <div className="greetingElementsInstrument">
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={["0", "-150"]}>
+              <div className="gsapGreetingBalloon">
                 <img
-                  src={greetingsTopBalloon2}
-                  className="greetingTopBalloon3 img-fit"
+                  src={greetingInstrument}
+                  className="greetingElement03 img-fit"
+                  alt=""
+                />
+              </div>
+            </Parallax>
+          </div>
+          <div className="greetingElementsMusic">
+            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={[0, -200]}>
+              <div className="gsapGreetingBalloon">
+                <img
+                  src={greetingMusic}
+                  className="greetingElement03 img-fit"
                   alt=""
                 />
               </div>
@@ -503,28 +514,6 @@ export default function GreetingSection() {
             dir={lang === "ar" ? "rtl" : "ltr"}
           >
             {t("greetingSection.description3")}
-          </div>
-          <div className="greetingElementsInstrument">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={["0", "-150"]}>
-              <div className="gsapGreetingBalloon">
-                <img
-                  src={greetingInstrument}
-                  className="greetingElement03 img-fit"
-                  alt=""
-                />
-              </div>
-            </Parallax>
-          </div>
-          <div className="greetingElementsMusic">
-            <Parallax shouldAlwaysCompleteAnimation={true} speed={10} translateY={["0", "-150"]}>
-              <div className="gsapGreetingBalloon">
-                <img
-                  src={greetingMusic}
-                  className="greetingElement03 img-fit"
-                  alt=""
-                />
-              </div>
-            </Parallax>
           </div>
           <div className="greetingElements04">
             <Parallax shouldAlwaysCompleteAnimation={true} speed={5} translateX={["-50px", "0px"]}>
