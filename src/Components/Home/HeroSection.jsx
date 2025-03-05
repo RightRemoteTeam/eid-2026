@@ -9,7 +9,7 @@ import audioFile from "../../assets/Sounds/1-morning-with-birds.mp3";
 import buzz from "buzz";
 import headerBg from "../../assets/images/heroSection/headerBg.png";
 import headerMobileBg from "../../assets/images/heroSection/headerMobileBg.png";
-import layer01 from "../../assets/images/heroSection/layer01-temp.png";
+import layer01 from "../../assets/images/heroSection/layer01.png";
 import layer02 from "../../assets/images/common/orange-balloon.png";
 import layer03 from "../../assets/images/common/green-balloon.png";
 import layer04 from "../../assets/images/heroSection/layer04.png";
@@ -71,7 +71,7 @@ export default function HeroSection() {
 
       gsap.to([".gsapBaloon"], {
         y: -8,
-        x: 8,
+        x: -12,
         duration: 1.3,
         rotate: -5,
         ease: "power1.inOut",
@@ -79,8 +79,8 @@ export default function HeroSection() {
         yoyo: true,
       });
       gsap.to([".gsapBaloon"], {
-        y: -22,
-        x: 10,
+        y: -10,
+        x: -12,
         duration: 2,
         ease: "power1.in",
         repeat: -1,
@@ -96,7 +96,7 @@ export default function HeroSection() {
         yoyo: true,
       });
       gsap.to([".gsapBaloon2"], {
-        y: -20,
+        y: -10,
         x: 12,
         duration: 2,
         ease: "power1.in",
