@@ -72,10 +72,16 @@ if ($id !=null && $id > 0 && file_exists($cards)) {
 }
 #root {
     width: 1000px;
-    padding: 5px;
-    border: 1px solid #EEE;
+    padding: 10px;
     margin: auto;
 }
+
+#root img{
+        width: 80%;
+        border-radius: 14px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
 @media screen and (max-width: 992px) { 
     #root {
         width: 90%;

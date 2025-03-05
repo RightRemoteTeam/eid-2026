@@ -44,7 +44,7 @@ function breakParagraphSafely($paragraph, $width) {
 
 function centerText($image, $draw, $text, $offsetY) {
     $imageWidth = $image->getImageWidth();
-    $lines = breakParagraphSafely($text, 55);
+    $lines = breakParagraphSafely($text, 40);
     $lineHeight = $image->queryFontMetrics($draw, "X")['textHeight'];
     $y = $offsetY;
     $count = 0;
