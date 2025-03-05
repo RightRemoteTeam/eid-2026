@@ -19,25 +19,24 @@ if ($id !=null && $id > 0 && file_exists($cards)) {
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <!-- Primary Meta Tags -->
-    <title>هوية عيد الفطر2024</title>
-    <meta name="title" content="هوية عيد الفطر2024" />
-    <meta name="description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
+    <title>فعاليات العيد 2025</title>
+    <meta name="title" content="فعاليات العيد 2025" />
+    <meta name="description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها. فعاليات العيد والفرحة تزيد" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://eid25.stocker.team/api/share.php?id=<?=$id?>" />
-    <meta property="og:title" content="هوية عيد الفطر2024" />
+    <meta property="og:title" content="فعاليات العيد 2025"/>
     <meta property="og:description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
     <meta property="og:image" content="<?=$image?>" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://eid25.stocker.team/api/share.php?id=<?=$id?>" />
-    <meta property="twitter:title" content="هوية عيد الفطر2024" />
+    <meta property="twitter:title" content="فعاليات العيد 2025"/>
     <meta property="twitter:description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
     <meta property="twitter:image" content="<?=$image?>" />
 
-<!-- Meta Tags Generated with https://metatags.io -->
     <link rel="apple-touch-icon" href="https://eid25.stocker.team/assets/logo192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
