@@ -67,7 +67,7 @@ if (!empty($name) && !empty($message) && !empty($card)) {
     $image->readImage($imagePath);
     $image_width = $image->getImageWidth();
 
-    $fontcolor = ($card == '1') ? "white" : "#005339";
+    $fontcolor = ($card == '1') ? "white" : "#191838";
 
     $nameDraw = new ImagickDraw();
     $nameDraw->setFont($fontPath);
@@ -82,9 +82,9 @@ if (!empty($name) && !empty($message) && !empty($card)) {
     $messageDraw->setFillColor(new ImagickPixel($fontcolor));
 
 
-    centerText($image, $nameDraw, $name, 850);
+    centerText($image, $nameDraw, $name, 950);
 
-    centerText($image, $messageDraw, $message, 400);
+    centerText($image, $messageDraw, $message, 350);
 
     $image->drawImage($nameDraw);
     $image->drawImage($messageDraw);

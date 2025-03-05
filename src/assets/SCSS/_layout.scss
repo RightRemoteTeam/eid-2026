@@ -25,8 +25,8 @@
     opacity: 0;
 }
 .spinner {
-    width: 200px;
-    height: 178px;
+    width: 240px;
+    height: 214px;
     background-image: url('../../../public/loader/Loading.png');
     background-size: contain;
     animation: spin 5s linear infinite;
@@ -34,8 +34,8 @@
     background-repeat: no-repeat;
     position: absolute;
     @media only screen and (max-width: 760px) {
-        width: 100px;
-        height: 98px;
+        width: 130px;
+        height: 127px;
         top: 35%;
     }
 }
