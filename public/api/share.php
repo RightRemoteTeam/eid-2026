@@ -1,13 +1,13 @@
 <?php
 
-$id = isset($_GET['id']) ? $_GET['id'] : null;
+$id = isset($_GET["id"]) ? $_GET["id"] : null;
 
-$cards = 'images/'.$id.'.jpg';
+$cards = "images/" . $id . ".jpg";
 
-if ($id !=null && $id > 0 && file_exists($cards)) {
-    $image = 'https://'.$_SERVER['HTTP_HOST'].'/api/images/'.$id.'.jpg';
-}else{
-    $image =null;
+if ($id != null && $id > 0 && file_exists($cards)) {
+    $image = "https://" . $_SERVER["HTTP_HOST"] . "/api/images/" . $id . ".jpg";
+} else {
+    $image = null;
 }
 ?>
 <!doctype html>
@@ -25,17 +25,17 @@ if ($id !=null && $id > 0 && file_exists($cards)) {
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eid25.stocker.team/api/share.php?id=<?=$id?>" />
+    <meta property="og:url" content="https://eid25.stocker.team/api/share.php?id=<?= $id ?>" />
     <meta property="og:title" content="فعاليات العيد 2025"/>
     <meta property="og:description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
-    <meta property="og:image" content="<?=$image?>" />
+    <meta property="og:image" content="<?= $image ?>" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://eid25.stocker.team/api/share.php?id=<?=$id?>" />
+    <meta property="twitter:url" content="https://eid25.stocker.team/api/share.php?id=<?= $id ?>" />
     <meta property="twitter:title" content="فعاليات العيد 2025"/>
     <meta property="twitter:description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
-    <meta property="twitter:image" content="<?=$image?>" />
+    <meta property="twitter:image" content="<?= $image ?>" />
 
     <link rel="apple-touch-icon" href="https://eid25.stocker.team/assets/logo192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,60 +46,80 @@ if ($id !=null && $id > 0 && file_exists($cards)) {
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
-<style>
-    body {
-        text-align: center;
-        font-family: Tahoma, Geneva, Verdana, sans-serif ;
-    }
-    .btn_wrapper {
-        margin: 20px;
-    }
-.btn {    
-    border: none;
-    border-radius: 50rem;
-    cursor: pointer;
-    display: block;
-    font-family: inherit;
-    margin: 0 auto;
-    width: 240px;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 17px 0;
-    background: #005339;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-#root {
-    width: 1000px;
-    padding: 10px;
-    margin: auto;
-}
+        
+        <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
 
-#root img{
-        width: 80%;
-        border-radius: 14px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    }
+        body {
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+        }
 
-@media screen and (max-width: 992px) { 
-    #root {
-        width: 90%;
-    }
-}
+        #root {
+            display: flex;
+            height: 100vh;
+            min-height: 400px;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            gap: 25px;
+        }
 
-</style>
+        #root img {
+            width: auto;
+            max-width: 80%;
+            min-width: 300px;
+            min-height: 300px;
+            max-height: calc(100vh - 200px);
+            border-radius: 14px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            object-fit: contain;
+        }
+
+        .btn_wrapper {
+            width: 100%;
+            min-width: 240px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 50rem;
+            cursor: pointer;
+            font-family: inherit;
+            width: 240px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 17px 0;
+            background: #005339;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #F7C73F;
+            color: #005339;
+            box-shadow: -6px 0px 20px -8px #F7C73F;
+        }
+    </style>
 </head>
-
-<body><noscript>You need to enable JavaScript to run this app.</noscript>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-        <?php
-            if ($image != null) {
-                echo "<img src='".$image."' class='prev_image' width='100%' />" ;
-            }
-        ?>        
+        <?php if ($image != null) {
+            echo "<img src='" . $image . "' alt='Eid Greetings' />";
+        } ?>
+        <div class="btn_wrapper">
+            <a href="/greetings" class="btn">Create Your Card</a>
+        </div>
     </div>
-    <div class="btn_wrapper"><a href="/" class="btn">create your card</a></div>
 </body>
-
 </html>
