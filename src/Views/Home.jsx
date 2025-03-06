@@ -4,7 +4,6 @@ import { useOutletContext } from "react-router-dom";
 import AudioPermissionModal from "../Components/Home/AudioPermissionModal";
 import HeroSection from "../Components/Home/HeroSection";
 import FamilySection from "../Components/Home/FamilySection";
-import ButtonSection from "../Components/Home/ButtonSection";
 import GreetingsCard from "../Components/Home/GreetingsCard";
 import DiscoverSection from "../Components/Home/DiscoverSection";
 // import OudSection from "../Components/Home/OudSection";
@@ -42,7 +41,6 @@ export default function Home() {
       <DiscoverSection />
       {/* <div className="takbeerSound" ref={sectionRef}>
         <OudSection sectionRef={sectionRef} />
-        <ButtonSection />
       </div> */}
       {/* <FamilySection sectionRef={sectionRef} /> */}
     </>
