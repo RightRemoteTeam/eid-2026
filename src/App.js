@@ -6,7 +6,6 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import { checkLang } from "./Components/Functions";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "./Components/ThemeContext";
 import ReactGA from "react-ga4";
 import { GoogleAnalytics } from "./Components/GoogleAnalytics";
 import ENV from "./Components/Constants";
@@ -15,7 +14,6 @@ import { useParallaxController } from "react-scroll-parallax";
 function App() {
   const GA_MEASUREMENT_ID = ENV.GA;
   let initialized = false;
-  const { theme } = useTheme();
   const { i18n, t } = useTranslation();
   const { lang } = useParams();
   const [audioEnabled, setAudioEnabled] = useState(false);
@@ -111,7 +109,7 @@ function App() {
         </div>
       )}
       <div
-        className={`wrapper ${theme} ${lang === "en" ? "ltr" : "rtl"} ${
+        className={`wrapper ${lang === "en" ? "ltr" : "rtl"} ${
           pageLoaded ? "visible" : "invisible"
         }`}
       >

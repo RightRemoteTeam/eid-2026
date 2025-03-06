@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useTheme } from '../ThemeContext';
 import { useTranslation } from 'react-i18next';
 import { Parallax } from "react-scroll-parallax";
 import { useOutletContext } from 'react-router-dom'
@@ -24,7 +23,6 @@ import buzz from 'buzz';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FamilySection({sectionRef}) {
-    const { theme } = useTheme();
     const { t, i18n } = useTranslation();
     const [audioEnabled] = useOutletContext();
     const familySectionRef=useRef(null)

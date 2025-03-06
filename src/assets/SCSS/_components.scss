@@ -32,47 +32,6 @@ body.rtl{
         font-weight: 400;
     }
 }
-.wrapper.dark-mode {
-    
-    .section-box {
-        & h1 ,& h2{
-            color: $color-white !important;
-        }
-    
-        & p {
-            color: $color-white;
-
-        }
-    } 
-    & section.header {
-        & .section-box{
-            & h1{
-                color: $color-dark-title-1 !important;
-            }
-        }
-    }
-    & section.happiness{
-        & .section-box{
-            & h2{
-                color: $color-dark-title-2 !important;
-            }
-        }
-    }
-    & section.aud{
-        & .section-box{
-            & h2{
-                color: $color-dark-title-3 !important;
-            }
-        }
-    }
-    & section.family{
-        & .section-box{
-            & h2{
-                color: $color-dark-title-4 !important;
-            }
-        }
-    }
-}
 
 .btn{
     text-decoration: none;
@@ -109,32 +68,4 @@ button.btn.btn-primary:disabled{
         font-size: 16px;
     }
 }
-.dark-mode  .btn.btn-primary{
-    /*
-    box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-    -webkit-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-    -moz-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-    */
-    background: $dark-button-color;
-    color: $dark-button-text-color;
-}
-.dark-mode {
-    .dayWave{
-        display: none;
-    }
-    .light-preparation-Qoute{
-        display: none;
-    }
-}
-.light-mode 
-{
-    .NightWave{
-        display: none;
-    }
-    .dark-preparation-Qoute{
-        display: none;
-    }
-}
-
-
 

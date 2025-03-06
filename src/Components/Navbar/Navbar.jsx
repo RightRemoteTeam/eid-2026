@@ -4,16 +4,12 @@ import { useNavigate, useLocation, Link, useParams } from "react-router-dom";
 import { AudioToggleButton } from "../Functions";
 import navBarBg from "../../assets/images/navbar/navbarBg.png";
 import navBarMobileBg from "../../assets/images/navbar/navbarMobileBg.png";
-// import { ToggleThemeButton } from "../Functions";
 import ENV from "../Constants";
-import { useTheme } from "../ThemeContext";
 import { GoogleAnalytics } from "../GoogleAnalytics";
 
 import EIDEventsLogo from "../../assets/images/navbar/eid-events-logo.png";
 
 export default function Navbar({ audioEnabled, setAudioEnabled }) {
-  // const { toggleTheme } = useTheme();
-  const { theme } = useTheme();
   const { t, i18n } = useTranslation();
 
   const { lang, "*":rest } = useParams();
@@ -44,7 +40,7 @@ export default function Navbar({ audioEnabled, setAudioEnabled }) {
   };
   return (
     <>
-      <nav className={`navbar ${theme}`}>
+      <nav className="navbar">
         <div className="navbar-bg">
         <picture>
         <source srcSet={navBarMobileBg} media="(max-width: 768px)" />

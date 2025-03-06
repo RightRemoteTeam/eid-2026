@@ -18,12 +18,9 @@
       font-family: "IBM Plex Sans Arabic", sans-serif;
     }
   }
-  .wrapper.light-mode
+  .wrapper
   {
       background-color: $color-white;
-  }
-  .wrapper.dark-mode{
-      background-color: $dark-body;
   }
 
   html,body {
