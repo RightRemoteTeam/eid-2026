@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import AudioPermissionModal from "../Components/Home/AudioPermissionModal";
 import HeroSection from "../Components/Home/HeroSection";
-import FamilySection from "../Components/Home/FamilySection";
 import GreetingsCard from "../Components/Home/GreetingsCard";
 import DiscoverSection from "../Components/Home/DiscoverSection";
 export default function Home() {
@@ -37,7 +36,6 @@ export default function Home() {
       <HeroSection />
       <GreetingsCard />
       <DiscoverSection />
-      {/* <FamilySection sectionRef={sectionRef} /> */}
     </>
   );
 }
