@@ -6,8 +6,6 @@ import HeroSection from "../Components/Home/HeroSection";
 import FamilySection from "../Components/Home/FamilySection";
 import GreetingsCard from "../Components/Home/GreetingsCard";
 import DiscoverSection from "../Components/Home/DiscoverSection";
-// import OudSection from "../Components/Home/OudSection";
-
 export default function Home() {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
@@ -39,9 +37,6 @@ export default function Home() {
       <HeroSection />
       <GreetingsCard />
       <DiscoverSection />
-      {/* <div className="takbeerSound" ref={sectionRef}>
-        <OudSection sectionRef={sectionRef} />
-      </div> */}
       {/* <FamilySection sectionRef={sectionRef} /> */}
     </>
   );
