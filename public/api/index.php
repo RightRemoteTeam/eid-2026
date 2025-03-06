@@ -39,8 +39,10 @@ $decoded = json_decode($content, true);
 
 if (is_array($decoded)) {
   if (isset($decoded['name']) && isset($decoded['message']) && isset($decoded['card'])) {
-    $name = filter_var($decoded['name'], FILTER_SANITIZE_STRING);
-    $message = filter_var($decoded['message'], FILTER_SANITIZE_STRING);
+    $name = trim($decoded['name']);
+    $message = trim($decoded['message']);
+    $name = html_entity_decode($name, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $message = html_entity_decode($message, ENT_QUOTES | ENT_HTML5, 'UTF-8');
     $card = check_card($decoded['card']);
     if (!empty($name) && !empty($message)) {
       $response['name'] = $name;
