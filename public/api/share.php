@@ -118,7 +118,7 @@ if ($id != null && $id > 0 && file_exists($cards)) {
             echo "<img src='" . $image . "' alt='Eid Greetings' />";
         } ?>
         <div class="btn_wrapper">
-            <a href="/greetings" class="btn">Create Your Card</a>
+            <a href="/ar/greetings" class="btn">Create Your Card</a>
         </div>
     </div>
 </body>

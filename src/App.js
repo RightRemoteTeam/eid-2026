@@ -14,7 +14,7 @@ import { useParallaxController } from "react-scroll-parallax";
 function App() {
   const GA_MEASUREMENT_ID = ENV.GA;
   let initialized = false;
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
   const { lang } = useParams();
   const [audioEnabled, setAudioEnabled] = useState(false);
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -41,7 +41,7 @@ function App() {
 
     const checkIfImagesLoaded = () => {
       requestAnimationFrame(() => {
-        const images = document.querySelectorAll("img:not(.saudi-logo)"); // Get all images after DOM update
+        const images = document.querySelectorAll("img:not(.saudi-logo)");
         let loadedImages = 0;
         let totalImages = images.length;
 
@@ -69,7 +69,6 @@ function App() {
             img.addEventListener("error", imageLoaded);
           }
         });
-
       });
     };
 
@@ -92,13 +91,6 @@ function App() {
 
   useEffect(() => {
     checkLang(i18n, lang);
-    // document.title = t("meta.title");
-    // document
-    //   .querySelector('meta[name="title"]')
-    //   .setAttribute("content", t("meta.title"));
-    // document
-    //   .querySelector('meta[name="description"]')
-    //   .setAttribute("content", t("meta.description"));
   }, [lang]);
 
   return (
