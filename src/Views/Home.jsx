@@ -1,16 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
-import { useOutletContext } from "react-router-dom";
-import AudioPermissionModal from "../Components/Home/AudioPermissionModal";
+import React from "react";
 import HeroSection from "../Components/Home/HeroSection";
 import GreetingsCard from "../Components/Home/GreetingsCard";
 import DiscoverSection from "../Components/Home/DiscoverSection";
-export default function Home() {
-  const { t } = useTranslation();
-  const sectionRef = useRef(null);
-  const [setAudioEnabled, pageLoaded] = useOutletContext();
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+//import { useOutletContext } from "react-router-dom";
+//import { useTranslation } from "react-i18next";
+//import AudioPermissionModal from "../Components/Home/AudioPermissionModal";
+
+export default function Home() {
+  // const { t } = useTranslation();
+  // const sectionRef = useRef(null);
+  // const [setAudioEnabled, pageLoaded] = useOutletContext();
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   // useEffect(() => {
   //   if (pageLoaded) {
@@ -21,11 +22,11 @@ export default function Home() {
   //   }
   // }, [pageLoaded]);
 
-  const handleEnableAudio = () => {
-    console.log("pop up close triggered");
-    setAudioEnabled(true);
-    setIsModalOpen(false);
-  };
+  // const handleEnableAudio = () => {
+  //   setAudioEnabled(true);
+  //   setIsModalOpen(false);
+  // };
+
   return (
     <>
       {/* <AudioPermissionModal
