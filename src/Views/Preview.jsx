@@ -14,7 +14,6 @@ export default function Preview() {
   const navigate = useNavigate();
   const { lang } = useParams();
   const [pageLoaded,setPageLoaded] = useOutletContext();
-  const [theme, setTheme] = useState("dark-mode");
   const { card, name, message} = location.state || {};
   const [error, setError] = useState(null);
   const [image, setImage] = useState(null);
@@ -24,8 +23,7 @@ export default function Preview() {
 
   useEffect(() => {
     setPageLoaded(false)
-    console.log('theme:',theme);
-    setImage(`${ENV.APP_URL}/cards/${theme}.jpeg`);
+    setImage(`${ENV.APP_URL}/cards/white-background.jpeg`);
     setError(null);
     try {
       fetch(`${ENV.PHP_SERVER}`, {

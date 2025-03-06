@@ -304,29 +304,8 @@
 }
 
 
-
-
 @media screen and (max-width: 1024px) {
     .greetings-card-container {
         padding-top: 18%;
-    }
-}
-
-
-.dark-mode {
-
-    & .preview-card-container {
-        background-color: #8956C9;
-    }
-
-    & .greetings-card-container {
-        & .preview-button {
-
-            box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-            -webkit-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-            -moz-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-            background: #f5c547;
-            color: #514f53;
-        }
     }
 }

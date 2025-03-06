@@ -5,17 +5,6 @@ import { GoogleAnalytics } from "./GoogleAnalytics";
 import playIcon from "./../assets/images/icons/play-audio.png";
 import pauseIcon from "./../assets/images/icons/pause-audio.png";
 
-export const ToggleThemeButton = ({ theme, toggleTheme }) => {
-  const isDarkMode = theme === "dark-mode";
-  //const icon = isDarkMode ? moonIcon : sunIcon;
-
-  return (
-    <div className={`toggle-button ${theme}`} onClick={toggleTheme}>
-      <img src={""} className="icon" alt="Toggle icon" />
-    </div>
-  );
-};
-
 export const AudioToggleButton = ({ audioEnabled, setAudioEnabled }) => {
   //const { t } = useTranslation();
   //const { openModal } = useModal();

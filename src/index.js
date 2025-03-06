@@ -12,13 +12,11 @@ import Greetings from "./Views/Greetings";
 import Preview from "./Views/Preview";
 import Share from "./Views/Share";
 import Local from "./Components/Locale/Locale";
-import { ThemeProvider } from "./Components/ThemeContext";
 import { ModalProvider } from "./Components/ModalContext";
 import ScrollToTop from "./Components/ScrollToTop";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <I18nextProvider i18n={i18n}>
-    <ThemeProvider>
       <BrowserRouter>
       <ScrollToTop/>
         <ModalProvider>
@@ -35,7 +33,6 @@ root.render(
           </ParallaxProvider>
         </ModalProvider>
       </BrowserRouter>
-    </ThemeProvider>
   </I18nextProvider>
 );
 

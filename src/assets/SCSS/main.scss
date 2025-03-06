@@ -296,25 +296,6 @@ body {
                         }
                     }
                 }
-
-                & .toggle-button.light-mode {
-                    background-color: #2fb4ee;
-
-                    & .icon {
-                        margin-left: auto;
-                        margin-right: 4px;
-                    }
-                }
-
-                & .toggle-button.dark-mode {
-                    background-color: #222222;
-                    color: #f8f9fa;
-
-                    & .icon {
-                        margin-right: auto;
-                        margin-left: 4px;
-                    }
-                }
             }
 
             & .eidEvents {
@@ -348,134 +329,6 @@ body {
 
         }
     }
-}
-
-.dark-mode {
-    & .modal-overlay {
-        & .modal-content {
-            background-color: #fff;
-            color: #6C3CAF;
-        }
-
-        & .download-container {
-            & .download-preview {
-                & img {
-                    border: 1.5px solid #8a59c8;
-                }
-            }
-        }
-    }
-
-    & .navbar {
-        @media screen and (max-width: 767px) {
-            background: #6c3caf;
-        }
-
-        & .navbar-container {
-            .logo-box {
-                & .light-logo {
-                    display: none;
-                }
-
-                & .dark-logo {
-                    display: initial;
-                }
-            }
-
-            & .headerRight {
-                & .eidEvents {
-                    background: #f7c73f;
-
-                    a {
-                        color: #3d3d3d;
-                    }
-                }
-            }
-        }
-
-        & .overlayHeader {
-            display: none;
-        }
-
-        & .overlayHeaderNight {
-            display: block;
-        }
-    }
-
-    & .swiper-slide {
-        & p {
-            color: #ffffff !important;
-        }
-    }
-
-    & .quoteSection {
-        & .quoteSectionImg {
-            .quoteDay {
-                display: none;
-            }
-
-            .quoteNight {
-                display: block;
-            }
-        }
-    }
-
-    & .greetingSection {
-        & .greetingSectionContainer {
-            .section-box {
-                h2 {
-                    color: #87ec6c !important;
-                }
-
-                p {
-                    color: #fff;
-                }
-
-                .btnWrap {
-                    & .btn.btn-primary {
-                        /*
-                        box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-                        -webkit-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-                        -moz-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-                        background: #f5c547;
-                        color: #514f53;
-                        */
-                    }
-                }
-            }
-        }
-    }
-
-    & section.aud {
-        & .aud-container {
-            & .takbeer-img {
-                & .takbeer-text {
-                    & .takbeerDark {
-                        display: initial;
-                    }
-
-                    & .takbeerLight {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-
-    & .rideSection {
-        & .rideSectionContainer {
-            .section-box {
-                h2 {
-                    color: #e76cb1 !important;
-                }
-
-                p {
-                    color: #fff;
-                }
-            }
-        }
-    }
-
 }
 
 // Loader starts here
@@ -512,20 +365,5 @@ body {
         background-color: #FDC100 !important;
         color: #005339;
         //box-shadow: -1px 0px 25px -8px rgb(255, 200, 54);
-    }
-}
-
-.dark-mode {
-    .btn-primary {
-        box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-        -webkit-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-        -moz-box-shadow: -1px 0px 25px -8px rgb(255 200 54);
-        background-color: #f5c547;
-        color: white;
-
-        &:hover {
-            background-color: white !important;
-            ;
-        }
     }
 }
