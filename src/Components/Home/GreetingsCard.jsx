@@ -417,7 +417,6 @@ export default function GreetingSection() {
                   />
                   <button
                     className="btn btn-primary download-btn disabled"
-                    disabled={true}
                     onClick={() => {
                       triggerEvent(
                         "Eid_Events_Booklet_2025_click",
