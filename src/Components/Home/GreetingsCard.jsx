@@ -49,7 +49,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoogleAnalytics } from "../GoogleAnalytics";
 import DownloadFilePopup from "./DownloadPopup";
 import pdfThumbnail_identity from "../../assets/images/downloadable/pdfThumbnail_identity.png";
-import pdfThumbnail_booket from "../../assets/images/downloadable/pdfThumbnail_booket.png";
+import pdfThumbnail_booklet from "../../assets/images/downloadable/pdfThumbnail_booklet.png";
 import pdfThumbnail_greetingcards from "../../assets/images/downloadable/pdfThumbnail_greetingcards.png";
 import pdfThumbnail_house_decorations from "../../assets/images/downloadable/pdfThumbnail_house_decorations.png";
 import pdfThumbnail_company_decorations from "../../assets/images/downloadable/pdfThumbnail_company_decorations.png";
@@ -422,7 +422,7 @@ export default function GreetingSection() {
                         "Eid_Events_Booklet_2025_click",
                         "link_click"
                       );
-                      setModalData(ENV.BOOKLET, pdfThumbnail_booket);
+                      setModalData(ENV.BOOKLET, pdfThumbnail_booklet);
                     }}
                     href={ENV.BOOKLET}
                     dir={lang === "ar" ? "rtl" : "ltr"}

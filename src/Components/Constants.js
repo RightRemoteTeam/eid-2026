@@ -1,6 +1,5 @@
 export default Object.freeze({
-  // APP_URL: 'https://eid.gea.gov.sa',
-  APP_URL: "https://eid25.stocker.team",
+  APP_URL: "https://eid.gea.gov.sa",
   APP_LANG: "ar", //ar, en
   EID_EVENT: "https://enjoy.sa/",
   EID_EVENT_EN: "https://enjoy.sa/en",

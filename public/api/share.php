@@ -25,19 +25,19 @@ if ($id != null && $id > 0 && file_exists($cards)) {
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eid25.stocker.team/api/share.php?id=<?= $id ?>" />
+    <meta property="og:url" content="https://eid.gea.gov.sa/api/share.php?id=<?= $id ?>" />
     <meta property="og:title" content="فعاليات العيد 2025"/>
     <meta property="og:description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
     <meta property="og:image" content="<?= $image ?>" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://eid25.stocker.team/api/share.php?id=<?= $id ?>" />
+    <meta property="twitter:url" content="https://eid.gea.gov.sa/api/share.php?id=<?= $id ?>" />
     <meta property="twitter:title" content="فعاليات العيد 2025"/>
     <meta property="twitter:description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
     <meta property="twitter:image" content="<?= $image ?>" />
 
-    <link rel="apple-touch-icon" href="https://eid25.stocker.team/assets/logo192.png" />
+    <link rel="apple-touch-icon" href="https://eid.gea.gov.sa/assets/logo192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
