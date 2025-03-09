@@ -666,7 +666,7 @@ export default function GreetingSection() {
                 <button
                   className="btn btn-primary download-btn"
                   onClick={() => {
-                    triggerEvent("Eid_Identity_2025_click", "link_click");
+                    triggerEvent("Your_Greetings_2025", "link_click");
                     setModalData(
                       ENV.GREETING_CARD,
                       pdfThumbnail_greetingcards
