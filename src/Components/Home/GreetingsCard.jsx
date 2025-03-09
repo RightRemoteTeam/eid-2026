@@ -49,7 +49,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GoogleAnalytics } from "../GoogleAnalytics";
 import DownloadFilePopup from "./DownloadPopup";
 import pdfThumbnail_identity from "../../assets/images/downloadable/pdfThumbnail_identity.png";
-import pdfThumbnail_booket from "../../assets/images/downloadable/pdfThumbnail_booket.png";
+import pdfThumbnail_booklet from "../../assets/images/downloadable/pdfThumbnail_booklet.jpeg";
 import pdfThumbnail_greetingcards from "../../assets/images/downloadable/pdfThumbnail_greetingcards.png";
 import pdfThumbnail_house_decorations from "../../assets/images/downloadable/pdfThumbnail_house_decorations.png";
 import pdfThumbnail_company_decorations from "../../assets/images/downloadable/pdfThumbnail_company_decorations.png";
@@ -422,7 +422,7 @@ export default function GreetingSection() {
                         "Eid_Events_Booklet_2025_click",
                         "link_click"
                       );
-                      setModalData(ENV.BOOKLET, pdfThumbnail_booket);
+                      setModalData(ENV.BOOKLET, pdfThumbnail_booklet);
                     }}
                     href={ENV.BOOKLET}
                     dir={lang === "ar" ? "rtl" : "ltr"}
@@ -666,7 +666,7 @@ export default function GreetingSection() {
                 <button
                   className="btn btn-primary download-btn"
                   onClick={() => {
-                    triggerEvent("Eid_Identity_2025_click", "link_click");
+                    triggerEvent("Your_Greetings_2025", "link_click");
                     setModalData(
                       ENV.GREETING_CARD,
                       pdfThumbnail_greetingcards
@@ -677,6 +677,9 @@ export default function GreetingSection() {
                 </button>
                 <Link to={`/${lang}/greetings`}
                   className="btn btn-primary download-btn"
+                  onClick={() => {
+                    triggerEvent("Eid_greetings_2025", "link_click");
+                  }}
                 >
                   {t("buttons.title7")}
                 </Link>

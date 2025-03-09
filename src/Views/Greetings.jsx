@@ -3,6 +3,8 @@ import ENV from "../Components/Constants";
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { GoogleAnalytics } from "../Components/GoogleAnalytics";
+
 const Greetings = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -13,6 +15,17 @@ const Greetings = () => {
   const [cardError, setCardError] = useState(false);
   const [nameError, setNameError] = useState(false);
   const [messageError, setMessageError] = useState(false);
+
+  const { trackEvent } = GoogleAnalytics();
+    const triggerEvent = (event_label, event_category) => {
+      console.log("event_label:", event_label);
+      trackEvent({
+        action: "click",
+        category: event_category,
+        label: event_label,
+        value: 1,
+      });
+    };
 
   const cardOnChange = (index) => {
     setSelectedCard(index);
@@ -28,7 +41,9 @@ const Greetings = () => {
     return text.trim().length === 0 ? false : true;
   }
 
+
   const handlePreview = () => {
+    triggerEvent("Eid_greeting_preview_2025", "link_click");
     const cardValid = selectedCard != null;
     const nameValid = validateinput(name);
     const messageValid = validateinput(message);
