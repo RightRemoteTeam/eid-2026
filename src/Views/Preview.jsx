@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import ENV from "../Components/Constants";
 import "../assets/SCSS/preview.scss";
 import { saveAs } from "file-saver";
+import { GoogleAnalytics } from "../Components/GoogleAnalytics";
 //import { useNavigate } from "react-router-dom";
 
 export default function Preview() {
@@ -25,6 +26,16 @@ export default function Preview() {
   const [image, setImage] = useState(null);
   const [shareUrl, setShareUrl] = useState(null);
   const [filename, setFilename] = useState(card + ".png");
+  const { trackEvent } = GoogleAnalytics();
+  const triggerEvent = (event_label, event_category) => {
+    console.log("event_label:", event_label);
+    trackEvent({
+      action: "click",
+      category: event_category,
+      label: event_label,
+      value: 1,
+    });
+  };
 
   useEffect(() => {
     setPageLoaded(false);
@@ -97,6 +108,7 @@ export default function Preview() {
   };
 
   const download = () => {
+    triggerEvent("Eid_greeting_download_2025", "link_click");
     saveAs(image, filename);
   };
 
@@ -118,6 +130,9 @@ export default function Preview() {
           <Link
             to={`/${lang}/greetings`}
             className="btn btn-primary download-btn"
+            onClick={() => {
+              triggerEvent("Eid_greetings_2025", "link_click");
+            }}
           >
             {t("Preview.edit")}
           </Link>
