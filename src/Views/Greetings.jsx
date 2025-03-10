@@ -30,11 +30,17 @@ const Greetings = () => {
   const cardOnChange = (index) => {
     setSelectedCard(index);
   };
+
+  const forbiddenCharacters = /[><“”"‘’']/g;
+
+
   const handleName = (event) => {
-    setName(event.target.value);
+    const inputValue = event.target.value.replace(forbiddenCharacters, '');
+    setName(inputValue);
   };
   const handleMessage = (event) => {
-    setMessage(event.target.value);
+    const inputValue = event.target.value.replace(forbiddenCharacters, '');
+    setMessage(inputValue);
   };
 
   function validateinput(text) {
