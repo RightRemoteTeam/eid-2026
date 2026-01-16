@@ -4,8 +4,30 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Hero assets
-import eidLogoMain from "../../assets/images/hero/eid-logo-main.png";
-import heroScene from "../../assets/images/hero/hero-scene.png";
+import ribbon from "../../assets/images/hero/ribbon1.svg";
+import eidLogoMain from "../../assets/images/hero/eidlogomain.svg";
+import people from "../../assets/images/hero/people.svg";
+import oud from "../../assets/images/hero/oud.svg";
+import dallah from "../../assets/images/hero/dallah.svg";
+import money from "../../assets/images/hero/money.svg";
+import mabkhara from "../../assets/images/hero/mabkhara.svg";
+import balloons from "../../assets/images/hero/balloons.svg";
+import dallah2 from "../../assets/images/hero/dallah2.svg";
+import giftBox from "../../assets/images/hero/giftbox.svg";
+import bowl from "../../assets/images/hero/bowl.svg";
+import halfnote from "../../assets/images/hero/halfnote.svg";
+import musicnote1 from "../../assets/images/hero/musicnote.svg";
+import musicnote2 from "../../assets/images/hero/musicnote2.svg";
+import musicnote3 from "../../assets/images/hero/musicnote3.svg";
+import ribbon2 from "../../assets/images/hero/ribbon2.svg";
+import firework from "../../assets/images/hero/firework.svg";
+import candy from "../../assets/images/hero/candy.svg";
+import bgbuilding from "../../assets/images/hero/backbuildings.svg";
+import spec1 from "../../assets/images/hero/spec1.svg";
+import spec2 from "../../assets/images/hero/spec2.svg";
+import spec3 from "../../assets/images/hero/spec3.svg";
+import clouds from "../../assets/images/hero/clouds.svg";
+import star from "../../assets/images/hero/star.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,9 +74,134 @@ export default function HeroSection() {
 
         {/* Hero Scene - Bottom */}
         <div className="hero-scene-bottom">
-          <img src={heroScene} alt="" className="hero-scene-image" />
+          <div className="scene-stage">
+            <img src={ribbon} alt="" className="layer ribbon" />
+            <div className="layer people">
+              <Parallax speed={2} translateY={[7, -3]}>
+                <img src={people} alt="" />
+              </Parallax>
+            </div>
+
+            <div className="layer oud">
+              <Parallax speed={6} translateY={[10, 0]} translateX={[0, 10]}>
+                <img src={oud} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer dallah">
+              <Parallax speed={2} translateY={[5, -2]}>
+                <img src={dallah} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer money">
+              <Parallax speed={5} translateX={[-10, 0]} translateY={[10, 0]}>
+                <img src={money} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer mabkhara">
+              <Parallax speed={2} translateY={[6, -3]}>
+                <img src={mabkhara} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer balloons">
+              <Parallax speed={2} translateX={[10, 0]} translateY={[12, 0]}>
+                <img src={balloons} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer dallah2">
+              <Parallax speed={2} rotate={[0, 20]} translateY={[5, -2]}>
+                <img src={dallah2} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer giftbox">
+              <Parallax speed={2} translateY={[10, -3]} rotate={[0, 20]}>
+                <img src={giftBox} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer bowl">
+              <Parallax speed={1} translateX={[-10, 0]} translateY={[10, 0]}>
+                <img src={bowl} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer musicnote1">
+              <Parallax speed={2} rotate={[0, -8]}>
+                <img src={musicnote1} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer musicnote2">
+              <Parallax speed={2} rotate={[0, -6]}>
+                <img src={musicnote2} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer musicnote3">
+              <Parallax speed={2} translateY={[18, -9]}>
+                <img src={musicnote3} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer halfnote">
+              <Parallax speed={2} translateY={[14, -7]}>
+                <img src={halfnote} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer ribbon2">
+              <Parallax speed={2} translateY={[3, -1]}>
+                <img src={ribbon2} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer ribbon3">
+              <Parallax speed={2} translateY={[3, -1]}>
+                <img src={ribbon2} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer firework">
+              <Parallax speed={1} scale={[0, 2]}>
+                <img src={firework} alt="" />
+              </Parallax>
+            </div>
+            <div className="layer candy">
+              <Parallax speed={2} rotate={[0,30]} translateY={[6, -3]}>
+                <img src={candy} alt="" />
+              </Parallax>
+            </div>
+            <img src={bgbuilding} alt="" className="layer bgbuilding" />
+          <div className="layer spec1">
+            <Parallax speed={3} translateY={[12, -6]} translateX={[-5, 3]} rotate={[0, 15]}>
+              <img src={spec1} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer spec2">
+            <Parallax speed={2} translateY={[10, -5]} translateX={[4, -2]} rotate={[0, -20]}>
+              <img src={spec2} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer spec3">
+            <Parallax speed={4} translateY={[14, -7]} translateX={[-3, 5]} rotate={[0, 25]}>
+              <img src={spec3} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer spec4">
+            <Parallax speed={3} translateY={[15, -8]} translateX={[6, -4]} rotate={[0, -18]}>
+              <img src={spec1} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer clouds">
+            <Parallax speed={1} translateX={[-2, 0]} translateY={[2, -1]}>
+              <img src={clouds} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer star">
+            <Parallax speed={2} scale={[0, 1]}>
+              <img src={star} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer star2">
+            <Parallax speed={2} scale={[0, 1]}>
+              <img src={star} alt="" />
+            </Parallax>
+          </div>
+
         </div>
       </div>
-    </section>
+    </div>
+    </section >
   );
 }

@@ -120,9 +120,17 @@
   min-height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom, $bg-gradient-start 0%, $bg-gradient-end 100%);
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $bp-tab) {
+    min-height: 70vh;
+  }
+
+  @media (max-width: $bp-mobile) {
+    min-height: 60vh;
+  }
 
   .hero-content {
     position: relative;
@@ -131,43 +139,48 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: $bp-tab) {
+      min-height: 70vh;
+    }
+
+    @media (max-width: $bp-mobile) {
+      min-height: 60vh;
+    }
   }
 
   .hero-logo-top {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 20px 40px;
+    padding: 40px 20px 20px;
     z-index: 10;
 
     .hero-main-logo {
       width: 100%;
-      max-width: 400px;
+      max-width: 280px;
       height: auto;
       display: block;
 
       @media (max-width: $bp-tab) {
-        max-width: 450px;
-        padding-top: 20px;
+        max-width: 320px;
+        padding-top: 10px;
       }
 
       @media (max-width: $bp-small) {
-        max-width: 380px;
+        max-width: 260px;
       }
 
       @media (max-width: $bp-mobile) {
-        max-width: 300px;
+        max-width: 220px;
       }
     }
   }
 
   .hero-scene-bottom {
-    position: relative;
     width: 100%;
     display: flex;
-    align-items: flex-end;
     justify-content: center;
-    margin-top: auto;
 
     .hero-scene-image {
       width: 95%;
@@ -180,8 +193,226 @@
         max-width: 100%;
       }
     }
+
+    .scene-stage {
+      position: relative;
+      width: 95%;
+      aspect-ratio: 16 / 7;
+      /* match your artwork ratio */
+      overflow: visible;
+    }
+
+    /* Every layer */
+    .layer {
+      position: absolute;
+      inset: auto;
+      width: auto;
+      height: auto;
+      max-width: none;
+      user-select: none;
+      pointer-events: none;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .ribbon {
+      left: 0;
+      top: 35%;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      object-fit: contain;
+    }
+
+    .people {
+      left: 50%;
+      top: 18%;
+      transform: translateX(-50%);
+      width: 50%;
+      z-index: 2;
+    }
+
+    .oud {
+      left: 6%;
+      top: 63%;
+      width: 23%;
+      z-index: 6;
+    }
+
+    .dallah {
+      right: 15%;
+      top: 62%;
+      width: 13%;
+      z-index: 5;
+    }
+
+    .money {
+      left: 14%;
+      top: 78%;
+      width: 18%;
+      z-index: 6;
+    }
+
+    .mabkhara {
+      right: 3%;
+      top: 63%;
+      width: 12%;
+      z-index: 5;
+    }
+
+    .balloons {
+      right: 9%;
+      top: 20%;
+      width: 15%;
+      z-index: 5;
+    }
+
+    .dallah2 {
+      right: 25%;
+      top: 67%;
+      width: 11%;
+      z-index: 5;
+    }
+
+    .giftbox {
+      left: 25%;
+      top: 85%;
+      width: 15%;
+      z-index: 6;
+    }
+
+    .bowl {
+      left: 33%;
+      top: 54%;
+      width: 12%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .halfnote {
+      left: 10%;
+      top: 24%;
+      width: 3%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .musicnote1 {
+      right: 27%;
+      top: 60%;
+      width: 3%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .musicnote2 {
+      left: 18%;
+      top: 55%;
+      width: 1.5%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .musicnote3 {
+      right: 18%;
+      top: 29%;
+      width: 4%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .ribbon2 {
+      left: 15%;
+      top: 35%;
+      width: 27%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .ribbon3 {
+      right: 3%;
+      top: 32%;
+      width: 30%;
+      transform: translateX(-50%);
+      transform: scaleX(-1);
+      z-index: 5;
+    }
+
+    .firework {
+      left: 37%;
+      top: 15%;
+      width: 7%;
+      z-index: 1;
+    }
+
+    .candy {
+      right: 35%;
+      top: 50%;
+      width: 11%;
+      z-index: 6;
+    }
+
+    .bgbuilding {
+      left: 53%;
+      transform: translateX(-50%);
+      top: 20%;
+      width: 85%;
+      z-index: 0;
+    }
+
+    .spec1 {
+      left: 2%;
+      top: 66%;
+      width: 9%;
+      z-index: 4;
+    }
+    .spec4 {
+      right: 2%;
+      top: 100%;
+      width: 9%;
+      z-index: 4;
+      transform: rotate(230deg);
+    }
+    .spec2 {
+      left: 3%;
+      top: 98%;
+      width: 6%;
+      z-index: 4;
+    }
+    .spec3 {
+      right: 17%;
+      top: 104%;
+      width: 6%;
+      z-index: 4;
+    }
+
+    .star {
+      right: 12%;
+      top: 55%;
+      width: 1.5%;
+      z-index: 5;
+    }
+    .star2 {
+      left: 9%;
+      top: 40%;
+      width: 1.5%;
+      z-index: 5;
+    }
+
+    .clouds {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 5%;
+      width: 95%;
+      z-index: 4;
+    }
   }
 }
+
 
 // Content Sections
 .content-section {
@@ -444,18 +675,24 @@
 
 // Animations
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 @keyframes floatRotate {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
+
   50% {
     transform: translateY(-15px) rotate(5deg);
   }
