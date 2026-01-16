@@ -1,0 +1,353 @@
+@import "../variables";
+section.happiness {
+    & .happiness-container{
+        & .happiness-intro-content {
+            /*
+            & .btn.btn-primary:hover{
+                background-color: #fff !important;
+                color: #5C5C5C;
+            }
+            */
+        }
+    }
+} 
+.light-mode {
+    section.happiness {
+        a.btn,button.btn {
+            background: #8a59c8;
+        }
+    }
+}
+
+section.happiness {
+    // height: calc(100vh - 3rem);
+    position: relative;
+    width: 100vw;
+    padding: 10% 0 25% 0;
+    height: 100vh;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    @media only screen and (max-width: 1200px) {
+        // padding: 300px 0px 200px 0px;
+    }
+
+    @media only screen and (max-width: 900px) {
+        // padding: 300px 0px 130px 0px;
+    }
+
+    @media only screen and (max-width: 760px) {
+        height: unset;
+        padding: 150px 0 150px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        // padding: 150px 0px 200px 0px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        // padding: 40% 0px 50% 0px;
+    }
+
+    @media only screen and (max-width: 375px) {
+        // padding:18% 0px 170px 0px;
+    }
+
+    & .happiness-container {
+        padding: 0 10px;
+
+        & .happiness-intro-content {
+            // flex: 1;
+            text-align: center;
+
+            & .section-box {
+                max-width: 40%;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+                width: 100%;
+
+                @media only screen and (max-width: $bp-tab) {
+                    max-width: 400px;
+                }
+                @media only screen and (max-width: 500px) {
+                    max-width: 280px;
+                }
+            }
+
+            & h2 {
+                color: $color-title-2;
+            }
+
+            // & a.btn {
+            //     background-color: $color-btn-2;
+            // }
+        }
+
+        & .happiness-img {
+ 
+            .gsapHappinessSmokeMachine, .gsapHappinessSmoke {
+                scale: 2.5;
+                opacity: 0;
+            }
+            // position: relative;
+            flex: 1;
+
+            &.happiness-left-img {
+                height: 100%;
+                // position: relative;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            & .shineIcon {
+                position: absolute;
+                top: 10%;
+                translate: easei-ime;
+                right: 0rem;
+                width: 5%;
+
+                & img {
+                    transform: rotate(-20deg);
+                    width: 100%;
+                }
+
+            }
+
+            & .ballonImag {
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                z-index: 9;
+                width: 20%;
+
+                & img {
+                    width: 100%;
+
+                    // transform: rotate(-40deg);
+                    // @media only screen and (max-width: $bp-tab) {
+                    //     transform: rotate(0deg);
+                    // }
+                    // @media only screen and (max-width: $bp-small) {
+                    //     width: 15rem;
+                    // }
+                }
+
+                @media only screen and (max-width: $bp-tab) {
+                    width: 17%;
+                    top: 28%;
+                    left: -2%;
+                }
+
+                @media only screen and (max-width: $bp-mobile) {
+                    width: 20%;
+                    top: 20%;
+                    left: -2rem;
+                }
+
+                @media only screen and (max-width: 375px) {
+                    width: 24%;
+                    top: 14%;
+                    left: -2rem;
+                }
+
+            }
+
+            & .smokeImage {
+                position: absolute;
+                // z-index: 9;
+                left: 9%;
+                top: -2%;
+                width: 12%;
+
+                @media only screen and (max-width: $bp-tab) {
+                    width: 12%;
+                    top: 21%;
+                    left: 1%;
+                }
+
+                @media only screen and (max-width: $bp-mobile) {
+                    width: 12%;
+                    top: 15%;
+                    left: 1%;
+                }
+
+                @media only screen and (max-width: 375px) {
+                    width: 12%;
+                    top: 9%;
+                    left: 2%;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            &.happiness-right-img {
+                & .kiteImg {
+                    position: absolute;
+                    right: 5%;
+                    top: 60%;
+                    width: 17%;
+
+                    & img {
+                        width: 100%;
+
+                        @media only screen and (max-width: $bp-small) {
+                            width: 17rem;
+                        }
+                    }
+
+                    // @media only screen and (max-width: $bp-tab) {
+                    //     right: -2%;
+                    //     top: unset;
+                    // }
+
+                    // @media only screen and (max-width: $bp-mobile) {
+                    //     right: -2%;
+                    //     top: 55%;
+                    //     width: 20%;
+                    // }
+
+                    @media only screen and (max-width: 760px) {
+                        right: 5%;
+                        top: unset;
+                        width: 17%;
+                    }
+                }
+
+                & .shineImage {
+                    position: absolute;
+                    top: 6%;
+                    right: 24%;
+                    width: 7%;
+
+                    & img {
+                        width: 100%;
+                        transform: rotate(-16deg) scaleX(-1);
+
+                        @media only screen and (max-width: $bp-tab) {
+                            transform: rotate(10deg) scaleX(-1);
+                        }
+
+                        // @media only screen and (max-width: $bp-small) {
+                        //     width: 8rem;
+                        // }
+                    }
+
+                    // @media only screen and (max-width: $bp-tab) {
+                    //     right: 2%;
+                    //     top: 25%;
+                    // }
+
+                    // @media only screen and (max-width: $bp-smallest) {
+                    //     bottom: 20%;
+                    // }
+                    @media only screen and (max-width: $bp-tab) {
+                        top: 24%;
+                        right: 10%;
+                        width: 8%;
+                    }
+
+                    @media only screen and (max-width: $bp-mobile) {
+                        top: 12%;
+                        right: 10%;
+                        width: 13%;
+                    }
+
+                    @media only screen and (max-width: 375px) {
+                        top: 14%;
+                        right: 9%;
+                        width: 13%;
+                    }
+                }
+            }
+        }
+
+        & .btn {
+            margin-top: 2.5rem;
+        }
+    }
+
+    & .happiness-wave {
+        & .wave {
+            position: absolute;
+            left: -10%;
+            bottom: 0%;
+            width: 64%;
+
+            & img {
+                transform: rotate(-10deg);
+            }
+
+            @media only screen and (max-width: $bp-tab) {
+                left: -50%;
+                bottom: -30%;
+                width: 94%;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                // bottom: 10%;
+                // width: 127%;
+                // left: -70%;
+            }
+
+            
+            @media only screen and (max-width: 760px) {
+                left: -50%;
+                bottom: 1%;
+                width: 94%;
+            }
+        }
+    }
+
+    & .shine-bottom {
+        & .shine {
+            position: absolute;
+            bottom: 25%;
+            left: 40%;
+            right: unset;
+            width: 7%;
+
+            & img {
+                width: 100%;
+                transform: scaleX(1);
+            }
+
+            @media only screen and (max-width: $bp-tab) {
+                bottom: 0%;
+                width: 9%;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                bottom: 0%;
+                width: 12%;
+            }
+
+            @media only screen and (max-width: 375px) {
+                bottom: 0%;
+                width: 12%;
+            }
+        }
+
+        // @media only screen and (max-width: $bp-tab) {
+        //     bottom: -9%;
+        //     left: 20%;
+        //     right: unset;
+        // }
+
+        // @media only screen and (max-width: $bp-small) {
+        //     bottom: -5%;
+        // }
+
+        // @media only screen and (max-width: $bp-smallest) {
+        //     bottom: 2%;
+        // }
+
+    }
+}

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+  html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 50%;
+  }
+    scroll-behavior: smooth;
+  }
+  body{
+      font-family: "Space Grotesk", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    &.rtl{
+      font-family: "IBM Plex Sans Arabic", sans-serif;
+    }
+  }
+  .wrapper.light-mode
+  {
+      background-color: $color-white;
+  }
+  .wrapper.dark-mode{
+      background-color: $dark-body;
+  }
