@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Eid 2026 Color Palette */
+  --color-eid-cyan-light: #d4fefe;
+  --color-eid-cyan: #6ff6f8;
+  --color-eid-green: #06f93f;
+  --color-eid-dark: #1a1a1a;
+
+  /* Font families */
+  --font-arabic: var(--font-ge-ss);
+  --font-display: var(--font-mestika);
+}
+
+/* Smooth scrolling for parallax */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #d4fefe, #6ff6f8);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d4fefe;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6ff6f8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06f93f;
+}
