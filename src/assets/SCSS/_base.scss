@@ -1,27 +1,50 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  html{
-    box-sizing: border-box;
-    font-size: 62.5%;
-    @media only screen and (max-width: $bp-large) {
-      font-size: 50%;
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
   }
-    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: hidden;
+  direction: rtl;
+
+  &.ltr {
+    direction: ltr;
   }
-  body{
-      font-family: "Space Grotesk", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-    &.rtl{
-      font-family: "IBM Plex Sans Arabic", sans-serif;
-    }
-  }
-  .wrapper.light-mode
-  {
-      background-color: $color-white;
-  }
-  .wrapper.dark-mode{
-      background-color: $dark-body;
-  }
+}
+
+.wrapper {
+  overflow: hidden;
+  background-color: $bg-main;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
