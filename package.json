@@ -1,27 +1,52 @@
 {
-  "name": "eid2026",
+  "name": "eid2025",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
+  "homepage": "./",
   "dependencies": {
-    "next": "16.1.2",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "react-scroll-parallax": "^3.5.0"
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "buzz": "^1.2.1",
+    "file-saver": "^2.0.5",
+    "gsap": "^3.12.5",
+    "i18next": "^23.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga4": "^2.1.0",
+    "react-i18next": "^14.0.5",
+    "react-router-dom": "^6.22.1",
+    "react-scripts": "5.0.1",
+    "react-scroll-parallax": "^3.4.5",
+    "sass": "^1.71.0",
+    "start": "^5.1.0",
+    "swiper": "^11.0.6",
+    "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.2",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "tiny": "tinypng src/assets/images -r -k vcjsh5Yqdvx4hpJgRrl2T9fnCQvMcTMd"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

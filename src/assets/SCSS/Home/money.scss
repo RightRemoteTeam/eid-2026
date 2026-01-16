@@ -1,0 +1,162 @@
+.moneySection {
+    padding: 70px 0 50px;
+    position: relative;
+    & .moneyElements {
+        & .moneyElements0 {
+            position: absolute;
+            width: 10%;
+            top: 0%;
+            left: 20%;
+        }
+        & .moneyElements01 {
+            position: absolute;
+            width: 14%;
+            top: 12%;
+            left: 57%;
+        }
+        & .moneyElements02 {
+            position: absolute;
+            width: 9%;
+            top: 32%;
+            left: 27%;
+            @media screen and (max-width: 680px){
+                width: 11%;
+                top: 42%;
+                left: 3%;
+            }
+        }
+        & .moneyElements03 {
+            position: absolute;
+            width: 8%;
+            top: 0%;
+            right: 8%;
+            @media screen and (max-width: 768px){
+                width: 12%;
+            }
+            @media screen and (max-width: 500px){
+                width: 15%;
+            }
+        }
+        & .moneyElements04 {
+            position: absolute;
+            width: 20%;
+            top: 35%;
+            left: 72%;
+            @media screen and (max-width: 680px){
+                width: 29%;
+                top: 46%;
+                left: 79%;
+            }
+        }
+        & .moneyElements05 {
+            position: absolute;
+            width: 51%;
+            bottom: 0%;
+            @media screen and (max-width: 680px){
+                display: none;
+            }
+        }
+        & .moneyElements06 {
+            position: absolute;
+            width: 51%;
+            bottom: 0%;
+            @media screen and (max-width: 680px){
+                display: none;
+            }
+        }
+        & .moneyElements09{
+            width: 8%;
+            position: absolute;
+            bottom: 10%;
+            right: 8%;
+            z-index: 9;
+            @media screen and (max-width: 680px){
+                width: 70px;
+                position: absolute;
+                bottom: unset;
+                right: -4%;
+                top: 10%;
+            }
+        }
+        & .moneyElements08 {
+            width: 8%;
+            position: absolute;
+            top: -50px;
+            left: 8%;
+            @media screen and (max-width: 768px){
+                width: 12%;
+            }
+            @media screen and (max-width: 500px){
+                width: 16%;
+            }
+        }
+        & .moneyElements07 {
+            width: 6%;
+            position: absolute;
+            top: -11%;
+            left: 63%;
+            @media screen and (max-width: 768px){
+                width: 10%;
+                top: 0%;
+            }
+            @media screen and (max-width: 500px){
+                width: 13%;
+                left: 48%;
+            }
+        }
+    }
+    .section-box {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 500px;
+        position: relative;
+        z-index: 9;
+        @media screen and (max-width: 680px){
+            max-width: 300px;
+            position: relative;
+        }
+        h2 {
+            color: #54b55c;
+        }
+        p {
+            color: #000;
+        }
+        & .btn.btn-primary {
+            margin: 40px 0 0;
+            display: block;
+            width: 100%;
+            /*
+            box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
+            -webkit-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
+            -moz-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
+            background: #8a59c8;
+            */
+            padding: 15px 0;
+            @media screen and (max-width: 680px){
+                width: 100%;
+                margin: 20px 0;
+                padding: 10px 0;
+            }
+        }
+        /*
+        & .btn.btn-primary:hover{
+            background-color: #fff !important;
+            color: #5C5C5C;
+        }
+        */
+        & .btnLogo {
+            margin-top: 30px;
+            a{
+                display: inline-block;
+                padding: 3px;
+                border-radius: 10px;
+                //border: 1px solid #804DBF;
+                //background: #fff;
+                @media screen and (max-width: 680px){
+                    width: 70px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,234 @@
+@import "../variables";
+section.aud {
+    position: relative;
+
+    & .aud-intro-content {
+        // flex-basis: 50%;
+        text-align: center;
+        width: 50%;
+        margin: auto;
+
+        @media only screen and (max-width: $bp-tab) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        & .section-box {
+            max-width: 500px;
+            padding: 0;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+
+            @media only screen and (max-width: $bp-tab) {
+                max-width: 100%;
+                margin: 0;
+                padding-right: 0;
+            }
+
+            & h2 {
+                color: $color-title-3;
+            }
+        }
+    }
+
+    & .aud-container {
+        padding: 50px 10px 100px;
+
+        // 82px 10px 25rem
+        @media only screen and (max-width: 760px) {
+            padding: 70px 10px 100px;
+        }
+        @media only screen and (max-width: 500px) {
+            padding: 40px 10px 20px;
+        }
+        & .takbeer-img{
+            & .takbeer-text{
+                position: absolute;
+                width: 20%;
+                top: -25%;
+                right: 10%;
+                transform: rotate(40deg);
+                &.takbeer-en{
+                    width: 25%;
+                    @media only screen and (max-width: 760px) {
+                        width: 25%;
+                    }
+                    @media only screen and (max-width: $bp-mobile) {
+                        width: 28%;
+                    }
+                    @media only screen and (max-width: 375px) {
+                        width: 34%;
+                    }
+                }
+                & .takbeerDark{
+                    display: none;
+                }
+                & img {
+                    width: 100%;
+                }
+                @media only screen and (max-width: 760px) {
+                    width: 22%;
+                }
+                @media only screen and (max-width: $bp-mobile) {
+                    width: 25%;
+                }
+                @media only screen and (max-width: 375px) {
+                    width: 28%;
+                }
+            }
+        }
+        & .shine-bottom {
+            position: absolute;
+            top: -10%;
+            left: 43%;
+            width: 5%;
+            transform: rotate(-15deg);
+
+            & img {
+                width: 100%;
+
+                // @media only screen and (max-width: $bp-small) {
+                //     width: 8rem;
+                // }
+            }
+
+            // @media only screen and (max-width: $bp-tab) {
+            //     right: 2%;
+            //     top: 25%;
+            // }
+
+            @media only screen and (max-width: 760px) {
+                width: 10%;
+            }
+            @media only screen and (max-width: $bp-mobile) {
+                width: 12%;
+            }
+
+            @media only screen and (max-width: 375px) {
+                width: 12%;
+            }
+
+            
+        }
+        & .aud-left-img {
+            & .oud-pink-ballon {
+                position: absolute;
+                top: 4%;
+                left: 7%;
+                width: 10%;
+
+                // @media only screen and (max-width: $bp-tab) {
+                //     top: 0px;
+                //     left: 0%;
+                //     width: 16%;
+                // }
+
+                // @media only screen and (max-width: $bp-mobile) {
+                //     top: 0px;
+                //     left: 0%;
+                //     width: 18%;
+                // }
+                @media only screen and (max-width: $bp-tab) {
+                    width: 16%;
+                }
+
+                @media only screen and (max-width: $bp-mobile) {
+                    width: 18%;
+                }
+                @media only screen and (max-width: 375px) {
+                    top: 4%;
+                    left: 7%;
+                    width: 22%;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+
+        //     position: absolute;
+        //     left: 18%;
+        //     top: 22%;
+        //     width: 24%;
+        //     @media only screen and (max-width: $bp-tab) {
+        //         display: none;
+        //     }
+        //     & img {
+        //         width: 100%;
+
+        //     }
+        // }
+    }
+
+    & .aud-bottom-elements {
+        & .oud-green-ballon {
+            position: absolute;
+            bottom: -10%;
+            left: 4%;
+            width: 14%;
+
+            // @media only screen and (max-width: $bp-mobile) {
+            //     bottom: 0%;
+            //     left: 15%;
+            //     width: 22%;
+            // }
+
+            @media only screen and (max-width: 480px) {
+                width: 17%;
+            }
+            @media only screen and (max-width: $bp-mobile) {
+                width: 22%;
+            }
+
+            @media only screen and (max-width: 375px) {
+                width: 24%;
+            }
+            & img {
+                width: 100%;
+            }
+        }
+
+        // position: relative;
+        & .waves {
+            & .aud-orange {
+                position: absolute;
+                right: -31%;
+                bottom: -4.5rem;
+                width: 68%;
+                // @media only screen and (max-width: $bp-mobile) {
+                //     right: -34%;
+                //     bottom: 9.5rem;
+                //     width: 100%;
+                // }
+                // @media only screen and (max-width: 375px) {
+    
+                //     position: absolute;
+                //     right: -36%;
+                //     bottom: 8.5rem;
+                //     width: 105%;
+                // }
+                & img {
+                    width: 100%;
+                }
+            }
+
+            & .aud-green {
+                position: absolute;
+                right: -17rem;
+                bottom: 11rem;
+                transform: scaleX(-1);
+                width: 90%;
+
+                & img {
+                    width: 100%
+                }
+
+                @media only screen and (max-width: $bp-tab) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

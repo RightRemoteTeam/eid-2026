@@ -1,0 +1,121 @@
+.ButtonSection {
+    position: relative;
+    padding:60px 0 60px;
+    // @media screen and (max-width: 1366px){
+    //     padding: 250px 0 150px;
+    // }
+    // @media screen and (max-width: 1280px){
+    //     padding: 220px 0 100px;
+    // }
+    // @media screen and (max-width: 680px){
+    //     padding: 220px 0 30px;
+    // }
+    // @media screen and (max-width: 580px){
+    //     padding: 180px 0 30px;
+    // }
+    @media screen and (max-width: 480px){
+        padding: 60px 0 25%;
+    }
+    // @media screen and (max-width: 390px){
+    //     padding: 120px 0 30px;
+    // }
+    
+    & img {
+        width: 100%;
+    }
+    & .ButtonElements01 {
+        position: absolute;
+        width: 15%;
+        top: 7%;
+        left: 24%;
+        // @media screen and (max-width: 1280px){
+        //     left: 8%;
+        // }
+        @media screen and (max-width: 680px){
+            top: 7%;
+        }
+        // @media screen and (max-width: 414px){
+        //     width: 25%;
+        // }
+    }
+    & .ButtonElements02 {
+        position: absolute;
+        width: 55%;
+        top: 0;
+        right: 0;
+        // @media screen and (max-width: 680px){
+        //     transform: rotate(-24deg);
+        //     top: 9%;
+        //     left: 35%;
+        // }
+        // @media screen and (max-width: 414px){
+        //     width: 23%;
+        // }
+    }
+    & .button-element-star{
+        position: absolute;
+        width: 6%;
+        bottom: 8%;
+        right: 32%;
+        display: none;
+        @media screen and (max-width: 767px){
+            display: block;
+        }
+        @media screen and (max-width: 500px){
+            bottom: -4%;
+        }
+        @media screen and (max-width: 480px){
+            bottom: 26%;
+        }
+    }
+    & .ButtonContainer{
+        position: relative;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        z-index: 1;
+        @media screen and (max-width: 1024px){
+            max-width: 80%;
+        }
+        & .buttonsectionWrap {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+            
+            .disabled-link {
+                pointer-events: none;
+                opacity: 0.5; 
+              }
+            & .btn.btn-primary {
+                margin: 0;
+                display: block;
+                width: 23%;
+                /*
+                box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
+                -webkit-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
+                -moz-box-shadow: -6px 0px 20px -8px rgb(144, 44, 245);
+                background: #8a59c8;
+                */
+                padding: 15px 0;
+                text-align: center;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media screen and (max-width: 768px){
+                    width: 48%;
+                    padding: 10px 0;
+                }
+                @media screen and (max-width:540px){
+                   white-space: pre;
+                }
+            }
+            /*
+            & .btn.btn-primary:hover{
+                background: #fff !important;
+                color: #5C5C5C;
+            }*/
+        }
+    }
+}

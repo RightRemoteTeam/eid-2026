@@ -1,0 +1,53 @@
+{
+  "header": {
+    "language": "عربي"
+  },
+  "buttons": {
+    "title1": "Eid Identity",
+    "title2": "Eid Events Booklet",
+    "title3": "Greeting Cards",
+    "title4": "Houses Decorations",
+    "title5": "Companies Decorations",
+    "title6": "Coming soon",
+    "title7": "Coming soon",
+    "title8": "Discover our Eid Events"
+  },
+  "greetingSection": {
+    "title": "Download greeting cards",
+    "para": "To share the joy with your loved ones",
+    "description1": "Welcome Eid, the holiday that makes everyone happy and joyful! Get dressed up, prepare the gifts and Eidiya, and of course, your outfit is absolutely on point.",
+    "description2": "After we get everything ready, we perform the Eid prayer, and immerse ourselves in the beautiful festive atmosphere. Afterward, we visit and greet our loved ones, showering them with affection, and then sit down to chat with the family",
+    "description3": "Once the greetings are exchanged and the celebrations are underway, it’s time for collecting Eidiyahs and gifts, and the little ones start gathering their annual fortune."
+  },
+  "discover": {
+    "description1": "Then comes the grand feast! The family lunch is essential... After the meal, the rounds of greetings with relatives and cousins begin. Some might drift into a food coma early, but by evening, you’ll definitely find everyone in a food-induced stupor.",
+    "description2": "After the Eid food coma, the excitement is revived and the energy of Eid returns, and now… you need something to make your happiness even greater. Where do we go, what should we do? Come join the Eid activities, and the joy will multiply!"
+  },
+  "footerMain": {
+    "menuone": "Privacy",
+    "menutwo": "Terms & Conditions",
+    "btn": "Replay The Journey",
+    "back_to_journey": "Back to Eid journey"
+  },
+  "modal": {
+    "audio_permission_error": "For better user experience enable the audio access",
+    "button_close": "OK"
+  },
+  "meta": {
+    "title": "Eid al-Fitr 2024 Identity",
+    "description": "Joyful moments you live, and unforgettable feelings with your family and loved ones."
+  },
+  "DownloadPopup": {
+    "ButtonText": "Download"
+  },
+  "Preview": {
+    "edit": "Edit",
+    "download": "Download"
+  },
+  "Greetings": {
+    "preview": "Preview",
+    "name": "Enter your name",
+    "message": "Type your message here!",
+    "messageLimit": "Maximum 25 characters"
+  }
+}
