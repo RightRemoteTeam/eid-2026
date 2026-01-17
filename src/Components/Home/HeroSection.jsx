@@ -44,10 +44,9 @@ export default function HeroSection() {
     });
 
     gsap.to(".hero-section .float-star", {
-      y: -10,
-      x: 5,
-      rotation: 5,
-      duration: 3,
+      scale: 1.3,
+      opacity: 0.7,
+      duration: 1.5,
       ease: "power1.inOut",
       repeat: -1,
       yoyo: true,
@@ -57,6 +56,39 @@ export default function HeroSection() {
       y: -8,
       rotation: 3,
       duration: 2,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    // Wobble animations for music notes
+    gsap.to(".hero-section .musicnote1", {
+      rotation: 15,
+      duration: 2,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    gsap.to(".hero-section .musicnote2", {
+      rotation: -12,
+      duration: 2.5,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    gsap.to(".hero-section .musicnote3", {
+      rotation: 10,
+      duration: 1.8,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    gsap.to(".hero-section .halfnote", {
+      rotation: -15,
+      duration: 2.2,
       ease: "power1.inOut",
       repeat: -1,
       yoyo: true,
@@ -72,28 +104,28 @@ export default function HeroSection() {
           <div className="scene-stage">
             <img src={ribbon} alt="" className="layer ribbon" />
             <div className="layer people">
-              <Parallax speed={2} translateY={[7, -3]}>
+              <Parallax speed={2} translateY={[10, -3]}>
                 <img src={people} alt="" />
               </Parallax>
             </div>
 
             <div className="layer oud">
-              <Parallax speed={6} translateY={[10, 0]} translateX={[0, 10]}>
+              <Parallax speed={10} translateY={[10, 0]} translateX={[0, 10]}>
                 <img src={oud} alt="" />
               </Parallax>
             </div>
             <div className="layer dallah">
-              <Parallax speed={2} translateX={[10,0]} translateY={[5, -2]}>
+              <Parallax speed={2} translateX={[10,-30]} translateY={[10, -20]}>
                 <img src={dallah} alt="" />
               </Parallax>
             </div>
             <div className="layer money">
-              <Parallax speed={5} translateX={[-10, 0]} translateY={[10, 0]}>
+              <Parallax speed={20} translateX={[-20, 0]} translateY={[0, -20]}>
                 <img src={money} alt="" />
               </Parallax>
             </div>
             <div className="layer mabkhara float-mabkhara">
-              <Parallax speed={2} translateY={[6, -3]}>
+              <Parallax speed={20} translateY={[10, -20]} translateX={[0,-20]}>
                 <img src={mabkhara} alt="" />
               </Parallax>
             </div>
@@ -153,28 +185,28 @@ export default function HeroSection() {
               </Parallax>
             </div>
             <div className="layer candy">
-              <Parallax speed={2} rotate={[0,30]} translateY={[6, -3]}>
+              <Parallax speed={2} rotate={[0,30]} translateY={[6, -20]}>
                 <img src={candy} alt="" />
               </Parallax>
             </div>
             <img src={bgbuilding} alt="" className="layer bgbuilding" />
           <div className="layer spec1">
-            <Parallax speed={3} translateY={[12, -6]} translateX={[-5, 3]} rotate={[0, 15]}>
+            <Parallax speed={3} translateY={[0, -20]} translateX={[0, -30]} rotate={[0, 15]}>
               <img src={spec1} alt="" />
             </Parallax>
           </div>
           <div className="layer spec2">
-            <Parallax speed={2} translateY={[10, -5]} translateX={[4, -2]} rotate={[0, -20]}>
+            <Parallax speed={2} translateY={[0, 20]} translateX={[0, -40]} rotate={[0, -20]}>
               <img src={spec2} alt="" />
             </Parallax>
           </div>
           <div className="layer spec3">
-            <Parallax speed={4} translateY={[14, -7]} translateX={[-3, 5]} rotate={[0, 25]}>
+            <Parallax speed={4} translateY={[0, -10]} translateX={[0, 20]} rotate={[0, 25]}>
               <img src={spec3} alt="" />
             </Parallax>
           </div>
           <div className="layer spec4">
-            <Parallax speed={3} translateY={[15, -8]} translateX={[6, -4]} rotate={[0, -18]}>
+            <Parallax speed={3} translateY={[0, 20]} translateX={[0, -20]} rotate={[0, -18]}>
               <img src={spec1} alt="" />
             </Parallax>
           </div>

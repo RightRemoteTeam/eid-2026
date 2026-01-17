@@ -30,10 +30,9 @@ export default function GreetingSection() {
     });
 
     gsap.to(".greeting-section .float-star", {
-      y: -10,
-      x: 5,
-      rotation: 5,
-      duration: 3,
+      scale: 1.3,
+      opacity: 0.7,
+      duration: 1.5,
       ease: "power1.inOut",
       repeat: -1,
       yoyo: true,
