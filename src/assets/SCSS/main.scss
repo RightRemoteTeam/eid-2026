@@ -56,39 +56,16 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 15px 0;
+  padding: 30px 40px;
   background: transparent;
   transition: background 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
   &.scrolled {
     background: rgba($bg-gradient-start, 0.95);
     backdrop-filter: blur(10px);
-  }
-
-  .navbar-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .navbar-logo {
-    img {
-      height: 60px;
-      width: auto;
-
-      @media (max-width: $bp-small) {
-        height: 40px;
-      }
-    }
-  }
-
-  .navbar-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
   }
 
   .language-switcher {
@@ -101,6 +78,11 @@
     color: $primary-green-dark;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-block;
+
+    span {
+      display: inline-block;
+    }
 
     &:hover {
       background: $primary-green-dark;
@@ -111,6 +93,10 @@
       padding: 6px 15px;
       font-size: 12px;
     }
+  }
+
+  @media (max-width: $bp-small) {
+    padding: 20px 20px;
   }
 }
 
