@@ -117,7 +117,8 @@
 // Hero Section
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
+  padding-top: 50px;
   width: 100%;
   background: linear-gradient(to bottom, $bg-gradient-start 0%, $bg-gradient-end 100%);
   overflow: visible;
@@ -125,27 +126,27 @@
   flex-direction: column;
 
   @media (max-width: $bp-tab) {
-    min-height: 70vh;
+    min-height: 50vh;
   }
 
   @media (max-width: $bp-mobile) {
-    min-height: 60vh;
+    min-height: 20vh;
   }
 
   .hero-content {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     @media (max-width: $bp-tab) {
-      min-height: 70vh;
+      min-height: 50vh;
     }
 
     @media (max-width: $bp-mobile) {
-      min-height: 60vh;
+      min-height: 20vh;
     }
   }
 
@@ -351,9 +352,10 @@
 
     .candy {
       right: 35%;
-      top: 50%;
+      top: 55%;
       width: 11%;
       z-index: 6;
+      rotate: -40deg;
     }
 
     .bgbuilding {
@@ -422,19 +424,19 @@
 // Greeting Section
 .greeting-section {
   position: relative;
-  padding: 250px 0;
   min-height: 200vh;
   background-color: $bg-main;
   text-align: center;
+  padding: 120px 0;
+
 
   @media (max-width: $bp-tab) {
-    padding: 100px 20px 0;
+    padding: 80px 0;
     min-height: 100vh;
   }
 
   @media (max-width: $bp-mobile) {
-    padding: 80px 20px 0;
-    min-height: 90vh;
+    min-height: 60vh;
   }
 
   .greeting-frame {
@@ -449,6 +451,14 @@
       width: 300px;
       height: auto;
       display: block;
+
+      @media (max-width: $bp-tab) {
+        width: 220px;
+      }
+
+      @media (max-width: $bp-mobile) {
+        width: 150px;
+      }
     }
   }
 
@@ -469,13 +479,6 @@
       aspect-ratio: 16/ 9;
       overflow: visible;
 
-      @media (max-width: $bp-tab) {
-        aspect-ratio: 16 / 10;
-      }
-
-      @media (max-width: $bp-mobile) {
-        aspect-ratio: 1 / 1;
-      }
 
       .layer {
         position: absolute;
@@ -522,6 +525,14 @@
         top: 87%;
         width: 45%;
         z-index: 6;
+
+        @media (max-width: $bp-tab) {
+          width: 80%;
+        }
+
+        @media (max-width: $bp-mobile) {
+          width: 90%;
+        }
       }
 
       .wallet {
@@ -529,6 +540,12 @@
         top: 106%;
         width: 17%;
         z-index: 7;
+
+        @media (max-width: $bp-tab) {
+          left: -5%;
+          width: 25%;
+          top: 130%;
+        }
       }
 
       .balloons {
@@ -544,6 +561,11 @@
         width: 20%;
         z-index: 7;
         transform: rotate(-60deg);
+
+        @media (max-width: $bp-tab) {
+          right: -5%;
+          width: 25%;
+        }
       }
 
       .star1 {
@@ -567,6 +589,11 @@
         width: 7%;
         z-index: 4;
         rotate: -10deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -2%;
+          width: 10%;
+        }
       }
 
       .candy2 {
@@ -575,6 +602,11 @@
         width: 10%;
         z-index: 4;
         rotate: -30deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -4%;
+          width: 14%;
+        }
       }
 
       .candy3 {
@@ -583,6 +615,11 @@
         width: 12%;
         z-index: 4;
         rotate: -50deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -5%;
+          width: 17%;
+        }
       }
 
       .candy4 {
@@ -591,6 +628,11 @@
         width: 15%;
         z-index: 4;
         rotate: -40deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -4%;
+          width: 21%;
+        }
       }
 
       .candy5 {
@@ -599,6 +641,11 @@
         width: 18%;
         z-index: 5;
         rotate: -60deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -2%;
+          width: 25%;
+        }
       }
     }
   }
@@ -615,13 +662,12 @@
   flex-direction: column;
 
   @media (max-width: $bp-tab) {
-    padding: 100px 20px 0;
+    padding: 120px 0;
     min-height: 100vh;
   }
 
   @media (max-width: $bp-mobile) {
-    padding: 80px 20px 0;
-    min-height: 90vh;
+    min-height: 100vh;
   }
 
   .traditions-frame {
@@ -680,6 +726,10 @@
         top: -10%;
         width: 17%;
         z-index: 6;
+
+        @media (max-width: $bp-tab) {
+          width: 75%;
+        }
       }
 
       // Center Badge
@@ -689,6 +739,12 @@
         top: 50%;
         width: 45%;
         z-index: 6;
+
+
+        @media (max-width: $bp-tab) {
+          top: 200%;
+          width: 90%;
+        }
       }
 
       // Firework - Top Left
@@ -697,6 +753,12 @@
         top: 0%;
         width: 16%;
         z-index: 5;
+
+        @media (max-width: $bp-tab) {
+          right: -10%;
+          top: -40%;
+          width: 50%;
+        }
       }
 
       // Music Notes - Left Side
@@ -705,14 +767,30 @@
         top: 15%;
         width: 6%;
         z-index: 7;
+
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 10%;
+          right: 4%;
+          top: 130%;
+        }
       }
 
       .musicnote2 {
         left: 30%;
         top: 88%;
-        width:2%;
+        width: 2%;
         z-index: 5;
         rotate: 20deg;
+
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 4%;
+          left: 10%;
+          top: 275%;
+        }
       }
 
       .halfnote {
@@ -720,6 +798,13 @@
         top: 15%;
         width: 6%;
         z-index: 5;
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 10%;
+          left: 4%;
+          top: 130%;
+        }
       }
 
       // Gift Boxes - Right Side
@@ -729,6 +814,10 @@
         width: 23%;
         z-index: 5;
         rotate: -10deg;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
       }
 
       .giftbox2 {
@@ -737,20 +826,34 @@
         width: 17%;
         z-index: 5;
         rotate: 0deg;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
       }
+
       .giftbox3 {
         right: 7%;
         top: 36%;
         width: 15%;
         z-index: 5;
         rotate: -8deg;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
       }
+
       .giftbox4 {
         right: 14%;
         top: 53%;
         width: 12%;
         z-index: 5;
         rotate: -8deg;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
       }
 
       // Dallah - Bottom
@@ -761,6 +864,14 @@
         z-index: 5;
         transform: scaleX(-1);
         rotate: -10deg;
+
+        @media (max-width: $bp-tab) {
+          z-index: 5;
+          width: 35%;
+          left: -10%;
+          top: 160%;
+          rotate: 0deg;
+        }
       }
 
       .dallah2 {
@@ -771,6 +882,12 @@
         transform: scaleX(-1);
         rotate: 20deg;
 
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 30%;
+          right: 0%;
+          top: 220%;
+        }
       }
 
       // Stars - Scattered
@@ -779,6 +896,13 @@
         top: 8%;
         width: 3%;
         z-index: 4;
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 5%;
+          left: 3%;
+          top: 50%;
+        }
       }
 
       .star2 {
@@ -786,6 +910,14 @@
         top: 8%;
         width: 3%;
         z-index: 4;
+
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 5%;
+          right: 4%;
+          top: 60%;
+        }
       }
 
     }

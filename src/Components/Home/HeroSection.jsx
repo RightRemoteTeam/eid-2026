@@ -67,10 +67,6 @@ export default function HeroSection() {
   return (
     <section ref={sectionRef} className="hero-section">
       <div className="hero-content">
-        {/* Main Logo - Top */}
-        <div className="hero-logo-top">
-          <img src={eidLogoMain} alt="عيد الفطر 2026" className="hero-main-logo" />
-        </div>
 
         {/* Hero Scene - Bottom */}
         <div className="hero-scene-bottom">
@@ -88,7 +84,7 @@ export default function HeroSection() {
               </Parallax>
             </div>
             <div className="layer dallah">
-              <Parallax speed={2} translateY={[5, -2]}>
+              <Parallax speed={2} translateX={[10,0]} translateY={[5, -2]}>
                 <img src={dallah} alt="" />
               </Parallax>
             </div>
