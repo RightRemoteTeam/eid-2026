@@ -117,7 +117,8 @@
 // Hero Section
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
+  padding-top: 50px;
   width: 100%;
   background: linear-gradient(to bottom, $bg-gradient-start 0%, $bg-gradient-end 100%);
   overflow: visible;
@@ -125,27 +126,27 @@
   flex-direction: column;
 
   @media (max-width: $bp-tab) {
-    min-height: 70vh;
+    min-height: 50vh;
   }
 
   @media (max-width: $bp-mobile) {
-    min-height: 60vh;
+    min-height: 20vh;
   }
 
   .hero-content {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     @media (max-width: $bp-tab) {
-      min-height: 70vh;
+      min-height: 50vh;
     }
 
     @media (max-width: $bp-mobile) {
-      min-height: 60vh;
+      min-height: 20vh;
     }
   }
 
@@ -351,9 +352,10 @@
 
     .candy {
       right: 35%;
-      top: 50%;
+      top: 55%;
       width: 11%;
       z-index: 6;
+      rotate: -40deg;
     }
 
     .bgbuilding {
@@ -370,6 +372,7 @@
       width: 9%;
       z-index: 4;
     }
+
     .spec4 {
       right: 2%;
       top: 100%;
@@ -377,12 +380,14 @@
       z-index: 4;
       transform: rotate(230deg);
     }
+
     .spec2 {
       left: 3%;
       top: 98%;
       width: 6%;
       z-index: 4;
     }
+
     .spec3 {
       right: 17%;
       top: 104%;
@@ -396,6 +401,7 @@
       width: 1.5%;
       z-index: 5;
     }
+
     .star2 {
       left: 9%;
       top: 40%;
@@ -415,91 +421,505 @@
 
 
 // Content Sections
-.content-section {
+// Greeting Section
+.greeting-section {
   position: relative;
-  padding: 80px 0;
+  min-height: 200vh;
   background-color: $bg-main;
-
-  .section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-}
-
-// Text Frame (Green decorative frame with text)
-.text-frame {
-  position: relative;
-  padding: 60px 40px;
   text-align: center;
+  padding: 120px 0;
 
-  .frame-bg {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 839px;
-    height: 100%;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+  @media (max-width: $bp-tab) {
+    padding: 80px 0;
+    min-height: 100vh;
   }
 
-  .frame-text {
-    position: relative;
-    z-index: 1;
-    font-size: 2.4rem;
-    line-height: 1.8;
-    color: $text-green;
-    font-weight: 500;
-
-    @media (max-width: $bp-tab) {
-      font-size: 1.8rem;
-    }
-
-    @media (max-width: $bp-small) {
-      font-size: 1.4rem;
-    }
-
-    &.text-cyan {
-      color: $text-cyan;
-    }
-
-    &.text-yellow {
-      color: $text-yellow;
-    }
+  @media (max-width: $bp-mobile) {
+    min-height: 60vh;
   }
-}
-
-// Greeting Box
-.greeting-box {
-  padding: 20px;
-  border-radius: 0;
-  text-align: center;
-  position: relative;
 
   .greeting-frame {
     width: 100%;
-    max-width: 277px;
-    margin: 0 auto 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     img {
-      width: 100%;
+      width: 300px;
+      height: auto;
+      display: block;
+
+      @media (max-width: $bp-tab) {
+        width: 220px;
+      }
+
+      @media (max-width: $bp-mobile) {
+        width: 150px;
+      }
     }
   }
 
-  .greeting-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: $primary-cyan;
-    line-height: 1.2;
+  .greeting-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
 
     @media (max-width: $bp-tab) {
-      font-size: 2.5rem;
+      margin-top: 40px;
+    }
+
+    .greeting-content-block {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/ 9;
+      overflow: visible;
+
+
+      .layer {
+        position: absolute;
+        inset: auto;
+        width: auto;
+        height: auto;
+        max-width: none;
+        user-select: none;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .building {
+        left: 50%;
+        transform: translateX(-40%);
+        top: 18%;
+        width: 50%;
+        z-index: 2;
+      }
+
+      .road {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 45%;
+        width: 100%;
+        z-index: 3;
+      }
+
+      .firework {
+        right: 7%;
+        top: 3%;
+        width: 14%;
+        z-index: 0;
+      }
+
+      .badge2 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 87%;
+        width: 45%;
+        z-index: 6;
+
+        @media (max-width: $bp-tab) {
+          width: 80%;
+        }
+
+        @media (max-width: $bp-mobile) {
+          width: 90%;
+        }
+      }
+
+      .wallet {
+        left: 15%;
+        top: 106%;
+        width: 17%;
+        z-index: 7;
+
+        @media (max-width: $bp-tab) {
+          left: -5%;
+          width: 25%;
+          top: 130%;
+        }
+      }
+
+      .balloons {
+        right: 26%;
+        top: 19%;
+        width: 17%;
+        z-index: 1;
+      }
+
+      .makhbara {
+        right: 12%;
+        top: 70%;
+        width: 20%;
+        z-index: 7;
+        transform: rotate(-60deg);
+
+        @media (max-width: $bp-tab) {
+          right: -5%;
+          width: 25%;
+        }
+      }
+
+      .star1 {
+        left: 27%;
+        top: 50%;
+        width: 2.5%;
+        z-index: 1;
+      }
+
+      .star2 {
+        right: 20%;
+        top: 39%;
+        width: 2.5%;
+        z-index: 1;
+      }
+
+      // Candy Trail
+      .candy1 {
+        left: 9%;
+        top: 20%;
+        width: 7%;
+        z-index: 4;
+        rotate: -10deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -2%;
+          width: 10%;
+        }
+      }
+
+      .candy2 {
+        left: 7%;
+        top: 27%;
+        width: 10%;
+        z-index: 4;
+        rotate: -30deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -4%;
+          width: 14%;
+        }
+      }
+
+      .candy3 {
+        left: 7%;
+        top: 35%;
+        width: 12%;
+        z-index: 4;
+        rotate: -50deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -5%;
+          width: 17%;
+        }
+      }
+
+      .candy4 {
+        left: 8%;
+        top: 45%;
+        width: 15%;
+        z-index: 4;
+        rotate: -40deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -4%;
+          width: 21%;
+        }
+      }
+
+      .candy5 {
+        left: 10%;
+        top: 55%;
+        width: 18%;
+        z-index: 5;
+        rotate: -60deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -2%;
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+
+// Traditions Section
+.traditions-section {
+  position: relative;
+  padding: 0 0;
+  min-height: 100vh;
+  background-color: $bg-main;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $bp-tab) {
+    padding: 120px 0;
+    min-height: 100vh;
+  }
+
+  @media (max-width: $bp-mobile) {
+    min-height: 100vh;
+  }
+
+  .traditions-frame {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 300px;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .traditions-content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    @media (max-width: $bp-tab) {
+      margin-top: 40px;
+    }
+
+    .traditions-content-block {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16/9;
+      overflow: visible;
+
+      .layer {
+        position: absolute;
+        inset: auto;
+        width: auto;
+        height: auto;
+        max-width: none;
+        user-select: none;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      // Top Card
+      .card1 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10%;
+        width: 17%;
+        z-index: 6;
+
+        @media (max-width: $bp-tab) {
+          width: 75%;
+        }
+      }
+
+      // Center Badge
+      .badge3 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        width: 45%;
+        z-index: 6;
+
+
+        @media (max-width: $bp-tab) {
+          top: 200%;
+          width: 90%;
+        }
+      }
+
+      // Firework - Top Left
+      .firework {
+        left: 7%;
+        top: 0%;
+        width: 16%;
+        z-index: 5;
+
+        @media (max-width: $bp-tab) {
+          right: -10%;
+          top: -40%;
+          width: 50%;
+        }
+      }
+
+      // Music Notes - Left Side
+      .musicnote1 {
+        right: 32%;
+        top: 15%;
+        width: 6%;
+        z-index: 7;
+
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 10%;
+          right: 4%;
+          top: 130%;
+        }
+      }
+
+      .musicnote2 {
+        left: 30%;
+        top: 88%;
+        width: 2%;
+        z-index: 5;
+        rotate: 20deg;
+
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 4%;
+          left: 10%;
+          top: 275%;
+        }
+      }
+
+      .halfnote {
+        left: 26%;
+        top: 15%;
+        width: 6%;
+        z-index: 5;
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 10%;
+          left: 4%;
+          top: 130%;
+        }
+      }
+
+      // Gift Boxes - Right Side
+      .giftbox1 {
+        right: 0%;
+        top: -10%;
+        width: 23%;
+        z-index: 5;
+        rotate: -10deg;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
+      }
+
+      .giftbox2 {
+        right: 3%;
+        top: 17%;
+        width: 17%;
+        z-index: 5;
+        rotate: 0deg;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
+      }
+
+      .giftbox3 {
+        right: 7%;
+        top: 36%;
+        width: 15%;
+        z-index: 5;
+        rotate: -8deg;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
+      }
+
+      .giftbox4 {
+        right: 14%;
+        top: 53%;
+        width: 12%;
+        z-index: 5;
+        rotate: -8deg;
+
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
+      }
+
+      // Dallah - Bottom
+      .dallah {
+        left: 17%;
+        top: 32%;
+        width: 20%;
+        z-index: 5;
+        transform: scaleX(-1);
+        rotate: -10deg;
+
+        @media (max-width: $bp-tab) {
+          z-index: 5;
+          width: 35%;
+          left: -10%;
+          top: 160%;
+          rotate: 0deg;
+        }
+      }
+
+      .dallah2 {
+        right: 22%;
+        top: 56%;
+        width: 17%;
+        z-index: 7;
+        transform: scaleX(-1);
+        rotate: 20deg;
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 30%;
+          right: 0%;
+          top: 220%;
+        }
+      }
+
+      // Stars - Scattered
+      .star1 {
+        left: 33%;
+        top: 8%;
+        width: 3%;
+        z-index: 4;
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 5%;
+          left: 3%;
+          top: 50%;
+        }
+      }
+
+      .star2 {
+        right: 34%;
+        top: 8%;
+        width: 3%;
+        z-index: 4;
+
+
+        @media (max-width: $bp-tab) {
+          z-index: 7;
+          width: 5%;
+          right: 4%;
+          top: 60%;
+        }
+      }
+
     }
   }
 }

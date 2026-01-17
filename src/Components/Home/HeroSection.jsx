@@ -4,30 +4,30 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Hero assets
-import ribbon from "../../assets/images/hero/ribbon1.svg";
-import eidLogoMain from "../../assets/images/hero/eidlogomain.svg";
-import people from "../../assets/images/hero/people.svg";
-import oud from "../../assets/images/hero/oud.svg";
-import dallah from "../../assets/images/hero/dallah.svg";
-import money from "../../assets/images/hero/money.svg";
-import mabkhara from "../../assets/images/hero/mabkhara.svg";
-import balloons from "../../assets/images/hero/balloons.svg";
-import dallah2 from "../../assets/images/hero/dallah2.svg";
-import giftBox from "../../assets/images/hero/giftbox.svg";
-import bowl from "../../assets/images/hero/bowl.svg";
-import halfnote from "../../assets/images/hero/halfnote.svg";
-import musicnote1 from "../../assets/images/hero/musicnote.svg";
-import musicnote2 from "../../assets/images/hero/musicnote2.svg";
-import musicnote3 from "../../assets/images/hero/musicnote3.svg";
-import ribbon2 from "../../assets/images/hero/ribbon2.svg";
-import firework from "../../assets/images/hero/firework.svg";
-import candy from "../../assets/images/hero/candy.svg";
-import bgbuilding from "../../assets/images/hero/backbuildings.svg";
-import spec1 from "../../assets/images/hero/spec1.svg";
-import spec2 from "../../assets/images/hero/spec2.svg";
-import spec3 from "../../assets/images/hero/spec3.svg";
-import clouds from "../../assets/images/hero/clouds.svg";
-import star from "../../assets/images/hero/star.svg";
+import ribbon from "../../assets/images/icons/ribbon1.svg";
+import eidLogoMain from "../../assets/images/icons/eidlogomain.svg";
+import people from "../../assets/images/icons/people.svg";
+import oud from "../../assets/images/icons/oud.svg";
+import dallah from "../../assets/images/icons/dallah.svg";
+import money from "../../assets/images/icons/money.svg";
+import mabkhara from "../../assets/images/icons/mabkhara.svg";
+import balloons from "../../assets/images/icons/balloons.svg";
+import dallah2 from "../../assets/images/icons/dallah2.svg";
+import giftBox from "../../assets/images/icons/giftbox.svg";
+import bowl from "../../assets/images/icons/bowl.svg";
+import halfnote from "../../assets/images/icons/halfnote.svg";
+import musicnote1 from "../../assets/images/icons/musicnote.svg";
+import musicnote2 from "../../assets/images/icons/musicnote2.svg";
+import musicnote3 from "../../assets/images/icons/musicnote3.svg";
+import ribbon2 from "../../assets/images/icons/ribbon2.svg";
+import firework from "../../assets/images/icons/firework.svg";
+import candy from "../../assets/images/icons/candy.svg";
+import bgbuilding from "../../assets/images/icons/backbuildings.svg";
+import spec1 from "../../assets/images/icons/spec1.svg";
+import spec2 from "../../assets/images/icons/spec2.svg";
+import spec3 from "../../assets/images/icons/spec3.svg";
+import clouds from "../../assets/images/icons/clouds.svg";
+import star from "../../assets/images/icons/star.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,8 +35,8 @@ export default function HeroSection() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // Floating animations for decorations
-    gsap.to(".float-balloon", {
+    // Floating animations for decorations - scoped to hero section
+    gsap.to(".hero-section .float-balloon", {
       y: -15,
       duration: 2.5,
       ease: "power1.inOut",
@@ -44,7 +44,7 @@ export default function HeroSection() {
       yoyo: true,
     });
 
-    gsap.to(".float-star", {
+    gsap.to(".hero-section .float-star", {
       y: -10,
       x: 5,
       rotation: 5,
@@ -54,7 +54,7 @@ export default function HeroSection() {
       yoyo: true,
     });
 
-    gsap.to(".float-mabkhara", {
+    gsap.to(".hero-section .float-mabkhara", {
       y: -8,
       rotation: 3,
       duration: 2,
@@ -67,10 +67,6 @@ export default function HeroSection() {
   return (
     <section ref={sectionRef} className="hero-section">
       <div className="hero-content">
-        {/* Main Logo - Top */}
-        <div className="hero-logo-top">
-          <img src={eidLogoMain} alt="عيد الفطر 2026" className="hero-main-logo" />
-        </div>
 
         {/* Hero Scene - Bottom */}
         <div className="hero-scene-bottom">
@@ -88,7 +84,7 @@ export default function HeroSection() {
               </Parallax>
             </div>
             <div className="layer dallah">
-              <Parallax speed={2} translateY={[5, -2]}>
+              <Parallax speed={2} translateX={[10,0]} translateY={[5, -2]}>
                 <img src={dallah} alt="" />
               </Parallax>
             </div>
@@ -97,12 +93,12 @@ export default function HeroSection() {
                 <img src={money} alt="" />
               </Parallax>
             </div>
-            <div className="layer mabkhara">
+            <div className="layer mabkhara float-mabkhara">
               <Parallax speed={2} translateY={[6, -3]}>
                 <img src={mabkhara} alt="" />
               </Parallax>
             </div>
-            <div className="layer balloons">
+            <div className="layer balloons float-balloon">
               <Parallax speed={2} translateX={[10, 0]} translateY={[12, 0]}>
                 <img src={balloons} alt="" />
               </Parallax>
@@ -188,7 +184,7 @@ export default function HeroSection() {
               <img src={clouds} alt="" />
             </Parallax>
           </div>
-          <div className="layer star">
+          <div className="layer star float-star">
             <Parallax speed={2} scale={[0, 1]}>
               <img src={star} alt="" />
             </Parallax>
