@@ -11,7 +11,6 @@ import { useParallaxController } from "react-scroll-parallax";
 
 function App() {
   const GA_MEASUREMENT_ID = ENV.GA;
-  let initialized = false;
   const { i18n } = useTranslation();
   const { lang } = useParams();
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -19,16 +18,9 @@ function App() {
   const { trackPageView } = GoogleAnalytics();
   const parallaxController = useParallaxController();
 
-  function initializeGA() {
-    if (!initialized) {
-      ReactGA.initialize(GA_MEASUREMENT_ID);
-      initialized = true;
-    }
-  }
-
   useEffect(() => {
-    initializeGA();
-  }, []);
+    ReactGA.initialize(GA_MEASUREMENT_ID);
+  }, [GA_MEASUREMENT_ID]);
 
   useEffect(() => {
     trackPageView(location.pathname);

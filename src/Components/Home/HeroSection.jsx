@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Hero assets
 import ribbon from "../../assets/images/icons/ribbon1.svg";
-import eidLogoMain from "../../assets/images/icons/eidlogomain.svg";
 import people from "../../assets/images/icons/people.svg";
 import oud from "../../assets/images/icons/oud.svg";
 import dallah from "../../assets/images/icons/dallah.svg";

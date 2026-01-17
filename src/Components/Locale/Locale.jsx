@@ -15,7 +15,7 @@ export default function Local() {
             i18n.changeLanguage(ENV.APP_LANG)
             navigate(ENV.APP_LANG)
         }
-    }, [lang])
+    }, [lang, i18n, navigate])
     
   return (
     <div>
