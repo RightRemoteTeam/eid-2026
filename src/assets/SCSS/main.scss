@@ -717,23 +717,37 @@
 
       .halfnote {
         left: 26%;
-        top: 20%;
+        top: 15%;
         width: 6%;
         z-index: 5;
       }
 
       // Gift Boxes - Right Side
       .giftbox1 {
-        right: 15%;
-        top: 25%;
-        width: 14%;
+        right: 0%;
+        top: -10%;
+        width: 23%;
         z-index: 5;
-        rotate: 10deg;
+        rotate: -10deg;
       }
 
       .giftbox2 {
-        right: 12%;
-        top: 40%;
+        right: 3%;
+        top: 17%;
+        width: 17%;
+        z-index: 5;
+        rotate: 0deg;
+      }
+      .giftbox3 {
+        right: 7%;
+        top: 36%;
+        width: 15%;
+        z-index: 5;
+        rotate: -8deg;
+      }
+      .giftbox4 {
+        right: 14%;
+        top: 53%;
         width: 12%;
         z-index: 5;
         rotate: -8deg;
@@ -741,17 +755,22 @@
 
       // Dallah - Bottom
       .dallah {
-        left: 20%;
-        top: 65%;
-        width: 30%;
+        left: 17%;
+        top: 32%;
+        width: 20%;
         z-index: 5;
+        transform: scaleX(-1);
+        rotate: -10deg;
       }
 
       .dallah2 {
         right: 22%;
-        top: 68%;
-        width: 11%;
-        z-index: 5;
+        top: 56%;
+        width: 17%;
+        z-index: 7;
+        transform: scaleX(-1);
+        rotate: 20deg;
+
       }
 
       // Stars - Scattered

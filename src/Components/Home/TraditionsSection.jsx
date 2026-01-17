@@ -30,6 +30,15 @@ export default function TraditionsSection() {
       repeat: -1,
       yoyo: true,
     });
+    gsap.to(".traditions-section .float-star2", {
+      y: -10,
+      x: 5,
+      rotation: 10,
+      duration: 6,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
   }, []);
 
   return (
@@ -77,10 +86,21 @@ export default function TraditionsSection() {
               <img src={giftBox} alt="" />
             </Parallax>
           </div>
+          <div className="layer giftbox3">
+            <Parallax speed={2} translateY={[8, -4]} rotate={[0, -15]}>
+              <img src={giftBox} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer giftbox4">
+            <Parallax speed={2} translateY={[8, -4]} rotate={[0, -15]}>
+              <img src={giftBox} alt="" />
+            </Parallax>
+          </div>
+
 
           {/* Dallah - Bottom */}
           <div className="layer dallah">
-            <Parallax speed={2} translateY={[5, -2]}>
+            <Parallax speed={2} translateY={[5, -2]} rotate={[0,10]}>
               <img src={dallah} alt="" />
             </Parallax>
           </div>
@@ -94,7 +114,7 @@ export default function TraditionsSection() {
           <div className="layer star1 float-star">
             <img src={star} alt="" />
           </div>
-          <div className="layer star2 float-star">
+          <div className="layer star2 float-star2">
             <img src={star} alt="" />
           </div>
 
