@@ -370,6 +370,7 @@
       width: 9%;
       z-index: 4;
     }
+
     .spec4 {
       right: 2%;
       top: 100%;
@@ -377,12 +378,14 @@
       z-index: 4;
       transform: rotate(230deg);
     }
+
     .spec2 {
       left: 3%;
       top: 98%;
       width: 6%;
       z-index: 4;
     }
+
     .spec3 {
       right: 17%;
       top: 104%;
@@ -396,6 +399,7 @@
       width: 1.5%;
       z-index: 5;
     }
+
     .star2 {
       left: 9%;
       top: 40%;
@@ -415,91 +419,356 @@
 
 
 // Content Sections
-.content-section {
+// Greeting Section
+.greeting-section {
   position: relative;
-  padding: 80px 0;
+  padding: 250px 0;
+  min-height: 200vh;
   background-color: $bg-main;
-
-  .section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-}
-
-// Text Frame (Green decorative frame with text)
-.text-frame {
-  position: relative;
-  padding: 60px 40px;
   text-align: center;
 
-  .frame-bg {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 839px;
-    height: 100%;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+  @media (max-width: $bp-tab) {
+    padding: 100px 20px 0;
+    min-height: 100vh;
   }
 
-  .frame-text {
-    position: relative;
-    z-index: 1;
-    font-size: 2.4rem;
-    line-height: 1.8;
-    color: $text-green;
-    font-weight: 500;
-
-    @media (max-width: $bp-tab) {
-      font-size: 1.8rem;
-    }
-
-    @media (max-width: $bp-small) {
-      font-size: 1.4rem;
-    }
-
-    &.text-cyan {
-      color: $text-cyan;
-    }
-
-    &.text-yellow {
-      color: $text-yellow;
-    }
+  @media (max-width: $bp-mobile) {
+    padding: 80px 20px 0;
+    min-height: 90vh;
   }
-}
-
-// Greeting Box
-.greeting-box {
-  padding: 20px;
-  border-radius: 0;
-  text-align: center;
-  position: relative;
 
   .greeting-frame {
     width: 100%;
-    max-width: 277px;
-    margin: 0 auto 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     img {
-      width: 100%;
+      width: 300px;
+      height: auto;
+      display: block;
     }
   }
 
-  .greeting-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: $primary-cyan;
-    line-height: 1.2;
+  .greeting-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
 
     @media (max-width: $bp-tab) {
-      font-size: 2.5rem;
+      margin-top: 40px;
+    }
+
+    .greeting-content-block {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/ 9;
+      overflow: visible;
+
+      @media (max-width: $bp-tab) {
+        aspect-ratio: 16 / 10;
+      }
+
+      @media (max-width: $bp-mobile) {
+        aspect-ratio: 1 / 1;
+      }
+
+      .layer {
+        position: absolute;
+        inset: auto;
+        width: auto;
+        height: auto;
+        max-width: none;
+        user-select: none;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .building {
+        left: 50%;
+        transform: translateX(-40%);
+        top: 18%;
+        width: 50%;
+        z-index: 2;
+      }
+
+      .road {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 45%;
+        width: 100%;
+        z-index: 3;
+      }
+
+      .firework {
+        right: 7%;
+        top: 3%;
+        width: 14%;
+        z-index: 0;
+      }
+
+      .badge2 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 87%;
+        width: 45%;
+        z-index: 6;
+      }
+
+      .wallet {
+        left: 15%;
+        top: 106%;
+        width: 17%;
+        z-index: 7;
+      }
+
+      .balloons {
+        right: 26%;
+        top: 19%;
+        width: 17%;
+        z-index: 1;
+      }
+
+      .makhbara {
+        right: 12%;
+        top: 70%;
+        width: 20%;
+        z-index: 7;
+        transform: rotate(-60deg);
+      }
+
+      .star1 {
+        left: 27%;
+        top: 50%;
+        width: 2.5%;
+        z-index: 1;
+      }
+
+      .star2 {
+        right: 20%;
+        top: 39%;
+        width: 2.5%;
+        z-index: 1;
+      }
+
+      // Candy Trail
+      .candy1 {
+        left: 9%;
+        top: 20%;
+        width: 7%;
+        z-index: 4;
+        rotate: -10deg;
+      }
+
+      .candy2 {
+        left: 7%;
+        top: 27%;
+        width: 10%;
+        z-index: 4;
+        rotate: -30deg;
+      }
+
+      .candy3 {
+        left: 7%;
+        top: 35%;
+        width: 12%;
+        z-index: 4;
+        rotate: -50deg;
+      }
+
+      .candy4 {
+        left: 8%;
+        top: 45%;
+        width: 15%;
+        z-index: 4;
+        rotate: -40deg;
+      }
+
+      .candy5 {
+        left: 10%;
+        top: 55%;
+        width: 18%;
+        z-index: 5;
+        rotate: -60deg;
+      }
+    }
+  }
+}
+
+// Traditions Section
+.traditions-section {
+  position: relative;
+  padding: 0 0;
+  min-height: 100vh;
+  background-color: $bg-main;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $bp-tab) {
+    padding: 100px 20px 0;
+    min-height: 100vh;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 80px 20px 0;
+    min-height: 90vh;
+  }
+
+  .traditions-frame {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 300px;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .traditions-content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    @media (max-width: $bp-tab) {
+      margin-top: 40px;
+    }
+
+    .traditions-content-block {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16/9;
+      overflow: visible;
+
+      .layer {
+        position: absolute;
+        inset: auto;
+        width: auto;
+        height: auto;
+        max-width: none;
+        user-select: none;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      // Top Card
+      .card1 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -10%;
+        width: 17%;
+        z-index: 6;
+      }
+
+      // Center Badge
+      .badge3 {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        width: 45%;
+        z-index: 6;
+      }
+
+      // Firework - Top Left
+      .firework {
+        left: 7%;
+        top: 0%;
+        width: 16%;
+        z-index: 5;
+      }
+
+      // Music Notes - Left Side
+      .musicnote1 {
+        right: 32%;
+        top: 15%;
+        width: 6%;
+        z-index: 7;
+      }
+
+      .musicnote2 {
+        left: 30%;
+        top: 88%;
+        width:2%;
+        z-index: 5;
+        rotate: 20deg;
+      }
+
+      .halfnote {
+        left: 26%;
+        top: 20%;
+        width: 6%;
+        z-index: 5;
+      }
+
+      // Gift Boxes - Right Side
+      .giftbox1 {
+        right: 15%;
+        top: 25%;
+        width: 14%;
+        z-index: 5;
+        rotate: 10deg;
+      }
+
+      .giftbox2 {
+        right: 12%;
+        top: 40%;
+        width: 12%;
+        z-index: 5;
+        rotate: -8deg;
+      }
+
+      // Dallah - Bottom
+      .dallah {
+        left: 20%;
+        top: 65%;
+        width: 30%;
+        z-index: 5;
+      }
+
+      .dallah2 {
+        right: 22%;
+        top: 68%;
+        width: 11%;
+        z-index: 5;
+      }
+
+      // Stars - Scattered
+      .star1 {
+        left: 33%;
+        top: 8%;
+        width: 3%;
+        z-index: 4;
+      }
+
+      .star2 {
+        right: 34%;
+        top: 8%;
+        width: 3%;
+        z-index: 4;
+      }
+
     }
   }
 }

@@ -1,5 +1,6 @@
 import HeroSection from "../Components/Home/HeroSection";
-import DiscoverSection from "../Components/Home/DiscoverSection";
+import GreetingSection from "../Components/Home/GreetingSection";
+import TraditionsSection from "../Components/Home/TraditionsSection";
 
 export default function Home() {
   return (
@@ -7,8 +8,11 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Discover Section */}
-      <DiscoverSection />
+      {/* Greeting Section */}
+      <GreetingSection />
+
+      {/* Traditions Section */}
+      <TraditionsSection />
     </>
   );
 }
