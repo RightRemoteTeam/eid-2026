@@ -1,8 +1,6 @@
 import React from "react";
 
 export const ToggleThemeButton = ({ theme, toggleTheme }) => {
-  const isDarkMode = theme === "dark-mode";
-
   return (
     <div className={`toggle-button ${theme}`} onClick={toggleTheme}>
       <img src={""} className="icon" alt="Toggle icon" />
