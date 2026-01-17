@@ -1014,6 +1014,185 @@
   }
 }
 
+
+// Categories Story Section
+
+.categories-story-section {
+  position: relative;
+  padding: 0 0;
+  min-height: 100vh;
+  background-color: $bg-main;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $bp-tab) {
+    padding: 100px 20px 0;
+    min-height: 100vh;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 80px 20px 0;
+    min-height: 90vh;
+  }
+
+  .categories-story-section-content {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    @media (max-width: $bp-tab) {
+      margin-top: 40px;
+    }
+
+    .categories-story-section-content-block {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16/9;
+      overflow: visible;
+
+      .layer {
+        position: absolute;
+        inset: auto;
+        width: auto;
+        height: auto;
+        max-width: none;
+        user-select: none;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .categories-cards {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        z-index: 6;
+
+        img {
+          cursor: pointer;
+          min-width: 230px;
+          width: 14vw;
+          max-width: 280px;
+        }
+      }
+
+      // Sweet Bowl Trail
+      .sweetbowl-1 {
+        position: absolute;
+        left: 9%;
+        top: 20%;
+        width: 7%;
+        z-index: 4;
+        rotate: 30deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -2%;
+          width: 10%;
+        }
+      }
+
+      .sweetbowl-2 {
+        position: absolute;
+        left: 7%;
+        top: 27%;
+        width: 10%;
+        z-index: 4;
+        rotate: 40deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -4%;
+          width: 14%;
+        }
+      }
+
+      .sweetbowl-3 {
+        position: absolute;
+        left: 7%;
+        top: 35%;
+        width: 12%;
+        z-index: 4;
+        rotate: 20deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -5%;
+          width: 17%;
+        }
+      }
+
+      .sweetbowl-4 {
+        position: absolute;
+        left: 8%;
+        top: 45%;
+        width: 15%;
+        z-index: 4;
+        rotate: 11deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -4%;
+          width: 21%;
+        }
+      }
+
+      .sweetbowl-5 {
+        position: absolute;
+        left: 10%;
+        top: 55%;
+        width: 18%;
+        z-index: 5;
+        rotate: -20deg;
+
+        @media (max-width: $bp-mobile) {
+          left: -2%;
+          width: 25%;
+        }
+      }
+
+      .eldiyah-message {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        width: 45%;
+        z-index: 6;
+      }
+
+      .half-note {
+        right: 15%;
+        top: 45%;
+        width: 7%;
+        z-index: 5;
+      }
+
+      .music-note {
+        left: 24%;
+        top: 75%;
+        width: 5%;
+        z-index: 5;
+      }
+
+      .oud {
+        right: 14%;
+        top: 69%;
+        width: 25%;
+        z-index: 6;
+        rotate: -20deg;
+      }
+    }
+  }
+}
+
 // CTA Button
 .cta-button {
   display: inline-flex;

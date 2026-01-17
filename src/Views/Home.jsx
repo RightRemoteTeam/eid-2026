@@ -1,6 +1,7 @@
 import HeroSection from "../Components/Home/HeroSection";
 import GreetingSection from "../Components/Home/GreetingSection";
 import TraditionsSection from "../Components/Home/TraditionsSection";
+import CategoriesStorySection from "../Components/Home/CategoriesStorySection";
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
 
       {/* Traditions Section */}
       <TraditionsSection />
+
+      {/* Categories Story Section */}
+      <CategoriesStorySection />
     </>
   );
 }
