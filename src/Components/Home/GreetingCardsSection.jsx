@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 // Assets
 import dallah from "../../assets/images/icons/dallah.svg";
 import dallah2 from "../../assets/images/icons/dallah2.svg";
-import greencard from "../../assets/images/cards/greencard.svg";
-import orangecard from "../../assets/images/cards/orangecard.svg";
+import greencard from "../../assets/images/cards/greencard.png";
+import orangecard from "../../assets/images/cards/orangecard.png";
 import btn1 from "../../assets/images/cards/BTN_1.svg";
 import btn2 from "../../assets/images/cards/BTN_2.svg";
 

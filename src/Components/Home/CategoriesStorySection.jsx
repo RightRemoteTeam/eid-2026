@@ -94,63 +94,73 @@ export default function CategoriesStorySection() {
       <section className="categories-story-section" ref={sectionRef}>
         <div className="categories-story-section-content">
           <div className="categories-story-section-content-block">
-            <div className="categories-cards" dir={lang === "ar" ? "rtl" : "ltr"}>
-              <div
-                onClick={() => {
-                  triggerEvent(
-                    "Eid_Corporate_Publications_2026_click",
-                    "link_click",
-                  );
-                  setModalData(
-                    ENV.EID_CORPORATE_PUBLICATIONS,
-                    corporatePublicationThumbNail,
-                    "Eid_Corporate_Publications_2026_download",
-                  );
-                }}
-              >
+            <div className="category-content-wrapper">
+              <div className="categories-cards" dir={lang === "ar" ? "rtl" : "ltr"}>
+                <div
+                  onClick={() => {
+                    triggerEvent(
+                      "Eid_Corporate_Publications_2026_click",
+                      "link_click",
+                    );
+                    setModalData(
+                      ENV.EID_CORPORATE_PUBLICATIONS,
+                      corporatePublicationThumbNail,
+                      "Eid_Corporate_Publications_2026_download",
+                    );
+                  }}
+                >
+                  <img
+                    src={corporatePublicationCardAr}
+                    alt="Corporate Publication"
+                  />
+                </div>
+                <div
+                  onClick={() => {
+                    triggerEvent(
+                      "Eid_Home_Publications_2026_click",
+                      "link_click",
+                    );
+                    setModalData(
+                      ENV.EID_HOME_PUBLICATIONS,
+                      homePublicationCardThumbNail,
+                      "Eid_Home_Publications_2026_download",
+                    );
+                  }}
+                >
+                  <img src={homePublicationCardAr} alt="Home Publication" />
+                </div>
+                <div
+                  onClick={() => {
+                    triggerEvent("Eid_Greeting_Cards_2026_click", "link_click");
+                    setModalData(
+                      ENV.EID_GREETING_CARDS,
+                      greetingCardThumbNail,
+                      "Eid_Greeting_Cards_2026_download",
+                    );
+                  }}
+                >
+                  <img src={greetingCardAr} alt="Greeting Cards" />
+                </div>
+                <div
+                  onClick={() => {
+                    triggerEvent("Eid_Activity_Booklet_2026_click", "link_click");
+                    setModalData(
+                      ENV.EID_ACTIVITY_BOOKLET,
+                      eidActivityBookletThumbNail,
+                      "Eid_Activity_Booklet_2026_download",
+                    );
+                  }}
+                >
+                  <img src={eidActivityBookletAr} alt="Eid Activity Booklet" />
+                </div>
+              </div>
+
+              <div className="category-badge-wrapper">
                 <img
-                  src={corporatePublicationCardAr}
-                  alt="Corporate Publication"
+                  src={eldiyahMessage}
+                  alt="Eldiyah Message"
+                  className="eldiyah-message"
                 />
-              </div>
-              <div
-                onClick={() => {
-                  triggerEvent(
-                    "Eid_Home_Publications_2026_click",
-                    "link_click",
-                  );
-                  setModalData(
-                    ENV.EID_HOME_PUBLICATIONS,
-                    homePublicationCardThumbNail,
-                    "Eid_Home_Publications_2026_download",
-                  );
-                }}
-              >
-                <img src={homePublicationCardAr} alt="Home Publication" />
-              </div>
-              <div
-                onClick={() => {
-                  triggerEvent("Eid_Greeting_Cards_2026_click", "link_click");
-                  setModalData(
-                    ENV.EID_GREETING_CARDS,
-                    greetingCardThumbNail,
-                    "Eid_Greeting_Cards_2026_download",
-                  );
-                }}
-              >
-                <img src={greetingCardAr} alt="Greeting Cards" />
-              </div>
-              <div
-                onClick={() => {
-                  triggerEvent("Eid_Activity_Booklet_2026_click", "link_click");
-                  setModalData(
-                    ENV.EID_ACTIVITY_BOOKLET,
-                    eidActivityBookletThumbNail,
-                    "Eid_Activity_Booklet_2026_download",
-                  );
-                }}
-              >
-                <img src={eidActivityBookletAr} alt="Eid Activity Booklet" />
               </div>
             </div>
 
@@ -180,11 +190,7 @@ export default function CategoriesStorySection() {
               </Parallax>
             </div>
 
-            <img
-              src={eldiyahMessage}
-              alt="Eldiyah Message"
-              className="layer eldiyah-message"
-            />
+
 
             <div className="layer music-note">
               <Parallax speed={2} rotate={[0, -8]}>

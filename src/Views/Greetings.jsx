@@ -57,7 +57,7 @@ const Greetings = () => {
     setNameError(!nameValid);
     setMessageError(!messageValid);
 
-    if (cardValid && nameValid && messageValid) {
+    if (cardValid && nameValid) {
       const cardNumber = selectedCard + 1;
       const stateData = { card: cardNumber, name, message };
       navigate(`/${lang}/preview`, { state: stateData });

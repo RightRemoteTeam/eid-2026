@@ -37,6 +37,8 @@ export default function Preview() {
   };
 
   useEffect(() => {
+    console.log("Generating preview for card:", card);
+
     setPageLoaded(false);
     setImage(`${ENV.APP_URL}/cards/white-background.jpeg`);
     setError(null);
@@ -53,6 +55,7 @@ export default function Preview() {
         }),
       })
         .then((response) => {
+          console.log("Response received from server.",response);
           if (response.ok) {
             return response.json();
           } else {
@@ -107,7 +110,7 @@ export default function Preview() {
   };
 
   const download = () => {
-    triggerEvent("Eid_greeting_download_2025", "link_click");
+    triggerEvent("Eid_greeting_download_2026", "link_click");
     saveAs(image, filename);
   };
 
@@ -130,7 +133,7 @@ export default function Preview() {
             to={`/${lang}/greetings`}
             className="btn btn-primary download-btn"
             onClick={() => {
-              triggerEvent("Eid_greetings_2025", "link_click");
+              triggerEvent("Eid_greetings_2026", "link_click");
             }}
           >
             {t("Preview.edit")}

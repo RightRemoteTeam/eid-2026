@@ -45,10 +45,11 @@
   }
 
   .social-icons {
-    display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
+    display: none;
+
 
     img {
       width: 50px;

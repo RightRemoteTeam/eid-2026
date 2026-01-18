@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
-import card1 from "../../assets/images/cards/card1.svg";
+import card1 from "../../assets/images/cards/card1.png";
 import badge3 from "../../assets/images/cards/badge3.svg";
 import firework from "../../assets/images/icons/firework.svg";
 import giftBox from "../../assets/images/icons/giftbox.svg";

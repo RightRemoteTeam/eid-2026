@@ -97,7 +97,7 @@ function App() {
         }`}
       >
         <Navbar />
-        <Outlet />
+        <Outlet context={[pageLoaded, setPageLoaded]} />
         <Footer />
       </div>
     </>
