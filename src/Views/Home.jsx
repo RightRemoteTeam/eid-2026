@@ -18,7 +18,7 @@ export default function Home() {
       <TraditionsSection />
 
       {/* Categories Story Section */}
-      {/* <CategoriesStorySection /> */}
+      <CategoriesStorySection />
 
       {/* Greeting Cards Section */}
       <GreetingCardsSection />
