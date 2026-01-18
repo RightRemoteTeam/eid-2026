@@ -1,5 +1,6 @@
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
+import { useParams } from "react-router-dom";
 
 // Assets
 import dallah from "../../assets/images/icons/dallah.svg";
@@ -10,6 +11,7 @@ import btn1 from "../../assets/images/cards/BTN_1.svg";
 import btn2 from "../../assets/images/cards/BTN_2.svg";
 
 export default function GreetingCardsSection() {
+  const { lang } = useParams();
   return (
     <section className="greeting-cards-section">
       <div className="greeting-cards-content">
@@ -26,7 +28,7 @@ export default function GreetingCardsSection() {
         {/* Cards and Buttons Wrapper */}
         <div className="cards-buttons-wrapper">
           {/* Cards Row */}
-          <div className="cards-container">
+          <div className="cards-container" dir={lang === "ar" ? "rtl" : "ltr"}>
             <div className="card-wrapper">
               <img src={greencard} alt="Green Card" className="card green-card" />
             </div>
@@ -36,7 +38,7 @@ export default function GreetingCardsSection() {
           </div>
 
           {/* Buttons Row */}
-          <div className="buttons-row">
+          <div className="buttons-row" dir={lang === "ar" ? "rtl" : "ltr"}>
             <img src={btn1} alt="أضف معايدتك وشاركها" className="card-btn btn-1" />
             <p className="cards-text">
               تحميل بطاقات المعايدة
