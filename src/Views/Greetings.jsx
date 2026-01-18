@@ -82,7 +82,7 @@ const Greetings = () => {
               />
               <label htmlFor={`radio-${index}`} className="card-label">
                 <img
-                  src={`${ENV.APP_URL}/cards/g${index + 1}.png`}
+                  src={`${ENV.APP_URL}/api/cards/g${index + 1}.png`}
                   alt={`Card ${index + 1}`}
                   className="card-image"
                 />

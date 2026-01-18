@@ -1,7 +1,5 @@
 export default Object.freeze({
 
-    // APP_URL: 'https://eid.gea.gov.sa',
-    APP_URL: 'https://eid25.stocker.team/2026',
     APP_LANG: 'ar', //ar, en
     EID_EVENT: "https://enjoy.sa/",
     EID_EVENT_EN: "https://enjoy.sa/en",
@@ -17,8 +15,11 @@ export default Object.freeze({
     EID_GREETING_CARDS:"./files/Eid_Greeting_Cards.zip",
 
     GA:"G-QY2LL1BM4R",
-    // PHP_SERVER: "/api/"
+    
+    APP_URL: '.',
+    PHP_SERVER: "/api/"
     
     //FOR TESTING LOCATLLY USE THE BELOW PHP SERVER
-    PHP_SERVER: "https://eid25.stocker.team/2026/api/"
+    //PHP_SERVER: "https://eid25.stocker.team/2026/api/"
+    //APP_URL: 'https://eid25.stocker.team/2026_VERSION',
 });
