@@ -88,7 +88,7 @@ function App() {
     <>
       {!pageLoaded && (
         <div className={`preLoader ${pageLoaded ? "hidden" : "visible"}`}>
-          <div className="spinner"></div>
+          <img src="/loader/Loading.png" alt="Loading" className="loader-image" />
         </div>
       )}
       <div

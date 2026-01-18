@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
 import { gsap } from "gsap";
@@ -35,7 +36,10 @@ export default function CategoriesStorySection() {
   const [pdfthumbnail, setPdfthumbnail] = useState("");
   const [downloadLink, setDownloadLink] = useState("");
   const [targetEventName, setTargetEventName] = useState("");
+  //const isMobile = useIsMobile();
 
+  //const { t } = useTranslation();
+  const { lang } = useParams();
   const { trackEvent } = GoogleAnalytics();
   const triggerEvent = (event_label, event_category) => {
     // console.log("event_label:", event_label);
@@ -90,7 +94,7 @@ export default function CategoriesStorySection() {
       <section className="categories-story-section" ref={sectionRef}>
         <div className="categories-story-section-content">
           <div className="categories-story-section-content-block">
-            <div className="categories-cards">
+            <div className="categories-cards" dir={lang === "ar" ? "rtl" : "ltr"}>
               <div
                 onClick={() => {
                   triggerEvent(
