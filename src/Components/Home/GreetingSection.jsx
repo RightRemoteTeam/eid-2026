@@ -4,6 +4,7 @@ import building from "../../assets/images/icons/building.svg";
 import road from "../../assets/images/icons/road.svg";
 import firework from "../../assets/images/icons/firework.svg";
 import badge2 from "../../assets/images/cards/badge2.svg";
+import badge2_en from "../../assets/images/cards/badge2_en.svg";
 import wallet from "../../assets/images/icons/wallet.svg";
 import balloons from "../../assets/images/icons/balloons.svg";
 import makhbara from "../../assets/images/icons/mabkhara.svg";
@@ -15,11 +16,13 @@ import cloudright from "../../assets/images/icons/cloud-right.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import { useParams } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function GreetingSection() {
-    const sectionRef = useRef(null);
+  const sectionRef = useRef(null);
+  const { lang } = useParams();
 
   useEffect(() => {
     // Floating animations for decorations - scoped to greeting section
@@ -88,7 +91,7 @@ export default function GreetingSection() {
               <img src={firework} alt="" />
             </Parallax>
           </div>
-          <img src={badge2} alt="" className="layer badge2" />
+          <img src={(lang == "ar") ? badge2 : badge2_en } alt="" className="layer badge2" />
           <div className="layer wallet">
             <Parallax speed={2} translateY={[5, -3]} rotate={[0, 25]}>
               <img src={wallet} alt="" />

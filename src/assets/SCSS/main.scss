@@ -76,6 +76,10 @@
     transition: all 0.3s ease;
     font-family: $font-primary;
 
+     :dir(ltr){
+      font-family: $font-secondary;
+    }
+
     span {
       display: inline-block;
     }
