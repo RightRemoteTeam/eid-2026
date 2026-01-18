@@ -135,7 +135,7 @@ export default function HeroSection() {
               </Parallax>
             </div>
             <div className="layer dallah2">
-              <Parallax speed={2} rotate={[0, 20]} translateY={[5, -2]}>
+              <Parallax speed={2} rotate={[0, -20]} translateY={[10, -10]}>
                 <img src={dallah2} alt="" />
               </Parallax>
             </div>
