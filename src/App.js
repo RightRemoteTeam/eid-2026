@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./assets/SCSS/main.scss";
 import { Outlet, useParams, useLocation } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import { checkLang } from "./Components/Functions";
 import { useTranslation } from "react-i18next";
@@ -95,6 +96,7 @@ function App() {
           pageLoaded ? "visible" : "invisible"
         }`}
       >
+        <Navbar />
         <Outlet />
         <Footer />
       </div>

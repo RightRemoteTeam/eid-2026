@@ -22,19 +22,42 @@ export default function TraditionsSection() {
   useEffect(() => {
     // Floating animations for decorations - scoped to traditions section
     gsap.to(".traditions-section .float-star", {
-      y: -10,
-      x: 5,
-      rotation: 5,
-      duration: 3,
+      scale: 1.3,
+      opacity: 0.7,
+      duration: 1.5,
       ease: "power1.inOut",
       repeat: -1,
       yoyo: true,
     });
     gsap.to(".traditions-section .float-star2", {
-      y: -10,
-      x: 5,
-      rotation: 10,
-      duration: 6,
+      scale: 1.3,
+      opacity: 0.7,
+      duration: 1.8,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    // Wobble animations for music notes
+    gsap.to(".traditions-section .musicnote1", {
+      rotation: 15,
+      duration: 2,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    gsap.to(".traditions-section .musicnote2", {
+      rotation: -12,
+      duration: 2.5,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    gsap.to(".traditions-section .halfnote", {
+      rotation: -15,
+      duration: 2.2,
       ease: "power1.inOut",
       repeat: -1,
       yoyo: true,
