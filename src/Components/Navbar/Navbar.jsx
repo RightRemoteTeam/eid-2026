@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate, useLocation } from "react-router-dom";
 import { GoogleAnalytics } from "../GoogleAnalytics";
+import eidEventsLogo from "../../assets/images/logos/eid-events-logo.png";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -34,6 +35,9 @@ export default function Navbar() {
     <nav className="navbar">
       <div className={`language-switcher ${i18n.language === "en" ? "lang-en" : "lang-ar"}`}>
         <span onClick={handleLangChange}>{t("header.language")}</span>
+      </div>
+      <div className="navbar-logo">
+        <img src={eidEventsLogo} alt="Eid Events Logo" />
       </div>
     </nav>
   );

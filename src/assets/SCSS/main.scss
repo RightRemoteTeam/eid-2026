@@ -52,24 +52,17 @@
 
 // Navbar
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 100;
   padding: 30px 40px;
-  background: transparent;
-  transition: background 0.3s ease;
+  background: $bg-gradient-start;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
-  &.scrolled {
-    background: rgba($bg-gradient-start, 0.95);
-    backdrop-filter: blur(10px);
-  }
-
   .language-switcher {
+    position: absolute;
+    left: 40px;
     background: $color-white;
     border: 2px solid $primary-green-dark;
     border-radius: 25px;
@@ -79,7 +72,6 @@
     color: $primary-green-dark;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: inline-block;
     font-family: $font-primary;
 
     span {
@@ -94,6 +86,22 @@
     @media (max-width: $bp-small) {
       padding: 6px 15px;
       font-size: 12px;
+      left: 20px;
+    }
+  }
+
+  .navbar-logo {
+    img {
+      height: 70px;
+      width: auto;
+
+      @media (max-width: $bp-tab) {
+        height: 60px;
+      }
+
+      @media (max-width: $bp-small) {
+        height: 40px;
+      }
     }
   }
 
