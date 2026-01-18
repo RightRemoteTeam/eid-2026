@@ -36,8 +36,6 @@ export default function CategoriesStorySection() {
   const [downloadLink, setDownloadLink] = useState("");
   const [targetEventName, setTargetEventName] = useState("");
 
-  const isMobile = useIsMobile();
-  const { lang } = useParams();
   const { trackEvent } = GoogleAnalytics();
   const triggerEvent = (event_label, event_category) => {
     // console.log("event_label:", event_label);

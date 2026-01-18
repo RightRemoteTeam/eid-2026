@@ -1,6 +1,7 @@
 import HeroSection from "../Components/Home/HeroSection";
 import GreetingSection from "../Components/Home/GreetingSection";
 import TraditionsSection from "../Components/Home/TraditionsSection";
+import GreetingCardsSection from "../Components/Home/GreetingCardsSection";
 import CategoriesStorySection from "../Components/Home/CategoriesStorySection";
 
 export default function Home() {
@@ -17,6 +18,9 @@ export default function Home() {
 
       {/* Categories Story Section */}
       <CategoriesStorySection />
+
+      {/* Greeting Cards Section */}
+      <GreetingCardsSection />
     </>
   );
 }
