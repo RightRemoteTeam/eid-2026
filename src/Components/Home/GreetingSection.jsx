@@ -9,6 +9,8 @@ import balloons from "../../assets/images/icons/balloons.svg";
 import makhbara from "../../assets/images/icons/mabkhara.svg";
 import star from "../../assets/images/icons/star.svg";
 import candy from "../../assets/images/icons/candy.svg";
+import cloudleft from "../../assets/images/icons/cloud-left.svg";
+import cloudright from "../../assets/images/icons/cloud-right.svg";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -58,6 +60,16 @@ export default function GreetingSection() {
           <div className="layer building">
             <Parallax speed={2} translateY={[5, -5]}>
               <img src={building} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer cloud-left">
+            <Parallax speed={2} translateX={[5, -5]}>
+              <img src={cloudleft} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer cloud-right">
+            <Parallax speed={2} translateX={[20, 0]}>
+              <img src={cloudright} alt="" />
             </Parallax>
           </div>
           <img src={road} alt="" className="layer road" />
