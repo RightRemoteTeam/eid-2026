@@ -31,13 +31,23 @@ export default function GreetingSection() {
       yoyo: true,
     });
 
-    gsap.to(".greeting-section .float-star", {
+    gsap.to(".greeting-section .star1", {
       scale: 1.3,
       opacity: 0.7,
       duration: 1.5,
       ease: "power1.inOut",
       repeat: -1,
       yoyo: true,
+    });
+
+    gsap.to(".greeting-section .star2", {
+      scale: 1.3,
+      opacity: 0.7,
+      duration: 1.8,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+      delay: 0.5,
     });
 
     gsap.to(".greeting-section .float-mabkhara", {
