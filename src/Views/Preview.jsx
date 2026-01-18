@@ -40,7 +40,7 @@ export default function Preview() {
     console.log("Generating preview for card:", card);
 
     setPageLoaded(false);
-    setImage(`${ENV.APP_URL}/cards/white-background.jpeg`);
+    setImage(`${ENV.APP_URL}/api/cards/dark-mode.jpeg`);
     setError(null);
     try {
       fetch(`${ENV.PHP_SERVER}`, {

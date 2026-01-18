@@ -18,5 +18,7 @@ export default Object.freeze({
 
     GA:"G-QY2LL1BM4R",
     // PHP_SERVER: "/api/"
+    
+    //FOR TESTING LOCATLLY USE THE BELOW PHP SERVER
     PHP_SERVER: "https://eid25.stocker.team/2026/api/"
 });
