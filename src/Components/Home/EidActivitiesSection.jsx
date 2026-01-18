@@ -1,5 +1,6 @@
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
+import { useParams } from "react-router-dom";
 
 // Assets from icons
 import bowl from "../../assets/images/icons/bowl.svg";
@@ -11,9 +12,13 @@ import enjoy from "../../assets/images/icons/enjoy.svg";
 
 // Assets from cards
 import badge4 from "../../assets/images/cards/badge4.svg";
+import badge4_en from "../../assets/images/cards/badge4_en.svg";
+
 import btn3 from "../../assets/images/cards/BTN_3.svg";
 
 export default function EidActivitiesSection() {
+  const { lang } = useParams();
+
   return (
       <section className="eid-activities-section">
         <div className="eid-activities-content">
@@ -22,7 +27,7 @@ export default function EidActivitiesSection() {
             <Parallax speed={2} className="layer bowl-element">
               <img src={bowl} alt="Bowl" />
             </Parallax>
-            <img src={badge4} alt="Badge" className="badge-element" />
+            <img src={(lang ==="ar") ? badge4 : badge4_en} alt="Badge" className="badge-element" />
           </div>
 
           {/* Left Side - Oud and Music Note */}
@@ -40,14 +45,20 @@ export default function EidActivitiesSection() {
 
           {/* Center Content */}
           <div className="center-content">
-            <p className="activities-text">
-              وبعد غيبوبة العيد يتجدد الحماس وتجيك
-              <br />
-              طاقة العيد، وهنا.. يبيلك شي لفرحتك يزيد..
-              <br />
-              وين نروح وش نسوي؟
-            </p>
-
+            {lang === "en" ? (
+              <p className="activities-text">
+                After the Eid food coma,<br />the excitement is revived and<br />the energy of Eid returns, and now…<br />you need something to make<br />your happiness even greater.<br />Where do we go, what should we do?<br />Come join the Eid activities,<br />and the joy will multiply!
+              </p>
+            ) : (
+              <p className="activities-text">
+                وبعد غيبوبة العيد يتجدد الحماس وتجيك
+                <br />
+                طاقة العيد، وهنا.. يبيلك شي لفرحتك يزيد..
+                <br />
+                وين نروح وش نسوي؟
+              </p>
+            )}
+            
             {/* Button with Diamonds */}
             <div className="button-diamonds">
               <img src={diamonds} alt="Diamonds" className="diamonds-left" />

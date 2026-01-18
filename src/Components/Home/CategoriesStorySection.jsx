@@ -15,14 +15,21 @@ import homePublicationCardAr from "../../assets/images/cards/BTN_AR_home_publica
 import greetingCardAr from "../../assets/images/cards/BTN_AR_greeting_card.png";
 import eidActivityBookletAr from "../../assets/images/cards/BTN_AR_eid_activities_booklet.png";
 
+import corporatePublicationCardEn from "../../assets/images/cards/BTN_EN_corporate_publications.png";
+import homePublicationCardEn from "../../assets/images/cards/BTN_EN_home_publications.png";
+import greetingCardEn from "../../assets/images/cards/BTN_EN_greeting_card.png";
+import eidActivityBookletEn from "../../assets/images/cards/BTN_EN_eid_activities_booklet.png";
+
 // Thumbnail for Assets
-import corporatePublicationThumbNail from "../../assets/images/cards/BTN_AR_corporate_publications.png";
-import homePublicationCardThumbNail from "../../assets/images/cards/BTN_AR_home_publications.png";
-import greetingCardThumbNail from "../../assets/images/cards/BTN_AR_greeting_card.png";
-import eidActivityBookletThumbNail from "../../assets/images/cards/BTN_AR_eid_activities_booklet.png";
+import corporatePublicationThumbNail from "../../assets/images/downloadable/pdfThumbnail_company_decorations.png";
+import homePublicationCardThumbNail from "../../assets/images/downloadable/pdfThumbnail_house_decorations.png";
+import greetingCardThumbNail from "../../assets/images/downloadable//pdfThumbnail_greetingcards.png";
+import eidActivityBookletThumbNail from "../../assets/images/downloadable/pdfEidActivityBookletThumbnail.png";
 
 import sweetBowl from "../../assets/images/icons/bowl.svg";
 import eldiyahMessage from "../../assets/images/cards/eldiyah-message.svg";
+import eldiyahMessage_en from "../../assets/images/cards/eldiyah-message_en.svg";
+
 import musicNote from "../../assets/images/icons/musicnote.svg";
 import halfNote from "../../assets/images/icons/musicnote3.svg";
 import oud from "../../assets/images/icons/oud.svg";
@@ -110,7 +117,7 @@ export default function CategoriesStorySection() {
                   }}
                 >
                   <img
-                    src={corporatePublicationCardAr}
+                    src={ (lang === "ar") ? corporatePublicationCardAr : corporatePublicationCardEn }
                     alt="Corporate Publication"
                   />
                 </div>
@@ -127,7 +134,7 @@ export default function CategoriesStorySection() {
                     );
                   }}
                 >
-                  <img src={homePublicationCardAr} alt="Home Publication" />
+                  <img src={ (lang === "ar") ? homePublicationCardAr : homePublicationCardEn } alt="Home Publication" />
                 </div>
                 <div
                   onClick={() => {
@@ -139,7 +146,7 @@ export default function CategoriesStorySection() {
                     );
                   }}
                 >
-                  <img src={greetingCardAr} alt="Greeting Cards" />
+                  <img src={ (lang === "ar") ? greetingCardAr : greetingCardEn } alt="Greeting Cards" />
                 </div>
                 <div
                   onClick={() => {
@@ -151,13 +158,13 @@ export default function CategoriesStorySection() {
                     );
                   }}
                 >
-                  <img src={eidActivityBookletAr} alt="Eid Activity Booklet" />
+                  <img src={ (lang === "ar") ? eidActivityBookletAr : eidActivityBookletEn } alt="Eid Activity Booklet" />
                 </div>
               </div>
 
               <div className="category-badge-wrapper">
                 <img
-                  src={eldiyahMessage}
+                  src= {(lang ==="ar") ? eldiyahMessage : eldiyahMessage_en}
                   alt="Eldiyah Message"
                   className="eldiyah-message"
                 />

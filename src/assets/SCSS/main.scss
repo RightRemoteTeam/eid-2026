@@ -1170,6 +1170,10 @@
       line-height: 1.6;
       margin: 0;
 
+      &:dir(ltr) {
+        font-family: $font-primary;
+      } 
+
       @media (max-width: $bp-tab) {
         font-size: 2rem;
       }
@@ -1333,6 +1337,10 @@
     color: $primary-green-dark;
     line-height: 1;
     margin: 0;
+
+    &:dir(ltr) {
+      font-family: $font-primary;
+    }
 
     @media (max-width: $bp-tab) {
       font-size: 1.4rem;

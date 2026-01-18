@@ -91,7 +91,7 @@ export default function GreetingSection() {
               <img src={firework} alt="" />
             </Parallax>
           </div>
-          <img src={(lang == "ar") ? badge2 : badge2_en } alt="" className="layer badge2" />
+          <img src={(lang === "ar") ? badge2 : badge2_en } alt="" className="layer badge2" />
           <div className="layer wallet">
             <Parallax speed={2} translateY={[5, -3]} rotate={[0, 25]}>
               <img src={wallet} alt="" />

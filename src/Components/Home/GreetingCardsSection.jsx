@@ -89,12 +89,18 @@ export default function GreetingCardsSection() {
               <Link to={`/${lang}/greetings`} className="card-btn btn-1" onClick={triggerEvent("Eid_greetings_2026", "link_click")}>
                 <img src={btn1} alt="أضف معايدتك وشاركها" />
               </Link>
-              <p className="cards-text">
-                تحميل بطاقات المعايدة
-                <br />
-                لتشارك الفرح مع أحبائك
-              </p>
-              
+              { lang === 'ar' ? 
+                  <p className="cards-text">
+                    تحميل بطاقات المعايدة
+                    <br />
+                    لتشارك الفرح مع أحبائك
+                  </p>
+                :
+                  <p className="cards-text">
+                  Download greeting cards<br />To share the joy with your loved ones
+                  </p>
+              }
+
               <button onClick={() => {
                 triggerEvent("Your_Greetings_2026", "link_click");
                 setModalData(

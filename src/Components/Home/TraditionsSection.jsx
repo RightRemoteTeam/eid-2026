@@ -8,8 +8,10 @@ import { GoogleAnalytics } from "../GoogleAnalytics";
 import DownloadFilePopup from "./DownloadPopup";
 
 import eidIdentityCard from "../../assets/images/cards/card1.png";
+import eidIdentityCard_en from "../../assets/images/cards/card1_en.png";
 import eidIdentityCardThumbNail from "../../assets/images/downloadable/pdfThumbnail_identity.png";
 import badge3 from "../../assets/images/cards/badge3.svg";
+import badge3_en from "../../assets/images/cards/badge3_en.svg";
 import firework from "../../assets/images/icons/firework.svg";
 import giftBox from "../../assets/images/icons/giftbox.svg";
 import star from "../../assets/images/icons/star.svg";
@@ -121,11 +123,11 @@ export default function TraditionsSection() {
                 );
               }}
             >
-              <img src={eidIdentityCard} alt="" style={{ cursor: "pointer" }} />
+              <img src= { (lang === "ar") ? eidIdentityCard : eidIdentityCard_en } alt="" style={{ cursor: "pointer" }} />
             </div>
 
             {/* Center Badge */}
-            <img src={badge3} alt="" className="layer badge3" />
+            <img src={ (lang ==="ar") ? badge3 : badge3_en } alt="" className="layer badge3" />
 
             {/* Firework - Top Left */}
             <div className="layer firework">
