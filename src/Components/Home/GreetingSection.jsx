@@ -9,6 +9,8 @@ import balloons from "../../assets/images/icons/balloons.svg";
 import makhbara from "../../assets/images/icons/mabkhara.svg";
 import star from "../../assets/images/icons/star.svg";
 import candy from "../../assets/images/icons/candy.svg";
+import cloudleft from "../../assets/images/icons/cloud-left.svg";
+import cloudright from "../../assets/images/icons/cloud-right.svg";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -29,13 +31,23 @@ export default function GreetingSection() {
       yoyo: true,
     });
 
-    gsap.to(".greeting-section .float-star", {
+    gsap.to(".greeting-section .star1", {
       scale: 1.3,
       opacity: 0.7,
       duration: 1.5,
       ease: "power1.inOut",
       repeat: -1,
       yoyo: true,
+    });
+
+    gsap.to(".greeting-section .star2", {
+      scale: 1.3,
+      opacity: 0.7,
+      duration: 1.8,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+      delay: 0.5,
     });
 
     gsap.to(".greeting-section .float-mabkhara", {
@@ -58,6 +70,16 @@ export default function GreetingSection() {
           <div className="layer building">
             <Parallax speed={2} translateY={[5, -5]}>
               <img src={building} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer cloud-left">
+            <Parallax speed={2} translateX={[5, -5]}>
+              <img src={cloudleft} alt="" />
+            </Parallax>
+          </div>
+          <div className="layer cloud-right">
+            <Parallax speed={2} translateX={[20, 0]}>
+              <img src={cloudright} alt="" />
             </Parallax>
           </div>
           <img src={road} alt="" className="layer road" />

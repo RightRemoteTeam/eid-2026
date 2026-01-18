@@ -32,7 +32,7 @@ export default function Navbar() {
   };
   return (
     <nav className="navbar">
-      <div className="language-switcher">
+      <div className={`language-switcher ${i18n.language === "en" ? "lang-en" : "lang-ar"}`}>
         <span onClick={handleLangChange}>{t("header.language")}</span>
       </div>
     </nav>

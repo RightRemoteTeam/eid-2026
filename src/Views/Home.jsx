@@ -3,6 +3,7 @@ import GreetingSection from "../Components/Home/GreetingSection";
 import TraditionsSection from "../Components/Home/TraditionsSection";
 import GreetingCardsSection from "../Components/Home/GreetingCardsSection";
 import CategoriesStorySection from "../Components/Home/CategoriesStorySection";
+import EidActivitiesSection from "../Components/Home/EidActivitiesSection";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
 
       {/* Greeting Cards Section */}
       <GreetingCardsSection />
+
+      {/* Eid Activities Section */}
+      <EidActivitiesSection />
     </>
   );
 }

@@ -12,6 +12,15 @@
     &.invisible {
         scale: 0;
     }
+    & .loader-image {
+        width: 200px;
+        height: 178px;
+        animation: spin 5s linear infinite;
+        @media only screen and (max-width: 760px) {
+            width: 100px;
+            height: 98px;
+        }
+    }
     & .loader-buscuits {
         margin-left: 1.6rem;
     }
@@ -23,21 +32,6 @@
 
 .invisible {
     opacity: 0;
-}
-.spinner {
-    width: 200px;
-    height: 178px;
-    background-image: url('../../../public/loader/Loading.png');
-    background-size: contain;
-    animation: spin 5s linear infinite;
-    // margin: 50px auto;
-    background-repeat: no-repeat;
-    position: absolute;
-    @media only screen and (max-width: 760px) {
-        width: 100px;
-        height: 98px;
-        top: 35%;
-    }
 }
 
 @keyframes spin {

@@ -1,3 +1,4 @@
+@import "fonts";
 @import "variables";
 @import "base";
 @import "layout";
@@ -79,6 +80,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-block;
+    font-family: $font-primary;
 
     span {
       display: inline-block;
@@ -371,19 +373,10 @@
 // Greeting Section
 .greeting-section {
   position: relative;
-  min-height: 200vh;
   background-color: $bg-main;
   text-align: center;
   padding: 120px 0;
-
-  @media (max-width: $bp-large) {
-    min-height: 95vh;
-  }
-
-
-  @media (max-width: $bp-tab) {
-    min-height: 70vh;
-  }
+  margin-bottom: 12vw;
 
   @media (max-width: $bp-mobile) {
     padding: 80px 0;
@@ -449,6 +442,20 @@
         top: 18%;
         width: 50%;
         z-index: 2;
+      }
+
+      .cloud-left {
+        left: 27%;
+        top: 28%;
+        width: 16%;
+        z-index: 2;
+      }
+
+      .cloud-right {
+        left: 55%;
+        top: 37%;
+        width: 16%;
+        z-index: 1;
       }
 
       .road {
@@ -571,7 +578,7 @@
 
       .candy4 {
         left: 8%;
-        top: 45%;
+        top: 43%;
         width: 15%;
         z-index: 4;
         rotate: -40deg;
@@ -583,8 +590,8 @@
       }
 
       .candy5 {
-        left: 10%;
-        top: 55%;
+        left: 11%;
+        top: 52%;
         width: 18%;
         z-index: 5;
         rotate: -60deg;
@@ -602,7 +609,6 @@
 .traditions-section {
   position: relative;
   padding: 0 0;
-  min-height: 100vh;
   background-color: $bg-main;
   text-align: center;
   display: flex;
@@ -613,7 +619,7 @@
   }
 
   @media (max-width: $bp-mobile) {
-    padding: 120px 0;
+    padding: 70px 0;
 
     min-height: 100vh;
   }
@@ -649,9 +655,10 @@
       width: 100%;
       height: 100%;
       overflow: visible;
-      min-height: 100vh;
+      aspect-ratio: 16/9;
+      position: relative;
 
-      @media (max-width: $bp-large) {
+      @media (max-width: $bp-mobile) {
         min-height: 75vh;
       }
 
@@ -1026,7 +1033,10 @@
     }
 
     @media (max-width: $bp-mobile) {
-      display: none;
+      top: auto;
+      bottom: 0%;
+      left: 7%;
+      z-index: 7;
     }
   }
 
@@ -1042,7 +1052,10 @@
     }
 
     @media (max-width: $bp-mobile) {
-      display: none;
+      top: auto;
+      bottom: 3%;
+      right: -3%;
+      z-index: 7;
     }
   }
 
@@ -1105,10 +1118,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 
     @media (max-width: $bp-mobile) {
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
     }
 
     .card-btn {
@@ -1122,25 +1136,248 @@
       }
 
       @media (max-width: $bp-mobile) {
-        width: 200px;
+        width: 80%;
       }
     }
 
     .cards-text {
-      font-family: "IBM Plex Sans Arabic", sans-serif;
+      font-family: $font-secondary;
       font-size: 1.5rem;
+      font-weight: 800;
       color: $primary-green-dark;
       text-align: center;
       line-height: 1.6;
       margin: 0;
 
       @media (max-width: $bp-tab) {
-        font-size: 1.2rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Eid Activities Section
+
+.eid-activities-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: $bg-main;
+  overflow: hidden;
+
+  @media (max-width: $bp-mobile) {
+    padding: 40px 0;
+  }
+
+  .eid-activities-content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @media (max-width: $bp-large ) {
+      min-height: 80vh;
+    }
+
+    @media (max-width: $bp-mobile) {
+      min-height: 500px;
+    }
+  }
+
+  .layer {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // Top Elements - Badge and Bowl
+  .top-elements {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    z-index: 2;
+
+    .badge-element {
+      width: 70%;
+      height: auto;
+
+      @media (max-width: $bp-tab) {
+        width: 280px;
       }
 
       @media (max-width: $bp-mobile) {
-        font-size: 1.1rem;
-        order: -1;
+        width: 85%;
+        margin-bottom: 70px;
+      }
+    }
+
+    .bowl-element {
+      position: absolute;
+      left: 0;
+      top: 70%;
+      width: 30%;
+      rotate: 40deg;
+
+      @media (max-width: $bp-tab) {
+        width: 35%;
+        top: 58%;
+        left: -12%;
+      }
+    }
+  }
+
+  // Left Side - Oud
+  .oud-element {
+    left: -25%;
+    bottom: 10%;
+    width: 55%;
+    z-index: 1;
+    rotate: -35deg;
+
+    @media (max-width: $bp-tab) {
+      width: 25%;
+      left: -5%;
+    }
+
+    @media (max-width: $bp-mobile) {
+      width: 50%;
+      left: -20%;
+      bottom: 0%;
+    }
+  }
+
+  // Music Note
+  .musicnote-element {
+    left: 15%;
+    bottom: 45%;
+    width: 5%;
+    z-index: 2;
+    rotate: 40deg;
+
+    @media (max-width: $bp-tab) {
+      left: 10%;
+      width: 7%;
+    }
+
+    @media (max-width: $bp-mobile) {
+      display: none;
+    }
+  }
+
+  // Right Side - Giant Wheel
+  .giantwheel-element {
+    right: -5%;
+    top: 20%;
+    width: 35%;
+    z-index: 1;
+
+
+    @media (max-width: $bp-mobile) {
+      width: 20%;
+      right: 0%;
+      top: 78%;
+    }
+  }
+
+  // Center Content
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 3;
+    padding: 0 20px;
+    text-align: center;
+
+    @media (max-width: $bp-mobile) {
+      gap: 20px;
+    }
+  }
+
+  .activities-text {
+    font-family: $font-secondary;
+    font-size: 3rem;
+    font-weight: 800;
+    color: $primary-green-dark;
+    line-height: 1;
+    margin: 0;
+
+    @media (max-width: $bp-tab) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: $bp-mobile) {
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+  }
+
+  // Button with Diamonds
+  .button-diamonds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    @media (max-width: $bp-mobile) {
+      gap: 10px;
+    }
+
+    .diamonds-left,
+    .diamonds-right {
+      width: 50px;
+      height: auto;
+
+      @media (max-width: $bp-mobile) {
+        width: 35px;
+      }
+    }
+
+    .diamonds-right {
+      transform: scaleX(-1);
+    }
+
+    .activities-btn {
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      width: 40%;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: $bp-mobile) {
+        width: 180px;
+      }
+    }
+  }
+
+  // Enjoy Logo
+  .enjoy-logo {
+    margin-top: 20px;
+
+    img {
+      width: 150px;
+      height: auto;
+
+      @media (max-width: $bp-tab) {
+        width: 120px;
+      }
+
+      @media (max-width: $bp-mobile) {
+        width: 100px;
       }
     }
   }
@@ -1356,23 +1593,24 @@
   padding: 60px 0;
 
   .footer-container {
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
 
-    @media (max-width: $bp-tab) {
-      flex-direction: column;
-      gap: 30px;
-    }
   }
 
   .footer-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     img {
       height: 100px;
+      object-fit: contain;
 
       @media (max-width: $bp-small) {
         height: 70px;
@@ -1384,11 +1622,8 @@
     width: 2px;
     height: 80px;
     background: $primary-green-dark;
+    flex-shrink: 0;
 
-    @media (max-width: $bp-tab) {
-      width: 80px;
-      height: 2px;
-    }
   }
 }
 
