@@ -10,6 +10,7 @@ export default Object.freeze({
     HOUSE_DECORATION_HORIZANTAL:"./files/EidEvents_Deco_House.pdf",
     COMPANY_DECORATION_HORIZANTAL:"./files/EidEvents_Deco_Companies.pdf",
 
+    EID_IDENTITY:"./files/Eid_Identity_2026.pdf",
     EID_CORPORATE_PUBLICATIONS:"./files/Eid_Corporate_Publications_2026.pdf",
     EID_HOME_PUBLICATIONS:"./files/Eid_Home_Publications_2026.pdf",
     EID_ACTIVITY_BOOKLET:"./files/Eid_Activity_Booklet_2026.pdf",

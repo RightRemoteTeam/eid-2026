@@ -694,7 +694,9 @@
         transform: translateX(-50%);
         top: 0%;
         width: 17%;
-        z-index: 6;
+        z-index: 10;
+        cursor: pointer;
+        pointer-events: auto;
 
         @media (max-width: $bp-tab) {
           width: 65%;
