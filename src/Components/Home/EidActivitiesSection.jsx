@@ -9,7 +9,6 @@ import musicnote3 from "../../assets/images/icons/musicnote3.svg";
 import giantwheel from "../../assets/images/icons/giantwheel.svg";
 import diamonds from "../../assets/images/icons/diamonds.svg";
 import enjoy from "../../assets/images/icons/enjoy.svg";
-import { useParams } from "react-router-dom";
 
 // Assets from cards
 import badge4 from "../../assets/images/cards/badge4.svg";
