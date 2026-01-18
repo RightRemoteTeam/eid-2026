@@ -6,15 +6,16 @@ export default function Footer() {
     <>
       <footer className="footer">
         <div className="footer-container">
-          <div className="footer-logo">
-            <img src={eidEventsLogo} alt="فعاليات العيد" />
-          </div>
 
-          <div className="footer-divider"></div>
 
           <div className="footer-logo">
             <img src={geaLogo} alt="هيئة الترفيه" />
           </div>
+          <div className="footer-divider"></div>
+          <div className="footer-logo">
+            <img src={eidEventsLogo} alt="فعاليات العيد" />
+          </div>
+
         </div>
       </footer>
 

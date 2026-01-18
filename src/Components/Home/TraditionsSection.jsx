@@ -88,7 +88,7 @@ export default function TraditionsSection() {
             </Parallax>
           </div>
           <div className="layer musicnote2">
-            <Parallax speed={2} rotate={[0, -6]}>
+            <Parallax speed={1} rotate={[0, -6]}>
               <img src={musicnote2} alt="" />
             </Parallax>
           </div>

@@ -14,12 +14,12 @@ export default function GreetingCardsSection() {
     <section className="greeting-cards-section">
       <div className="greeting-cards-content">
         {/* Left Dallah */}
-        <Parallax speed={-5} className="layer dallah-left">
+        <Parallax speed={-2} className="layer dallah-left">
           <img src={dallah2} alt="Dallah" />
         </Parallax>
 
         {/* Right Dallah */}
-        <Parallax speed={-5} className="layer dallah-right">
+        <Parallax speed={-2} className="layer dallah-right">
           <img src={dallah} alt="Dallah" />
         </Parallax>
 
