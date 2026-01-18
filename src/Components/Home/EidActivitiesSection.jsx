@@ -9,16 +9,17 @@ import musicnote3 from "../../assets/images/icons/musicnote3.svg";
 import giantwheel from "../../assets/images/icons/giantwheel.svg";
 import diamonds from "../../assets/images/icons/diamonds.svg";
 import enjoy from "../../assets/images/icons/enjoy.svg";
+import { useParams } from "react-router-dom";
 
 // Assets from cards
 import badge4 from "../../assets/images/cards/badge4.svg";
 import badge4_en from "../../assets/images/cards/badge4_en.svg";
 
 import btn3 from "../../assets/images/cards/BTN_3.svg";
+import btn3en from "../../assets/images/cards/BTN_3_en.svg";
 
 export default function EidActivitiesSection() {
   const { lang } = useParams();
-
   return (
       <section className="eid-activities-section">
         <div className="eid-activities-content">
@@ -63,7 +64,7 @@ export default function EidActivitiesSection() {
             <div className="button-diamonds">
               <img src={diamonds} alt="Diamonds" className="diamonds-left" />
               <a href="https://enjoy.sa/en/" target="_blank" rel="noopener noreferrer" className="activities-btn">
-                <img src={btn3} alt="اكتشف فعاليات العيد" />
+                <img src={lang === "en" ? btn3en : btn3} alt="اكتشف فعاليات العيد" />
               </a>
               <img src={diamonds} alt="Diamonds" className="diamonds-right" />
             </div>

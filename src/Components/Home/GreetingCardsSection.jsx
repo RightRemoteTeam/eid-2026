@@ -12,7 +12,9 @@ import dallah2 from "../../assets/images/icons/dallah2.svg";
 import greencard from "../../assets/images/cards/greencard.png";
 import orangecard from "../../assets/images/cards/orangecard.png";
 import btn1 from "../../assets/images/cards/BTN_1.svg";
+import btn1_en from "../../assets/images/cards/BTN_1_en.svg";
 import btn2 from "../../assets/images/cards/BTN_2.svg";
+import btn2en from "../../assets/images/cards/BTN_2_en.svg";
 
 import pdfThumbnail_greetingcards from "../../assets/images/downloadable/pdfThumbnail_greetingcards.png";
 
@@ -87,7 +89,7 @@ export default function GreetingCardsSection() {
             {/* Buttons Row */}
             <div className="buttons-row">
               <Link to={`/${lang}/greetings`} className="card-btn btn-1" onClick={triggerEvent("Eid_greetings_2026", "link_click")}>
-                <img src={btn1} alt="أضف معايدتك وشاركها" />
+                <img src={lang === "en" ? btn1_en : btn1} alt="أضف معايدتك وشاركها" />
               </Link>
               { lang === 'ar' ? 
                   <p className="cards-text">
@@ -108,7 +110,7 @@ export default function GreetingCardsSection() {
                   pdfThumbnail_greetingcards
                 );
               }} className="card-btn btn-2">
-                <img src={btn2} alt="بطاقة معايدتك" />
+                <img src={lang === "en" ? btn2en : btn2} alt="بطاقة معايدتك" />
               </button>
             </div>
           </div>
