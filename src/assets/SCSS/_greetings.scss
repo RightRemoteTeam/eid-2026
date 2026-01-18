@@ -1,0 +1,277 @@
+// Greetings Page
+.greetings-card-container {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 9;
+  flex: 1;
+  min-height: 100vh;
+  background: $color-white;
+
+  @media screen and (max-width: $bp-medium) {
+    padding-top: 30px;
+  }
+
+  @media screen and (max-width: $bp-tab) {
+    padding-top: 20px;
+  }
+
+  .greetings-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+
+    .eid-logo {
+      max-width: 200px;
+      height: auto;
+
+      @media (max-width: $bp-mobile) {
+        max-width: 150px;
+      }
+    }
+  }
+
+  .layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 60px;
+
+    @media screen and (max-width: 1280px) {
+      width: 90%;
+      gap: 40px;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  .card-column {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-right: 10px;
+
+    @media screen and (max-width: $bp-medium) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex: unset;
+      width: 60%;
+      gap: 0;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+      margin-bottom: 25px;
+      padding-right: 0;
+    }
+
+    @media (max-width: $bp-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    position: relative;
+    transition: transform 0.3s ease;
+
+    @media screen and (max-width: $bp-medium) {
+      width: 48%;
+      margin-bottom: 20px;
+
+      &:nth-child(3) {
+        order: 1;
+      }
+
+      &:nth-child(6) {
+        order: 1;
+      }
+    }
+
+    @media (max-width: $bp-mobile) {
+      width: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &.card-error {
+      &:first-child {
+        border: 5px solid #f20c1c;
+        animation: grow-border 2s ease-in-out infinite;
+      }
+    }
+  }
+
+  .card-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked + .card-label::after {
+      content: "✓";
+      font-size: 17px;
+      color: $color-white;
+      opacity: 1;
+      transform: scale(1);
+      background: $primary-green-dark;
+      line-height: 31px;
+      border: 2px solid $color-white;
+    }
+  }
+
+  .card-label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      width: 30px;
+      height: 30px;
+      background: #F7F7F7;
+      text-align: center;
+      line-height: 25px;
+      border-radius: 50%;
+      border: 2px solid $primary-green-dark;
+      transition: all 0.3s ease;
+      opacity: 1;
+
+      @media (max-width: 680px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+  }
+
+  .input-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    max-width: 400px;
+
+    @media screen and (max-width: $bp-medium) {
+      width: 40%;
+      flex: unset;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+      max-width: none;
+      padding-left: 0;
+    }
+  }
+
+  .name-input,
+  .message-input {
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: none;
+    resize: none;
+    display: block;
+    box-shadow: 0px 0px 16px 0px rgba(0, 61, 35, 0.12);
+    font-size: 16px;
+    color: $primary-green-dark;
+    font-family: $font-primary;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+
+    &::placeholder {
+      color: rgba(0, 61, 35, 0.5);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 20px 0px rgba(6, 249, 63, 0.25);
+    }
+
+    &.input-error {
+      border: 2px solid #f20c1c !important;
+    }
+  }
+
+  .name-input {
+    height: auto;
+  }
+
+  .message-input {
+    height: 150px;
+
+    @media (max-width: 800px) {
+      height: 100px;
+    }
+  }
+
+  .preview-button {
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: $font-primary;
+    display: block;
+    background: $primary-green-dark;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px auto 0;
+    border-radius: 50px;
+    width: 220px;
+    font-size: 16px;
+    box-shadow: -6px 0px 20px -8px $primary-green-dark;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $primary-green;
+      color: $color-white;
+      box-shadow: -6px 0px 20px -8px $primary-green;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 680px) {
+      width: 100%;
+      margin: 7px 0;
+      padding: 10px 0;
+    }
+  }
+}
+
+// Animations
+@keyframes grow-border {
+  from {
+    border-width: 0;
+  }
+  to {
+    border-width: 5px;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}

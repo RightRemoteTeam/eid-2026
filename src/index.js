@@ -8,6 +8,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./Components/Locale/i18n";
 import Home from "./Views/Home";
+import Greetings from "./Views/Greetings";
 import Local from "./Components/Locale/Locale";
 import ScrollToTop from "./Components/ScrollToTop";
 
@@ -21,6 +22,7 @@ root.render(
           <Route path="/" element={<Local />} />
           <Route path="/:lang/*" element={<App />}>
             <Route path="" element={<Home />} />
+            <Route path="greetings" element={<Greetings />} />
           </Route>
         </Routes>
       </ParallaxProvider>
