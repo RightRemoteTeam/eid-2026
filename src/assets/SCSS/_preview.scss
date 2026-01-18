@@ -1,0 +1,130 @@
+// Preview Page
+.preview-card-container {
+  min-height: calc(100vh - 200px);
+  background: $bg-gradient-start;
+  padding: 40px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  @media screen and (max-width: $bp-medium) {
+    padding: 30px 20px;
+  }
+
+  .card {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: $bp-mobile) {
+      max-width: 400px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .social-and-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 600px;
+
+    @media (max-width: $bp-mobile) {
+      max-width: 400px;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: $bp-mobile) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: $bp-mobile) {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    button,
+    a {
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      font-family: $font-primary;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      text-align: center;
+
+      @media (max-width: $bp-mobile) {
+        width: 100%;
+        padding: 12px 30px;
+      }
+    }
+
+    .btn-primary,
+    .download-btn {
+      background: $color-white;
+      color: $primary-teal;
+      border: 2px solid $primary-teal;
+
+      &:hover {
+        background: $primary-teal;
+        color: $color-white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0, 216, 216, 0.3);
+      }
+    }
+
+    button[type="button"] {
+      background: $primary-teal;
+      color: $color-white;
+      box-shadow: -6px 0px 20px -8px $primary-teal;
+
+      &:hover {
+        background: $primary-green-dark;
+        box-shadow: -6px 0px 20px -8px $primary-green-dark;
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}

@@ -47,7 +47,7 @@
   "Greetings": {
     "preview": "Preview",
     "name": "Enter your name",
-    "message": "Type your message here!",
+    "message": "Type your message here",
     "messageLimit": "Maximum 25 characters"
   }
 }

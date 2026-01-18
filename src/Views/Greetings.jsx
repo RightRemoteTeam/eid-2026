@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { GoogleAnalytics } from "../Components/GoogleAnalytics";
-import eidLogo from "../assets/images/icons/eidlogomain.svg";
 
 const Greetings = () => {
   const navigate = useNavigate();
@@ -66,9 +65,6 @@ const Greetings = () => {
   };
   return (
     <section className="greetings-card-container">
-      <div className="greetings-header">
-        <img src={eidLogo} alt="Eid Logo" className="eid-logo" />
-      </div>
       <div className="layout">
         <div className="card-column">
           {Array.from({ length: 2 }, (_, index) => (
@@ -86,7 +82,7 @@ const Greetings = () => {
               />
               <label htmlFor={`radio-${index}`} className="card-label">
                 <img
-                  src={`${ENV.APP_URL}/cards/g${index + 1}.jpg`}
+                  src={`${ENV.APP_URL}/cards/g${index + 1}.png`}
                   alt={`Card ${index + 1}`}
                   className="card-image"
                 />

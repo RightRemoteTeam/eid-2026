@@ -5,8 +5,8 @@
   position: relative;
   z-index: 9;
   flex: 1;
-  min-height: 100vh;
-  background: $color-white;
+  min-height: calc(100vh - 200px);
+  background: $bg-gradient-start;
 
   @media screen and (max-width: $bp-medium) {
     padding-top: 30px;
@@ -14,21 +14,6 @@
 
   @media screen and (max-width: $bp-tab) {
     padding-top: 20px;
-  }
-
-  .greetings-header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 0 20px;
-
-    .eid-logo {
-      max-width: 200px;
-      height: auto;
-
-      @media (max-width: $bp-mobile) {
-        max-width: 150px;
-      }
-    }
   }
 
   .layout {
@@ -123,7 +108,7 @@
       color: $color-white;
       opacity: 1;
       transform: scale(1);
-      background: $primary-green-dark;
+      background: $primary-teal;
       line-height: 31px;
       border: 2px solid $color-white;
     }
@@ -146,7 +131,7 @@
       text-align: center;
       line-height: 25px;
       border-radius: 50%;
-      border: 2px solid $primary-green-dark;
+      border: 2px solid $primary-teal;
       transition: all 0.3s ease;
       opacity: 1;
 
@@ -231,20 +216,20 @@
     font-weight: 600;
     font-family: $font-primary;
     display: block;
-    background: $primary-green-dark;
+    background: $primary-teal;
     padding: 15px 0;
     text-align: center;
     margin: 20px auto 0;
     border-radius: 50px;
     width: 220px;
     font-size: 16px;
-    box-shadow: -6px 0px 20px -8px $primary-green-dark;
+    box-shadow: -6px 0px 20px -8px $primary-teal;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: $primary-green;
+      background-color: $primary-green-dark;
       color: $color-white;
-      box-shadow: -6px 0px 20px -8px $primary-green;
+      box-shadow: -6px 0px 20px -8px $primary-green-dark;
       transform: translateY(-2px);
     }
 
