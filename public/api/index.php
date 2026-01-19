@@ -37,7 +37,7 @@ $decoded = json_decode($content, true);
 
 if (is_array($decoded)) {
   if (isset($decoded['name']) && isset($decoded['card'])) {
-    $name = filter_var($decoded['name'], FILTER_SANITIZE_STRING);
+    $name = htmlspecialchars($decoded['name'], ENT_QUOTES, 'UTF-8');
     $card = check_card($decoded['card']);
     if (!empty($name) && !empty($card)) {
       $response['name'] = $name;
@@ -57,7 +57,7 @@ if (is_array($decoded)) {
 
 
 if (!empty($name) && !empty($card)) {
-    $imagePath = $_SERVER['DOCUMENT_ROOT'].'./api/cards/g'.$card.'.png';
+    $imagePath = $_SERVER['DOCUMENT_ROOT'].'/api/cards/g'.$card.'.png';
     $fontPath = $_SERVER['DOCUMENT_ROOT']."/api/font/IBM_Plex_Sans/IBMPlexSansArabic-Bold.ttf";
     $image = new Imagick();
     $image->readImage($imagePath);

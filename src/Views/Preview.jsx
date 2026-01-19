@@ -40,10 +40,11 @@ export default function Preview() {
     console.log("Generating preview for card:", card);
 
     setPageLoaded(false);
-    setImage(`${ENV.APP_URL}/api/cards/dark-mode.jpeg`);
+    setImage(`${window.PHP_SERVER}cards/dark-mode.jpeg`);
     setError(null);
     try {
-      fetch(`${ENV.PHP_SERVER}`, {
+      //fetch(`${ENV.PHP_SERVER}`, {
+      fetch(`${window.PHP_SERVER}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,7 +69,7 @@ export default function Preview() {
             // navigate('/');
           } else {
             setImage(`${data.image}`);
-            setShareUrl(`${ENV.APP_URL}/api/share.php?id=${data.time}`);
+            setShareUrl(`${window.PHP_SERVER}share.php?id=${data.time}`);
             setFilename(`${data.time}.png`);
             setError(null);
             setPageLoaded(true);
