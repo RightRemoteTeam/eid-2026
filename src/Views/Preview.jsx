@@ -108,7 +108,7 @@ export default function Preview() {
   };
 
   const download = () => {
-    triggerEvent("Eid_greeting_download_2025", "link_click");
+    triggerEvent("Eid_greeting_download_2026", "link_click");
     saveAs(image, filename);
   };
 
@@ -131,7 +131,7 @@ export default function Preview() {
             to={`/${lang}/greetings`}
             className="btn btn-primary download-btn"
             onClick={() => {
-              triggerEvent("Eid_greetings_2025", "link_click");
+              triggerEvent("Eid_greetings_2026", "link_click");
             }}
           >
             {t("Preview.edit")}

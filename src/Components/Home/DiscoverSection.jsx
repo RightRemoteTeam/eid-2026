@@ -221,7 +221,7 @@ export default function DiscoverSection() {
               target="_blank"
               dir={lang === "ar" ? "rtl" : "ltr"}
               to={`${ENV.EID_EVENT}${lang}/${ENV.EID_EVENT_QUERY_PARAM}`}
-              onClick={() => triggerEvent("Eid_Events_2025", "link_click")}
+              onClick={() => triggerEvent("Eid_Events_2026", "link_click")}
             >
               {t("buttons.title8")}
             </Link>

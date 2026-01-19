@@ -49,7 +49,7 @@ const Greetings = () => {
 
 
   const handlePreview = () => {
-    triggerEvent("Eid_greeting_preview_2025", "link_click");
+    triggerEvent("Eid_greeting_preview_2026", "link_click");
     const cardValid = selectedCard != null;
     const nameValid = validateinput(name);
     const messageValid = validateinput(message);

@@ -1,196 +1,254 @@
 @import "../variables";
 
-section.header {
-    font-size: 0;
-    height: calc((1844 / 1920) * 100%);
+// Hero Section
+.hero-section {
+  font-size: 0;
 
-    @media (max-width: 768px) {
-        height: calc((490 / 430) * 100%);
-    }
-    
-    .posAbsImg{
-        position: absolute;
-    }
+  .hero-container {
+    position: relative;
+    width: 100%;
 
-    .header-container{
-        position: relative;
+    .hero-bg {
+      position: relative;
+      width: 100%;
+      z-index: 0;
+
+      img {
         width: 100%;
-
-        .header-bg{
-            position: relative;
-            width: 100%;
-            z-index: 0;
-
-            img{
-                width: 100%;
-            }
-        }
-
-        .layer01Wrap{
-            top: 0%;
-            left: 0%;
-            z-index: 1;
-            width: 100%;
-
-            img{
-                width: 100%;
-            }
-        }
-
-        .layer02Wrap{
-            top: 26%;
-            left: 35%;
-            z-index: 2;
-            width: 14%;
-
-            @media(max-width: 768px){
-                top: 19%;
-            }
-        }
-
-
-        .layer03Wrap{
-            width: 15.7%;
-            right: 35%;
-            top: 26%;
-            z-index: 2;
-            
-            @media(max-width: 768px){
-                top: 19%;
-            }
-        }
-
-        .layer04Wrap{
-            width: 7%;
-            left: 36%;
-            top: 35%;
-            z-index: 2;
-
-            @media(max-width: 768px){
-                top: 29%;
-            }
-        }
-
-        .layer05Wrap{
-            width: 7%;
-            right: 36%;
-            top: 35%;
-            z-index: 2;
-
-            @media(max-width: 768px){
-                top: 29%;
-            }
-        }
-
-        .layer06Wrap{
-            width: 16.3%;
-            left: 5%;
-            top: 67%;
-            z-index: 2;
-
-            @media(max-width: 768px){
-                top: 54%;
-            }
-        }
-
-        .layer07Wrap{
-            width: 6.7%;
-            left: 11%;
-            top: 73%;
-            z-index: 2;
-            
-            @media(max-width: 768px){
-                top: 60%;
-            }
-
-        }
-        
-        .layer08Wrap{
-            width: 10%;
-            left: 24%;
-            top: 60%;
-            z-index: 4;
-
-            @media(max-width: 768px){
-                top: 48%;
-            }
-        }
-
-        .layer09Wrap{
-            width: 13.5%;
-            left: 21%;
-            top: 70%;
-            z-index: 4;
-
-            @media(max-width: 768px){
-                top: 57%;
-            }
-
-
-        }
-
-        
-        .layer10Wrap{
-            width: 7.5%;
-            left: 35%;
-            top: 60%;
-            z-index: 4;
-
-            @media(max-width: 768px){
-                top: 51%;
-            }
-        }
-
-        .layer11Wrap{
-            width: 7.5%;
-            right: 35%;
-            top: 60%;
-            z-index: 4;
-
-            @media(max-width: 768px){
-                top: 51%;
-            }
-        }
-
-        .layer12Wrap{
-            width: 16.2%;
-            right: 15%;
-            top: 58%;
-            z-index: 4;
-
-            @media(max-width: 768px){
-                top: 49%;
-            }
-        }
-
-        .layer13Wrap{
-            width: 12%;
-            right:20%;
-            top: 69%;
-            z-index: 4;
-
-            @media(max-width: 768px){
-                top: 57%;
-            }
-        }
-
-        .layer14Wrap{
-            width: 12%;
-            right: 4%;
-            top: 68%;
-            z-index: 4;
-
-            @media(max-width: 768px){
-                top: 60%;
-            }
-        }
-
-        .layer20Wrap{
-            width: 3%;
-            left: 49%;
-            top: 50%;
-            z-index: 4;
-        }
+      }
     }
-   
+  }
+
+  .hero-scene-bottom {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .scene-stage {
+      position: relative;
+      width: 95%;
+      aspect-ratio: 16 / 7;
+      /* match your artwork ratio */
+      overflow: visible;
+    }
+
+    /* Every layer */
+    .layer {
+      position: absolute;
+      inset: auto;
+      width: auto;
+      height: auto;
+      max-width: none;
+      user-select: none;
+      pointer-events: none;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .ribbon {
+      left: 0;
+      top: 35%;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      object-fit: contain;
+    }
+
+    .people {
+      left: 50%;
+      top: 18%;
+      transform: translateX(-50%);
+      width: 50%;
+      z-index: 2;
+    }
+
+    .oud {
+      left: 6%;
+      top: 63%;
+      width: 23%;
+      z-index: 6;
+    }
+
+    .dallah {
+      right: 15%;
+      top: 62%;
+      width: 13%;
+      z-index: 5;
+    }
+
+    .money {
+      left: 14%;
+      top: 78%;
+      width: 18%;
+      z-index: 6;
+    }
+
+    .mabkhara {
+      right: 3%;
+      top: 63%;
+      width: 12%;
+      z-index: 5;
+    }
+
+    .balloons {
+      right: 9%;
+      top: 20%;
+      width: 15%;
+      z-index: 5;
+    }
+
+    .dallah2 {
+      right: 25%;
+      top: 67%;
+      width: 11%;
+      z-index: 5;
+    }
+
+    .giftbox {
+      left: 25%;
+      top: 85%;
+      width: 15%;
+      z-index: 6;
+    }
+
+    .bowl {
+      left: 33%;
+      top: 54%;
+      width: 12%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .halfnote {
+      left: 10%;
+      top: 24%;
+      width: 3%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .musicnote1 {
+      right: 27%;
+      top: 60%;
+      width: 3%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .musicnote2 {
+      left: 18%;
+      top: 55%;
+      width: 1.5%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .musicnote3 {
+      right: 18%;
+      top: 29%;
+      width: 4%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .ribbon2 {
+      left: 15%;
+      top: 35%;
+      width: 27%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .ribbon3 {
+      right: 3%;
+      top: 32%;
+      width: 30%;
+      transform: translateX(-50%);
+      transform: scaleX(-1);
+      z-index: 1;
+    }
+
+    .firework {
+      left: 37%;
+      top: 15%;
+      width: 7%;
+      z-index: 1;
+    }
+
+    .candy {
+      right: 35%;
+      top: 55%;
+      width: 11%;
+      z-index: 6;
+      rotate: -40deg;
+    }
+
+    .bgbuilding {
+      left: 53%;
+      transform: translateX(-50%);
+      top: 20%;
+      width: 85%;
+      z-index: 0;
+    }
+
+    .spec1 {
+      left: 2%;
+      top: 66%;
+      width: 9%;
+      z-index: 4;
+    }
+
+    .spec4 {
+      right: 2%;
+      top: 100%;
+      width: 9%;
+      z-index: 4;
+      transform: rotate(230deg);
+    }
+
+    .spec2 {
+      left: 3%;
+      top: 98%;
+      width: 6%;
+      z-index: 4;
+    }
+
+    .spec3 {
+      right: 17%;
+      top: 104%;
+      width: 6%;
+      z-index: 4;
+    }
+
+    .star {
+      right: 12%;
+      top: 55%;
+      width: 1.5%;
+      z-index: 5;
+    }
+
+    .star2 {
+      left: 9%;
+      top: 40%;
+      width: 1.5%;
+      z-index: 5;
+    }
+
+    .clouds {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 5%;
+      width: 95%;
+      z-index: 4;
+    }
+  }
 }

@@ -19,21 +19,21 @@ if ($id != null && $id > 0 && file_exists($cards)) {
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <!-- Primary Meta Tags -->
-    <title>فعاليات العيد 2025</title>
-    <meta name="title" content="فعاليات العيد 2025" />
+    <title>فعاليات العيد 2026</title>
+    <meta name="title" content="فعاليات العيد 2026" />
     <meta name="description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها. فعاليات العيد والفرحة تزيد" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://eid.gea.gov.sa/api/share.php?id=<?= $id ?>" />
-    <meta property="og:title" content="فعاليات العيد 2025"/>
+    <meta property="og:title" content="فعاليات العيد 2026"/>
     <meta property="og:description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
     <meta property="og:image" content="<?= $image ?>" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://eid.gea.gov.sa/api/share.php?id=<?= $id ?>" />
-    <meta property="twitter:title" content="فعاليات العيد 2025"/>
+    <meta property="twitter:title" content="فعاليات العيد 2026"/>
     <meta property="twitter:description" content="لحظات فرح تعيشها، ومشاعر مستحيل تنساها بين #أهلك_وناسك" />
     <meta property="twitter:image" content="<?= $image ?>" />
 
